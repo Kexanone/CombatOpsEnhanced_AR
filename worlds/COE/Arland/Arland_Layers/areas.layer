@@ -1,0 +1,53 @@
+COE_PolygonAreaPicker AirfieldBorder {
+ coords 924.016 41.076 2647.103
+ m_cDebugShapeColor 1 0 0 1
+ m_vP1 -374.288 0 5.551
+ m_vP2 7.922 0 288.398
+ m_vP3 76.667 0 183.107
+ m_vP4 566.993 0 323.516
+ m_vP5 868.047 0 327.91
+ m_vP6 911.712 0 179.276
+ m_vP7 647.671 0 102.888
+ m_vP8 661.901 0 26.603
+ m_vP9 282.392 0 -89.264
+ m_vP10 549.892 0 -497.696
+ m_vP11 367.286 0 -639.017
+ m_vP12 -19.424 0 -90.996
+ m_vP13 -335.232 0 -171.853
+}
+COE_EntitySpawner CarrierSpawner : "{66C9366A037F7CB7}Prefabs/Spawner/COE_EntitySpawner.et" {
+ coords 944.908 0 4017.722
+ m_sInnerBorderName "CarrierSpawnInnerBorder"
+ m_sOuterBorderName "CarrierSpawnOuterBorder"
+ m_aPrefabParamsList {
+  COE_EntitySpawner_PrefabParams "{5E6F18678B7C00B1}" {
+   m_sPrefabName "{ADED7C5C14FC51D0}Prefabs/Compositions/Base/COE_NavalBaseUS_workaround.et"
+  }
+ }
+ {
+  $grp COE_PolygonAreaPicker {
+   CarrierSpawnInnerBorder {
+    coords -113.48 0 -130.663
+    m_cDebugShapeColor 1 0 0 1
+    m_vP1 -347.02 0 531.851
+    m_vP2 2949.411 0 164.886
+    m_vP3 3770.1 0 -950.89
+    m_vP4 3525.976 0 -2933.412
+    m_vP5 1814.793 0 -3974.627
+    m_vP6 -403.321 0 -3282.712
+    m_vP7 -1375.694 0 -1686.444
+   }
+   CarrierSpawnOuterBorder {
+    coords -172.242 0 -83.215
+    m_cDebugShapeColor 0 1 0 1
+    m_vP1 -369.496 0 638.653
+    m_vP2 3091.02 0 208.628
+    m_vP3 3894.743 0 -980.757
+    m_vP4 3646.843 0 -3019.631
+    m_vP5 1908.704 0 -4093.656
+    m_vP6 -370.357 0 -3404.468
+    m_vP7 -1420.645 0 -1740.11
+   }
+  }
+ }
+}

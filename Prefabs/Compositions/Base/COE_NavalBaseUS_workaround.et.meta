@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{ADED7C5C14FC51D0}Prefabs/Compositions/Base/COE_NavalBaseUS_workaround.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

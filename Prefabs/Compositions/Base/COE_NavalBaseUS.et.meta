@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{054F83ED85A4C8E4}Prefabs/Compositions/Base/COE_NavalBaseUS.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -1,0 +1,7 @@
+SCR_SpawnPoint : "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et" {
+ coords 96.918 1 146.578
+}
+GenericEntity : "{EDE6EC8B05227E3E}Prefabs/Systems/Arsenal/ArsenalBoxes/USSR/ArsenalBox_USSR.et" {
+ coords 96.811 1 148.266
+ angleY 177.421
+}

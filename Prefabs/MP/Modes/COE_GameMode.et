@@ -1,0 +1,122 @@
+COE_GameMode : "{1B76F75A3175E85C}Prefabs/MP/Modes/Plain/GameMode_Plain.et" {
+ ID "56B2B479C6B96951"
+ components {
+  SignalsManagerComponent "{5E6F1867E2884BD3}" {
+  }
+  SCR_ArsenalManagerComponent "{5E6F1867E2884BA8}" {
+  }
+  SCR_CommandingManagerComponent "{5E6F1867E2884BA4}" {
+  }
+  SCR_DebriefingScreenComponent "{5E6F1867E2884BA2}" {
+   Enabled 0
+   m_sHeaderTitle "#AR-CombatScenarioArland_Name"
+   m_BaseLayout SCR_DebriefingScreenUnevenFourTiles "{5E6F1867E2884BBF}" {
+    m_TopLeftTile SCR_DebriefingScreenBigImageContent "{5E6F1867E2884BBD}" {
+    }
+    m_TopRightTile SCR_DebriefingScreenFinishedObjectivesContent "{5E6F1867E2884BBB}" {
+    }
+    m_BottomLeftTile SCR_DebriefingScreenSummaryContent "{5E6F1867E2884BB9}" {
+    }
+    m_BottomRightTile SCR_DebriefingScreenStatisticsContent "{5E6F1867E2884BB6}" {
+    }
+   }
+  }
+  SCR_NametagConfigComponent "{571AA9E54FC9210D}" {
+   m_sConfigPath "{09F7AAA14A642683}Configs/NameTags/NametagFriendlies.conf"
+  }
+  SCR_NotificationSenderComponent "{56FA84B04BE7D4C0}" {
+   m_iKillFeedType FULL
+  }
+  SCR_RespawnBriefingComponent "{5E6F1867E2884BB0}" {
+   m_Info SCR_UIInfo "{5E6F1867E2884B89}" {
+    Description "#CombatScenario_Briefing"
+   }
+   m_SimpleBriefingBackground "{39A515BAE3795994}UI/Textures/DeployMenu/Briefing/conflict_HintBanner_3_UI.edds"
+   m_aGameModeHints {
+    SCR_HintUIInfo "{5E6F1867E2884B84}" {
+     Name "#AR-Workshop_TabName_Briefing"
+     Description "#AR-CombatScenario_Briefing"
+    }
+   }
+   m_aWinConditions {
+    SCR_BriefingVictoryCondition "{5E6F1867E2884B80}" {
+     victoryCondition CUSTOM
+     name "#AR-CombatScenario_Intel_Title"
+     description "#AR-CombatScenario_Intel_Title"
+    }
+    SCR_BriefingVictoryCondition "{5E6F1867E2884B9C}" {
+     victoryCondition SEIZE
+     name "#AR-CombatScenario_ClearAreaTask_Title"
+     description "#AR-CombatScenario_ClearAreaTask_Title"
+    }
+    SCR_BriefingVictoryCondition "{5E6F1867E2884B99}" {
+     victoryCondition GUARD
+     name "#AR-EditableEntity_AIWaypoint_SearchAndDestroy_Name"
+     description "#AR-EditableEntity_AIWaypoint_SearchAndDestroy_Name"
+    }
+    SCR_BriefingVictoryCondition "{5E6F1867E2884B96}" {
+     name "#AR-CombatScenario_ExfilTask_Title"
+     description "#AR-CombatScenario_ExfilTask_Title"
+    }
+   }
+  }
+  SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
+   m_SpawnLogic SCR_MenuSpawnLogic "{5D36888CC966608A}" {
+   }
+  }
+  SCR_RespawnTimerComponent "{5E6F1867E2884B95}" {
+  }
+  SCR_TimeAndWeatherHandlerComponent "{5E6F1867E2884B93}" {
+   m_bRandomStartingDaytime 1
+   m_bRandomStartingWeather 1
+   m_bAllowHeaderSettings 1
+  }
+  SCR_WelcomeScreenComponent "{5E6F1867E2884B90}" {
+   m_BaseLayout SCR_WelcomeScreenThreeHorizontalColumns "{5E6F1867E2884B91}" {
+    m_LeftColumn SCR_WelcomeScreenFactionContent "{5E6F1867E2884A6E}" {
+     m_sTitleText "#AR-DeployScreen_AvailableFactionsTitle"
+     m_sBottomTitleText "#AR-DeployScreen_MoreFactions"
+    }
+    m_MiddleColumn SCR_WelcomeScreenMissionObjectivesContent "{5E6F1867E2884A6C}" {
+     m_sTitleText "Possible Objectives"
+     m_aMissionObjectives {
+      SCR_WelcomeScreenMissionObjectives "{5E6F1867E2884A68}" {
+       m_sObjectiveQuadName "Seize"
+       m_sDescription "#AR-CombatScenario_Kill_Title"
+      }
+      SCR_WelcomeScreenMissionObjectives "{5E6F1867E2884A66}" {
+       m_sObjectiveQuadName "Custom"
+       m_sDescription "#AR-CombatScenario_Intel_Title"
+      }
+      SCR_WelcomeScreenMissionObjectives "{5E6F1867E2884A63}" {
+       m_sObjectiveQuadName "Seize"
+       m_sDescription "#AR-CombatScenario_ClearAreaTask_Title"
+      }
+      SCR_WelcomeScreenMissionObjectives "{5E6F1867E289B940}" {
+       m_sObjectiveQuadName "Defend"
+       m_sDescription "#AR-Commanding_Command_SaD"
+      }
+      SCR_WelcomeScreenMissionObjectives "{5E6F1867E289B95F}" {
+       m_sObjectiveQuadName "GetOut"
+       m_sDescription "#AR-CombatScenario_ExfilTask_Title"
+      }
+     }
+    }
+    m_RightColumn SCR_WelcomeScreenIntroductionContent "{5E6F1867E289B95B}" {
+     m_sTitleText "Introduction"
+     m_aIntroduction {
+      SCR_WelcomeScreenIntroduction "{5E6F1867E289B951}" {
+       m_sContentImage "{8E135C7AA80F6861}UI/Textures/MissionLoadingScreens/CO_Arland_05.edds"
+       m_sContentTitleText "#AR-Workshop_TabName_Briefing"
+       m_sContentDescriptionText "#AR-CombatScenario_Briefing"
+      }
+     }
+    }
+   }
+  }
+  SerializerInventoryStorageManagerComponent "{5E6F1867E289B96E}" {
+  }
+ }
+ m_bAutoPlayerRespawn 0
+ m_fAutoReloadTime 30
+}

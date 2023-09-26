@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{86AFC01CD1FEA979}Prefabs/MP/Modes/KEX_GameMode_CombatOps.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -1,0 +1,171 @@
+KEX_GameModeCombatOps : "{1B76F75A3175E85C}Prefabs/MP/Modes/Plain/GameMode_Plain.et" {
+ ID "56B2B479C6B96951"
+ components {
+  SignalsManagerComponent "{5E1A3B19C1E9B5A6}" {
+  }
+  SCR_ArsenalManagerComponent "{5E1A3209434E0F4C}" {
+  }
+  SCR_CommandingManagerComponent "{5E1A32096AA6E1AC}" {
+  }
+  SCR_DebriefingScreenComponent "{5E1A32097B5EDDE7}" {
+   Enabled 0
+   m_sHeaderTitle "#AR-CombatScenarioArland_Name"
+   m_BaseLayout SCR_DebriefingScreenUnevenFourTiles "{5E1A3208A9F7FA1B}" {
+    m_TopLeftTile SCR_DebriefingScreenBigImageContent "{5E1A3208C6B35F02}" {
+    }
+    m_TopRightTile SCR_DebriefingScreenFinishedObjectivesContent "{5E1A3208C24A0DA3}" {
+    }
+    m_BottomLeftTile SCR_DebriefingScreenSummaryContent "{5E1A3208DF8D7109}" {
+    }
+    m_BottomRightTile SCR_DebriefingScreenStatisticsContent "{5E1A3208DDA9A089}" {
+    }
+   }
+  }
+  SCR_NametagConfigComponent "{571AA9E54FC9210D}" {
+   m_sConfigPath "{09F7AAA14A642683}Configs/NameTags/NametagFriendlies.conf"
+  }
+  SCR_NotificationSenderComponent "{56FA84B04BE7D4C0}" {
+   m_iKillFeedType FULL
+  }
+  SCR_RespawnBriefingComponent "{5E1A32084AF8EA3C}" {
+   m_Info SCR_UIInfo "{5E1A3208647E0961}" {
+    Description "#CombatScenario_Briefing"
+   }
+   m_SimpleBriefingBackground "{39A515BAE3795994}UI/Textures/DeployMenu/Briefing/conflict_HintBanner_3_UI.edds"
+   m_aGameModeHints {
+    SCR_HintUIInfo "{5E1A320F8F79645B}" {
+     Name "#AR-Workshop_TabName_Briefing"
+     Description "#AR-CombatScenario_Briefing"
+    }
+   }
+   m_aWinConditions {
+    SCR_BriefingVictoryCondition "{5E1A320FC335D92B}" {
+     victoryCondition CUSTOM
+     name "#AR-CombatScenario_Intel_Title"
+     description "#AR-CombatScenario_Intel_Title"
+    }
+    SCR_BriefingVictoryCondition "{5E1A320FD7E96662}" {
+     victoryCondition SEIZE
+     name "#AR-CombatScenario_ClearAreaTask_Title"
+     description "#AR-CombatScenario_ClearAreaTask_Title"
+    }
+    SCR_BriefingVictoryCondition "{5E1A320FD4248D71}" {
+     victoryCondition GUARD
+     name "#AR-EditableEntity_AIWaypoint_SearchAndDestroy_Name"
+     description "#AR-EditableEntity_AIWaypoint_SearchAndDestroy_Name"
+    }
+    SCR_BriefingVictoryCondition "{5E1A320FD469EBA5}" {
+     name "#AR-CombatScenario_ExfilTask_Title"
+     description "#AR-CombatScenario_ExfilTask_Title"
+    }
+   }
+  }
+  SCR_RespawnTimerComponent "{5E1A3B19850D245B}" {
+  }
+  SCR_TimeAndWeatherHandlerComponent "{5E1A3B189D442026}" {
+   m_bRandomStartingDaytime 1
+   m_bRandomStartingWeather 1
+   m_bAllowHeaderSettings 1
+  }
+  SCR_WelcomeScreenComponent "{5E1A3B1B3686273D}" {
+   m_BaseLayout SCR_WelcomeScreenThreeHorizontalColumns "{5E1A3B1B462B66E4}" {
+    m_LeftColumn SCR_WelcomeScreenFactionContent "{5E1A3B1B495FE1F6}" {
+     m_sTitleText "#AR-DeployScreen_AvailableFactionsTitle"
+     m_sBottomTitleText "#AR-DeployScreen_MoreFactions"
+    }
+    m_MiddleColumn SCR_WelcomeScreenMissionObjectivesContent "{5E1A3B1B59A32F75}" {
+     m_sTitleText "Possible Objectives"
+     m_aMissionObjectives {
+      SCR_WelcomeScreenMissionObjectives "{5E1A3B1A9982199D}" {
+       m_sObjectiveQuadName "Seize"
+       m_sDescription "#AR-CombatScenario_Kill_Title"
+      }
+      SCR_WelcomeScreenMissionObjectives "{5E1A3B1A99F9B2F9}" {
+       m_sObjectiveQuadName "Custom"
+       m_sDescription "#AR-CombatScenario_Intel_Title"
+      }
+      SCR_WelcomeScreenMissionObjectives "{5E1A3B1AA6309B04}" {
+       m_sObjectiveQuadName "Seize"
+       m_sDescription "#AR-CombatScenario_ClearAreaTask_Title"
+      }
+      SCR_WelcomeScreenMissionObjectives "{5E1A3B1AA53F935F}" {
+       m_sObjectiveQuadName "Defend"
+       m_sDescription "#AR-Commanding_Command_SaD"
+      }
+      SCR_WelcomeScreenMissionObjectives "{5E1A3B1AA5760DFD}" {
+       m_sObjectiveQuadName "GetOut"
+       m_sDescription "#AR-CombatScenario_ExfilTask_Title"
+      }
+     }
+    }
+    m_RightColumn SCR_WelcomeScreenIntroductionContent "{5E1A3B1B62156BB4}" {
+     m_sTitleText "Introduction"
+     m_aIntroduction {
+      SCR_WelcomeScreenIntroduction "{5E1A3B1B72688A14}" {
+       m_sContentImage "{8E135C7AA80F6861}UI/Textures/MissionLoadingScreens/CO_Arland_05.edds"
+       m_sContentTitleText "#AR-Workshop_TabName_Briefing"
+       m_sContentDescriptionText "#AR-CombatScenario_Briefing"
+      }
+     }
+    }
+   }
+  }
+  SerializerInventoryStorageManagerComponent "{5E1A3B19B0FD69A9}" {
+  }
+ }
+ m_bAutoPlayerRespawn 0
+ m_fAutoReloadTime 30
+ m_FactionPrefabs {
+  KEX_CombatOps_FactionPrefabs "{5E1A5D1DA41216BB}" {
+   m_sFactionKey "US"
+   m_sSpawnPointPrefab "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et"
+   m_sSpawnFireplacePrefab "{31DE47468E9DD502}Prefabs/Compositions/Misc/CombatOps/KEX_Fireplace.et"
+   m_sSpawnChairPrefab "{55973C5B0950D4AB}Prefabs/Props/Military/Furniture/ChairMilitary_US_01.et"
+   m_sSpawnTentPrefab "{01AE5FD77A9A4C21}Prefabs/Structures/Military/Camps/TentSmallUS_01/TentSmallUS_01.et"
+   m_sArsenalBoxPrefab "{BE99D77D1155B127}Prefabs/Systems/Arsenal/ArsenalBoxes/US/ArsenalBox_US.et"
+   m_sSpawnVehiclePrefab "{86D830868F026D54}Prefabs/Vehicles/Wheeled/M151A2/M151A2_MERDC.et"
+   m_PatrolGroupPrefabs {
+    "{84E5BBAB25EA23E5}Prefabs/Groups/BLUFOR/Group_US_FireTeam.et" "{FCF7F5DC4F83955C}Prefabs/Groups/BLUFOR/Group_US_LightFireTeam.et" "{DE747BC9217D383C}Prefabs/Groups/BLUFOR/Group_US_Team_GL.et" "{FAEA8B9E1252F56E}Prefabs/Groups/BLUFOR/Group_US_Team_LAT.et" "{81B6DBF2B88545F5}Prefabs/Groups/BLUFOR/Group_US_Team_Suppress.et"
+   }
+   m_SniperTeamPrefabs {
+    "{D807C7047E818488}Prefabs/Groups/BLUFOR/Group_US_SniperTeam.et"
+   }
+   m_HVTCharacterPrefabs {
+    "{DB108F0264C75F14}Prefabs/Characters/Factions/BLUFOR/US_Army/KEX_Character_US_Officer.et"
+   }
+   m_UnarmedHVTVehiclePrefabs {
+    "{36BDCC88B17B3BFA}Prefabs/Vehicles/Wheeled/M923A1/M923A1_command.et" "{38186F12F27A61C6}Prefabs/Vehicles/Wheeled/M923A1/M923A1_command_MERDC.et" "{2BE1F8B9299B67C1}Prefabs/Vehicles/Wheeled/M923A1/M923A1_tanker.et" "{26013123314183EA}Prefabs/Vehicles/Wheeled/M923A1/M923A1_tanker_MERDC.et" "{48A6D4372444B85A}Prefabs/Vehicles/Wheeled/M923A1/M923A1_transport_covered_closed.et" "{DC21E543DF39D2C0}Prefabs/Vehicles/Wheeled/M923A1/M923A1_transport_covered_closed_MERDC.et"
+   }
+   m_ArmedHVTVehiclePrefabs {
+    "{3EA6F47D95867114}Prefabs/Vehicles/Wheeled/M998/M1025_armed_M2HB.et" "{DD774A8FD0989A78}Prefabs/Vehicles/Wheeled/M998/M1025_armed_M2HB_MERDC.et"
+   }
+   m_IntelPrefabs {
+    "{6D56FED1E55A8F84}Prefabs/Items/Misc/IntelligenceFolder_E_01/IntelligenceFolder_E_01.et"
+   }
+  }
+  KEX_CombatOps_FactionPrefabs "{5E1A5D1DA4ADFEBB}" {
+   m_sFactionKey "USSR"
+   m_sSpawnPointPrefab "{4FEA25583D0975F7}Prefabs/MP/Spawning/SpawnPoint_USSR.et"
+   m_sSpawnFireplacePrefab "{31DE47468E9DD502}Prefabs/Compositions/Misc/CombatOps/KEX_Fireplace.et"
+   m_sSpawnChairPrefab "{172DD50ACF177B9E}Prefabs/Props/Military/Furniture/ChairMilitary_USSR_01.et"
+   m_sSpawnTentPrefab "{75A7C06222E6218B}Prefabs/Structures/Military/Camps/TentSmallUSSR_01/TentSmallUSSR_01.et"
+   m_sArsenalBoxPrefab "{EDE6EC8B05227E3E}Prefabs/Systems/Arsenal/ArsenalBoxes/USSR/ArsenalBox_USSR.et"
+   m_sSpawnVehiclePrefab "{16A674FE31B0921C}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_uncovered.et"
+   m_PatrolGroupPrefabs {
+    "{30ED11AA4F0D41E5}Prefabs/Groups/OPFOR/Group_USSR_FireGroup.et" "{657590C1EC9E27D3}Prefabs/Groups/OPFOR/Group_USSR_LightFireTeam.et" "{96BAB56E6558788E}Prefabs/Groups/OPFOR/Group_USSR_Team_AT.et" "{43C7A28EEB660FF8}Prefabs/Groups/OPFOR/Group_USSR_Team_GL.et" "{1C0502B5729E7231}Prefabs/Groups/OPFOR/Group_USSR_Team_Suppress.et"
+   }
+   m_HVTCharacterPrefabs {
+    "{5117311FB822FD1F}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Officer.et"
+   }
+   m_UnarmedHVTVehiclePrefabs {
+    "{1BABF6B33DA0AEB6}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_command.et" "{4C81D7ED8F8C0D87}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_tanker.et" "{9DD4FD3527CB46C8}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_transport_covered_closed.et"
+   }
+   m_ArmedHVTVehiclePrefabs {
+    "{C012BB3488BEA0C2}Prefabs/Vehicles/Wheeled/BTR70/BTR70.et"
+   }
+   m_IntelPrefabs {
+    "{6D56FED1E55A8F84}Prefabs/Items/Misc/IntelligenceFolder_E_01/IntelligenceFolder_E_01.et"
+   }
+  }
+ }
+}

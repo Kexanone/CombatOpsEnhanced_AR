@@ -1,0 +1,97 @@
+SCR_AIWorld AIWorld : "{01DC74137CFDDB6A}Prefabs/AI/SCR_AIWorld_Arland.et" {
+ coords 98.785 1 142.27
+}
+PerceptionManager PerceptionManager : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
+ coords 98.458 1 145.191
+}
+TagManager TagManager : "{2FA9E172CAB1857A}Prefabs/MP/Managers/TagManager.et" {
+ coords 93.496 1.214 146.931
+}
+SCR_FactionManager FactionManager : "{589540B35EBA8CDC}Prefabs/MP/Managers/Factions/FactionManager_USxUSSR.et" {
+ coords 104.017 1 143.709
+ Factions {
+  SCR_Faction "{56B2B46E999BF3BF}" {
+   m_bIsPlayable 0
+  }
+  SCR_Faction "{56B2B46E9AF80999}" {
+   m_bIsPlayable 0
+  }
+ }
+}
+COE_GameMode GameMode : "{9EDD3A569D1FE096}Prefabs/MP/Modes/COE_GameMode.et" {
+ components {
+  SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
+   m_SpawnLogic SCR_AutoSpawnLogic "{5D36888CC966608A}" {
+    m_sForcedFaction "US"
+    m_sForcedLoadout "Rifleman"
+   }
+  }
+  SCR_TimeAndWeatherHandlerComponent "{5E6F1867E2884B93}" {
+   m_bRandomStartingDaytime 0
+   m_bRandomStartingWeather 0
+   m_bAllowHeaderSettings 0
+  }
+ }
+ coords 92.656 1 140.371
+}
+RadioManagerEntity RadioManager : "{B8E09FAB91C4ECCD}Prefabs/Radio/RadioManager.et" {
+ coords -860.907 -49.981 -310.18
+}
+ScriptedChatEntity ChatEntity : "{F69BC912AC8236F9}Prefabs/MP/ScriptedChatEntity.et" {
+ coords -975.306 -50.981 -416.662
+ Flags 0
+}
+COE_ObjectiveManager ObjectiveManager {
+ coords 85.345 2.01 -12.26
+ m_aObjectiveTypes {
+  COE_ObjectiveDestroyRadarType "{5E72D22FC0F434C6}" {
+  }
+ }
+}
+COE_VehicleSpawnManager VehicleSpawnManager : "{03A3F74C83B9255B}Prefabs/Managers/COE_VehicleSpawnManager.et" {
+ coords 91.746 1 141.073
+}
+HitRegistrationManager HitRegManager : "{0EDA3D48791120DD}Prefabs/MP/HitRegManager.et" {
+ coords 96.594 1 143.542
+}
+SCR_BaseTaskManager TaskManager : "{1AC69CD7907FB4F8}Prefabs/ScenarioFramework/Tasks/TaskManager.et" {
+ coords -483.718 2.01 -62.527
+}
+SCR_GarbageManager GarbageManager : "{9B883A7D8EBB282A}Prefabs/MP/Managers/GarbageManager.et" {
+ coords 91.357 0.976 141.078
+ CharacterLifetime 360
+ VehicleLifetime 300
+ ItemLifetime 360
+ m_bOnlyDestroyed 1
+}
+SCR_LoadoutManager LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutManager_Base.et" {
+ coords 96.703 1.079 146.705
+ m_aPlayerLoadouts {
+  SCR_FactionPlayerLoadout "{5AEC9DF92837B715}" {
+   m_sLoadoutName "Rifleman"
+   m_sLoadoutResource "{8D89B17BCFBFAE44}Prefabs/Characters/Campaign/Final/Campaign_US_Player.et"
+   m_sLoadoutImage "{2B0877799B9B6C66}UI/Textures/EditorPreviews/Characters/BLUFOR/US_Army/Character_US_Rifleman.edds"
+   m_sAffiliatedFaction "US"
+  }
+  SCR_PlayerArsenalLoadout "{5B0298F01E3A1A0D}" {
+   m_sLoadoutName "Arsenal "
+   m_sLoadoutResource "{BE7CA93E188A5B58}Prefabs/Characters/Campaign/Final/Campaign_US_Base.et"
+   m_sPreviewLoadout "{284E735C6C70DAD2}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_BaseLoadout.et"
+   m_sLoadoutImage "{2B0877799B9B6C66}UI/Textures/EditorPreviews/Characters/BLUFOR/US_Army/Character_US_Rifleman.edds"
+   m_sAffiliatedFaction "US"
+  }
+  SCR_FactionPlayerLoadout "{5E1A3B1BC24D1796}" {
+   m_sLoadoutName "Rifleman"
+   m_sLoadoutResource "{F063CEEB9295E9B6}Prefabs/Characters/Campaign/Final/Campaign_USSR_Player.et"
+   m_sLoadoutImage "{6A8FF7A3F9007CD0}UI/Textures/EditorPreviews/Characters/OPFOR/USSR_Army/Character_USSR_Rifleman.edds"
+   m_sAffiliatedFaction "USSR"
+  }
+  SCR_PlayerArsenalLoadout "{5E1A3B1BC3C524A3}" {
+   m_sLoadoutName "Arsenal"
+   m_sLoadoutResource "{5346CF7E39A65A6B}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Base.et"
+   m_sPreviewLoadout "{3ECA3A935BC069B9}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_BaseLoadout.et"
+   m_sLoadoutImage "{6A8FF7A3F9007CD0}UI/Textures/EditorPreviews/Characters/OPFOR/USSR_Army/Character_USSR_Rifleman.edds"
+   m_sAffiliatedFaction "USSR"
+  }
+ }
+}

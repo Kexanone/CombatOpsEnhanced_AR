@@ -1,0 +1,44 @@
+GenericEntity {
+ ID "5E6F187D1B11ED87"
+ coords 813.331 0 4157.08
+ {
+  GenericEntity ArsenalBox : "{54986385A6AF77B2}Prefabs/Systems/Arsenal/ArsenalBoxes/ArsenalBox_Base.et" {
+   ID "5E6F187D1B11ED8E"
+   components {
+    MeshObject "{56F2C6D1431AD85A}" {
+     Object "{5172A6E151032216}Assets/Props/Military/AmmoBox/EquipmentBoxStack/EquipmentBoxStack_01_V1.xob"
+    }
+    SCR_FactionAffiliationComponent "{5A50E7655452A21D}" {
+     "faction affiliation" "US"
+    }
+   }
+   coords 7.834 17.568 38.421
+  }
+  SCR_SpawnPoint SpawnPoint : "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et" {
+   ID "5E6F187D1B11ED88"
+   coords 5.035 17.615 38.375
+   angleY -90
+  }
+  $grp COE_VehicleSpawnSlot : "{737F3D65682DD64F}Prefabs/Spawner/COE_VehicleSpawnSlot.et" {
+   R3D_UH60_Navy2 {
+    ID "5E6F187D1B119E71"
+    coords -8.621 17.374 26.056
+    m_sVehiclePrefabToSpawn "{F028F51C207914CA}Prefabs/Vehicles/Helis/R3D_UH60/R3D_UH60_Navy.et"
+   }
+   R3D_UH60_Navy1 {
+    ID "5E6F187D1B11ED98"
+    coords -8.621 17.805 57.026
+    m_sVehiclePrefabToSpawn "{F028F51C207914CA}Prefabs/Vehicles/Helis/R3D_UH60/R3D_UH60_Navy.et"
+   }
+  }
+  StaticModelEntity Ship : "{98FE7FDB84B147BD}PrefabsEditable/Auto/Structures/Military/Vessels/VessleHMAS_Adelaide_01/E_VessleHMAS_Adelaide_01.et" {
+   ID "5E6F187D1B11ED95"
+   components {
+    SCR_EditableEntityComponent "{5E24B5E7518CC75B}" {
+     Enabled 0
+    }
+   }
+   coords 0 0 0
+  }
+ }
+}

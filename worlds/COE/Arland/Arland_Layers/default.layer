@@ -1,0 +1,103 @@
+GenericEntity {
+ components {
+  SCR_AISmartActionSentinelComponent "{5E1A7559412C7404}" {
+   AIBehaviorTree "{BC53D77D23308CD6}AI/BehaviorTrees/SmartActions/SA_ObservationPost.bt"
+   Tags {
+    "CustomPost"
+   }
+   ActionOffset 6.129 8.966 -4.145
+   m_vLookPosition 12.829 0 -7.468
+  }
+  SCR_AISmartActionSentinelComponent "{5E1A755B530721A9}" {
+   AIBehaviorTree "{BC53D77D23308CD6}AI/BehaviorTrees/SmartActions/SA_ObservationPost.bt"
+   Tags {
+    "CustomPost"
+   }
+   ActionOffset -5.058 9.468 -6.819
+   m_vLookPosition -5.373 -7.23 -17.94
+  }
+ }
+ coords 1365.162 38.023 2964.907
+ angleX -0.895
+ angleY 0.028
+ angleZ -1.79
+}
+KEX_CombatOps_SpawnSlot SpawnSlot1 {
+ coords 2532.14 101.685 1982.53
+ angleX 5.866
+ angleY 2.406
+ angleZ 21.927
+}
+StaticModelEntity {
+ coords 1371.483 0.01 2149.756
+}
+SCR_DefendWaypoint wp1 : "{2A81753527971941}Prefabs/AI/Waypoints/AIWaypoint_Defend_CP.et" {
+ coords 1347.76 37.868 2966.24
+ angleX -0.895
+ angleZ -0.895
+}
+SCR_AIGroup : "{30ED11AA4F0D41E5}Prefabs/Groups/OPFOR/Group_USSR_FireGroup.et" {
+ coords 1348.281 38.101 2959.231
+ m_aStaticWaypoints {
+  "wp1"
+ }
+}
+GenericEntity : "{4D69F9D77C372BE5}Prefabs/Compositions/Slotted/SlotFlatSmall/MachineGunNest_S_US_01_M60.et" {
+ coords 1375.12 38.431 2929.114
+ {
+  GenericEntity {
+   ID "568EC21CC32A7E35"
+   coords 0 0 2.018
+   angleY 90
+  }
+ }
+}
+GenericEntity SlotDestroy1 : "{7586595959BA2D99}Prefabs/ScenarioFramework/Components/SlotDestroy.et" {
+ coords 1427.087 39.01 2768.599
+}
+GenericEntity Slot1 : "{AA01691FDC4E9167}Prefabs/ScenarioFramework/Components/Slot.et" {
+ components {
+  SCR_AISmartActionSentinelComponent "{5C7485FC05C853B4}" {
+   AIBehaviorTree "{BC53D77D23308CD6}AI/BehaviorTrees/SmartActions/SA_ObservationPost.bt"
+   Tags {
+    "CustomPost"
+   }
+  }
+ }
+ coords 1366.486 38 2952.508
+ angleY -64.943
+}
+Vehicle BTR1 : "{C012BB3488BEA0C2}Prefabs/Vehicles/Wheeled/BTR70/BTR70.et" {
+ coords 1368.819 38 2947.038
+}
+GenericEntity Area1 : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
+ components {
+  SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+   m_iRandomPercent 100
+   m_bShowDebugShapesDuringRuntime 1
+   m_fAreaRadius 75
+  }
+ }
+ coords 1396.133 39.01 2769.744
+ {
+  GenericEntity : "{5EDF39860639027D}Prefabs/ScenarioFramework/Components/LayerTaskDestroy.et" {
+   components {
+    SCR_ScenarioFrameworkLayerTaskDestroy "{5A6513F41BA457C8}" {
+     m_sTaskTitle "Destroy Target"
+     m_sTaskDescription "Destroy Target %1"
+    }
+   }
+   coords -2.251 0.242 -9.513
+   {
+    GenericEntity : "{7586595959BA2D99}Prefabs/ScenarioFramework/Components/SlotDestroy.et" {
+     components {
+      SCR_ScenarioFrameworkSlotDestroy "{5A22E1D6276BD209}" {
+       m_sObjectToSpawn "{C012BB3488BEA0C2}Prefabs/Vehicles/Wheeled/BTR70/BTR70.et"
+      }
+     }
+     coords -0.274 -0.013 -3.826
+    }
+   }
+  }
+ }
+}
