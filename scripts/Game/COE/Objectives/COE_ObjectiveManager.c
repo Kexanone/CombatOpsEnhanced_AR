@@ -7,7 +7,7 @@ class COE_ObjectiveManager : GenericEntity
 	[Attribute("3", UIWidgets.EditBox, desc: "Number of objectives required to complete the mission")]
 	protected int m_iNumberOfObjectives;
 	
-	[Attribute(defvalue: "10", desc: "Timeout until next objective is spawned")]
+	[Attribute(defvalue: "15", desc: "Timeout until next objective is spawned")]
 	protected float m_fNextObjectiveTimeout;
 	
 	[Attribute(desc: "Types of objectives to select from")]

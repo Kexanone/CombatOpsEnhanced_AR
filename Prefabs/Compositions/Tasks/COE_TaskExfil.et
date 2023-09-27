@@ -1,15 +1,5 @@
 GenericEntity : "{246BEC080F393398}Prefabs/ScenarioFramework/Components/LayerTaskMove.et" {
  ID "5A2283E9CC4DE119"
- components {
-  SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
-   m_aTriggerActionsOnFinish {
-    SCR_ScenarioFrameworkActionEndMission "{5A6D34926E5735E2}" {
-     m_bOverrideGameOverType 1
-     m_eOverriddenGameOverType COMBATPATROL_VICTORY
-    }
-   }
-  }
- }
  coords 116.662 0.71 148.796
  {
   GenericEntity SlotExtraction1 : "{9C47DECB98FDA4DA}Prefabs/ScenarioFramework/Components/SlotExtraction.et" {
@@ -32,7 +22,16 @@ GenericEntity : "{246BEC080F393398}Prefabs/ScenarioFramework/Components/LayerTas
      m_sTaskTitle "RTB"
      m_sTaskDescription "Return to the carrier"
      m_aActionsOnFinished {
+      SCR_ScenarioFrameworkActionEndMission "{5E757D006BE320EA}" {
+       m_bOverrideGameOverType 1
+       m_eOverriddenGameOverType COMBATPATROL_VICTORY
+      }
       SCR_ScenarioFrameworkActionPlaySound "{5A96DC4CC736B5F0}" {
+       m_sSound "SOUND_CP_TEC"
+      }
+     }
+     m_aActionsOnCreated {
+      SCR_ScenarioFrameworkActionPlaySound "{5E757D00DE1DC861}" {
        m_sSound "SOUND_CP_TEC"
       }
      }

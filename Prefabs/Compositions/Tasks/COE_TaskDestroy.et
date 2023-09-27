@@ -4,23 +4,32 @@ GenericEntity : "{5EDF39860639027D}Prefabs/ScenarioFramework/Components/LayerTas
   SCR_ScenarioFrameworkLayerTaskDestroy "{5A6513F41BA457C8}" {
    m_sTaskTitle "Destroy Target"
    m_sTaskDescription "Destroy Target %1"
-   m_aTriggerActionsOnFinish {
-    SCR_ScenarioFrameworkActionExecuteFunction "{5E7569E9CF146516}" {
-     m_ObjectToCallTheMethodFrom SCR_ScenarioFrameworkGetEntityByName "{5E7569E9CDAB9834}" {
-      m_sEntityName "ObjectiveManager"
-     }
-     m_sMethodToCall "ScheduleNextObjective"
-    }
-    SCR_ScenarioFrameworkActionPlaySound "{5E757D0439DABA80}" {
-     m_sSound "SOUND_CP_TD_VC"
-    }
-   }
   }
  }
  coords 95.884 1 169.191
  {
   GenericEntity : "{7586595959BA2D99}Prefabs/ScenarioFramework/Components/SlotDestroy.et" {
    ID "5E7569E9F32FE3DD"
+   components {
+    SCR_ScenarioFrameworkSlotDestroy "{5A22E1D6276BD209}" {
+     m_aActionsOnFinished {
+      SCR_ScenarioFrameworkActionExecuteFunction "{5E757D0012FBA3A1}" {
+       m_ObjectToCallTheMethodFrom SCR_ScenarioFrameworkGetEntityByName "{5E757D001E9DC150}" {
+        m_sEntityName "ObjectiveManager"
+       }
+       m_sMethodToCall "ScheduleNextObjective"
+      }
+      SCR_ScenarioFrameworkActionPlaySound "{5E757D0020535B81}" {
+       m_sSound "SOUND_CP_TD_VC"
+      }
+     }
+     m_aActionsOnCreated {
+      SCR_ScenarioFrameworkActionPlaySound "{5E757D0C8574833C}" {
+       m_sSound "SOUND_CP_IPL_1"
+      }
+     }
+    }
+   }
    coords 0 0 0
   }
  }
