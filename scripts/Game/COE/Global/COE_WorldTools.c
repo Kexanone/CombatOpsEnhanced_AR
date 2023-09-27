@@ -58,6 +58,7 @@ class COE_WorldTools
 		
 		transform[3] = pos;
 		SCR_TerrainHelper.SnapAndOrientToTerrain(transform);
+		Math.Randomize(-1);
 		SetTransformRotation(transform, Math.RandomFloat(0, 360));		
 	}
 	
@@ -65,6 +66,8 @@ class COE_WorldTools
 	// Samples positions in the world
 	static void SampleTransformInWorld(out vector transform[4], array<COE_AreaBase> excludedAreas, COE_SamplePosParams params = null)
 	{
+		Math.Randomize(-1);
+		
 		if (!params)
 			params = COE_SamplePosParams();
 		

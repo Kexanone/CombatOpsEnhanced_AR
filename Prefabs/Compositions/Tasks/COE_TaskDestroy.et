@@ -1,0 +1,27 @@
+GenericEntity : "{5EDF39860639027D}Prefabs/ScenarioFramework/Components/LayerTaskDestroy.et" {
+ ID "5A6513F5EA1C13D1"
+ components {
+  SCR_ScenarioFrameworkLayerTaskDestroy "{5A6513F41BA457C8}" {
+   m_sTaskTitle "Destroy Target"
+   m_sTaskDescription "Destroy Target %1"
+   m_aTriggerActionsOnFinish {
+    SCR_ScenarioFrameworkActionExecuteFunction "{5E7569E9CF146516}" {
+     m_ObjectToCallTheMethodFrom SCR_ScenarioFrameworkGetEntityByName "{5E7569E9CDAB9834}" {
+      m_sEntityName "ObjectiveManager"
+     }
+     m_sMethodToCall "ScheduleNextObjective"
+    }
+    SCR_ScenarioFrameworkActionPlaySound "{5E757D0439DABA80}" {
+     m_sSound "SOUND_CP_TD_VC"
+    }
+   }
+  }
+ }
+ coords 95.884 1 169.191
+ {
+  GenericEntity : "{7586595959BA2D99}Prefabs/ScenarioFramework/Components/SlotDestroy.et" {
+   ID "5E7569E9F32FE3DD"
+   coords 0 0 0
+  }
+ }
+}

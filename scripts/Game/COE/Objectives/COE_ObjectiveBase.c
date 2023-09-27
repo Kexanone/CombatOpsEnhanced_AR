@@ -11,12 +11,11 @@ class COE_ObjectiveBaseType : ScriptAndConfig
 //------------------------------------------------------------------------------------------------
 class COE_ObjectiveBase : Managed
 {
-	protected SCR_BaseTask m_pTask;
-	protected ref ScriptInvoker m_OnObjectiveCompleted = new ScriptInvoker;
+	protected IEntity m_pTaskLayer;
 	
 	//------------------------------------------------------------------------------------------------
-	ScriptInvoker GetOnObjectiveCompleted()
+	void SetTaskLayer(IEntity layer)
 	{
-		return m_OnObjectiveCompleted;
+		m_pTaskLayer = layer;
 	}
 }

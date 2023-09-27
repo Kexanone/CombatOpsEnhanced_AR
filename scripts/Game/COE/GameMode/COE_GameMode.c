@@ -10,9 +10,6 @@ class COE_GameMode : SCR_BaseGameMode
 	protected string m_sPlayerFactionKey;
 	protected string m_sEnemyFactionKey;
 	protected bool m_bFactionsAssigned = false;
-
-	[Attribute("3", UIWidgets.EditBox, desc: "Number of objectives required to complete the mission")]
-	protected int m_iNumberOfObjectives;
 	
 	//------------------------------------------------------------------------------------------------
 	void COE_GameMode(IEntitySource src, IEntity parent)
@@ -20,14 +17,11 @@ class COE_GameMode : SCR_BaseGameMode
 		if (!GetGame().InPlayMode() || !Replication.IsServer())
 			return;
 		
-		Math.Randomize(-1);
-		
 		// Read mission header
 		COE_MissionHeader header = COE_MissionHeader.Cast(GetGame().GetMissionHeader());
-		
 		if (header)
 		{
-			m_iNumberOfObjectives = header.m_iCOE_NumberOfObjectives;
+			m_sPlayerFactionKey = header.m_sCOE_PlayerFactionKey;
 		};
 	};
 	
@@ -80,10 +74,5 @@ class COE_GameMode : SCR_BaseGameMode
 		playerFaction.SetIsPlayable(true);
 		enemyFaction.SetIsPlayable(false);
 		m_bFactionsAssigned = true;
-	};
-	
-	int GetNumberOfObjectives()
-	{
-		return m_iNumberOfObjectives;
 	}
 };

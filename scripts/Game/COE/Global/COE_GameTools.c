@@ -38,4 +38,27 @@ class COE_GameTools
 		transform[3] = pos;
 		return SCR_AIWaypoint.Cast(SpawnPrefab(name, transform));
 	}
+	
+	//------------------------------------------------------------------------------------------------
+	static IEntity SpawnSFTaskPrefab(ResourceName taskPrefabName, vector pos, IEntity targetEntity = null)
+	{
+		vector transform[4];
+		Math3D.MatrixIdentity4(transform);
+		transform[3] = pos;
+		IEntity layer = SpawnPrefab(taskPrefabName, transform);
+		IEntity slot = layer.GetChildren();
+		
+		if (targetEntity && slot)
+		{
+			SCR_ScenarioFrameworkLayerBase slotSFComponent = SCR_ScenarioFrameworkLayerBase.Cast(slot.FindComponent(SCR_ScenarioFrameworkLayerBase));
+			slotSFComponent.SetEntity(targetEntity);
+		};
+			
+		SCR_ScenarioFrameworkLayerBase layerSFComponent = SCR_ScenarioFrameworkLayerBase.Cast(layer.FindComponent(SCR_ScenarioFrameworkLayerBase));
+		if (!layerSFComponent)
+			return null;
+		
+		layerSFComponent.Init();
+		return layer;
+	}
 }

@@ -22,15 +22,6 @@ GenericEntity {
  angleY 0.028
  angleZ -1.79
 }
-KEX_CombatOps_SpawnSlot SpawnSlot1 {
- coords 2532.14 101.685 1982.53
- angleX 5.866
- angleY 2.406
- angleZ 21.927
-}
-StaticModelEntity {
- coords 1371.483 0.01 2149.756
-}
 SCR_DefendWaypoint wp1 : "{2A81753527971941}Prefabs/AI/Waypoints/AIWaypoint_Defend_CP.et" {
  coords 1347.76 37.868 2966.24
  angleX -0.895
@@ -52,9 +43,6 @@ GenericEntity : "{4D69F9D77C372BE5}Prefabs/Compositions/Slotted/SlotFlatSmall/Ma
   }
  }
 }
-GenericEntity SlotDestroy1 : "{7586595959BA2D99}Prefabs/ScenarioFramework/Components/SlotDestroy.et" {
- coords 1427.087 39.01 2768.599
-}
 GenericEntity Slot1 : "{AA01691FDC4E9167}Prefabs/ScenarioFramework/Components/Slot.et" {
  components {
   SCR_AISmartActionSentinelComponent "{5C7485FC05C853B4}" {
@@ -69,35 +57,4 @@ GenericEntity Slot1 : "{AA01691FDC4E9167}Prefabs/ScenarioFramework/Components/Sl
 }
 Vehicle BTR1 : "{C012BB3488BEA0C2}Prefabs/Vehicles/Wheeled/BTR70/BTR70.et" {
  coords 1368.819 38 2947.038
-}
-GenericEntity Area1 : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
- components {
-  SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
-   m_iRandomPercent 100
-   m_bShowDebugShapesDuringRuntime 1
-   m_fAreaRadius 75
-  }
- }
- coords 1396.133 39.01 2769.744
- {
-  GenericEntity : "{5EDF39860639027D}Prefabs/ScenarioFramework/Components/LayerTaskDestroy.et" {
-   components {
-    SCR_ScenarioFrameworkLayerTaskDestroy "{5A6513F41BA457C8}" {
-     m_sTaskTitle "Destroy Target"
-     m_sTaskDescription "Destroy Target %1"
-    }
-   }
-   coords -2.251 0.242 -9.513
-   {
-    GenericEntity : "{7586595959BA2D99}Prefabs/ScenarioFramework/Components/SlotDestroy.et" {
-     components {
-      SCR_ScenarioFrameworkSlotDestroy "{5A22E1D6276BD209}" {
-       m_sObjectToSpawn "{C012BB3488BEA0C2}Prefabs/Vehicles/Wheeled/BTR70/BTR70.et"
-      }
-     }
-     coords -0.274 -0.013 -3.826
-    }
-   }
-  }
- }
 }

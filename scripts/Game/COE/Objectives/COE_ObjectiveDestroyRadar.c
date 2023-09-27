@@ -20,16 +20,18 @@ class COE_ObjectiveDestroyRadar : COE_ObjectiveBase
 	{
 		array<COE_AreaBase> excludedAreas = {};
 		COE_AreaPickerBase picker = COE_AreaPickerBase.Cast(GetGame().GetWorld().FindEntityByName("AirfieldBorder"));
-		excludedAreas.Insert(picker.GetArea());
+		if (picker)
+			excludedAreas.Insert(picker.GetArea());
 		
 		COE_SamplePosParams params = COE_SamplePosParams();
 		params.EmptyRadius = EMPTY_POSITION_CYLINDER_RADIUS;
 		params.MaxSlopeAngle = 5;
 		vector transform[4];
 		COE_WorldTools.SampleTransformInWorld(transform, excludedAreas, params);
-		m_pTarget = COE_GameTools.SpawnStructurePrefab("{DC7B76A39454380A}Prefabs/Compositions/Installation/COE_RPL5_Radar.et", transform);
-		vector targetPos = m_pTarget.GetOrigin();
-		IEntity antenna = m_pTarget.GetChildren();
+		IEntity target = COE_GameTools.SpawnStructurePrefab("{DC7B76A39454380A}Prefabs/Compositions/Installation/COE_RPL5_Radar.et", transform);
+		SetTaskLayer(COE_GameTools.SpawnSFTaskPrefab("{982CCB885E1BAB04}Prefabs/Compositions/Tasks/COE_TaskDestroy.et", transform[3], target));
+		
+		vector targetPos = m_pTaskLayer.GetOrigin();
 				
 		COE_WorldTools.RemoveTreesInRadius(targetPos, EMPTY_POSITION_CYLINDER_RADIUS);
 				
@@ -39,6 +41,7 @@ class COE_ObjectiveDestroyRadar : COE_ObjectiveBase
 		
 		array<SCR_SiteSlotEntity> slots = COE_WorldTools.QuerySiteSlotEntitiesBySphere(targetPos, 50);
 		
+		Math.Randomize(-1);
 		for (int i = 0; i < Math.RandomIntInclusive(2, 3); i++)
 		{			
 			if (i < slots.Count())
@@ -56,37 +59,5 @@ class COE_ObjectiveDestroyRadar : COE_ObjectiveBase
 		
 		SCR_AIGroup group = COE_GameTools.SpawnGroupPrefab("{657590C1EC9E27D3}Prefabs/Groups/OPFOR/Group_USSR_LightFireTeam.et", targetPos);
 		group.AddWaypoint(COE_GameTools.SpawnWaypointPrefab("{2A81753527971941}Prefabs/AI/Waypoints/AIWaypoint_Defend_CP.et", targetPos));
-		
-		CreateTask(antenna);
-	}
-	
-	//------------------------------------------------------------------------------------------------
-	void CreateTask(IEntity target)
-	{
-		m_pTask = GetTaskManager().SpawnTask("{3AD0A1257870E6C7}Prefabs/Tasks/CustomTask.et");
-		m_pTask.SetOrigin(target.GetOrigin());
-		m_pTask.SetTargetFaction(GetGame().GetFactionManager().GetFactionByKey("US"));
-		m_pTask.SetTitle("Destroy Radar");
-		m_pTask.SetDescription("Destroy the enemy radar installation");
-		m_pTask.COE_SetIconName("Icon_Task_Guard");
-		m_pTask.Create();
-		
-		// Complete task when target is destroyed
-		m_pTargetDestructionComponent = SCR_DestructionMultiPhaseComponent.Cast(target.FindComponent(SCR_DestructionMultiPhaseComponent));
-		if (m_pTargetDestructionComponent)
-			m_pTargetDestructionComponent.GetOnDamageInvoker().Insert(OnTargetDamage);
-	}
-	
-	//------------------------------------------------------------------------------------------------
-	// Marks task as completed when target is destroyed
-	void OnTargetDamage()
-	{
-		if (!m_pTargetDestructionComponent.GetDestroyed() || !m_pTarget)
-			return;
-		
-		m_pTargetDestructionComponent.GetOnDamageInvoker().Remove(OnTargetDamage);
-		
-		m_pTask.Finish();
-		m_OnObjectiveCompleted.Invoke();
 	}
 }

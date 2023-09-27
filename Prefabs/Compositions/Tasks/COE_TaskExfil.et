@@ -1,50 +1,44 @@
-GenericEntity : "{C72F956E4AC6A6E7}Prefabs/ScenarioFramework/Components/Area.et" {
- ID "59E8CDC4819B4FE1"
- coords 909.74 33.952 2517.228
+GenericEntity : "{246BEC080F393398}Prefabs/ScenarioFramework/Components/LayerTaskMove.et" {
+ ID "5A2283E9CC4DE119"
+ components {
+  SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
+   m_aTriggerActionsOnFinish {
+    SCR_ScenarioFrameworkActionEndMission "{5A6D34926E5735E2}" {
+     m_bOverrideGameOverType 1
+     m_eOverriddenGameOverType COMBATPATROL_VICTORY
+    }
+   }
+  }
+ }
+ coords 116.662 0.71 148.796
  {
-  GenericEntity TaskExtraction_A : "{246BEC080F393398}Prefabs/ScenarioFramework/Components/LayerTaskMove.et" {
-   ID "5E7118A3163F5F78"
+  GenericEntity SlotExtraction1 : "{9C47DECB98FDA4DA}Prefabs/ScenarioFramework/Components/SlotExtraction.et" {
+   ID "5E750EB95E94B11D"
    components {
-    SCR_ScenarioFrameworkLayerTask "{5A2283E9F84958A1}" {
-     m_aTriggerActionsOnFinish {
-      SCR_ScenarioFrameworkActionEndMission "{5A6D34926E5735E2}" {
-       m_bOverrideGameOverType 1
-       m_eOverriddenGameOverType COMBATPATROL_VICTORY
+    SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
+     m_sFactionKey "US"
+     m_aPlugins {
+      SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
+       m_fAreaRadius 100
+       m_fMinimumPlayersNeededPercentage 0.75
+       m_fActivationCountdownTimer 20
+       m_bNotificationEnabled 1
+       m_sPlayerActivationNotificationTitle "%1 out of %2 players needed reached exfil point"
+       m_bEnableAudio 1
+       m_sCountdownAudio "SOUND_RESPAWNMENU"
+      }
+     }
+     m_sObjectToSpawn "{47D49EA6A216CFD5}Prefabs/ScenarioFramework/Triggers/TriggerCharacterSlow.et"
+     m_sTaskTitle "RTB"
+     m_sTaskDescription "Return to the carrier"
+     m_aActionsOnFinished {
+      SCR_ScenarioFrameworkActionPlaySound "{5A96DC4CC736B5F0}" {
+       m_sSound "SOUND_CP_TEC"
       }
      }
     }
    }
-   coords 6.257 -0.29 0.518
-   {
-    GenericEntity SlotExtraction_1 : "{9C47DECB98FDA4DA}Prefabs/ScenarioFramework/Components/SlotExtraction.et" {
-     ID "5E7118A3163F5C85"
-     components {
-      SCR_ScenarioFrameworkSlotExtraction "{5A1EEEC837EEA27B}" {
-       m_sFactionKey "US"
-       m_aPlugins {
-        SCR_ScenarioFrameworkPluginTrigger "{5A6C6D099D49E4BA}" {
-         m_fAreaRadius 100
-         m_fMinimumPlayersNeededPercentage 0.75
-         m_fActivationCountdownTimer 20
-         m_bNotificationEnabled 1
-         m_sPlayerActivationNotificationTitle "%1 out of %2 players needed reached exfil point"
-         m_bEnableAudio 1
-         m_sCountdownAudio "SOUND_RESPAWNMENU"
-        }
-       }
-       m_sObjectToSpawn "{47D49EA6A216CFD5}Prefabs/ScenarioFramework/Triggers/TriggerCharacterSlow.et"
-       m_sTaskTitle "RTB"
-       m_sTaskDescription "Return to the carrier"
-       m_aActionsOnFinished {
-        SCR_ScenarioFrameworkActionPlaySound "{5A96DC4CC736B5F0}" {
-         m_sSound "SOUND_CP_TEC"
-        }
-       }
-      }
-     }
-     coords 3.388 0.964 -0.58
-    }
-   }
+   coords 0 0 0
   }
  }
 }

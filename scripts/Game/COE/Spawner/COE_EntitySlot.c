@@ -31,6 +31,8 @@ class COE_EntitySpawner : GenericEntity
 	//------------------------------------------------------------------------------------------------
 	void Spawn()
 	{
+		Math.Randomize(-1);
+		
 		COE_PolygonAreaPicker innerBorderPicker = COE_PolygonAreaPicker.Cast(GetGame().GetWorld().FindEntityByName(m_sInnerBorderName));
 		if (!innerBorderPicker)
 			return;

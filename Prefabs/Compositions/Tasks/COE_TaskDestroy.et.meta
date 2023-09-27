@@ -1,5 +1,5 @@
 MetaFileClass {
- Name "{49B2DF0651711783}Prefabs/Compositions/Tasks/Common/COE_TaskExfil2.et"
+ Name "{982CCB885E1BAB04}Prefabs/Compositions/Tasks/COE_TaskDestroy.et"
  Configurations {
   EntityTemplateResourceClass PC {
   }

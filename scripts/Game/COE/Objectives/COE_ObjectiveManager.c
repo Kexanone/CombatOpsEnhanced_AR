@@ -4,6 +4,9 @@ class COE_ObjectiveManagerClass : GenericEntityClass
 
 class COE_ObjectiveManager : GenericEntity
 {
+	[Attribute("3", UIWidgets.EditBox, desc: "Number of objectives required to complete the mission")]
+	protected int m_iNumberOfObjectives;
+	
 	[Attribute(defvalue: "10", desc: "Timeout until next objective is spawned")]
 	protected float m_fNextObjectiveTimeout;
 	
@@ -23,11 +26,22 @@ class COE_ObjectiveManager : GenericEntity
 	{
 		if (!GetGame().InPlayMode() || !Replication.IsServer())
 			return;
-				
+		
+		SCR_ArrayHelperT<ref COE_ObjectiveBaseType>.Shuffle(m_aObjectiveTypes);
+		
+		/*
+		COE_MissionHeader header = COE_MissionHeader.Cast(GetGame().GetMissionHeader());
+		if (header)
+		{
+			PrintFormat("||GOG||%1||%2||", m_iNumberOfObjectives, header.m_iCOE_NumberOfObjectives);
+			m_iNumberOfObjectives = header.m_iCOE_NumberOfObjectives;
+			PrintFormat("||KEK||%1||%2||", m_iNumberOfObjectives, header.m_iCOE_NumberOfObjectives);
+		};
+		*/
+		
 		m_pInstance = this;
 		Activate();
 		SetEventMask(EntityEvent.INIT);
-		SCR_ArrayHelperT<ref COE_ObjectiveBaseType>.Shuffle(m_aObjectiveTypes);
 	};
 	
 	override protected void EOnInit(IEntity owner)
@@ -37,30 +51,34 @@ class COE_ObjectiveManager : GenericEntity
 		if (!GetGame().InPlayMode() || !Replication.IsServer())
 			return;
 		
-		CreateNextObjective()
+		ScheduleNextObjective();
 	}
 	
 	void ScheduleNextObjective()
 	{
+		if (!Replication.IsServer())
+			return;
+		
 		GetGame().GetCallqueue().CallLater(CreateNextObjective, m_fNextObjectiveTimeout * 1000);
 	}
 	
 	void CreateNextObjective()
 	{
+		if (!Replication.IsServer())
+			return;
 		
 		COE_GameMode gameMode = COE_GameMode.Cast(GetGame().GetGameMode());
 		if (!gameMode)
 			return;
 		
-		if (m_pObjectiveCounter < gameMode.GetNumberOfObjectives())
+		if (m_pObjectiveCounter < m_iNumberOfObjectives)
 		{
 			COE_ObjectiveBaseType objectiveType = m_aObjectiveTypes[m_pObjectiveCounter % m_aObjectiveTypes.Count()];
 			m_pCurrentAO = objectiveType.CreateInstance();
-			m_pCurrentAO.GetOnObjectiveCompleted().Insert(ScheduleNextObjective)
 		}	
 		else
 		{
-			gameMode.EndGameMode(SCR_GameModeEndData.CreateSimple(EGameOverTypes.COMBATPATROL_VICTORY));
+			m_pCurrentAO = COE_ObjectiveExfil();
 		};	
 		
 		m_pObjectiveCounter++;

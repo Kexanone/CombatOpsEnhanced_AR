@@ -1,5 +1,15 @@
 StaticModelEntity : "{2BC7C6DE43AC49E2}Prefabs/Structures/Military/Radar/ApproachRadar_RPL5_01/ApproachRadar_RPL5_01_short.et" {
  ID "56ACD1C4DB91DB10"
+ components {
+  SCR_EditableEntityComponent "{5E750EB2C92285BF}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5E750EB20581E8AB}" {
+    Name "RPL-5 Radar"
+   }
+   m_bAutoRegister ALWAYS
+  }
+  RplComponent "{5E74ED8A5CD70F5A}" {
+  }
+ }
  coords 1392.12 0 2148.93
  angleY -36.522
  {
@@ -14,6 +24,9 @@ StaticModelEntity : "{2BC7C6DE43AC49E2}Prefabs/Structures/Military/Radar/Approac
     GenericEntity : "{B526FBF1999025E5}Prefabs/Structures/Military/Radar/ApproachRadar_RPL5_01/ApproachRadar_RPL5_01_cables_short.et" {
      ID "5E6F0D978F666451"
      components {
+      SignalsManagerComponent "{5A5B46889896D4F3}" {
+       Enabled 0
+      }
       RplComponent "{5624A88DC2D9928D}" {
        Enabled 1
       }
@@ -25,6 +38,9 @@ StaticModelEntity : "{2BC7C6DE43AC49E2}Prefabs/Structures/Military/Radar/Approac
   GenericEntity : "{F15B99F6B06E7200}Prefabs/Structures/Military/Radar/ApproachRadar_RPL5_01/ApproachRadar_RPL5_01_generator.et" {
    ID "5E6F0D978F666450"
    components {
+    SignalsManagerComponent "{5A50CBEAD73E05FB}" {
+     Enabled 0
+    }
     RplComponent "{5624A88DC2D9928D}" {
      Enabled 1
     }

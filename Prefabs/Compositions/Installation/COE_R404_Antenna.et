@@ -4,6 +4,12 @@ StaticModelEntity : "{B9AEDBE988F20A1A}Prefabs/Structures/Infrastructure/Towers/
   SCR_DestructionMultiPhaseComponent "{5A5ED31B16298711}" {
    Enabled 1
   }
+  SCR_EditableEntityComponent "{5E750EB265ED97F9}" {
+   m_UIInfo SCR_EditableEntityUIInfo "{5E750EB26E7B7D9B}" {
+    Name "R-404 Antenna"
+   }
+   m_bAutoRegister ALWAYS
+  }
  }
  coords 876.486 39 2630.279
  angleY -51
