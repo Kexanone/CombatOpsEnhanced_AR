@@ -47,7 +47,7 @@ ScriptedChatEntity ChatEntity : "{F69BC912AC8236F9}Prefabs/MP/ScriptedChatEntity
 COE_ObjectiveManager ObjectiveManager {
  coords 85.345 2.01 -12.26
  m_aObjectiveTypes {
-  COE_ObjectiveDestroyRadarType "{5E72D22FC0F434C6}" {
+  COE_ObjectiveDestroyType "{5E761910250A8E86}" {
   }
  }
 }

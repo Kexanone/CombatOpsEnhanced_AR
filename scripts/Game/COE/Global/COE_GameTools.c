@@ -22,21 +22,21 @@ class COE_GameTools
 	}
 	
 	//------------------------------------------------------------------------------------------------
-	static SCR_AIGroup SpawnGroupPrefab(ResourceName name, vector pos, float rotation = 0)
+	static AIGroup SpawnGroupPrefab(ResourceName name, vector pos, float rotation = 0)
 	{
 		vector transform[4];
 		Math3D.AnglesToMatrix(Vector(rotation, 0, 0), transform);
 		transform[3] = pos;
-		return SCR_AIGroup.Cast(SpawnPrefab(name, transform));
+		return AIGroup.Cast(SpawnPrefab(name, transform));
 	}
 	
 	//------------------------------------------------------------------------------------------------
-	static SCR_AIWaypoint SpawnWaypointPrefab(ResourceName name, vector pos)
+	static AIWaypoint SpawnWaypointPrefab(ResourceName name, vector pos)
 	{
 		vector transform[4];
 		Math3D.MatrixIdentity4(transform);
 		transform[3] = pos;
-		return SCR_AIWaypoint.Cast(SpawnPrefab(name, transform));
+		return AIWaypoint.Cast(SpawnPrefab(name, transform));
 	}
 	
 	//------------------------------------------------------------------------------------------------

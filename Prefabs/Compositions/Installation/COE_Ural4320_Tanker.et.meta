@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{D074913C6D18C69E}Prefabs/Compositions/Installation/COE_Ural4320_Tanker.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}
