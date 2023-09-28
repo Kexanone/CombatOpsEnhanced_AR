@@ -32,7 +32,7 @@ GenericEntity : "{246BEC080F393398}Prefabs/ScenarioFramework/Components/LayerTas
      }
      m_aActionsOnCreated {
       SCR_ScenarioFrameworkActionPlaySound "{5E757D00DE1DC861}" {
-       m_sSound "SOUND_CP_TEC"
+       m_sSound "SOUND_CP_TETN"
       }
      }
     }

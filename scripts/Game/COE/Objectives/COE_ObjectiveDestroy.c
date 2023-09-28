@@ -22,6 +22,16 @@ class COE_ObjectiveDestroy : COE_ObjectiveBase
 	//------------------------------------------------------------------------------------------------
 	void COE_ObjectiveDestroy()
 	{
+		COE_EntitySpawner baseSpawner = COE_EntitySpawner.Cast(GetGame().GetWorld().FindEntityByName("CarrierSpawner"));
+		if (!baseSpawner)
+			return;
+		
+		array<IEntity> baseEntities = baseSpawner.GetSpawnedEntities();
+		if (baseEntities.IsEmpty() || !baseEntities[0])
+			return;
+		
+		COE_CircleArea sampleArea = COE_CircleArea(baseEntities[0].GetOrigin(), 7500);
+		
 		array<COE_AreaBase> excludedAreas = {};
 		COE_AreaPickerBase picker = COE_AreaPickerBase.Cast(GetGame().GetWorld().FindEntityByName("AirfieldBorder"));
 		if (picker)
@@ -31,12 +41,13 @@ class COE_ObjectiveDestroy : COE_ObjectiveBase
 		params.EmptyRadius = EMPTY_POSITION_CYLINDER_RADIUS;
 		params.MaxSlopeAngle = 5;
 		vector transform[4];
-		COE_WorldTools.SampleTransformInWorld(transform, excludedAreas, params);
+		COE_WorldTools.SampleTransformInArea(transform, sampleArea, excludedAreas, params);
 		
-		
-		
-		if (m_iCounter == 0)
+		if (m_iCounter == 0 || m_iCounter >= targetPrefabNames.Count())
+		{
+			m_iCounter = 0;
 			SCR_ArrayHelperT<ResourceName>.Shuffle(targetPrefabNames);
+		};	
 			
 		IEntity target = COE_GameTools.SpawnStructurePrefab(targetPrefabNames[m_iCounter], transform);
 		SetTaskLayer(COE_GameTools.SpawnSFTaskPrefab("{982CCB885E1BAB04}Prefabs/Compositions/Tasks/COE_TaskDestroy.et", transform[3], target));
@@ -46,7 +57,7 @@ class COE_ObjectiveDestroy : COE_ObjectiveBase
 				
 		COE_WorldTools.RemoveTreesInRadius(targetPos, EMPTY_POSITION_CYLINDER_RADIUS);
 				
-		COE_CircleArea sampleArea = COE_CircleArea(targetPos, 50);
+		sampleArea = COE_CircleArea(targetPos, 50);
 		params.EmptyRadius = 5;
 		params.MaxSlopeAngle = 10;
 		

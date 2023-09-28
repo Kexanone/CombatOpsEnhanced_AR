@@ -21,7 +21,7 @@ COE_EntitySpawner CarrierSpawner : "{66C9366A037F7CB7}Prefabs/Spawner/COE_Entity
  m_sOuterBorderName "CarrierSpawnOuterBorder"
  m_aPrefabParamsList {
   COE_EntitySpawner_PrefabParams "{5E6F18678B7C00B1}" {
-   m_sPrefabName "{ADED7C5C14FC51D0}Prefabs/Compositions/Base/COE_NavalBaseUS_workaround.et"
+   m_sPrefabName "{054F83ED85A4C8E4}Prefabs/Compositions/Base/COE_NavalBaseUS.et"
   }
  }
  {

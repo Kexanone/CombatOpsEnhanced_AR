@@ -43,13 +43,6 @@ ScriptedChatEntity ChatEntity : "{F69BC912AC8236F9}Prefabs/MP/ScriptedChatEntity
  coords 368.037 -13.981 2372.968
  Flags 0
 }
-COE_ObjectiveManager ObjectiveManager {
- coords 1428.688 39.01 2777.37
- m_aObjectiveTypes {
-  COE_ObjectiveDestroyType "{5E761916E6CEBCF8}" {
-  }
- }
-}
 COE_VehicleSpawnManager VehicleSpawnManager : "{03A3F74C83B9255B}Prefabs/Managers/COE_VehicleSpawnManager.et" {
  coords 1435.089 38 2930.703
 }
@@ -58,6 +51,9 @@ HitRegistrationManager HitRegManager : "{0EDA3D48791120DD}Prefabs/MP/HitRegManag
 }
 SCR_BaseTaskManager TaskManager : "{1AC69CD7907FB4F8}Prefabs/ScenarioFramework/Tasks/TaskManager.et" {
  coords 859.625 39.01 2727.103
+}
+COE_ObjectiveManager ObjectiveManager : "{973B5090288C8ADC}Prefabs/Managers/COE_ObjectiveManager.et" {
+ coords 1428.688 39.01 2777.37
 }
 SCR_GarbageManager GarbageManager : "{9B883A7D8EBB282A}Prefabs/MP/Managers/GarbageManager.et" {
  coords 1434.7 37.976 2930.708

@@ -1,17 +1,29 @@
-SCR_MapEntity MapEntity1 : "{731564B66F91B107}Prefabs/World/Game/MapEntity.et" {
- coords 110.1 1 150.152
-}
-SCR_AIWorld AIWorld : "{01DC74137CFDDB6A}Prefabs/AI/SCR_AIWorld_Arland.et" {
- coords 98.785 1 142.27
+SCR_AIWorld AIWorld : "{70CCCF16487C927F}Prefabs/AI/SCR_AIWorld_Eden.et" {
+ components {
+  NavmeshWorldComponent "{5584F30E67F617AD}" {
+   NavmeshSettings NavmeshWorld "{50FC63BEBE3973C5}" {
+    NavmeshFilesConfig BaseNavmeshFilesConfig "{5AF8B9A1594F5532}" : "{8BBC73472092902E}Configs/Navmesh/Navmesh_GM_Eden_Soldier.conf" {
+    }
+   }
+  }
+  NavmeshWorldComponent "{5584F30EEFEE1223}" {
+   NavmeshSettings ChimeraNavmeshWorld "{50FC63BEBE3973C5}" {
+    NavmeshFilesConfig BaseNavmeshFilesConfig "{5CF6FEFBD1A09749}" {
+     NavmeshFile "{C35ECF3276824653}worlds/GameMaster/Navmeshes/GM_Eden_vehicles.nmn"
+    }
+   }
+  }
+ }
+ coords 4779.853 27.028 11842.991
 }
 PerceptionManager PerceptionManager : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
- coords 98.458 1 145.191
+ coords 4778.674 27.103 11842.043
 }
 TagManager TagManager : "{2FA9E172CAB1857A}Prefabs/MP/Managers/TagManager.et" {
- coords 93.496 1.214 146.931
+ coords 4773.712 27.317 11843.783
 }
 SCR_FactionManager FactionManager : "{589540B35EBA8CDC}Prefabs/MP/Managers/Factions/FactionManager_USxUSSR.et" {
- coords 104.017 1 143.709
+ coords 4784.233 27.103 11840.561
  Factions {
   SCR_Faction "{56B2B46E999BF3BF}" {
    m_bIsPlayable 0
@@ -22,46 +34,36 @@ SCR_FactionManager FactionManager : "{589540B35EBA8CDC}Prefabs/MP/Managers/Facti
  }
 }
 COE_GameMode GameMode : "{9EDD3A569D1FE096}Prefabs/MP/Modes/COE_GameMode.et" {
- components {
-  SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
-   m_SpawnLogic SCR_AutoSpawnLogic "{5D36888CC966608A}" {
-    m_sForcedFaction "US"
-    m_sForcedLoadout "Rifleman"
-   }
-  }
-  SCR_TimeAndWeatherHandlerComponent "{5E6F1867E2884B93}" {
-   m_bRandomStartingDaytime 0
-   m_bRandomStartingWeather 0
-   m_bAllowHeaderSettings 0
-  }
- }
- coords 92.656 1 140.371
+ coords 4772.873 27.103 11837.223
 }
 RadioManagerEntity RadioManager : "{B8E09FAB91C4ECCD}Prefabs/Radio/RadioManager.et" {
- coords -860.907 -49.981 -310.18
+ coords 3819.31 -23.878 11386.672
 }
 ScriptedChatEntity ChatEntity : "{F69BC912AC8236F9}Prefabs/MP/ScriptedChatEntity.et" {
- coords -975.306 -50.981 -416.662
+ coords 3704.91 -24.878 11280.189
  Flags 0
 }
 COE_VehicleSpawnManager VehicleSpawnManager : "{03A3F74C83B9255B}Prefabs/Managers/COE_VehicleSpawnManager.et" {
- coords 91.746 1 141.073
+ coords 4771.962 27.103 11837.925
+}
+HitRegistrationManager HitRegManager : "{0EDA3D48791120DD}Prefabs/MP/HitRegManager.et" {
+ coords 4776.811 27.103 11840.395
 }
 SCR_BaseTaskManager TaskManager : "{1AC69CD7907FB4F8}Prefabs/ScenarioFramework/Tasks/TaskManager.et" {
- coords -483.718 2.01 -62.527
+ coords 4196.499 28.113 11634.325
 }
 COE_ObjectiveManager ObjectiveManager : "{973B5090288C8ADC}Prefabs/Managers/COE_ObjectiveManager.et" {
- coords 85.345 2.01 -12.26
+ coords 4765.562 28.113 11684.592
 }
 SCR_GarbageManager GarbageManager : "{9B883A7D8EBB282A}Prefabs/MP/Managers/GarbageManager.et" {
- coords 91.357 0.976 141.078
+ coords 4771.573 27.079 11837.93
  CharacterLifetime 360
  VehicleLifetime 300
  ItemLifetime 360
  m_bOnlyDestroyed 1
 }
 SCR_LoadoutManager LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutManager_Base.et" {
- coords 96.703 1.079 146.705
+ coords 4776.919 27.182 11843.557
  m_aPlayerLoadouts {
   SCR_FactionPlayerLoadout "{5AEC9DF92837B715}" {
    m_sLoadoutName "Rifleman"

@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{01830A6844E52E38}Prefabs/Vehicles/Helis/R3D_UH60/COE_UH60_Navy.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

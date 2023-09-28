@@ -4,4 +4,18 @@ SCR_SpawnPoint : "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et" {
 GenericEntity : "{EDE6EC8B05227E3E}Prefabs/Systems/Arsenal/ArsenalBoxes/USSR/ArsenalBox_USSR.et" {
  coords 96.811 1 148.266
  angleY 177.421
+ {
+  GenericEntity {
+   ID "58C4B81A90E077E5"
+   {
+    GenericEntity {
+     ID "56E094763A91239A"
+     components {
+      SCR_ArsenalInventoryStorageManagerComponent "{5E770A8E47B4AD5D}" {
+      }
+     }
+    }
+   }
+  }
+ }
 }

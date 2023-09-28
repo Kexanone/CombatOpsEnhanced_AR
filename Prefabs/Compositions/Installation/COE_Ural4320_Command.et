@@ -9,6 +9,11 @@ Vehicle : "{1BABF6B33DA0AEB6}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_command.
  {
   GenericEntity : "{B90CA0BEF3CC1D19}Prefabs/Structures/Military/CamoNets/Soviet/CamoNet_Medium_Soviet.et" {
    ID "5E7619136D6729FE"
+   components {
+    Hierarchy "{58489A7BAB68DC3D}" {
+     Enabled 0
+    }
+   }
    coords 0.031 0.366 -0.718
   }
  }

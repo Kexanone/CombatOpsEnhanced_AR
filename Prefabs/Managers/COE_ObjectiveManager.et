@@ -1,0 +1,8 @@
+COE_ObjectiveManager {
+ ID "5E76D989132921B4"
+ coords 1428.688 39.01 2777.37
+ m_aObjectiveTypes {
+  COE_ObjectiveDestroyType "{5E761916E6CEBCF8}" {
+  }
+ }
+}

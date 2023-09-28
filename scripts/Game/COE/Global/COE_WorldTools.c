@@ -127,4 +127,25 @@ class COE_WorldTools
 		
 		return true;
 	}
+	
+	//------------------------------------------------------------------------------------------------
+	protected static ref m_aAllEntities;
+	
+	//------------------------------------------------------------------------------------------------
+	protected void GetAllEntities()
+	{
+		m_aAllEntities = {};
+		
+		vector minPos, maxPos;
+		GetGame().GetWorld().GetBoundBox(minPos, maxPos);
+		GetGame().GetWorld().QueryEntitiesByAABB(minPos, maxPos, QuerieAllEntitiesCallback);
+	}
+
+	//------------------------------------------------------------------------------------------------
+	protected static bool QuerieAllEntitiesCallback(IEntity entity)
+	{
+		if (entity)
+			ENTITIES_TO_PARSE.Insert(entity);
+		return true;
+	}
 }

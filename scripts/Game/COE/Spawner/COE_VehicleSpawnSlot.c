@@ -31,6 +31,20 @@ class COE_VehicleSpawnSlot : GenericEntity
 		spawnManager.AddSlot(this);
 	};
 	
+	void ScheduleRespawn()
+	{
+		SCR_EditableVehicleComponent editableVehicle = SCR_EditableVehicleComponent.Cast(m_pVehicle.FindComponent(SCR_EditableVehicleComponent));
+		array<CompartmentAccessComponent> crewCompartmentAccess = new array<CompartmentAccessComponent>;
+		editableVehicle.GetCrew(crewCompartmentAccess, false);
+
+		foreach (CompartmentAccessComponent compartmentAccess: crewCompartmentAccess)
+		{
+			compartmentAccess.EjectOutOfVehicle();
+		};
+		
+		GetGame().GetCallqueue().CallLater(Respawn, 3000);	
+	}
+	
 	void Respawn()
 	{
 		if (m_pVehicle)

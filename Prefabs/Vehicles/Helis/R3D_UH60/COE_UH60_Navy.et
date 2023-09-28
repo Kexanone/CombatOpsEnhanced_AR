@@ -1,0 +1,24 @@
+R3D_HeliBase : "{F028F51C207914CA}Prefabs/Vehicles/Helis/R3D_UH60/R3D_UH60_Navy.et" {
+ ID "59793C869E187858"
+ components {
+  SCR_ArsenalComponent "{5E771AB86397D018}" {
+   m_eSupportedArsenalItemTypes 524286
+   m_eSupportedArsenalItemModes 126
+   m_eEditableAttributeGroups 30
+   m_eArsenalSaveType FACTION_ITEMS_ONLY
+  }
+  SCR_UniversalInventoryStorageComponent "{5ADC32D10C0F8E3F}" {
+   Attributes SCR_ItemAttributeCollection "{5ADC32D11E5E36B3}" {
+    ItemPhysAttributes ItemPhysicalAttributes "{5E771AB29A8D49CF}" {
+    }
+   }
+   UseCapacityCoefficient 1
+  }
+  SCR_VehicleDamageManagerComponent "{141326E9FD94FE40}" {
+   m_fVehicleDestroyDamage 6000.5
+  }
+  COE_VehicleArsenalInventoryStorageManagerComponent "{591056FA3B752FE6}" {
+  }
+ }
+ coords 85.808 1 144.123
+}

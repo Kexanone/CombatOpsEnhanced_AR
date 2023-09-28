@@ -9,7 +9,7 @@ class COE_VehicleSpawnManager : GenericEntity
 	[Attribute("3", UIWidgets.EditBox, desc: "Number of seconds after which vehicle respawns when no player is with the deserted distance")]
 	protected float m_fDesertedDelay;
 	
-	[Attribute("25", UIWidgets.EditBox, desc: "Deserted distance for players in meters")]
+	[Attribute("1000", UIWidgets.EditBox, desc: "Deserted distance for players in meters")]
 	protected float m_fDesertedPlayerDistance;
 	protected float m_fDesertedPlayerDistanceSq;
 	
@@ -52,10 +52,10 @@ class COE_VehicleSpawnManager : GenericEntity
 		foreach (COE_VehicleSpawnSlot slot : m_aManagedSlots)
 		{
 			bool isDeserted = true;
+			vector vehiclePos = slot.m_pVehicle.GetOrigin();
 			
-			if (slot.GetIsVehicleAlive())
+			if (slot.GetIsVehicleAlive() && vehiclePos[1] > GetGame().GetWorld().GetOceanBaseHeight() - 1)
 			{
-				vector vehiclePos = slot.m_pVehicle.GetOrigin();
 				
 				// Skip deserted check if vehicle is close to spawn
 				if (vector.DistanceSqXZ(slot.GetOrigin(), vehiclePos) < m_fDesertedSlotDistanceSq)
@@ -76,7 +76,7 @@ class COE_VehicleSpawnManager : GenericEntity
 			};
 			
 			if (slot.m_bWasVehicleDeserted && isDeserted)
-				slot.Respawn();
+				slot.ScheduleRespawn();
 			else
 				slot.m_bWasVehicleDeserted = isDeserted;
 		};
