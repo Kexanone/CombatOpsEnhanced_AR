@@ -1,0 +1,12 @@
+SCR_DestructibleBuildingEntity : "{80F53B22769563A5}Prefabs/Structures/Services/Hotels/MountainHotel_01/MountainHotel_01_base.et" {
+ ID "F0DBA538AC2A0552"
+ components {
+  COE_IntelSlotsComponent "{5E83382AB86343CD}" {
+   m_aIntelSlotConfigs {
+    COE_IntelSlotConfig "{5E83382AC5AEEF0A}" {
+     m_vPosition -7.376 4.305 -6.166
+    }
+   }
+  }
+ }
+}

@@ -1,0 +1,41 @@
+GenericEntity : "{2008B4EE6C4D528E}Prefabs/ScenarioFramework/Components/LayerTaskKill.et" {
+ ID "5B0276310950DF33"
+ components {
+  SCR_ScenarioFrameworkLayerTaskKill "{5B02763B6A6D6C4B}" {
+   m_iRandomPercent 100
+  }
+ }
+ coords 93.912 1 153.26
+ {
+  GenericEntity : "{C70DC6CBD1AAEC9A}Prefabs/ScenarioFramework/Components/SlotKill.et" {
+   ID "5E7D7A55AF193C78"
+   components {
+    SCR_ScenarioFrameworkSlotKill "{5B02763C1EAA0BF1}" {
+     m_sObjectToSpawn "{5117311FB822FD1F}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Officer.et"
+     m_aActionsOnFinished {
+      SCR_ScenarioFrameworkActionExecuteFunction "{5E7D7A6BEB1B16A0}" {
+       m_ObjectToCallTheMethodFrom SCR_ScenarioFrameworkGetEntityByName "{5E7D7A6BF672ECBF}" {
+        m_sEntityName "ObjectiveManager"
+       }
+       m_sMethodToCall "ScheduleNextObjective"
+      }
+      SCR_ScenarioFrameworkActionPlaySound "{5E7D7A6B02E3093A}" {
+       m_sSound "SOUND_CP_TD_PC"
+      }
+     }
+     m_aActionsOnCreated {
+      SCR_ScenarioFrameworkActionPlaySound "{5E7D7A6B0E46BE5B}" {
+       m_sSound "SOUND_CP_IPL_3"
+      }
+     }
+     m_aWaypointGroupNames {
+      SCR_WaypointSet "{5E7D7A5671E2F32D}" {
+      }
+     }
+     m_bSpawnAIOnWPPos 0
+    }
+   }
+   coords 0 0 0
+  }
+ }
+}

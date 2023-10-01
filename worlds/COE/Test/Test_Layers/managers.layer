@@ -39,9 +39,6 @@ COE_FactionManager FactionManager : "{F9A08100A9E20FB5}Prefabs/Managers/COE_Fact
 COE_VehicleSpawnManager VehicleSpawnManager : "{03A3F74C83B9255B}Prefabs/Managers/COE_VehicleSpawnManager.et" {
  coords 91.746 1 141.073
 }
-SCR_BaseTaskManager TaskManager : "{1AC69CD7907FB4F8}Prefabs/ScenarioFramework/Tasks/TaskManager.et" {
- coords -483.718 2.01 -62.527
-}
 COE_ObjectiveManager ObjectiveManager : "{973B5090288C8ADC}Prefabs/Managers/COE_ObjectiveManager.et" {
  coords 85.345 2.01 -12.26
 }
@@ -82,4 +79,7 @@ SCR_LoadoutManager LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loado
    m_sAffiliatedFaction "USSR"
   }
  }
+}
+SCR_BaseTaskManager TaskManager : "{B9CB53CDBFDD6FAE}Prefabs/Managers/COE_TaskManager.et" {
+ coords -483.718 2.01 -62.527
 }

@@ -1,0 +1,16 @@
+SCR_DestructibleBuildingEntity : "{0B1B8B16E7E9481F}Prefabs/Structures/Commercial/Pubs/PubVillage_E_2L01/PubVillage_E_2L01_Base.et" {
+ ID "F0DBA538AC2A0552"
+ components {
+  COE_IntelSlotsComponent "{5E833824010CFB34}" {
+   m_aIntelSlotConfigs {
+    COE_IntelSlotConfig "{5E8338240E2A9D58}" {
+     m_vPosition -7.755 4.705 -1.349
+     m_vAngles -108.869 0 0
+    }
+    COE_IntelSlotConfig "{5E8338244EDC55E6}" {
+     m_vPosition 7.044 4.705 0.859
+    }
+   }
+  }
+ }
+}

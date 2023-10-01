@@ -1,81 +1,14 @@
 SCR_SpawnPoint : "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et" {
  coords 96.918 1 146.578
 }
-GenericEntity COE_TaskDeliverIntel : "{88821DCA414AF4C7}Prefabs/ScenarioFramework/Components/LayerTaskDeliver.et" {
+GenericEntity Slot1 : "{AA01691FDC4E9167}Prefabs/ScenarioFramework/Components/Slot.et" {
  components {
-  SCR_ScenarioFrameworkLayerTaskDeliver "{5A6513F48903E7DA}" {
-   m_iRandomPercent 100
-   m_sTaskTitle "#AR-CombatScenario_Intel_Title"
-   m_sTaskDescription "#AR-CombatScenario_Intel_Description_A"
-   m_bPlaceMarkerOnSubjectSlot 1
-   m_sTaskTitleUpdated "Deliver Intel"
-   m_sTaskDescriptionUpdated "#AR-CombatScenario_Intel_Description_D"
+  SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+   m_sObjectToSpawn "{6D56FED1E55A8F84}Prefabs/Items/Misc/IntelligenceFolder_E_01/IntelligenceFolder_E_01.et"
   }
  }
- coords 99.566 1 152.77
- {
-  GenericEntity : "{4C2EF5C1E53FE511}Prefabs/ScenarioFramework/Components/SlotDelivery.et" {
-   components {
-    SCR_ScenarioFrameworkSlotDelivery "{59F51EA7A10294D2}" {
-     m_iRandomPercent 100
-     m_aPlugins {
-      SCR_ScenarioFrameworkPluginTrigger "{5A6513EB3A4B9621}" {
-       m_fAreaRadius 15
-      }
-     }
-     m_sObjectToSpawn "{47D49EA6A216CFD5}Prefabs/ScenarioFramework/Triggers/TriggerCharacterSlow.et"
-    }
-   }
-   coords 0 0 0
-  }
-  GenericEntity : "{9F70B00322910AED}Prefabs/ScenarioFramework/Components/SlotPick.et" {
-   components {
-    SCR_ScenarioFrameworkSlotPick "{5A2283FD60F69A1A}" {
-     m_iRandomPercent 100
-     m_sObjectToSpawn "{6D56FED1E55A8F84}Prefabs/Items/Misc/IntelligenceFolder_E_01/IntelligenceFolder_E_01.et"
-     m_sTaskTitle "#AR-CombatScenario_Intel_Title"
-     m_sTaskDescription "#AR-CombatScenario_Intel_Description_A"
-     m_aActionsOnFinished {
-      SCR_ScenarioFrameworkActionExecuteFunction "{5E7D7A61DF78F28A}" {
-       m_ObjectToCallTheMethodFrom SCR_ScenarioFrameworkGetEntityByName "{5E7D7A61E76C414A}" {
-        m_sEntityName "ObjectiveManager"
-       }
-       m_sMethodToCall "ScheduleNextObjective"
-      }
-     }
-     m_aActionsOnCreated {
-      SCR_ScenarioFrameworkActionPlaySound "{5E7D7A612B103443}" {
-       m_sSound "SOUND_CP_IPL_3"
-      }
-     }
-     m_aActionsOnUpdated {
-      SCR_ScenarioFrameworkActionPlaySound "{5E7D7A668AC27219}" {
-       m_sSound "SOUND_CP_TIF"
-      }
-     }
-     m_sTaskTitleUpdated1 "Deliver Intel"
-     m_sTaskDescriptionUpdated1 "#AR-CombatScenario_Intel_Description_E"
-     m_sTaskTitleUpdated2 "#AR-CombatScenario_Intel_Title"
-     m_sTaskDescriptionUpdated2 "#AR-CombatScenario_Intel_Description_D"
-    }
-   }
-   coords 0 0 0
-   angleY -22.479
-  }
- }
-}
-GenericEntity COE_TaskDestroy : "{982CCB885E1BAB04}Prefabs/Compositions/Tasks/COE_TaskDestroy.et" {
- coords 104.862 1 140.509
- {
-  GenericEntity {
-   ID "5E7569E9F32FE3DD"
-   components {
-    SCR_ScenarioFrameworkSlotDestroy "{5A22E1D6276BD209}" {
-     m_sObjectToSpawn "{43C4AF1EEBD001CE}Prefabs/Vehicles/Wheeled/UAZ452/UAZ452_ambulance.et"
-    }
-   }
-  }
- }
+ coords 138.582 1.563 133.29
+ angleY -86.478
 }
 GenericEntity : "{EDE6EC8B05227E3E}Prefabs/Systems/Arsenal/ArsenalBoxes/USSR/ArsenalBox_USSR.et" {
  coords 96.811 1 148.266

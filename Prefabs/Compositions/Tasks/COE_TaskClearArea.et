@@ -1,0 +1,35 @@
+GenericEntity : "{CDC0845AD90BA073}Prefabs/ScenarioFramework/Components/LayerTaskClearArea.et" {
+ ID "5A6513F475666863"
+ coords 101.693 1 158.047
+ {
+  GenericEntity : "{E53456990A756229}Prefabs/ScenarioFramework/Components/SlotClearArea.et" {
+   ID "5E8302A6ED92C0E6"
+   components {
+    SCR_ScenarioFrameworkSlotClearArea "{5A633AF525D5B972}" {
+     m_aPlugins {
+      COE_ScenarioFrameworkPluginTrigger "{5A633AF5368D26A3}" {
+       m_fAreaRadius 100
+      }
+     }
+     m_aActionsOnFinished {
+      SCR_ScenarioFrameworkActionExecuteFunction "{5E7D7A5BB0650530}" {
+       m_ObjectToCallTheMethodFrom SCR_ScenarioFrameworkGetEntityByName "{5E7D7A5A1D5E488D}" {
+        m_sEntityName "ObjectiveManager"
+       }
+       m_sMethodToCall "ScheduleNextObjective"
+      }
+      SCR_ScenarioFrameworkActionPlaySound "{5E7D7A5BBE66625B}" {
+       m_sSound "SOUND_CP_TD_VC"
+      }
+     }
+     m_aActionsOnCreated {
+      SCR_ScenarioFrameworkActionPlaySound "{5E7D7A5BBC038837}" {
+       m_sSound "SOUND_CP_IPL_3"
+      }
+     }
+    }
+   }
+   coords 0.361 0.004 -0.31
+  }
+ }
+}

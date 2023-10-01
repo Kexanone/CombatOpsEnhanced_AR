@@ -112,4 +112,4 @@ class COE_VehicleSpawnSlot : GenericEntity
 		return false;
 	}
 #endif
-};
+}

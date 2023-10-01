@@ -89,7 +89,6 @@ class COE_PolygonAreaPicker : COE_AreaPickerBase
 	//------------------------------------------------------------------------------------------------
 	void COE_PolygonAreaPicker(IEntitySource src, IEntity parent)
 	{
-		vector offset = GetOrigin();
 		array<float> polygon = {};
 		
 		foreach (vector relPoint : {m_vP1, m_vP2, m_vP3, m_vP4, m_vP5, m_vP6, m_vP7, m_vP8, m_vP9, m_vP10, m_vP11, m_vP12, m_vP13, m_vP14, m_vP15, m_vP16})
@@ -97,7 +96,7 @@ class COE_PolygonAreaPicker : COE_AreaPickerBase
 			if (relPoint == vector.Zero)
 				break;
 			
-			vector point = relPoint + offset;
+			vector point = CoordToParent(relPoint);
 			polygon.Insert(point[0]);
 			polygon.Insert(point[2]);
 			

@@ -17,9 +17,10 @@ GenericEntity : "{88821DCA414AF4C7}Prefabs/ScenarioFramework/Components/LayerTas
    components {
     SCR_ScenarioFrameworkSlotDelivery "{59F51EA7A10294D2}" {
      m_iRandomPercent 100
+     m_bShowDebugShapesDuringRuntime 0
      m_aPlugins {
       SCR_ScenarioFrameworkPluginTrigger "{5A6513EB3A4B9621}" {
-       m_fAreaRadius 15
+       m_fAreaRadius 100
       }
      }
      m_sObjectToSpawn "{47D49EA6A216CFD5}Prefabs/ScenarioFramework/Triggers/TriggerCharacterSlow.et"
@@ -45,7 +46,7 @@ GenericEntity : "{88821DCA414AF4C7}Prefabs/ScenarioFramework/Components/LayerTas
      }
      m_aActionsOnCreated {
       SCR_ScenarioFrameworkActionPlaySound "{5E7D7A612B103443}" {
-       m_sSound "SOUND_CP_IPL_3"
+       m_sSound "SOUND_CP_IPL_2"
       }
      }
      m_aActionsOnUpdated {

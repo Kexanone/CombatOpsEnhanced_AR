@@ -1,0 +1,29 @@
+SCR_DestructibleBuildingEntity : "{74CBD673D67C58FF}Prefabs/Structures/Industrial/Houses/Office_E_01/Office_E_01_base.et" {
+ ID "F0DBA538AC2A0552"
+ components {
+  COE_IntelSlotsComponent "{5E83094EB98E199C}" {
+   m_aIntelSlotConfigs {
+    COE_IntelSlotConfig "{5E83094EC7EE124E}" {
+     m_vPosition 4.217 5.165 4.859
+     m_vAngles -69.021 0 0
+    }
+    COE_IntelSlotConfig "{5E83094EC9D88D0A}" {
+     m_vPosition 7.161 5.165 4.688
+     m_vAngles 93.477 0 0
+    }
+    COE_IntelSlotConfig "{5E83094E41587D20}" {
+     m_vPosition 0.604 5.165 4.816
+     m_vAngles -132.422 0 0
+    }
+    COE_IntelSlotConfig "{5E83094D84FB3F84}" {
+     m_vPosition -4.403 5.165 4.44
+     m_vAngles -165.066 0 0
+    }
+    COE_IntelSlotConfig "{5E83094BC91049D8}" {
+     m_vPosition -3.872 5.165 3.605
+     m_vAngles -72.149 0 0
+    }
+   }
+  }
+ }
+}

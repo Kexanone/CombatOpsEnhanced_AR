@@ -20,7 +20,7 @@ GenericEntity : "{5EDF39860639027D}Prefabs/ScenarioFramework/Components/LayerTas
        m_sMethodToCall "ScheduleNextObjective"
       }
       SCR_ScenarioFrameworkActionPlaySound "{5E757D0020535B81}" {
-       m_sSound "SOUND_CP_TD_VC"
+       m_sSound "SOUND_CP_TD_SC"
       }
      }
      m_aActionsOnCreated {

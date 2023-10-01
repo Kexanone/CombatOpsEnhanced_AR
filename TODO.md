@@ -6,3 +6,10 @@
 - [ ] Make tree removal working on all clients
 - [ ] Add QRFs
 - [ ] Add random patrols in nearby towns
+
+
+Arleville
+Beauregard
+Military
+Military_2
+Military_3

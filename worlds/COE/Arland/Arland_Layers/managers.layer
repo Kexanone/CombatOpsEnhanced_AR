@@ -55,9 +55,6 @@ SCR_DefendWaypoint WP1 : "{0445C8BE5521F375}Prefabs/AI/Waypoints/COE_AIWaypoint_
 HitRegistrationManager HitRegManager : "{0EDA3D48791120DD}Prefabs/MP/HitRegManager.et" {
  coords 1439.937 38 2933.172
 }
-SCR_BaseTaskManager TaskManager : "{1AC69CD7907FB4F8}Prefabs/ScenarioFramework/Tasks/TaskManager.et" {
- coords 859.625 39.01 2727.103
-}
 COE_ObjectiveManager ObjectiveManager : "{973B5090288C8ADC}Prefabs/Managers/COE_ObjectiveManager.et" {
  coords 1428.688 39.01 2777.37
  m_aLocationConfigs {
@@ -105,6 +102,9 @@ SCR_LoadoutManager LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loado
    m_sAffiliatedFaction "USSR"
   }
  }
+}
+SCR_BaseTaskManager TaskManager : "{B9CB53CDBFDD6FAE}Prefabs/Managers/COE_TaskManager.et" {
+ coords 859.625 39.01 2727.103
 }
 Vehicle BTR1 : "{C012BB3488BEA0C2}Prefabs/Vehicles/Wheeled/BTR70/BTR70.et" {
  coords 1384.349 36.313 2375.826

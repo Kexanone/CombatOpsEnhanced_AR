@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{B3A0C171D2796529}Prefabs/Compositions/Tasks/COE_TaskClearArea.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

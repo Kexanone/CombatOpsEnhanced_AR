@@ -41,9 +41,6 @@ COE_VehicleSpawnManager VehicleSpawnManager : "{03A3F74C83B9255B}Prefabs/Manager
 HitRegistrationManager HitRegManager : "{0EDA3D48791120DD}Prefabs/MP/HitRegManager.et" {
  coords 4776.811 27.103 11840.395
 }
-SCR_BaseTaskManager TaskManager : "{1AC69CD7907FB4F8}Prefabs/ScenarioFramework/Tasks/TaskManager.et" {
- coords 4196.499 28.113 11634.325
-}
 COE_ObjectiveManager ObjectiveManager : "{973B5090288C8ADC}Prefabs/Managers/COE_ObjectiveManager.et" {
  coords 4765.562 28.113 11684.592
 }
@@ -84,4 +81,7 @@ SCR_LoadoutManager LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loado
    m_sAffiliatedFaction "USSR"
   }
  }
+}
+SCR_BaseTaskManager TaskManager : "{B9CB53CDBFDD6FAE}Prefabs/Managers/COE_TaskManager.et" {
+ coords 4196.499 28.113 11634.324
 }

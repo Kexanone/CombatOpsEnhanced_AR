@@ -1,0 +1,21 @@
+SCR_DestructibleBuildingEntity : "{76D7178C2C1F92A9}Prefabs/Structures/Services/Government/MunicipalOffice_E_01/MunicipalOffice_E_01_Base.et" {
+ ID "F0DBA538AC2A0552"
+ components {
+  COE_IntelSlotsComponent "{5E8338268A13B2E9}" {
+   m_aIntelSlotConfigs {
+    COE_IntelSlotConfig "{5E833826942CC8BB}" {
+     m_vPosition 9.071 4.909 6.349
+     m_vAngles -80 0 0
+    }
+    COE_IntelSlotConfig "{5E833826D3528247}" {
+     m_vPosition -5.021 4.909 6.024
+     m_vAngles 80 0 0
+    }
+    COE_IntelSlotConfig "{5E833826FC5EFCB1}" {
+     m_vPosition -9.902 4.909 6.116
+     m_vAngles 200 0 0
+    }
+   }
+  }
+ }
+}

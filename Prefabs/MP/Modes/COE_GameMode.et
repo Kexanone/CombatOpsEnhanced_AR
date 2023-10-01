@@ -13,16 +13,32 @@ COE_GameMode : "{1B76F75A3175E85C}Prefabs/MP/Modes/Plain/GameMode_Plain.et" {
   SCR_CommandingManagerComponent "{5E6F1867E2884BA4}" {
   }
   SCR_DebriefingScreenComponent "{5E6F1867E2884BA2}" {
-   Enabled 0
    m_sHeaderTitle "#AR-CombatScenarioArland_Name"
    m_BaseLayout SCR_DebriefingScreenUnevenFourTiles "{5E6F1867E2884BBF}" {
     m_TopLeftTile SCR_DebriefingScreenBigImageContent "{5E6F1867E2884BBD}" {
+     m_sContentImage "{DE06FBCB3D1D9E6E}gfx/preview.edds"
     }
     m_TopRightTile SCR_DebriefingScreenFinishedObjectivesContent "{5E6F1867E2884BBB}" {
+     m_sTitleText "#AR-DebriefingScreen_Objectives"
     }
     m_BottomLeftTile SCR_DebriefingScreenSummaryContent "{5E6F1867E2884BB9}" {
+     m_sTitleText "#AR-DebriefingScreen_Debriefing"
+     m_sSubtitleText "#AR-DebriefingScreen_Subtitle"
     }
     m_BottomRightTile SCR_DebriefingScreenStatisticsContent "{5E6F1867E2884BB6}" {
+     m_sTitleText "#AR-DebriefingScreen_Statistics"
+     m_aStatistics {
+      SCR_DebriefingScreenStatisticShotsFired "{5E83095F660AB0A2}" {
+      }
+      SCR_DebriefingScreenStatisticKills "{5E83095F67BFBC71}" {
+      }
+      SCR_DebriefingScreenStatisticDeaths "{5E83095F659FABBF}" {
+      }
+      SCR_DebriefingScreenStatisticDistanceWalked "{5E83095F619EFC94}" {
+      }
+      SCR_DebriefingScreenStatisticDistanceDriven "{5E83095F6EE0B393}" {
+      }
+     }
     }
    }
   }
@@ -38,7 +54,6 @@ COE_GameMode : "{1B76F75A3175E85C}Prefabs/MP/Modes/Plain/GameMode_Plain.et" {
    m_Info SCR_UIInfo "{5E6F1867E2884B89}" {
     Description "#CombatScenario_Briefing"
    }
-   m_SimpleBriefingBackground "{39A515BAE3795994}UI/Textures/DeployMenu/Briefing/conflict_HintBanner_3_UI.edds"
    m_aGameModeHints {
     SCR_HintUIInfo "{5E6F1867E2884B84}" {
      Name "#AR-Workshop_TabName_Briefing"
@@ -113,7 +128,7 @@ COE_GameMode : "{1B76F75A3175E85C}Prefabs/MP/Modes/Plain/GameMode_Plain.et" {
      m_sTitleText "Introduction"
      m_aIntroduction {
       SCR_WelcomeScreenIntroduction "{5E6F1867E289B951}" {
-       m_sContentImage "{8E135C7AA80F6861}UI/Textures/MissionLoadingScreens/CO_Arland_05.edds"
+       m_sContentImage "{DE06FBCB3D1D9E6E}gfx/preview.edds"
        m_sContentTitleText "#AR-Workshop_TabName_Briefing"
        m_sContentDescriptionText "#AR-CombatScenario_Briefing"
       }
