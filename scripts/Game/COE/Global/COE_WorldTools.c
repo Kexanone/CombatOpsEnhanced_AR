@@ -20,7 +20,7 @@ class COE_WorldTools
 	}
 	
 	//------------------------------------------------------------------------------------------------
-	protected static bool IsPositionAccepted(vector pos, array<COE_AreaBase> excludedAreas, COE_SamplePosParams params)
+	protected static bool IsPositionAccepted(vector pos, array<ref COE_AreaBase> excludedAreas, COE_SamplePosParams params)
 	{
 		if (COE_Utils.SurfaceIsWater(pos))
 			return false;
@@ -39,7 +39,7 @@ class COE_WorldTools
 	
 	//------------------------------------------------------------------------------------------------
 	// Samples positions in a given area
-	static void SampleTransformInArea(out vector transform[4], COE_AreaBase area, array<COE_AreaBase> excludedAreas, COE_SamplePosParams params = null)
+	static void SampleTransformInArea(out vector transform[4], COE_AreaBase area, array<ref COE_AreaBase> excludedAreas, COE_SamplePosParams params = null)
 	{
 		if (!params)
 			params = COE_SamplePosParams();
@@ -64,7 +64,7 @@ class COE_WorldTools
 	
 	//------------------------------------------------------------------------------------------------
 	// Samples positions in the world
-	static void SampleTransformInWorld(out vector transform[4], array<COE_AreaBase> excludedAreas, COE_SamplePosParams params = null)
+	static void SampleTransformInWorld(out vector transform[4], array<ref COE_AreaBase> excludedAreas, COE_SamplePosParams params = null)
 	{
 		Math.Randomize(-1);
 		
@@ -129,23 +129,51 @@ class COE_WorldTools
 	}
 	
 	//------------------------------------------------------------------------------------------------
-	protected static ref m_aAllEntities;
+	protected static array<IEntity> m_aAllEntities;
+	protected static typename m_tQueriedType;
+	protected static ResourceName m_sQueriedPrefabName;
 	
 	//------------------------------------------------------------------------------------------------
-	protected void GetAllEntities()
+	static void GetAllEntities(notnull out array<IEntity> entities, typename type = typename.Empty)
 	{
-		m_aAllEntities = {};
+		m_aAllEntities = entities;
+		m_tQueriedType = type;
 		
 		vector minPos, maxPos;
 		GetGame().GetWorld().GetBoundBox(minPos, maxPos);
-		GetGame().GetWorld().QueryEntitiesByAABB(minPos, maxPos, QuerieAllEntitiesCallback);
+		GetGame().GetWorld().QueryEntitiesByAABB(minPos, maxPos, QuerieEntitiesByTypeCallback);
 	}
 
 	//------------------------------------------------------------------------------------------------
-	protected static bool QuerieAllEntitiesCallback(IEntity entity)
+	protected static bool QuerieEntitiesByTypeCallback(IEntity entity)
 	{
-		if (entity)
-			ENTITIES_TO_PARSE.Insert(entity);
+		if (m_tQueriedType == typename.Empty || entity.Type().IsInherited(m_tQueriedType))
+			m_aAllEntities.Insert(entity);
+		
+		return true;
+	}
+	
+	//------------------------------------------------------------------------------------------------
+	static void GetAllPrefabEntities(notnull out array<IEntity> entities, ResourceName prefabName = string.Empty)
+	{
+		m_aAllEntities = entities;
+		m_sQueriedPrefabName = prefabName;
+		
+		vector minPos, maxPos;
+		GetGame().GetWorld().GetBoundBox(minPos, maxPos);
+		GetGame().GetWorld().QueryEntitiesByAABB(minPos, maxPos, QuerieEntitiesByPrefabNameCallback);
+	}
+
+	//------------------------------------------------------------------------------------------------
+	protected static bool QuerieEntitiesByPrefabNameCallback(IEntity entity)
+	{	
+		EntityPrefabData data = entity.GetPrefabData();
+		if (!data)
+			return true;
+		
+		if (m_sQueriedPrefabName.IsEmpty() || m_sQueriedPrefabName == data.GetPrefabName())
+			m_aAllEntities.Insert(entity);
+		
 		return true;
 	}
 }

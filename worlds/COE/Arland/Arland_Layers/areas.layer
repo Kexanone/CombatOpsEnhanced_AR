@@ -1,19 +1,82 @@
-COE_PolygonAreaPicker AirfieldBorder {
- coords 924.016 41.076 2647.103
- m_cDebugShapeColor 1 0 0 1
- m_vP1 -374.288 0 5.551
- m_vP2 7.922 0 288.398
- m_vP3 76.667 0 183.107
- m_vP4 566.993 0 323.516
- m_vP5 868.047 0 327.91
- m_vP6 911.712 0 179.276
- m_vP7 647.671 0 102.888
- m_vP8 661.901 0 26.603
- m_vP9 282.392 0 -89.264
- m_vP10 549.892 0 -497.696
- m_vP11 367.286 0 -639.017
- m_vP12 -19.424 0 -90.996
- m_vP13 -335.232 0 -171.853
+$grp COE_PolygonAreaPicker {
+ AirfieldBorder {
+  coords 924.016 41.076 2647.103
+  m_cDebugShapeColor 1 0 0 1
+  m_vP1 -374.288 0 5.551
+  m_vP2 7.922 0 288.398
+  m_vP3 76.667 0 183.107
+  m_vP4 566.993 0 323.516
+  m_vP5 868.047 0 327.91
+  m_vP6 911.712 0 179.276
+  m_vP7 647.671 0 102.888
+  m_vP8 661.901 0 26.603
+  m_vP9 282.392 0 -89.264
+  m_vP10 549.892 0 -497.696
+  m_vP11 367.286 0 -639.017
+  m_vP12 -19.424 0 -90.996
+  m_vP13 -335.232 0 -171.853
+ }
+ COE_Beauregard {
+  coords 3163.14 11.594 2797.64
+  m_cDebugShapeColor 0 1 0 0
+  m_vP1 172.76 0 69.39
+  m_vP2 87.307 0 191.261
+  m_vP3 -56.334 0 230.723
+  m_vP4 -160.635 11.487 95.084
+  m_vP5 -192.128 20.087 -103.619
+  m_vP6 -30.343 20.039 -252.097
+  m_vP7 98.323 16.819 -114.516
+ }
+ COE_Arleville {
+  coords 2782.852 74.833 1620.094
+  m_cDebugShapeColor 0 1 0 0
+  m_vP1 95.92 0 165.886
+  m_vP2 -10.013 0 139.953
+  m_vP3 -129.908 6.836 178.339
+  m_vP4 -177.179 4.896 160.146
+  m_vP5 -171.846 0 59.928
+  m_vP6 -122.303 6.957 59.648
+  m_vP7 -30.837 -12.954 -162.01
+  m_vP8 57.69 0 -112.601
+  m_vP9 159.084 0 -40.69
+  m_vP10 168.335 0 8.004
+ }
+ COE_Military1 {
+  coords 1385.07 36.287 2378.66
+  angleX 1.79
+  angleZ -0.895
+  m_cDebugShapeColor 0 1 0 0
+  m_vP1 -32.089 2 -52.962
+  m_vP2 43.822 2 -57.92
+  m_vP3 48.107 2 86.143
+  m_vP4 -8.801 2 86.668
+  m_vP5 -89.9 2 25.037
+ }
+ COE_Military2 {
+  coords 1360.132 38.501 2945.951
+  angleX 1.79
+  angleZ -0.895
+  m_cDebugShapeColor 0 1 0 0
+  m_vP1 -113.208 2 -74.111
+  m_vP2 52.471 2 -31.683
+  m_vP3 96.044 0 16.702
+  m_vP4 89.276 0 45.002
+  m_vP5 17.964 0 62.058
+  m_vP6 -140.315 0 21.876
+ }
+ COE_Military3 {
+  coords 1346.632 8.375 1855.068
+  angleX 1.79
+  angleZ -0.895
+  m_cDebugShapeColor 0 1 0 0
+  m_vP1 91.344 2 -106.486
+  m_vP2 167.414 0 -11.785
+  m_vP3 146.915 4.952 81.615
+  m_vP4 96.599 7.917 99.149
+  m_vP5 -34.17 12.795 61.275
+  m_vP6 -144.94 7.835 82.44
+  m_vP7 -160.861 6.513 18.675
+ }
 }
 COE_EntitySpawner CarrierSpawner : "{66C9366A037F7CB7}Prefabs/Spawner/COE_EntitySpawner.et" {
  coords 944.908 0 4017.722
@@ -21,7 +84,7 @@ COE_EntitySpawner CarrierSpawner : "{66C9366A037F7CB7}Prefabs/Spawner/COE_Entity
  m_sOuterBorderName "CarrierSpawnOuterBorder"
  m_aPrefabParamsList {
   COE_EntitySpawner_PrefabParams "{5E6F18678B7C00B1}" {
-   m_sPrefabName "{054F83ED85A4C8E4}Prefabs/Compositions/Base/COE_NavalBaseUS.et"
+   m_sPrefabName "{054F83ED85A4C8E4}Prefabs/Compositions/Base/COE_MainBaseCarrierUS.et"
   }
  }
  {

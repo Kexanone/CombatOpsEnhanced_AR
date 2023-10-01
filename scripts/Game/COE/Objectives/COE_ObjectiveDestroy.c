@@ -32,7 +32,7 @@ class COE_ObjectiveDestroy : COE_ObjectiveBase
 		
 		COE_CircleArea sampleArea = COE_CircleArea(baseEntities[0].GetOrigin(), 7500);
 		
-		array<COE_AreaBase> excludedAreas = {};
+		array<ref COE_AreaBase> excludedAreas = {};
 		COE_AreaPickerBase picker = COE_AreaPickerBase.Cast(GetGame().GetWorld().FindEntityByName("AirfieldBorder"));
 		if (picker)
 			excludedAreas.Insert(picker.GetArea());

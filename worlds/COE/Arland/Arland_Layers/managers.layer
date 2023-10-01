@@ -22,17 +22,6 @@ PerceptionManager PerceptionManager : "{028DAEAD63E056BE}Prefabs/World/Game/Perc
 TagManager TagManager : "{2FA9E172CAB1857A}Prefabs/MP/Managers/TagManager.et" {
  coords 1436.839 38.214 2936.561
 }
-SCR_FactionManager FactionManager : "{589540B35EBA8CDC}Prefabs/MP/Managers/Factions/FactionManager_USxUSSR.et" {
- coords 1447.36 38 2933.339
- Factions {
-  SCR_Faction "{56B2B46E999BF3BF}" {
-   m_bIsPlayable 0
-  }
-  SCR_Faction "{56B2B46E9AF80999}" {
-   m_bIsPlayable 0
-  }
- }
-}
 COE_GameMode GameMode : "{9EDD3A569D1FE096}Prefabs/MP/Modes/COE_GameMode.et" {
  coords 1435.999 38 2930.001
 }
@@ -43,8 +32,25 @@ ScriptedChatEntity ChatEntity : "{F69BC912AC8236F9}Prefabs/MP/ScriptedChatEntity
  coords 368.037 -13.981 2372.968
  Flags 0
 }
+COE_FactionManager FactionManager : "{F9A08100A9E20FB5}Prefabs/Managers/COE_FactionManager.et" {
+ coords 1447.36 38 2933.339
+}
 COE_VehicleSpawnManager VehicleSpawnManager : "{03A3F74C83B9255B}Prefabs/Managers/COE_VehicleSpawnManager.et" {
  coords 1435.089 38 2930.703
+}
+SCR_DefendWaypoint WP1 : "{0445C8BE5521F375}Prefabs/AI/Waypoints/COE_AIWaypoint_Defend.et" {
+ coords 1369.067 36.026 2386.771
+ m_DefendPresets {
+  SCR_DefendWaypointPreset "{5A5E8832CED378A7}" {
+   m_aTagsForSearch {
+    "COE_Post" "GatePost"
+   }
+  }
+  SCR_DefendWaypointPreset "{5A5E8832CED378AF}" {
+   m_aTagsForSearch {
+   }
+  }
+ }
 }
 HitRegistrationManager HitRegManager : "{0EDA3D48791120DD}Prefabs/MP/HitRegManager.et" {
  coords 1439.937 38 2933.172
@@ -54,6 +60,13 @@ SCR_BaseTaskManager TaskManager : "{1AC69CD7907FB4F8}Prefabs/ScenarioFramework/T
 }
 COE_ObjectiveManager ObjectiveManager : "{973B5090288C8ADC}Prefabs/Managers/COE_ObjectiveManager.et" {
  coords 1428.688 39.01 2777.37
+ m_aLocationConfigs {
+  COE_NamedLocationConfig "{5E7D7A70CD6A5F2A}" {
+   m_aNamedLocations {
+    "Arleville" "Beauregard" "Military" "Military_2" "Military_3"
+   }
+  }
+ }
 }
 SCR_GarbageManager GarbageManager : "{9B883A7D8EBB282A}Prefabs/MP/Managers/GarbageManager.et" {
  coords 1434.7 37.976 2930.708
@@ -91,5 +104,14 @@ SCR_LoadoutManager LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loado
    m_sLoadoutImage "{6A8FF7A3F9007CD0}UI/Textures/EditorPreviews/Characters/OPFOR/USSR_Army/Character_USSR_Rifleman.edds"
    m_sAffiliatedFaction "USSR"
   }
+ }
+}
+Vehicle BTR1 : "{C012BB3488BEA0C2}Prefabs/Vehicles/Wheeled/BTR70/BTR70.et" {
+ coords 1384.349 36.313 2375.826
+}
+SCR_AIGroup : "{E552DABF3636C2AD}Prefabs/Groups/OPFOR/Group_USSR_RifleSquad.et" {
+ coords 1389.7 36.224 2367.464
+ m_aStaticWaypoints {
+  "WP1"
  }
 }

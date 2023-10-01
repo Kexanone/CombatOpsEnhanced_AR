@@ -1,0 +1,39 @@
+COE_FactionManager : "{4A188E44289B9A50}Prefabs/MP/Managers/Factions/FactionManager_Editor.et" {
+ ID "56B2B4776E6E4499"
+ coords 9.189 1 5.925
+ Factions {
+  COE_Faction "{56DEAC40D2DBC8B1}" {
+   m_aPlayerMainBasePrefabs {
+    "{054F83ED85A4C8E4}Prefabs/Compositions/Base/COE_MainBaseCarrierUS.et"
+   }
+  }
+  COE_Faction "{56DEAC40D3C2E623}" {
+   m_aTargetToDestroyPrefabs {
+    "{CC15340158615106}Prefabs/Compositions/Installation/USSR/COE_R404_Antenna.et" "{DC7B76A39454380A}Prefabs/Compositions/Installation/USSR/COE_RPL5_Radar.et" "{5A5D82E72D1AD220}Prefabs/Compositions/Installation/USSR/COE_Ural4320_Command.et" "{D074913C6D18C69E}Prefabs/Compositions/Installation/USSR/COE_Ural4320_Tanker.et"
+   }
+   m_aHVTPrefabs {
+    "{5117311FB822FD1F}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Officer.et"
+   }
+   m_aIntelPrefabs {
+    "{6D56FED1E55A8F84}Prefabs/Items/Misc/IntelligenceFolder_E_01/IntelligenceFolder_E_01.et"
+   }
+   m_aSmallRoadSlotPrefabs {
+    "{83A10E8547281E57}Prefabs/Compositions/Slotted/SlotRoadSmall/Barricade_S_USSR_01.et" "{9483333BFD9E2D0E}Prefabs/Compositions/Slotted/SlotRoadSmall/Checkpoint_S_USSR_01.et"
+   }
+   m_aMediumRoadSlotPrefabs {
+    "{27F6A0815E6FF6EE}Prefabs/Compositions/Slotted/SlotRoadMedium/Barricade_M_USSR_01.et" "{089470408DAADC20}Prefabs/Compositions/Slotted/SlotRoadMedium/Checkpoint_M_USSR_01.et"
+   }
+   m_aLargeRoadSlotPrefabs {
+    "{2A27606856B8A913}Prefabs/Compositions/Slotted/SlotRoadLarge/Barricade_L_USSR_01.et" "{9F9924B626C5FA2B}Prefabs/Compositions/Slotted/SlotRoadLarge/Checkpoint_L_USSR_01.et"
+   }
+  }
+  COE_Faction "{56DEAC40D132400B}" {
+  }
+ }
+ m_aOpposingFactionsConfigs {
+  COE_OpposingFactionsConfig "{5E7B188E3CBD7464}" {
+   m_sPlayerFactionKey "US"
+   m_sEnemyFactionKey "USSR"
+  }
+ }
+}

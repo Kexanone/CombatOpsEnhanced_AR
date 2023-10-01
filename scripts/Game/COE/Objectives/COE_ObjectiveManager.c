@@ -10,6 +10,9 @@ class COE_ObjectiveManager : GenericEntity
 	[Attribute(defvalue: "15", desc: "Timeout until next objective is spawned")]
 	protected float m_fNextObjectiveTimeout;
 	
+	[Attribute(desc: "Configurations for objective locations")]
+	protected ref array<ref COE_LoationBaseConfig> m_aLocationConfigs;
+	
 	[Attribute(desc: "Types of objectives to select from")]
 	protected ref array<ref COE_ObjectiveBaseType> m_aObjectiveTypes;
 	

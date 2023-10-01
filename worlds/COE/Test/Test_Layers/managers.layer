@@ -10,17 +10,6 @@ PerceptionManager PerceptionManager : "{028DAEAD63E056BE}Prefabs/World/Game/Perc
 TagManager TagManager : "{2FA9E172CAB1857A}Prefabs/MP/Managers/TagManager.et" {
  coords 93.496 1.214 146.931
 }
-SCR_FactionManager FactionManager : "{589540B35EBA8CDC}Prefabs/MP/Managers/Factions/FactionManager_USxUSSR.et" {
- coords 104.017 1 143.709
- Factions {
-  SCR_Faction "{56B2B46E999BF3BF}" {
-   m_bIsPlayable 0
-  }
-  SCR_Faction "{56B2B46E9AF80999}" {
-   m_bIsPlayable 0
-  }
- }
-}
 COE_GameMode GameMode : "{9EDD3A569D1FE096}Prefabs/MP/Modes/COE_GameMode.et" {
  components {
   SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
@@ -43,6 +32,9 @@ RadioManagerEntity RadioManager : "{B8E09FAB91C4ECCD}Prefabs/Radio/RadioManager.
 ScriptedChatEntity ChatEntity : "{F69BC912AC8236F9}Prefabs/MP/ScriptedChatEntity.et" {
  coords -975.306 -50.981 -416.662
  Flags 0
+}
+COE_FactionManager FactionManager : "{F9A08100A9E20FB5}Prefabs/Managers/COE_FactionManager.et" {
+ coords 104.017 1 143.709
 }
 COE_VehicleSpawnManager VehicleSpawnManager : "{03A3F74C83B9255B}Prefabs/Managers/COE_VehicleSpawnManager.et" {
  coords 91.746 1 141.073

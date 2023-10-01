@@ -1,0 +1,13 @@
+SCR_DestructibleBuildingEntity : "{A43A100E3C377DB2}Prefabs/Structures/Core/Building_Base.et" {
+ ID "F0DBA538AC2A0552"
+ components {
+  SCR_AISmartActionSentinelComponent "{5E7C35058C11F082}" {
+   AIBehaviorTree "{BC53D77D23308CD6}AI/BehaviorTrees/SmartActions/SA_ObservationPost.bt"
+   Tags {
+    "COE_Post"
+   }
+   ActionOffset 1.721 7.203 1.588
+   m_vLookPosition 1.742 7.203 4.215
+  }
+ }
+}

@@ -1,6 +1,61 @@
 COE_ObjectiveManager {
  ID "5E76D989132921B4"
  coords 1428.688 39.01 2777.37
+ m_aLocationConfigs {
+  COE_FreeRoamingLocationConfig "{5E7B42E9CB2B02CF}" {
+   m_sComment "Free-roam building on flat area"
+   m_aExcludedAreaPickerNames {
+    "AirfieldBorder"
+   }
+   m_aSupportedTaskTypes {
+    1
+   }
+  }
+  COE_PrefabLocationConfig "{5E7B42D1349C35C1}" {
+   m_sComment "Pick office building, hotel or pub as location"
+   m_aSupportedTaskTypes {
+    4 5
+   }
+   m_aPrefabsToQuery {
+    "{51F233A0BA73532A}Prefabs/Structures/Industrial/Houses/Office_E_01/Office_E_01.et" "{A33B68467443EBAF}Prefabs/Structures/Industrial/Houses/Office_E_01/Office_E_01_ENP.et" "{363A616E6C64BB7F}Prefabs/Structures/Services/Government/MunicipalOffice_E_01/MunicipalOffice_E_01.et" "{1A774A9DF37FE9CA}Prefabs/Structures/Services/Government/MunicipalOffice_E_01/MunicipalOffice_E_01_beige.et" "{6AB811A185D78D2A}Prefabs/Structures/Services/Government/MunicipalOffice_E_01/MunicipalOffice_E_01_Military.et" "{B514DD5B90A27E78}Prefabs/Structures/Services/Government/MunicipalOffice_E_01/MunicipalOffice_E_01_school.et" "{D217E566992B77F4}Prefabs/Structures/Services/Government/MunicipalOffice_E_01/MunicipalOffice_E_01_school_v2.et" "{39FC44E47347DF5D}Prefabs/Structures/Services/Hotels/MountainHotel_01/MountainHotel_01_green.et" "{FC4BFDB06DC30F3F}Prefabs/Structures/Services/Hotels/MountainHotel_01/MountainHotel_01_red.et" "{DD6953233EB10B88}Prefabs/Structures/Commercial/Pubs/PubVillage_E_1L01/PubVillage_E_1L01.et" "{1B68F3EE279C97A1}Prefabs/Structures/Commercial/Pubs/PubVillage_E_2L01/PubVillage_E_2L01_V1.et" "{C7B11EF2ABFDF49F}Prefabs/Structures/Commercial/Pubs/PubVillage_E_2L01/PubVillage_E_2L01_V2.et" "{7BFECEE28B046E72}Prefabs/Structures/Commercial/Pubs/PubVillage_E_2L01/PubVillage_E_2L01_V3_UCeperu.et" "{2727C76FA6C96B21}Prefabs/Structures/Commercial/Pubs/PubVillage_E_2L01/PubVillage_E_2L01_V4_UGrocha.et" "{D13E0BC1C8B07819}Prefabs/Structures/Commercial/Pubs/PubVillage_E_2L01/PubVillage_E_2L01_V5_Mortonka.et" "{DA1AA1BD5CBCD864}Prefabs/Structures/Commercial/Pubs/PubVillage_E_2L01/PubVillage_E_2L01_V6_Upirata.et" "{F5F4CF162914FB95}Prefabs/Structures/Commercial/Pubs/PubVillage_E_2L01/PubVillage_E_2L01_V7_Kamzik.et" "{965AFAD159CB0C8A}Prefabs/Structures/Commercial/Pubs/PubVillage_E_2L01/PubVillage_E_2L01_V8_ProgresBar.et"
+   }
+  }
+  COE_PrefabLocationConfig "{5E7B42D0793541FB}" {
+   m_sComment "Building living quarters on large slot"
+   m_aSupportedTaskTypes {
+    1 2 4 5
+   }
+   m_aPrefabsToQuery {
+    "{055DDE93F47A6A1D}PrefabsEditable/Slots/Flat/E_SlotFlatLarge.et"
+   }
+  }
+  COE_AreaLocationConfig "{5E7C1ABC4E15FEA7}" {
+   m_sComment "Towns"
+   m_aSupportedTaskTypes {
+    0 1 2 3
+   }
+   m_aAreaPickerNames {
+    "COE_Arleville" "COE_Beauregard"
+   }
+  }
+  COE_AreaLocationConfig "{5E7C1ABE1F9F05D6}" {
+   m_sComment "Military bases"
+   m_aSupportedTaskTypes {
+    0 1 2 3
+   }
+   m_aAreaPickerNames {
+    "COE_Military1" "COE_Military2" "COE_Military3"
+   }
+  }
+  COE_NamedLocationConfig "{5E7D7A70CD6A5F2A}" {
+   m_aSupportedTaskTypes {
+    0 1 2 3
+   }
+   m_aNamedLocations {
+    "" "" "" "" ""
+   }
+  }
+ }
  m_aObjectiveTypes {
   COE_ObjectiveDestroyType "{5E761916E6CEBCF8}" {
   }
