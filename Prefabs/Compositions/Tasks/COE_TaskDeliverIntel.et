@@ -33,7 +33,6 @@ GenericEntity : "{88821DCA414AF4C7}Prefabs/ScenarioFramework/Components/LayerTas
    components {
     SCR_ScenarioFrameworkSlotPick "{5A2283FD60F69A1A}" {
      m_iRandomPercent 100
-     m_sObjectToSpawn "{6D56FED1E55A8F84}Prefabs/Items/Misc/IntelligenceFolder_E_01/IntelligenceFolder_E_01.et"
      m_sTaskTitle "#AR-CombatScenario_Intel_Title"
      m_sTaskDescription "#AR-CombatScenario_Intel_Description_A"
      m_aActionsOnFinished {

@@ -142,4 +142,6 @@ COE_GameMode : "{1B76F75A3175E85C}Prefabs/MP/Modes/Plain/GameMode_Plain.et" {
  PlayerControllerPrefab "{CD2B8EF361478648}Prefabs/Characters/Core/DefaultPlayerControllerMP_ScenarioFramework.et"
  m_bAutoPlayerRespawn 0
  m_fAutoReloadTime 30
+ m_sMainBaseInnerBorderName "MainBaseSpawnInnerBorder"
+ m_sMainBaseOuterBorderName "MainBaseSpawnOuterBorder"
 }

@@ -6,6 +6,15 @@ class COE_GameModeClass : SCR_BaseGameModeClass
 //------------------------------------------------------------------------------------------------
 class COE_GameMode : SCR_BaseGameMode
 {
+	[Attribute(desc: "Label of main base prefab", uiwidget: UIWidgets.ComboBox, enums: ParamEnumArray.FromEnum(COE_EPrefabLabel))]
+	protected COE_EPrefabLabel m_iMainBasePrefabLabel;
+	
+	[Attribute(desc: "Inner border for main base positions", category: "Main Base")]
+	protected string m_sMainBaseInnerBorderName;
+	
+	[Attribute(desc: "Outer border for main base positions", category: "Main Base")]
+	protected string m_sMainBaseOuterBorderName;
+	
 	//------------------------------------------------------------------------------------------------
 	void COE_GameMode(IEntitySource src, IEntity parent)
 	{
@@ -20,15 +29,52 @@ class COE_GameMode : SCR_BaseGameMode
 	}
 	
 	//------------------------------------------------------------------------------------------------
-	override protected void OnGameModeStart()
+	override protected void OnGameStart()
 	{
-		super.OnGameModeStart();
+		super.OnGameStart();
 		
-		if (!GetGame().InPlayMode() || !Replication.IsServer())
+		if (!Replication.IsServer())
 			return;
 		
-		COE_EntitySpawner carrierSpawner = COE_EntitySpawner.Cast(GetGame().GetWorld().FindEntityByName("CarrierSpawner"));
-		if (carrierSpawner)
-			carrierSpawner.Spawn();
+		CreateMainBase();
+		
+		COE_ObjectiveManager objectiveManager = COE_ObjectiveManager.GetInstance();
+		if (objectiveManager)
+			objectiveManager.OnGameStart();
+	}
+	
+	//------------------------------------------------------------------------------------------------
+	void CreateMainBase()
+	{
+		COE_PolygonAreaPicker innerBorderPicker = COE_PolygonAreaPicker.Cast(GetGame().GetWorld().FindEntityByName(m_sMainBaseInnerBorderName));
+		if (!innerBorderPicker)
+			return;
+		
+		COE_PolygonArea innerBorder = COE_PolygonArea.Cast(innerBorderPicker.GetArea());
+
+		COE_PolygonAreaPicker outerBorderPicker = COE_PolygonAreaPicker.Cast(GetGame().GetWorld().FindEntityByName(m_sMainBaseOuterBorderName));
+		if (!outerBorderPicker)
+			return;
+		
+		COE_PolygonArea outerBorder = COE_PolygonArea.Cast(outerBorderPicker.GetArea());
+		
+		COE_FactionManager factionManager = COE_FactionManager.Cast(GetGame().GetFactionManager());
+		if (!factionManager)
+			return;
+		
+		COE_Faction faction = factionManager.GetPlayerFaction();
+		if (!faction)
+			return;
+		
+		Resource resource = Resource.Load(faction.GetRandomPrefabByLabel(m_iMainBasePrefabLabel));
+		if (!resource)
+			return;
+		
+		EntitySpawnParams params = EntitySpawnParams();
+		params.TransformMode = ETransformMode.WORLD;
+		Math.Randomize(-1);
+		Math3D.AnglesToMatrix(Vector(Math.RandomFloat(0, 360), 0, 0), params.Transform);				
+		params.Transform[3] = COE_AreaBase.SamplePointInArea(outerBorder, innerBorder);
+		faction.SetPlayerMainBase(GetGame().SpawnEntityPrefab(resource, GetWorld(), params));
 	}
 };

@@ -23,6 +23,14 @@ class COE_CircleArea : COE_AreaBase
 		return SCR_Math2D.GenerateRandomPointInRadius(0, m_fRadius, m_vCenter);
 	}
 	
+	override void GetBoundBox(out vector min, out vector max)
+	{
+		vector offset = {m_fRadius, 0, m_fRadius};
+		min = m_vCenter - offset;
+		max = m_vCenter + offset;
+	}
+	
+	//------------------------------------------------------------------------------------------------
 	void SetRadius(float radius)
 	{
 		m_fRadius = radius;

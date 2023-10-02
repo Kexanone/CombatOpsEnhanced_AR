@@ -1,15 +1,32 @@
 //------------------------------------------------------------------------------------------------
-class COE_ObjectiveDestroyType : COE_ObjectiveBaseType
+class COE_TaskDestroyConfig : COE_TaskBaseConfig
 {
+	[Attribute(desc: "Label of target prefab", uiwidget: UIWidgets.ComboBox, enums: ParamEnumArray.FromEnum(COE_EPrefabLabel))]
+	protected COE_EPrefabLabel m_iTargetPrefabLabel;
+	
 	//------------------------------------------------------------------------------------------------
-	override COE_ObjectiveBase CreateInstance()
+	override void Create(COE_LocationBase location = null)
 	{
-		return COE_ObjectiveDestroy();
+	}
+	
+	//------------------------------------------------------------------------------------------------
+	ResourceName GetTargetPrefabName()
+	{
+		COE_FactionManager factionManager = COE_FactionManager.Cast(GetGame().GetFactionManager());
+		if (!factionManager)
+			return string.Empty;
+		
+		COE_Faction faction = factionManager.GetEnemyFaction();
+		if (!faction)
+			return string.Empty;
+		
+		return faction.GetRandomPrefabByLabel(m_iTargetPrefabLabel);
 	}
 }
 
+/*
 //------------------------------------------------------------------------------------------------
-class COE_ObjectiveDestroy : COE_ObjectiveBase
+class COE_TaskDestroy : COE_TaskBase
 {
 	static int m_iCounter = 0;
 	static ref array<ResourceName> targetPrefabNames = {"{DC7B76A39454380A}Prefabs/Compositions/Installation/COE_RPL5_Radar.et", "{CC15340158615106}Prefabs/Compositions/Installation/COE_R404_Antenna.et", "{5A5D82E72D1AD220}Prefabs/Compositions/Installation/COE_Ural4320_Command.et", "{D074913C6D18C69E}Prefabs/Compositions/Installation/COE_Ural4320_Tanker.et"};
@@ -20,7 +37,7 @@ class COE_ObjectiveDestroy : COE_ObjectiveBase
 	private const float EMPTY_POSITION_CYLINDER_RADIUS = 15;
 	
 	//------------------------------------------------------------------------------------------------
-	void COE_ObjectiveDestroy()
+	void COE_TaskDestroy(COE_TaskBaseConfig config, COE_LocationBase location)
 	{
 		COE_EntitySpawner baseSpawner = COE_EntitySpawner.Cast(GetGame().GetWorld().FindEntityByName("CarrierSpawner"));
 		if (!baseSpawner)
@@ -50,7 +67,7 @@ class COE_ObjectiveDestroy : COE_ObjectiveBase
 		};	
 			
 		IEntity target = COE_GameTools.SpawnStructurePrefab(targetPrefabNames[m_iCounter], transform);
-		SetTaskLayer(COE_GameTools.SpawnSFTaskPrefab("{982CCB885E1BAB04}Prefabs/Compositions/Tasks/COE_TaskDestroy.et", transform[3], target));
+		COE_GameTools.SpawnSFTaskPrefab("{982CCB885E1BAB04}Prefabs/Compositions/Tasks/COE_TaskDestroy.et", transform[3], target);
 		m_iCounter++;
 		
 		vector targetPos = m_pTaskLayer.GetOrigin();
@@ -94,3 +111,4 @@ class COE_ObjectiveDestroy : COE_ObjectiveBase
 		}
 	}
 }
+*/

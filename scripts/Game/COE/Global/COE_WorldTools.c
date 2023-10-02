@@ -141,11 +141,11 @@ class COE_WorldTools
 		
 		vector minPos, maxPos;
 		GetGame().GetWorld().GetBoundBox(minPos, maxPos);
-		GetGame().GetWorld().QueryEntitiesByAABB(minPos, maxPos, QuerieEntitiesByTypeCallback);
+		GetGame().GetWorld().QueryEntitiesByAABB(minPos, maxPos, QueryEntitiesByTypeCallback);
 	}
 
 	//------------------------------------------------------------------------------------------------
-	protected static bool QuerieEntitiesByTypeCallback(IEntity entity)
+	protected static bool QueryEntitiesByTypeCallback(IEntity entity)
 	{
 		if (m_tQueriedType == typename.Empty || entity.Type().IsInherited(m_tQueriedType))
 			m_aAllEntities.Insert(entity);
@@ -161,11 +161,11 @@ class COE_WorldTools
 		
 		vector minPos, maxPos;
 		GetGame().GetWorld().GetBoundBox(minPos, maxPos);
-		GetGame().GetWorld().QueryEntitiesByAABB(minPos, maxPos, QuerieEntitiesByPrefabNameCallback);
+		GetGame().GetWorld().QueryEntitiesByAABB(minPos, maxPos, QueryEntitiesByPrefabNameCallback);
 	}
 
 	//------------------------------------------------------------------------------------------------
-	protected static bool QuerieEntitiesByPrefabNameCallback(IEntity entity)
+	protected static bool QueryEntitiesByPrefabNameCallback(IEntity entity)
 	{	
 		EntityPrefabData data = entity.GetPrefabData();
 		if (!data)

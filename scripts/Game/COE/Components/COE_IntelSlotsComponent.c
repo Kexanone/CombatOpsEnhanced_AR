@@ -21,6 +21,9 @@ class COE_IntelSlotsComponentClass : ScriptComponentClass
 class COE_IntelSlotsComponent : ScriptComponent
 {
 #ifdef WORKBENCH
+	[Attribute(defvalue: "0", desc: "Show entity preview")]
+	protected bool m_bShowDebugEntityPreviewInWorkbench;
+	
 	[Attribute(defvalue: "{6D56FED1E55A8F84}Prefabs/Items/Misc/IntelligenceFolder_E_01/IntelligenceFolder_E_01.et", desc: "Name of the prefab for the preview")]
 	protected ResourceName m_sDebugPreviewPrefabName;
 #endif
@@ -36,6 +39,16 @@ class COE_IntelSlotsComponent : ScriptComponent
 		transform[3] = GetOwner().CoordToParent(config.m_vPosition);
 		Math3D.AnglesToMatrix(config.m_vAngles, transform);
 		Math3D.MatrixMultiply3(ownerTransform, transform, transform);
+	}
+	
+	//------------------------------------------------------------------------------------------------
+	IEntity SpawnInRandomSlot(ResourceName prefabName)
+	{
+		if (m_aIntelSlotConfigs.IsEmpty())
+			return null;
+		
+		Math.Randomize(-1);
+		return Spawn(prefabName, m_aIntelSlotConfigs[Math.RandomInt(0, m_aIntelSlotConfigs.Count())]);
 	}
 	
 	//------------------------------------------------------------------------------------------------
@@ -66,6 +79,9 @@ class COE_IntelSlotsComponent : ScriptComponent
 	//------------------------------------------------------------------------------------------------
 	override void _WB_OnInit(IEntity owner, inout vector mat[4], IEntitySource src)
 	{
+		if (!m_bShowDebugEntityPreviewInWorkbench)
+			return;
+		
 		foreach (COE_IntelSlotConfig slotConfig : m_aIntelSlotConfigs)
 		{
 			SCR_EntityHelper.DeleteEntityAndChildren(slotConfig.m_pPreviewEntity);
@@ -76,7 +92,27 @@ class COE_IntelSlotsComponent : ScriptComponent
 	//------------------------------------------------------------------------------------------------
 	override bool _WB_OnKeyChanged(IEntity owner, BaseContainer src, string key, BaseContainerList ownerContainers, IEntity parent)
 	{
-		if (key == "coords")
+		if (key == "m_bShowDebugEntityPreviewInWorkbench")
+		{
+			foreach (COE_IntelSlotConfig slotConfig : m_aIntelSlotConfigs)
+			{
+				SCR_EntityHelper.DeleteEntityAndChildren(slotConfig.m_pPreviewEntity);
+				
+				if (m_bShowDebugEntityPreviewInWorkbench)
+					SpawnEntityPreview(owner, m_sDebugPreviewPrefabName);
+			};
+			
+			return true;			
+		};
+		
+		if (!m_bShowDebugEntityPreviewInWorkbench)
+			return false;
+		
+		if (!m_bShowDebugEntityPreviewInWorkbench)
+		{
+			return true;	
+		}
+		else if (key == "coords")
 		{
 			foreach (COE_IntelSlotConfig slotConfig : m_aIntelSlotConfigs)
 			{
@@ -92,7 +128,8 @@ class COE_IntelSlotsComponent : ScriptComponent
 			{
 				SCR_EntityHelper.DeleteEntityAndChildren(slotConfig.m_pPreviewEntity);
 			};
-		}
+		};
+		
 		return false;
 	}
 #endif

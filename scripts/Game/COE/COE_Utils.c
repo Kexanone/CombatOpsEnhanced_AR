@@ -40,4 +40,16 @@ class COE_Utils
 		vector normal = SCR_TerrainHelper.GetTerrainNormal(pos);
 		return Math.RAD2DEG * Math.Acos(vector.Dot(Vector(0, 1, 0), normal)) < maxAngle;
 	}
+	
+	//------------------------------------------------------------------------------------------------
+	static void PrintError(string message, string component = string.Empty)
+	{
+		string combinedMessage = "Combat Ops Enhanced";
+		
+		if (!component.IsEmpty())
+			combinedMessage += " - " + component;
+				
+		combinedMessage += ": " + message;
+		Print(message, LogLevel.ERROR);
+	}
 }

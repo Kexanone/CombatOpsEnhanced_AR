@@ -8,8 +8,11 @@ COE_FactionManager : "{4A188E44289B9A50}Prefabs/MP/Managers/Factions/FactionMana
    }
   }
   COE_Faction "{56DEAC40D3C2E623}" {
-   m_aTargetToDestroyPrefabs {
-    "{CC15340158615106}Prefabs/Compositions/Installation/USSR/COE_R404_Antenna.et" "{DC7B76A39454380A}Prefabs/Compositions/Installation/USSR/COE_RPL5_Radar.et" "{5A5D82E72D1AD220}Prefabs/Compositions/Installation/USSR/COE_Ural4320_Command.et" "{D074913C6D18C69E}Prefabs/Compositions/Installation/USSR/COE_Ural4320_Tanker.et"
+   m_aInstallationToDestroyPrefabs {
+    "{DC7B76A39454380A}Prefabs/Compositions/Installation/USSR/COE_RPL5_Radar.et" "{CC15340158615106}Prefabs/Compositions/Installation/USSR/COE_R404_Antenna.et" "{5A5D82E72D1AD220}Prefabs/Compositions/Installation/USSR/COE_Ural4320_Command.et"
+   }
+   m_aSuppliesToDestroyPrefabs {
+    "{D074913C6D18C69E}Prefabs/Compositions/Installation/USSR/COE_Ural4320_Tanker.et"
    }
    m_aHVTPrefabs {
     "{5117311FB822FD1F}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Officer.et"
@@ -25,6 +28,9 @@ COE_FactionManager : "{4A188E44289B9A50}Prefabs/MP/Managers/Factions/FactionMana
    }
    m_aLargeRoadSlotPrefabs {
     "{2A27606856B8A913}Prefabs/Compositions/Slotted/SlotRoadLarge/Barricade_L_USSR_01.et" "{9F9924B626C5FA2B}Prefabs/Compositions/Slotted/SlotRoadLarge/Checkpoint_L_USSR_01.et"
+   }
+   m_aMGNestPrefabs {
+    "{6C125CAB25D1631A}Prefabs/Compositions/Slotted/SlotFlatSmall/MachineGunNest_S_USSR_01.et" "{114DE81321786CD9}Prefabs/Compositions/Slotted/SlotFlatSmall/MachineGunNest_S_USSR_01_PKM.et"
    }
   }
   COE_Faction "{56DEAC40D132400B}" {

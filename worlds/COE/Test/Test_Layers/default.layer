@@ -1,15 +1,6 @@
 SCR_SpawnPoint : "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et" {
  coords 96.918 1 146.578
 }
-GenericEntity Slot1 : "{AA01691FDC4E9167}Prefabs/ScenarioFramework/Components/Slot.et" {
- components {
-  SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
-   m_sObjectToSpawn "{6D56FED1E55A8F84}Prefabs/Items/Misc/IntelligenceFolder_E_01/IntelligenceFolder_E_01.et"
-  }
- }
- coords 138.582 1.563 133.29
- angleY -86.478
-}
 GenericEntity : "{EDE6EC8B05227E3E}Prefabs/Systems/Arsenal/ArsenalBoxes/USSR/ArsenalBox_USSR.et" {
  coords 96.811 1 148.266
  angleY 177.421

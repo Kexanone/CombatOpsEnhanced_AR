@@ -51,12 +51,7 @@ class COE_EntitySpawner : GenericEntity
 			{
 				EntitySpawnParams params = EntitySpawnParams();
 				params.TransformMode = ETransformMode.WORLD;
-				vector rotMat[3];
-				Math3D.AnglesToMatrix(Vector(Math.RandomFloat(0, 360), 0, 0), rotMat);
-				
-				for (int i = 0; i < 3; i++)
-					params.Transform[i] = rotMat[i];
-				
+				Math3D.AnglesToMatrix(Vector(Math.RandomFloat(0, 360), 0, 0), params.Transform);				
 				params.Transform[3] = COE_AreaBase.SamplePointInArea(outerBorder, innerBorder);
 				IEntity entity = GetGame().SpawnEntityPrefab(Resource.Load(prefabParams.m_sPrefabName), null, params);
 				m_aSpawnedEntities.Insert(entity);
