@@ -1,21 +1,84 @@
 SCR_DestructibleBuildingEntity : "{A43A100E3C377DB2}Prefabs/Structures/Core/Building_Base.et" {
  ID "F0DBA538AC2A0552"
  components {
-  SCR_AISmartActionSentinelComponent "{5E7C350411977066}" {
-   AIBehaviorTree "{BC53D77D23308CD6}AI/BehaviorTrees/SmartActions/SA_ObservationPost.bt"
-   Tags {
-    "COE_Post"
+  COE_AISlotsComponent "{5E8EEBC02C23008F}" {
+   m_aAISlotConfigs {
+    COE_AISlotConfig "{5E8EEBC029974FEF}" {
+     m_vPosition 5.979 4.323 3.435
+     m_vLookPosition 3.014 4.323 1.859
+     m_iEntityLabel HVT
+     m_bOccupyWhenNotMain 0
+    }
+    COE_AISlotConfig "{5E8EEBC07DDE71A0}" {
+     m_vPosition 1.872 4.323 4.788
+     m_vLookPosition 2.457 4.323 2.147
+     m_iEntityLabel HVT
+     m_bOccupyWhenNotMain 0
+    }
+    COE_AISlotConfig "{5E8EEE04AED8426D}" {
+     m_vPosition -1.995 4.323 5.181
+     m_vLookPosition -1.402 4.323 2.028
+     m_iEntityLabel HVT
+     m_bOccupyWhenNotMain 0
+    }
+    COE_AISlotConfig "{5E8EEE04D763FF35}" {
+     m_vPosition -3.844 4.323 2.799
+     m_vLookPosition -1.933 4.323 2.045
+     m_iEntityLabel HVT
+     m_bOccupyWhenNotMain 0
+    }
+    COE_AISlotConfig "{5E8EEE04F15BB7BB}" {
+     m_vPosition -7.032 7.501 5.813
+     m_vLookPosition -8.163 7.501 9.445
+     m_iEntityLabel MARKSMAN
+    }
+    COE_AISlotConfig "{5E8EEE0420932775}" {
+     m_vPosition -6.58 7.501 -5.953
+     m_vLookPosition -6.488 7.501 -10.433
+     m_iEntityLabel MARKSMAN
+    }
+    COE_AISlotConfig "{5E8EEE043B974950}" {
+     m_vPosition 6.514 7.501 -3.732
+     m_vLookPosition 7.837 7.501 -6.066
+     m_iEntityLabel MARKSMAN
+    }
+    COE_AISlotConfig "{5E8EEE045DE6AD3D}" {
+     m_vPosition -7.463 1.136 -0.028
+     m_vLookPosition -11.005 1.136 0.231
+     m_iEntityLabel RIFLEMAN
+     m_bOccupyWhenNotMain 0
+    }
+    COE_AISlotConfig "{5E8EEE05940923BC}" {
+     m_vPosition -3.665 1.136 2.1
+     m_vLookPosition -3.902 1.136 6.804
+     m_iEntityLabel RIFLEMAN
+     m_bOccupyWhenNotMain 0
+    }
+    COE_AISlotConfig "{5E8EEE05B0366F25}" {
+     m_vPosition 2.38 1.136 -0.145
+     m_vLookPosition 7.945 0 0.258
+     m_iEntityLabel RIFLEMAN
+     m_bOccupyWhenNotMain 0
+    }
+    COE_AISlotConfig "{5E8EEE05DC17242E}" {
+     m_vPosition -7.384 4.323 -1.248
+     m_vLookPosition -7.442 4.323 -4.462
+     m_iEntityLabel RIFLEMAN
+     m_bOccupyWhenNotMain 0
+    }
+    COE_AISlotConfig "{5E8EEE05F6980C2F}" {
+     m_vPosition -1.907 4.323 -3.322
+     m_vLookPosition -6.741 4.323 -4.291
+     m_iEntityLabel RIFLEMAN
+     m_bOccupyWhenNotMain 0
+    }
+    COE_AISlotConfig "{5E8EEE0512A9189C}" {
+     m_vPosition 7.006 4.323 -0.024
+     m_vLookPosition 8.385 4.323 0.059
+     m_iEntityLabel RIFLEMAN
+     m_bOccupyWhenNotMain 0
+    }
    }
-   ActionOffset -6.481 7.5 -5.995
-   m_vLookPosition -6.161 7.5 -10.277
-  }
-  SCR_AISmartActionSentinelComponent "{5E7C3504B70B14A9}" {
-   AIBehaviorTree "{BC53D77D23308CD6}AI/BehaviorTrees/SmartActions/SA_ObservationPost.bt"
-   Tags {
-    "COE_Post"
-   }
-   ActionOffset 6.853 7.5 5.209
-   m_vLookPosition 8.792 7.5 7.22
   }
  }
 }

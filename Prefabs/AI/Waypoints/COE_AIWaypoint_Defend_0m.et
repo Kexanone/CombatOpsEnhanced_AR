@@ -1,0 +1,25 @@
+SCR_DefendWaypoint {
+ ID "5E8EEE143C8143AE"
+ coords 2687.019 389.014 5186.562
+ Type "Defend"
+ Title "Defend waypoint"
+ AIBehaviorTree "{53C0853FB44E73E9}AI/BehaviorTrees/Waypoints/WP_Defend.bt"
+ AIBehaviorTreeMoveTo "{A3755C1F88DED8D6}AI/BehaviorTrees/Waypoints/WP_Move.bt"
+ CompletionRadius 0
+ Autocomplete 0
+ m_holdingTime -1
+ m_DefendPresets {
+  SCR_DefendWaypointPreset "{5E8EEE143C8143B5}" {
+   m_sName "Guarding"
+   m_aTagsForSearch {
+    "ObservationPost" "GatePost"
+   }
+  }
+  SCR_DefendWaypointPreset "{5E8EEE143C8143BE}" {
+   m_sName "Defending"
+   m_aTagsForSearch {
+    "CoverPost"
+   }
+  }
+ }
+}

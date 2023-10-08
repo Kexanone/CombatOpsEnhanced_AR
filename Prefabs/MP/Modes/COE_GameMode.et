@@ -12,6 +12,8 @@ COE_GameMode : "{1B76F75A3175E85C}Prefabs/MP/Modes/Plain/GameMode_Plain.et" {
   }
   SCR_CommandingManagerComponent "{5E6F1867E2884BA4}" {
   }
+  SCR_CompositionSlotManagerComponent "{5E8ED61996D6450A}" {
+  }
   SCR_DebriefingScreenComponent "{5E6F1867E2884BA2}" {
    m_sHeaderTitle "#AR-CombatScenarioArland_Name"
    m_BaseLayout SCR_DebriefingScreenUnevenFourTiles "{5E6F1867E2884BBF}" {

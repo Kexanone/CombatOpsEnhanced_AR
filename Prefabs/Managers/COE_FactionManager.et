@@ -29,8 +29,29 @@ COE_FactionManager : "{4A188E44289B9A50}Prefabs/MP/Managers/Factions/FactionMana
    m_aLargeRoadSlotPrefabs {
     "{2A27606856B8A913}Prefabs/Compositions/Slotted/SlotRoadLarge/Barricade_L_USSR_01.et" "{9F9924B626C5FA2B}Prefabs/Compositions/Slotted/SlotRoadLarge/Checkpoint_L_USSR_01.et"
    }
+   m_aLargeFlatSlotPrefabs {
+    "{F68F3B7247F6E80F}Prefabs/Compositions/Slotted/SlotFlatLarge/LivingArea_L_USSR_01.et"
+   }
    m_aMGNestPrefabs {
     "{6C125CAB25D1631A}Prefabs/Compositions/Slotted/SlotFlatSmall/MachineGunNest_S_USSR_01.et" "{114DE81321786CD9}Prefabs/Compositions/Slotted/SlotFlatSmall/MachineGunNest_S_USSR_01_PKM.et"
+   }
+   m_aMarksmanPrefabs {
+    "{976AC400219898FA}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Sharpshooter.et"
+   }
+   m_aRiflemanMGPrefabs {
+    "{23ADBBC31B6A3DC6}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_AR.et" "{96C784C502AC37DA}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_MG.et"
+   }
+   m_aRiflemanGLPrefabs {
+    "{8E0FE664CE7D1CA9}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_GL.et"
+   }
+   m_aRiflemanATPrefabs {
+    "{1C78331E156A3D65}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_AT.et"
+   }
+   m_aRiflemanPrefabs {
+    "{23ADBBC31B6A3DC6}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_AR.et" "{1C78331E156A3D65}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_AT.et" "{8E0FE664CE7D1CA9}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_GL.et" "{AB9726163EC1BD81}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Medic.et" "{DCB41B3746FDD1BE}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Rifleman.et" "{612F43A4D5AE765F}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_RTO.et" "{5436629450D8387A}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_SL.et"
+   }
+   m_aTeamPrefabs {
+    "{657590C1EC9E27D3}Prefabs/Groups/OPFOR/Group_USSR_LightFireTeam.et" "{96BAB56E6558788E}Prefabs/Groups/OPFOR/Group_USSR_Team_AT.et" "{43C7A28EEB660FF8}Prefabs/Groups/OPFOR/Group_USSR_Team_GL.et" "{1C0502B5729E7231}Prefabs/Groups/OPFOR/Group_USSR_Team_Suppress.et"
    }
   }
   COE_Faction "{56DEAC40D132400B}" {

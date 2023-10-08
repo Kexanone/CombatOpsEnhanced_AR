@@ -22,7 +22,7 @@ class COE_GameTools
 	}
 	
 	//------------------------------------------------------------------------------------------------
-	static AIGroup SpawnGroupPrefab(ResourceName name, vector pos, float rotation = 0)
+	static AIGroup SpawnGroupPrefab(ResourceName name, vector pos = vector.Zero, float rotation = 0)
 	{
 		vector transform[4];
 		Math3D.AnglesToMatrix(Vector(rotation, 0, 0), transform);

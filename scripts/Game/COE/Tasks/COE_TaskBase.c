@@ -1,11 +1,32 @@
 //------------------------------------------------------------------------------------------------
 class COE_TaskBaseConfig : ScriptAndConfig
 {
+	[Attribute(defvalue: "1", desc: "Whether this task is enabled")]
+	protected bool m_bEnabled;
+	
 	[Attribute(desc: "Types of the task", uiwidget: UIWidgets.ComboBox, enums: ParamEnumArray.FromEnum(COE_ETaskType))]
 	protected COE_ETaskType m_iTaskType;
 	
 	[Attribute(desc: "Name of the Scenario Workflow task prefab")]
 	protected ResourceName m_sSFTaskPrefabName;
+	
+	protected COE_Faction m_EnemyFaction;
+	
+	//------------------------------------------------------------------------------------------------
+	bool IsEnabled()
+	{
+		return m_bEnabled;
+	}
+	
+	//------------------------------------------------------------------------------------------------
+	void Init()
+	{
+		COE_FactionManager factionManager = COE_FactionManager.Cast(GetGame().GetFactionManager());
+		if (!factionManager)
+			return;
+		
+		m_EnemyFaction = factionManager.GetEnemyFaction();
+	}
 	
 	//------------------------------------------------------------------------------------------------
 	COE_ETaskType GetTaskType()
@@ -14,8 +35,10 @@ class COE_TaskBaseConfig : ScriptAndConfig
 	}
 	
 	//------------------------------------------------------------------------------------------------
-	void Create(COE_LocationBase location = null)
+	void Create(COE_Location location = null)
 	{
+		if (location)
+			SpawnSFTaskPrefab(location.GetCenter());
 	}
 	
 	//------------------------------------------------------------------------------------------------

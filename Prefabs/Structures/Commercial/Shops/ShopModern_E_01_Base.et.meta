@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{9ABD5AF92E43D2AA}Prefabs/Structures/Commercial/Shops/ShopModern_E_01_Base.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

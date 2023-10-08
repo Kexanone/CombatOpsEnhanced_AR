@@ -1,11 +1,11 @@
 //------------------------------------------------------------------------------------------------
 class COE_TaskDeliverIntelConfig : COE_TaskBaseConfig
 {
-	[Attribute(desc: "Label of intel prefab", uiwidget: UIWidgets.ComboBox, enums: ParamEnumArray.FromEnum(COE_EPrefabLabel))]
-	protected COE_EPrefabLabel m_iIntelPrefabLabel;
+	[Attribute(desc: "Label of intel prefab", uiwidget: UIWidgets.ComboBox, enums: ParamEnumArray.FromEnum(COE_EEntityLabel))]
+	protected COE_EEntityLabel m_iIntelPrefabLabel;
 	
 	//------------------------------------------------------------------------------------------------
-	override void Create(COE_LocationBase location = null)
+	override void Create(COE_Location location = null)
 	{
 		IEntity mainStructure = location.GetMainStructure();
 		if (!mainStructure)
@@ -21,22 +21,9 @@ class COE_TaskDeliverIntelConfig : COE_TaskBaseConfig
 			return;
 		};
 		
-		IEntity intel = slotComponent.SpawnInRandomSlot(GetIntelPrefabName());
+		ResourceName intelPrefabName = m_EnemyFaction.GetRandomPrefabByLabel(m_iIntelPrefabLabel);
+		IEntity intel = slotComponent.SpawnInRandomSlot(intelPrefabName);
 		SpawnSFTaskPrefab(mainStructure.GetOrigin(), intel);
-	}
-	
-	//------------------------------------------------------------------------------------------------
-	ResourceName GetIntelPrefabName()
-	{
-		COE_FactionManager factionManager = COE_FactionManager.Cast(GetGame().GetFactionManager());
-		if (!factionManager)
-			return string.Empty;
-		
-		COE_Faction faction = factionManager.GetEnemyFaction();
-		if (!faction)
-			return string.Empty;
-		
-		return faction.GetRandomPrefabByLabel(m_iIntelPrefabLabel);
 	}
 	
 	//------------------------------------------------------------------------------------------------

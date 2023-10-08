@@ -1,0 +1,54 @@
+SCR_DestructibleBuildingEntity : "{8E796437146BA2D2}Prefabs/Structures/Cultural/Churches/ChurchSmall_E_01_Base.et" {
+ ID "F0DBA538AC2A0552"
+ {
+  GenericEntity {
+   ID "59BAD64434610A0C"
+   components {
+    DoorComponent "{221C667A9F7D4B69}" {
+     ClosedAngle 0
+     InitialAngle 90
+    }
+   }
+  }
+  GenericEntity {
+   ID "59BAD64434610A18"
+   components {
+    DoorComponent "{221C667A9F7D4B69}" {
+     ClosedAngle 90
+    }
+   }
+  }
+  GenericEntity {
+   ID "59BAD64434610A25"
+   components {
+    DoorComponent "{221C667A9F7D4B69}" {
+     InitialAngle -90
+    }
+   }
+  }
+  GenericEntity {
+   ID "59BAD64434610A33"
+   components {
+    DoorComponent "{221C667A9F7D4B69}" {
+     InitialAngle -90
+    }
+   }
+  }
+  GenericEntity {
+   ID "59BAD64434610A5E"
+   components {
+    DoorComponent "{221C667A9F7D4B69}" {
+     InitialAngle -90
+    }
+   }
+  }
+  GenericEntity {
+   ID "59BAD64434610AFF"
+   components {
+    DoorComponent "{221C667A9F7D4B69}" {
+     InitialAngle 90
+    }
+   }
+  }
+ }
+}

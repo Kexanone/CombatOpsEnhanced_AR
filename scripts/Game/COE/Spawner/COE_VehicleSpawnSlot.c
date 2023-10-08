@@ -54,6 +54,7 @@ class COE_VehicleSpawnSlot : GenericEntity
 		params.TransformMode = ETransformMode.WORLD;
 		GetWorldTransform(params.Transform);
 		m_pVehicle = Vehicle.Cast(GetGame().SpawnEntityPrefab(Resource.Load(m_sVehiclePrefabToSpawn), null, params));
+		m_pVehicle.GetPhysics().SetActive(ActiveState.ACTIVE);
 	};
 	
 	//------------------------------------------------------------------------------------------------

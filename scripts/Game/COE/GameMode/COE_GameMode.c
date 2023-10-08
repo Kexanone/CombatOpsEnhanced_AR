@@ -6,8 +6,8 @@ class COE_GameModeClass : SCR_BaseGameModeClass
 //------------------------------------------------------------------------------------------------
 class COE_GameMode : SCR_BaseGameMode
 {
-	[Attribute(desc: "Label of main base prefab", uiwidget: UIWidgets.ComboBox, enums: ParamEnumArray.FromEnum(COE_EPrefabLabel))]
-	protected COE_EPrefabLabel m_iMainBasePrefabLabel;
+	[Attribute(desc: "Label of main base prefab", uiwidget: UIWidgets.ComboBox, enums: ParamEnumArray.FromEnum(COE_EEntityLabel))]
+	protected COE_EEntityLabel m_iMainBasePrefabLabel;
 	
 	[Attribute(desc: "Inner border for main base positions", category: "Main Base")]
 	protected string m_sMainBaseInnerBorderName;

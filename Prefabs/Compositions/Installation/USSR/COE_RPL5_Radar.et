@@ -1,6 +1,22 @@
 StaticModelEntity : "{2BC7C6DE43AC49E2}Prefabs/Structures/Military/Radar/ApproachRadar_RPL5_01/ApproachRadar_RPL5_01_short.et" {
  ID "56ACD1C4DB91DB10"
  components {
+  COE_AISlotsComponent "{5E8F1C81F35321A5}" {
+   m_aAISlotConfigs {
+    COE_AISlotConfig "{5E8F1C81F0BDE89C}" {
+     m_vPosition -0.513 0 -5.074
+     m_vLookPosition -1.918 0 -10.427
+     m_iEntityLabel RIFLEMAN
+     m_bOccupyWhenNotMain 0
+    }
+    COE_AISlotConfig "{5E8F1C810469D243}" {
+     m_vPosition 5.048 0 0.594
+     m_vLookPosition 11.682 0 2.635
+     m_iEntityLabel RIFLEMAN
+     m_bOccupyWhenNotMain 0
+    }
+   }
+  }
   SCR_EditableEntityComponent "{5E750EB2C92285BF}" {
    m_UIInfo SCR_EditableEntityUIInfo "{5E750EB20581E8AB}" {
     Name "RPL-5 Radar"

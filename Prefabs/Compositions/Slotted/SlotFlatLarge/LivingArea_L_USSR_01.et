@@ -1,0 +1,71 @@
+GenericEntity : "{3BA9D94C4EE9B33B}Prefabs/Compositions/Slotted/CompositionBase.et" {
+ ID "5282DCB5DFC8538F"
+ components {
+  COE_AISlotsComponent "{5E8EEE057AEE09AB}" {
+   m_aAISlotConfigs {
+    COE_AISlotConfig "{5E8EEE05785534B5}" {
+     m_vPosition -12.431 0 0.679
+     m_iEntityLabel HVT
+     m_bOccupyWhenNotMain 0
+    }
+    COE_AISlotConfig "{5E8EEE069BEF8BCE}" {
+     m_vPosition 13.865 0 -1.337
+     m_iEntityLabel HVT
+     m_bOccupyWhenNotMain 0
+    }
+    COE_AISlotConfig "{5E8EEE06AB7D7101}" {
+     m_vPosition 12.38 0 -12.015
+     m_vLookPosition 4.027 0 -11.128
+     m_iEntityLabel HVT
+     m_bOccupyWhenNotMain 0
+    }
+    COE_AISlotConfig "{5E8EEE06C162BF0E}" {
+     m_vPosition -0.954 0 17.858
+     m_vLookPosition -0.456 0 20.138
+     m_iEntityLabel RIFLEMAN
+    }
+    COE_AISlotConfig "{5E8EEE06E3BCF95B}" {
+     m_vPosition -0.862 0 6.083
+     m_vLookPosition -5.876 0 7.906
+     m_iEntityLabel RIFLEMAN
+    }
+    COE_AISlotConfig "{5E8EEE06F42BF96E}" {
+     m_vPosition 2.517 0 -15.969
+     m_vLookPosition 7.35 0 -21.908
+     m_iEntityLabel RIFLEMAN
+    }
+    COE_AISlotConfig "{5E8EEE0607FC9D6D}" {
+     m_vPosition -17.591 0 0.859
+     m_vLookPosition -21.862 0 0.25
+     m_iEntityLabel RIFLEMAN
+    }
+    COE_AISlotConfig "{5E8EEE06117A9C46}" {
+     m_vPosition 16.905 0 -2.781
+     m_vLookPosition 21.361 0 -1.451
+     m_iEntityLabel RIFLEMAN
+    }
+    COE_AISlotConfig "{5E8EEE0624A6CD4C}" {
+     m_vPosition -2.061 0 -3.32
+     m_vLookPosition 0.245 0 -3.929
+     m_iEntityLabel RIFLEMAN
+    }
+   }
+  }
+  COE_IntelSlotsComponent "{5E8338283A54F228}" {
+   m_bShowDebugEntityPreviewInWorkbench 1
+   m_aIntelSlotConfigs {
+    COE_IntelSlotConfig "{5E83382846D56865}" {
+     m_vPosition -10.847 1.083 -0.11
+    }
+    COE_IntelSlotConfig "{5E8338276E8395CD}" {
+     m_vPosition 12.884 1.064 -2.201
+     m_vAngles 177 0 0
+    }
+    COE_IntelSlotConfig "{5E83383889257DD9}" {
+     m_vPosition -10.876 1.002 -10.504
+     m_vAngles 246 0 0
+    }
+   }
+  }
+ }
+}

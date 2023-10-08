@@ -42,7 +42,7 @@ class COE_AreaLocationConfig : COE_LocationBaseConfig
 }
 
 //------------------------------------------------------------------------------------------------
-class COE_AreaLocation : COE_LocationBase
+class COE_AreaLocation : COE_Location
 {
 	protected ref COE_AreaBase m_aArea;
 	

@@ -1,23 +1,20 @@
 //------------------------------------------------------------------------------------------------
 class COE_SlotLocationConfig : COE_PrefabLocationConfig
 {
-	[Attribute(desc: "Prefab to spawn on slot")]
-	protected ResourceName m_sPrefabToSpawn;
+	[Attribute(desc: "Label of prefab to spawn", uiwidget: UIWidgets.ComboBox, enums: ParamEnumArray.FromEnum(COE_EEntityLabel))]
+	protected COE_EEntityLabel m_iPrefabLabelToSpawn;
 
 	//------------------------------------------------------------------------------------------------
-	override COE_SlotLocation Create()
+	override COE_Location Create()
 	{
-		IEntity entity = PickEntity();
-		if (!entity)
+		COE_Location location = super.Create();
+		SCR_SiteSlotEntity slot = SCR_SiteSlotEntity.Cast(location.GetMainStructure());
+		if (!slot)
 			return null;
 		
-		COE_SlotLocation location = COE_SlotLocation(entity.GetOrigin(), m_fLocationRadius);
-		location.SetMainPrefabName(m_sPrefabToSpawn);
+		Resource prefabToSpawn = Resource.Load(m_Faction.GetRandomPrefabByLabel(m_iPrefabLabelToSpawn));
+		IEntity structure = slot.SpawnEntityInSlot(prefabToSpawn);
+		location.SetMainStructure(structure);
 		return location;
 	}
-}
-
-//------------------------------------------------------------------------------------------------
-class COE_SlotLocation : COE_PrefabLocation
-{
 }

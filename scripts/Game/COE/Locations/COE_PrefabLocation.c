@@ -26,42 +26,33 @@ class COE_PrefabLocationConfig : COE_LocationBaseConfig
 		
 		vector pos = entity.GetOrigin();
 		
-		if (!m_pSampledArea.IsPointInArea(pos))
+		if (!IsPositionAccepted(pos))
 			return true;
-		
-		foreach (COE_AreaBase area : m_aExcludedAreas)
-		{
-			if (area.IsPointInArea(pos))
-				return true;
-		};
 		
 		m_aEntitiesToPick.Insert(entity);
 		return true;
 	}
 	
 	//------------------------------------------------------------------------------------------------
-	protected IEntity PickEntity()
+	override protected bool PickPosition(out vector pos, out IEntity associatedStructure)
 	{
 		if (m_aEntitiesToPick.IsEmpty())
-			return null;
+			return false;
+				
+		while (true)
+		{
+			if (m_aEntitiesToPick.IsEmpty())
+				return false;
+			
+			associatedStructure = m_aEntitiesToPick[Math.RandomInt(0, m_aEntitiesToPick.Count())];
+			pos = associatedStructure.GetOrigin();
+			
+			if (IsPositionAccepted(pos))
+				return true;
+			
+			m_aEntitiesToPick.RemoveItem(associatedStructure);
+		}
 		
-		return m_aEntitiesToPick[Math.RandomInt(0, m_aEntitiesToPick.Count())];
+		return false;
 	}
-	
-	//------------------------------------------------------------------------------------------------
-	override COE_PrefabLocation Create()
-	{
-		IEntity entity = PickEntity();
-		if (!entity)
-			return null;
-		
-		COE_PrefabLocation location = COE_PrefabLocation(entity.GetOrigin(), m_fLocationRadius);
-		location.SetMainStructure(entity);
-		return location;
-	}
-}
-
-//------------------------------------------------------------------------------------------------
-class COE_PrefabLocation : COE_LocationBase
-{
 }

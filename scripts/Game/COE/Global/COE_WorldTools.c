@@ -107,7 +107,7 @@ class COE_WorldTools
 	{
 		SCR_SiteSlotEntity slot = SCR_SiteSlotEntity.Cast(entity);
 		
-		if (slot)
+		if (slot && !slot.IsOccupied())
 			m_aQueriedSlots.Insert(slot);
 		
 		return true;

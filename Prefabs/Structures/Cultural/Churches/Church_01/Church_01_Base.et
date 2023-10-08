@@ -1,0 +1,27 @@
+SCR_DestructibleBuildingEntity : "{A43A100E3C377DB2}Prefabs/Structures/Core/Building_Base.et" {
+ ID "5206DA6BF27D60C9"
+ components {
+  COE_AISlotsComponent "{5E902738BBC6CA53}" {
+   m_aAISlotConfigs {
+    COE_AISlotConfig "{5E902738C6ED9B55}" {
+     m_vPosition 0.198 18.145 13.026
+     m_vLookPosition 0.289 18.145 9.565
+     m_iStanceChange 14
+     m_iEntityLabel MARKSMAN
+    }
+    COE_AISlotConfig "{5E902738C7E7ABCC}" {
+     m_vPosition -2.168 18.145 15.245
+     m_vLookPosition -3.651 18.145 15.394
+     m_iStanceChange 14
+     m_iEntityLabel MARKSMAN
+    }
+    COE_AISlotConfig "{5E902738C51A84E8}" {
+     m_vPosition 2.374 18.145 15.191
+     m_vLookPosition 4.323 18.145 15.137
+     m_iStanceChange 14
+     m_iEntityLabel MARKSMAN
+    }
+   }
+  }
+ }
+}

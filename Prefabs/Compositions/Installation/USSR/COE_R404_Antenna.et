@@ -1,6 +1,22 @@
 StaticModelEntity : "{B9AEDBE988F20A1A}Prefabs/Structures/Infrastructure/Towers/AntennaR404_01/AntennaR404_01.et" {
  ID "50D67C36F43527FE"
  components {
+  COE_AISlotsComponent "{5E8F1C81C3113617}" {
+   m_aAISlotConfigs {
+    COE_AISlotConfig "{5E8F1C81C0B68088}" {
+     m_vPosition 4.371 0 -2.436
+     m_vLookPosition 6.673 0 -0.422
+     m_iEntityLabel RIFLEMAN
+     m_bOccupyWhenNotMain 0
+    }
+    COE_AISlotConfig "{5E8F1C81DD66566A}" {
+     m_vPosition 0.726 0 -4.513
+     m_vLookPosition -2.66 0 -8.983
+     m_iEntityLabel RIFLEMAN
+     m_bOccupyWhenNotMain 0
+    }
+   }
+  }
   SCR_DestructionMultiPhaseComponent "{5A5ED31B16298711}" {
    Enabled 1
   }

@@ -1,12 +1,35 @@
 //------------------------------------------------------------------------------------------------
 class COE_TaskDestroyConfig : COE_TaskBaseConfig
 {
-	[Attribute(desc: "Label of target prefab", uiwidget: UIWidgets.ComboBox, enums: ParamEnumArray.FromEnum(COE_EPrefabLabel))]
-	protected COE_EPrefabLabel m_iTargetPrefabLabel;
+	[Attribute(desc: "Label of target prefab", uiwidget: UIWidgets.ComboBox, enums: ParamEnumArray.FromEnum(COE_EEntityLabel))]
+	protected COE_EEntityLabel m_iTargetPrefabLabel;
 	
 	//------------------------------------------------------------------------------------------------
-	override void Create(COE_LocationBase location = null)
+	override void Create(COE_Location location = null)
 	{
+		vector transform[4];
+		Math3D.MatrixIdentity4(transform);
+		
+		SCR_SiteSlotEntity slot = SCR_SiteSlotEntity.Cast(location.GetRandomFlatSlot());
+		if (slot)
+		{
+			transform[3] = slot.GetOrigin();
+		}
+		else
+		{
+			transform[3] = location.GetCenter();
+		};
+		
+		SCR_TerrainHelper.SnapAndOrientToTerrain(transform);
+		Math.Randomize(-1);
+		COE_WorldTools.SetTransformRotation(transform, Math.RandomFloat(0, 360));		
+		IEntity target = COE_GameTools.SpawnStructurePrefab(GetTargetPrefabName(), transform);
+		
+		if (slot)
+			slot.SetOccupant(target);
+		
+		location.AddStructure(target);
+		SpawnSFTaskPrefab(transform[3], target);
 	}
 	
 	//------------------------------------------------------------------------------------------------

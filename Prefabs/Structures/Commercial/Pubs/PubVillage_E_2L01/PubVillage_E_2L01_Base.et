@@ -1,0 +1,69 @@
+SCR_DestructibleBuildingEntity : "{A43A100E3C377DB2}Prefabs/Structures/Core/Building_Base.et" {
+ ID "F0DBA538AC2A0552"
+ components {
+  COE_AISlotsComponent "{5E8EEE0058C9118F}" {
+   m_aAISlotConfigs {
+    COE_AISlotConfig "{5E8EEE006616A89A}" {
+     m_vPosition -6.79 3.913 -3.642
+     m_vLookPosition -4.658 3.913 -0.538
+     m_iEntityLabel HVT
+     m_bOccupyWhenNotMain 0
+    }
+    COE_AISlotConfig "{5E8EEE01C8FE18D8}" {
+     m_vPosition 6.558 3.913 2.869
+     m_vLookPosition 4.764 3.913 0.135
+     m_iEntityLabel HVT
+     m_bOccupyWhenNotMain 0
+    }
+    COE_AISlotConfig "{5E8EEE01E2B6A1F2}" {
+     m_vPosition 5.304 3.913 -3.736
+     m_vLookPosition 3.354 3.913 -1.753
+     m_iEntityLabel HVT
+     m_bOccupyWhenNotMain 0
+    }
+    COE_AISlotConfig "{5E8EEE01176D4B6B}" {
+     m_vPosition -6.62 0 -3.395
+     m_vLookPosition -4.62 0 -5.91
+     m_iEntityLabel RIFLEMAN
+     m_bOccupyWhenNotMain 0
+    }
+    COE_AISlotConfig "{5E8EEE013E807F0D}" {
+     m_vPosition 1.061 0 1.054
+     m_vLookPosition 1.047 0 -0.1
+     m_iEntityLabel RIFLEMAN
+     m_bOccupyWhenNotMain 0
+    }
+    COE_AISlotConfig "{5E8EEE014EFBD96E}" {
+     m_vPosition 1.399 3.913 0.242
+     m_vLookPosition 1.383 3.913 3.754
+     m_iEntityLabel RIFLEMAN
+     m_bOccupyWhenNotMain 0
+    }
+    COE_AISlotConfig "{5E8EEE01585ED6D7}" {
+     m_vPosition 1.826 1.965 5.183
+     m_vLookPosition 0 1.965 0
+     m_iEntityLabel RIFLEMAN
+     m_bOccupyWhenNotMain 0
+    }
+    COE_AISlotConfig "{5E8EEE02A73C8C8A}" {
+     m_vPosition 4.365 0 -8.133
+     m_vLookPosition 4.246 0 -10.68
+     m_iEntityLabel RIFLEMAN
+     m_bOccupyWhenNotMain 0
+    }
+    COE_AISlotConfig "{5E8EEE02B7450AC9}" {
+     m_vPosition 1.269 3.913 -5.602
+     m_vLookPosition 3.208 3.913 -2.703
+     m_iEntityLabel RIFLEMAN
+     m_bOccupyWhenNotMain 0
+    }
+    COE_AISlotConfig "{5E8EEE02D7871FAA}" {
+     m_vPosition -7.245 3.913 -0.154
+     m_vLookPosition -3.804 3.913 -0.131
+     m_iEntityLabel RIFLEMAN
+     m_bOccupyWhenNotMain 0
+    }
+   }
+  }
+ }
+}

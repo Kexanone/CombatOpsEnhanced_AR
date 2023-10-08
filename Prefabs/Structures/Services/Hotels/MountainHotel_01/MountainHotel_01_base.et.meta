@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{80F53B22769563A5}Prefabs/Structures/Services/Hotels/MountainHotel_01/MountainHotel_01_base.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

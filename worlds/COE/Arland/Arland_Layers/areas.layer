@@ -100,6 +100,9 @@ $grp COE_PolygonAreaPicker {
   m_vP7 -1420.645 0 -1740.11
  }
 }
+GenericEntity COE_Harbour1 {
+ coords 3266.836 2 2898.722
+}
 COE_EntitySpawner CarrierSpawner : "{66C9366A037F7CB7}Prefabs/Spawner/COE_EntitySpawner.et" {
  coords 944.908 0 4017.722
  Flags 1048579

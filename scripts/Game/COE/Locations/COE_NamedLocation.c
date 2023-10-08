@@ -5,22 +5,23 @@ class COE_NamedLocationConfig : COE_LocationBaseConfig
 	protected ref array<string> m_aNamedLocations;
 	
 	//------------------------------------------------------------------------------------------------
-	override bool PickPosition(out vector pos)
+	override bool PickPosition(out vector pos, out IEntity associatedStructure)
 	{
-		if (m_aNamedLocations.IsEmpty())
-			return false;
+		while (true)
+		{
+			if (m_aNamedLocations.IsEmpty())
+				return false;
 		
-		string locationName = m_aNamedLocations[Math.RandomInt(0, m_aNamedLocations.Count())];
-		IEntity location = GetGame().GetWorld().FindEntityByName(locationName);
-		if (!location)
-			return false;
+			string locationName = m_aNamedLocations[Math.RandomInt(0, m_aNamedLocations.Count())];
+			IEntity location = GetGame().GetWorld().FindEntityByName(locationName);		
+			pos = location.GetOrigin();
+			
+			if (IsPositionAccepted(pos))
+				return true;
+			
+			m_aNamedLocations.RemoveItem(locationName);
+		};
 		
-		pos = location.GetOrigin();
-		return true;
+		return false;
 	}
-}
-
-//------------------------------------------------------------------------------------------------
-class COE_NamedLocation : COE_LocationBase
-{
 }
