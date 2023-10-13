@@ -8,6 +8,7 @@ GenericEntity : "{88821DCA414AF4C7}Prefabs/ScenarioFramework/Components/LayerTas
    m_bPlaceMarkerOnSubjectSlot 1
    m_sTaskTitleUpdated "Deliver Intel"
    m_sTaskDescriptionUpdated "#AR-CombatScenario_Intel_Description_D"
+   m_iIntelMapMarkerUpdateDelay 2
   }
  }
  coords 99.566 1 152.77
@@ -21,6 +22,7 @@ GenericEntity : "{88821DCA414AF4C7}Prefabs/ScenarioFramework/Components/LayerTas
      m_aPlugins {
       SCR_ScenarioFrameworkPluginTrigger "{5A6513EB3A4B9621}" {
        m_fAreaRadius 100
+       m_bOnce 0
       }
      }
      m_sObjectToSpawn "{47D49EA6A216CFD5}Prefabs/ScenarioFramework/Triggers/TriggerCharacterSlow.et"
@@ -35,20 +37,19 @@ GenericEntity : "{88821DCA414AF4C7}Prefabs/ScenarioFramework/Components/LayerTas
      m_iRandomPercent 100
      m_sTaskTitle "#AR-CombatScenario_Intel_Title"
      m_sTaskDescription "#AR-CombatScenario_Intel_Description_A"
-     m_aActionsOnFinished {
-      SCR_ScenarioFrameworkActionExecuteFunction "{5E7D7A61DF78F28A}" {
-       m_ObjectToCallTheMethodFrom SCR_ScenarioFrameworkGetEntityByName "{5E7D7A61E76C414A}" {
-        m_sEntityName "ObjectiveManager"
-       }
-       m_sMethodToCall "ScheduleNextObjective"
-      }
-     }
      m_aActionsOnCreated {
       SCR_ScenarioFrameworkActionPlaySound "{5E7D7A612B103443}" {
        m_sSound "SOUND_CP_IPL_2"
       }
      }
      m_aActionsOnUpdated {
+      SCR_ScenarioFrameworkActionExecuteFunction "{5E910BC18BBB9079}" {
+       m_iMaxNumberOfActivations 1
+       m_ObjectToCallTheMethodFrom SCR_ScenarioFrameworkGetEntityByName "{5E910BC192555723}" {
+        m_sEntityName "ObjectiveManager"
+       }
+       m_sMethodToCall "ScheduleNextObjective"
+      }
       SCR_ScenarioFrameworkActionPlaySound "{5E7D7A668AC27219}" {
        m_sSound "SOUND_CP_TIF"
       }

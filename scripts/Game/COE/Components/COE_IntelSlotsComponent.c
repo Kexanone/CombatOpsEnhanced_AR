@@ -36,9 +36,9 @@ class COE_IntelSlotsComponent : ScriptComponent
 	{
 		vector ownerTransform[4];
 		GetOwner().GetWorldTransform(ownerTransform);
-		transform[3] = GetOwner().CoordToParent(config.m_vPosition);
 		Math3D.AnglesToMatrix(config.m_vAngles, transform);
 		Math3D.MatrixMultiply3(ownerTransform, transform, transform);
+		transform[3] = GetOwner().CoordToParent(config.m_vPosition);
 	}
 	
 	//------------------------------------------------------------------------------------------------
@@ -59,11 +59,10 @@ class COE_IntelSlotsComponent : ScriptComponent
 			Math.Randomize(-1);
 			config = m_aIntelSlotConfigs[Math.RandomInt(0, m_aIntelSlotConfigs.Count())];
 		};
-			
-		EntitySpawnParams spawnParams = new EntitySpawnParams;
-		spawnParams.TransformMode = ETransformMode.WORLD;
-		GetTransformFromConfig(spawnParams.Transform, config);
-		return GetGame().SpawnEntityPrefab(Resource.Load(prefabName), null, spawnParams);
+		
+		vector transform[4];
+		GetTransformFromConfig(transform, config);
+		return COE_GameTools.SpawnPrefab(prefabName, transform);
 	}
 
 #ifdef WORKBENCH	
