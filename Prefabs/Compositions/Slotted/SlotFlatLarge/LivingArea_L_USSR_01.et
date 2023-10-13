@@ -52,7 +52,6 @@ GenericEntity : "{3BA9D94C4EE9B33B}Prefabs/Compositions/Slotted/CompositionBase.
    }
   }
   COE_IntelSlotsComponent "{5E8338283A54F228}" {
-   m_bShowDebugEntityPreviewInWorkbench 1
    m_aIntelSlotConfigs {
     COE_IntelSlotConfig "{5E83382846D56865}" {
      m_vPosition -10.847 1.083 -0.11
