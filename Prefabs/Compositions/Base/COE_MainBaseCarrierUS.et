@@ -138,6 +138,11 @@ GenericEntity {
     }
     SCR_DestructibleBuildingEntity : "{4D57ABE744816D32}Prefabs/Structures/Military/Vessel/VesselHMAS_Adelaide_01/VesselHMAS_Adelaide_01_base.et" {
      ID "5E770A88F87610BC"
+     components {
+      RplComponent "{50A4E7C9B5728062}" {
+       Streamable Disabled
+      }
+     }
      coords 0 0 0
     }
     GenericEntity : "{53A99461B277506E}Prefabs/Structures/Military/Vessel/VesselHMAS_Adelaide_01/VessleHMAS_Adelaide_01_Fittings_01.et" {
@@ -160,6 +165,9 @@ GenericEntity {
       }
       ActionsManagerComponent "{5A7C23C95F15F590}" {
        Enabled 0
+      }
+      RplComponent "{63136787FD0BCE14}" {
+       Streamable Disabled
       }
      }
      coords 0 0 0
