@@ -46,52 +46,58 @@ COE_ObjectiveManager ObjectiveManager : "{973B5090288C8ADC}Prefabs/Managers/COE_
  m_aLocationConfigs {
   COE_FreeRoamingLocationConfig "{5E7B42E9CB2B02CF}" {
    m_bWeight 42
+   m_fMaxDistanceMainBase 10000
   }
   COE_PrefabLocationConfig "{5E7B42D1349C35C1}" {
    m_bWeight 18
+   m_fMaxDistanceMainBase 10000
   }
   COE_SlotLocationConfig "{5E7B42D0793541FB}" {
    m_bWeight 10
+   m_fMaxDistanceMainBase 10000
   }
   COE_NamedLocationConfig "{5E7D7A70CD6A5F2A}" {
    m_sComment "Towns"
    m_bWeight 12
+   m_fMaxDistanceMainBase 10000
    m_aNamedLocations {
     "C_Location_St_Pierre" "C_LocationChotain" "C_LocationDurras" "C_LocationEntreDeux" "C_LocationErquy" "C_LocationFigari" "C_LocationGravette" "C_LocationLamentin" "C_LocationLaruns" "C_LocationLeMoule" "C_LocationLevie" "C_LocationMeaux" "C_LocationMontignac" "C_LocationMorton" "C_LocationProvins" "C_LocationRegina" "C_LocationStPhilippe" "C_LocationTyrone" "C_LocationVernon" "C_LocationVilleneuve"
    }
   }
   COE_NamedLocationConfig "{5E8F1CE937D132EA}" {
    m_bWeight 3
+   m_fMaxDistanceMainBase 10000
    m_aNamedLocations {
     "G_Military" "G_Military2" "G_Military3" "G_Military4" "G_Military5" "G_Military6"
    }
   }
   COE_NamedLocationConfig "{5E8F1CE955E96A2B}" {
    m_bWeight 3
+   m_fMaxDistanceMainBase 10000
    m_aNamedLocations {
     "G_Harbour" "G_Harbour2" "G_Harbour3" "G_Harbour4" "G_Harbour5" "G_Harbour6"
    }
   }
   COE_NamedLocationConfig "{5E8F1CE953563688}" {
    m_bWeight 3
+   m_fMaxDistanceMainBase 10000
    m_aNamedLocations {
     "G_Industrial" "G_Industrial3" "G_Sawmill" "G_Quarry" "G_Landfill"
    }
   }
  }
  m_aTaskConfigs {
+  COE_TaskDestroyConfig "{5E83606AACFAFC49}" {
+   m_bEnabled 0
+  }
   COE_TaskDestroyConfig "{5E8360688CB4482C}" {
+  }
+  COE_TaskKillConfig "{5E83606A43AC974F}" {
+   m_bEnabled 0
   }
   COE_TaskDeliverIntelConfig "{5E83606A41749631}" {
   }
  }
-}
-SCR_GarbageManager GarbageManager : "{9B883A7D8EBB282A}Prefabs/MP/Managers/GarbageManager.et" {
- coords 4771.573 27.079 11837.93
- CharacterLifetime 360
- VehicleLifetime 300
- ItemLifetime 360
- m_bOnlyDestroyed 1
 }
 SCR_LoadoutManager LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutManager_Base.et" {
  coords 4776.919 27.182 11843.557
@@ -105,7 +111,6 @@ SCR_LoadoutManager LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loado
   SCR_PlayerArsenalLoadout "{5B0298F01E3A1A0D}" {
    m_sLoadoutName "Arsenal "
    m_sLoadoutResource "{BE7CA93E188A5B58}Prefabs/Characters/Campaign/Final/Campaign_US_Base.et"
-   m_sPreviewLoadout "{284E735C6C70DAD2}Prefabs/Characters/Factions/BLUFOR/US_Army/Character_US_BaseLoadout.et"
    m_sLoadoutImage "{2B0877799B9B6C66}UI/Textures/EditorPreviews/Characters/BLUFOR/US_Army/Character_US_Rifleman.edds"
    m_sAffiliatedFaction "US"
   }
@@ -118,7 +123,6 @@ SCR_LoadoutManager LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loado
   SCR_PlayerArsenalLoadout "{5E1A3B1BC3C524A3}" {
    m_sLoadoutName "Arsenal"
    m_sLoadoutResource "{5346CF7E39A65A6B}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Base.et"
-   m_sPreviewLoadout "{3ECA3A935BC069B9}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_BaseLoadout.et"
    m_sLoadoutImage "{6A8FF7A3F9007CD0}UI/Textures/EditorPreviews/Characters/OPFOR/USSR_Army/Character_USSR_Rifleman.edds"
    m_sAffiliatedFaction "USSR"
   }

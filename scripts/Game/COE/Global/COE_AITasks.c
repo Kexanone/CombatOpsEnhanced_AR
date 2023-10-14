@@ -11,7 +11,16 @@ class COE_AITasks
 		
 		formationHandler.SetFormation("Column");
 		
-		vector prevPos = group.GetLeaderEntity().GetOrigin();
+		vector prevPos = position;
+		array<AIAgent> agents = {};
+		group.GetAgents(agents);
+		
+		if (!agents.IsEmpty())
+		{
+			prevPos = agents[0].GetControlledEntity().GetOrigin();
+			
+		};
+		
 		prevPos[1] = SCR_TerrainHelper.GetTerrainY(prevPos);
 		
 		array<AIWaypoint> wpList = {};

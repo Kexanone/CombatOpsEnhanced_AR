@@ -12,6 +12,9 @@ TagManager TagManager : "{2FA9E172CAB1857A}Prefabs/MP/Managers/TagManager.et" {
 }
 COE_GameMode GameMode : "{9EDD3A569D1FE096}Prefabs/MP/Modes/COE_GameMode.et" {
  components {
+  SCR_MapMarkerManagerComponent "{5D32E876D3886A72}" {
+   m_sMarkerCfgPath "{720E8E61D7692172}Configs/Map/MapMarkerConfig.conf"
+  }
   SCR_RespawnSystemComponent "{56B2B4793051E7C9}" {
    m_SpawnLogic SCR_AutoSpawnLogic "{5D36888CC966608A}" {
     m_sForcedFaction "US"
@@ -41,13 +44,35 @@ COE_VehicleSpawnManager VehicleSpawnManager : "{03A3F74C83B9255B}Prefabs/Manager
 }
 COE_ObjectiveManager ObjectiveManager : "{973B5090288C8ADC}Prefabs/Managers/COE_ObjectiveManager.et" {
  coords 85.345 2.01 -12.26
-}
-SCR_GarbageManager GarbageManager : "{9B883A7D8EBB282A}Prefabs/MP/Managers/GarbageManager.et" {
- coords 91.357 0.976 141.078
- CharacterLifetime 360
- VehicleLifetime 300
- ItemLifetime 360
- m_bOnlyDestroyed 1
+ m_aLocationConfigs {
+  COE_FreeRoamingLocationConfig "{5E7B42E9CB2B02CF}" {
+   m_bEnabled 0
+  }
+  COE_PrefabLocationConfig "{5E7B42D1349C35C1}" {
+   m_bEnabled 0
+  }
+  COE_SlotLocationConfig "{5E7B42D0793541FB}" {
+   m_bEnabled 0
+  }
+  COE_AreaLocationConfig "{5E7C1ABC4E15FEA7}" {
+   m_bEnabled 0
+  }
+  COE_AreaLocationConfig "{5E7C1ABE1F9F05D6}" {
+   m_bEnabled 0
+  }
+  COE_NamedLocationConfig "{5E7D7A70CD6A5F2A}" {
+   m_bEnabled 0
+  }
+  COE_NamedLocationConfig "{5E8F1CE937D132EA}" {
+   m_bEnabled 0
+  }
+  COE_NamedLocationConfig "{5E8F1CE955E96A2B}" {
+   m_bEnabled 0
+  }
+  COE_NamedLocationConfig "{5E8F1CE953563688}" {
+   m_bEnabled 0
+  }
+ }
 }
 SCR_LoadoutManager LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutManager_Base.et" {
  coords 96.703 1.079 146.705

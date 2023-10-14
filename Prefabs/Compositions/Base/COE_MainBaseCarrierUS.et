@@ -5,8 +5,6 @@ GenericEntity {
   StaticModelEntity Ship {
    ID "5E770A88F8765814"
    components {
-    Hierarchy "{5E24A630ECD242A4}" {
-    }
     SCR_EditableEntityComponent "{5E24B5E7518CC75B}" {
      Enabled 0
      m_UIInfo SCR_EditableEntityUIInfo "{5E24B5E6B9E03904}" {
@@ -91,6 +89,8 @@ GenericEntity {
      m_bEditableChildren 0
     }
     RplComponent "{5E24B5E726213938}" {
+    }
+    Hierarchy "{5E24A630ECD242A4}" {
     }
    }
    coords 0 0 0
@@ -336,7 +336,7 @@ GenericEntity {
     }
    }
   }
-  GenericEntity ArsenalBox : "{54986385A6AF77B2}Prefabs/Systems/Arsenal/ArsenalBoxes/ArsenalBox_Base.et" {
+  GenericEntity ArsenalBox : "{54986385A6AF77B2}Prefabs/Props/Military/Arsenal/ArsenalBoxes/ArsenalBox_Base.et" {
    ID "5E770A88F849EFBE"
    components {
     MeshObject "{56F2C6D1431AD85A}" {
@@ -344,6 +344,16 @@ GenericEntity {
     }
     SCR_FactionAffiliationComponent "{5A50E7655452A21D}" {
      "faction affiliation" "US"
+    }
+    SCR_ResourceComponent "{5D7D07D2F7A252D2}" {
+     m_aContainers {
+      SCR_ResourceContainer "{5E9B03BFA7FEE300}" {
+       m_eResourceRights SELF
+       m_eStorageType STORED
+       m_fResourceValueCurrent 10000
+       m_fResourceValueMax 10000
+      }
+     }
     }
    }
    coords 7.834 17.568 38.421
@@ -357,22 +367,22 @@ GenericEntity {
    R3D_UH60_Navy4 {
     ID "5E770A88F8494839"
     coords -8.621 16.478 -35.974
-    m_sVehiclePrefabToSpawn "{01830A6844E52E38}Prefabs/Vehicles/Helis/R3D_UH60/COE_UH60_Navy.et"
+    m_sVehiclePrefabToSpawn "{70BAEEFC2D3FEE64}Prefabs/Vehicles/Helicopters/UH1H/UH1H.et"
    }
    R3D_UH60_Navy2 {
     ID "5E770A88F84986E6"
     coords -8.621 17.374 26.056
-    m_sVehiclePrefabToSpawn "{01830A6844E52E38}Prefabs/Vehicles/Helis/R3D_UH60/COE_UH60_Navy.et"
+    m_sVehiclePrefabToSpawn "{70BAEEFC2D3FEE64}Prefabs/Vehicles/Helicopters/UH1H/UH1H.et"
    }
    R3D_UH60_Navy3 {
     ID "5E770A88F84986E9"
     coords -8.621 16.915 -4.974
-    m_sVehiclePrefabToSpawn "{01830A6844E52E38}Prefabs/Vehicles/Helis/R3D_UH60/COE_UH60_Navy.et"
+    m_sVehiclePrefabToSpawn "{70BAEEFC2D3FEE64}Prefabs/Vehicles/Helicopters/UH1H/UH1H.et"
    }
    R3D_UH60_Navy1 {
     ID "5E770A88F849EFB8"
     coords -8.621 17.805 57.026
-    m_sVehiclePrefabToSpawn "{01830A6844E52E38}Prefabs/Vehicles/Helis/R3D_UH60/COE_UH60_Navy.et"
+    m_sVehiclePrefabToSpawn "{70BAEEFC2D3FEE64}Prefabs/Vehicles/Helicopters/UH1H/UH1H.et"
    }
   }
  }
