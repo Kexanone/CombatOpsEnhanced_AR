@@ -46,6 +46,21 @@ class COE_GameMode : SCR_BaseGameMode
 	//------------------------------------------------------------------------------------------------
 	void CreateMainBase()
 	{
+		COE_FactionManager factionManager = COE_FactionManager.Cast(GetGame().GetFactionManager());
+		if (!factionManager)
+			return;
+		
+		COE_Faction faction = factionManager.GetPlayerFaction();
+		if (!faction)
+			return;
+		
+		IEntity base = GetGame().GetWorld().FindEntityByName("COE_MainBaseLandUS");
+		faction.SetPlayerMainBase(base);
+		vector basePos = base.GetOrigin();
+		SCR_MapMarkerManagerComponent markerManager = SCR_MapMarkerManagerComponent.Cast(FindComponent(SCR_MapMarkerManagerComponent));
+		markerManager.InsertStaticMarkerByType(SCR_EMapMarkerType.PLACED_MILITARY, basePos[0], basePos[2], 32);
+		
+		/*
 		COE_PolygonAreaPicker innerBorderPicker = COE_PolygonAreaPicker.Cast(GetGame().GetWorld().FindEntityByName(m_sMainBaseInnerBorderName));
 		if (!innerBorderPicker)
 			return;
@@ -76,5 +91,6 @@ class COE_GameMode : SCR_BaseGameMode
 		Math3D.AnglesToMatrix(Vector(Math.RandomFloat(0, 360), 0, 0), params.Transform);				
 		params.Transform[3] = COE_AreaBase.SamplePointInArea(outerBorder, innerBorder);
 		faction.SetPlayerMainBase(GetGame().SpawnEntityPrefab(resource, GetWorld(), params));
+		*/
 	}
 };

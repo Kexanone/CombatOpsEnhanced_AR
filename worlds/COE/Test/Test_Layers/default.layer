@@ -1,21 +1,71 @@
-SCR_SpawnPoint : "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et" {
- coords 96.918 1 146.578
+$grp COE_PolygonAreaPicker {
+ MainBaseSpawnOuterBorder {
+  coords 101.446 1 147.155
+  m_vP1 -13.295 0 40.925
+  m_vP2 -13.295 0 -95.154
+  m_vP3 -52.772 0 -95.154
+  m_vP4 -52.772 0 40.925
+ }
+ MainBaseSpawnInnerBorder {
+  coords 80.3 1 151.731
+  m_vP1 -6.289 0 27.354
+  m_vP2 -6.289 0 -74.067
+  m_vP3 -18.321 0 -74.067
+  m_vP4 -18.321 0 27.354
+ }
 }
-GenericEntity : "{EDE6EC8B05227E3E}Prefabs/Systems/Arsenal/ArsenalBoxes/USSR/ArsenalBox_USSR.et" {
- coords 96.811 1 148.266
- angleY 177.421
- {
-  GenericEntity {
-   ID "58C4B81A90E077E5"
-   {
-    GenericEntity {
-     ID "56E094763A91239A"
-     components {
-      SCR_ArsenalInventoryStorageManagerComponent "{5E770A8E47B4AD5D}" {
-      }
-     }
+GenericEntity ArsenalBox : "{54986385A6AF77B2}Prefabs/Props/Military/Arsenal/ArsenalBoxes/ArsenalBox_Base.et" {
+ components {
+  MeshObject "{56F2C6D1431AD85A}" {
+   Object "{5172A6E151032216}Assets/Props/Military/AmmoBox/EquipmentBoxStack/EquipmentBoxStack_01_V1.xob"
+  }
+  SCR_FactionAffiliationComponent "{5A50E7655452A21D}" {
+   "faction affiliation" "US"
+  }
+  SCR_ResourceComponent "{5D7D07D2F7A252D2}" {
+   m_aContainers {
+    SCR_ResourceContainer "{5E9B03BFA7FEE300}" {
+     m_eResourceRights SELF
+     m_eStorageType STORED
+     m_fResourceValueCurrent 10000
+     m_fResourceValueMax 10000
     }
    }
   }
  }
+ coords 101.733 1 148.23
+ angleX 0.465
+ angleY -13.148
+ angleZ -1.947
+}
+SCR_SpawnPoint : "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et" {
+ coords 96.918 1 146.578
+}
+GenericEntity TASK : "{982CCB885E1BAB04}Prefabs/Compositions/Tasks/COE_TaskDestroy.et" {
+ coords 104.262 1 153.108
+ {
+  GenericEntity SLOT {
+   ID "5E7569E9F32FE3DD"
+   components {
+    SCR_ScenarioFrameworkSlotDestroy "{5A22E1D6276BD209}" {
+     m_sObjectToSpawn "{BDFB2377B6B4ABBB}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469_covered_CIV_PTS.et"
+    }
+   }
+  }
+ }
+}
+GenericEntity : "{AD59EDEAA26CE792}Prefabs/Props/Military/Compositions/USSR/ArsenalBox_USSR.et" {
+ components {
+  SCR_ResourceComponent "{5D7D07D2F7A252D2}" {
+   m_aContainers {
+    SCR_ResourceContainerVirtual "{5E9B03BE4B041DFC}" {
+     m_eResourceRights SELF
+     m_eStorageType STORED
+     m_fResourceValueCurrent 10000
+     m_fResourceValueMax 10000
+    }
+   }
+  }
+ }
+ coords 96.742 1 149.272
 }

@@ -70,7 +70,7 @@ class COE_AISlotConfig : ScriptAndConfig
 		SCR_AIGroup group = SCR_AIGroup.Cast(COE_GameTools.SpawnGroupPrefab(m_sGroupBasePrefabName));
 		group.SetFaction(faction);
 		IEntity entity = GetGame().SpawnEntityPrefab(Resource.Load(prefabName), null, spawnParams);
-		group.AddAIEntityToGroup(entity, 0);
+		group.AddAIEntityToGroup(entity);
 		AIWaypoint wp = COE_GameTools.SpawnWaypointPrefab(m_sWaypointPrefabName, spawnParams.Transform[3]);
 		group.AddWaypoint(wp);
 		
