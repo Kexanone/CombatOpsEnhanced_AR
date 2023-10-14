@@ -1442,6 +1442,21 @@ GenericEntity COE_MainBaseLandUS {
     }
    }
   }
+  GenericEntity ArsenalBox : "{45C675ED3CFBBEC5}Prefabs/Props/Military/Compositions/US/ArsenalBox_US.et" {
+   components {
+    SCR_ResourceComponent "{5D7D07D2F7A252D2}" {
+     m_aContainers {
+      SCR_ResourceContainer "{5E9C307367928238}" {
+       m_eResourceRights SELF
+       m_eStorageType STORED
+       m_fResourceValueCurrent 30000
+       m_fResourceValueMax 30000
+      }
+     }
+    }
+   }
+   coords 0.389 -0.031 -3.999
+  }
   $grp StaticModelEntity : "{472BE7BF1240C1CE}Prefabs/Compositions/Misc/SubCompositions/Utility/Helipad_Lights_US_01.et" {
    {
     coords -17.21 0.445 26.644
@@ -1459,30 +1474,6 @@ GenericEntity COE_MainBaseLandUS {
     coords 5.02 0.525 14.606
     angleY 164.781
    }
-  }
-  GenericEntity ArsenalBox : "{54986385A6AF77B2}Prefabs/Props/Military/Arsenal/ArsenalBoxes/ArsenalBox_Base.et" {
-   components {
-    MeshObject "{56F2C6D1431AD85A}" {
-     Object "{5172A6E151032216}Assets/Props/Military/AmmoBox/EquipmentBoxStack/EquipmentBoxStack_01_V1.xob"
-    }
-    SCR_FactionAffiliationComponent "{5A50E7655452A21D}" {
-     "faction affiliation" "US"
-    }
-    SCR_ResourceComponent "{5D7D07D2F7A252D2}" {
-     m_aContainers {
-      SCR_ResourceContainer "{5E9B03BFA7FEE300}" {
-       m_eResourceRights SELF
-       m_eStorageType STORED
-       m_fResourceValueCurrent 10000
-       m_fResourceValueMax 10000
-      }
-     }
-    }
-   }
-   coords 0.379 -0.031 -3.899
-   angleX 0.465
-   angleY -13.148
-   angleZ -1.947
   }
   SCR_SpawnPoint SpawnPoint : "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et" {
    coords 4.732 0.273 -16.862
