@@ -1,0 +1,33 @@
+Vehicle : "{38186F12F27A61C6}Prefabs/Vehicles/Wheeled/M923A1/M923A1_command_MERDC.et" {
+ ID "5206D4E79715C115"
+ components {
+  COE_AISlotsComponent "{5E9E2E7FE25BF389}" {
+   m_aAISlotConfigs {
+    COE_AISlotConfig "{5E9E2E7FE3BB4857}" {
+     m_vPosition -4.492 0 -2.352
+     m_vLookPosition -7.576 0 -3.335
+     m_iEntityLabel RIFLEMAN
+     m_bOccupyWhenNotMain 0
+    }
+    COE_AISlotConfig "{5E9E2E7FE03D0A3C}" {
+     m_vPosition -2.409 0 0.709
+     m_vLookPosition -1.437 0 6.084
+     m_iEntityLabel RIFLEMAN
+     m_bOccupyWhenNotMain 0
+    }
+   }
+  }
+ }
+ coords 4773.161 26.751 11860.56
+ {
+  GenericEntity : "{B89C671B75B43849}Prefabs/Structures/Military/CamoNets/US/CamoNet_Medium_US.et" {
+   ID "5E9E2E7F2F92B686"
+   components {
+    Hierarchy "{58489A7BAB68DC3D}" {
+     Enabled 0
+    }
+   }
+   coords -0.219 0.306 -1.35
+  }
+ }
+}
