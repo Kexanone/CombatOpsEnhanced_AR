@@ -34,12 +34,19 @@ ScriptedChatEntity ChatEntity : "{F69BC912AC8236F9}Prefabs/MP/ScriptedChatEntity
 }
 COE_FactionManager FactionManager : "{F9A08100A9E20FB5}Prefabs/Managers/COE_FactionManager.et" {
  coords 4784.233 27.103 11840.561
+ Factions {
+  COE_Faction "{56DEAC40D2DBC8B1}" {
+  }
+ }
 }
 COE_VehicleSpawnManager VehicleSpawnManager : "{03A3F74C83B9255B}Prefabs/Managers/COE_VehicleSpawnManager.et" {
  coords 4771.962 27.103 11837.925
 }
 HitRegistrationManager HitRegManager : "{0EDA3D48791120DD}Prefabs/MP/HitRegManager.et" {
  coords 4776.811 27.103 11840.395
+}
+SCR_LoadoutManager LoadoutManager : "{4193EDCF6585A770}Prefabs/MP/Managers/COE_LoadoutManager.et" {
+ coords 4776.918 27.182 11843.557
 }
 COE_ObjectiveManager ObjectiveManager : "{973B5090288C8ADC}Prefabs/Managers/COE_ObjectiveManager.et" {
  coords 4765.562 28.113 11684.592
@@ -87,44 +94,16 @@ COE_ObjectiveManager ObjectiveManager : "{973B5090288C8ADC}Prefabs/Managers/COE_
   }
  }
  m_aTaskConfigs {
+  COE_TaskClearAreaConfig "{5E83606A455304A0}" {
+  }
   COE_TaskDestroyConfig "{5E83606AACFAFC49}" {
-   m_bEnabled 0
   }
   COE_TaskDestroyConfig "{5E8360688CB4482C}" {
   }
   COE_TaskKillConfig "{5E83606A43AC974F}" {
-   m_bEnabled 0
   }
   COE_TaskDeliverIntelConfig "{5E83606A41749631}" {
-  }
- }
-}
-SCR_LoadoutManager LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutManager_Base.et" {
- coords 4776.919 27.182 11843.557
- m_aPlayerLoadouts {
-  SCR_FactionPlayerLoadout "{5AEC9DF92837B715}" {
-   m_sLoadoutName "Rifleman"
-   m_sLoadoutResource "{8D89B17BCFBFAE44}Prefabs/Characters/Campaign/Final/Campaign_US_Player.et"
-   m_sLoadoutImage "{2B0877799B9B6C66}UI/Textures/EditorPreviews/Characters/BLUFOR/US_Army/Character_US_Rifleman.edds"
-   m_sAffiliatedFaction "US"
-  }
-  SCR_PlayerArsenalLoadout "{5B0298F01E3A1A0D}" {
-   m_sLoadoutName "Arsenal "
-   m_sLoadoutResource "{BE7CA93E188A5B58}Prefabs/Characters/Campaign/Final/Campaign_US_Base.et"
-   m_sLoadoutImage "{2B0877799B9B6C66}UI/Textures/EditorPreviews/Characters/BLUFOR/US_Army/Character_US_Rifleman.edds"
-   m_sAffiliatedFaction "US"
-  }
-  SCR_FactionPlayerLoadout "{5E1A3B1BC24D1796}" {
-   m_sLoadoutName "Rifleman"
-   m_sLoadoutResource "{F063CEEB9295E9B6}Prefabs/Characters/Campaign/Final/Campaign_USSR_Player.et"
-   m_sLoadoutImage "{6A8FF7A3F9007CD0}UI/Textures/EditorPreviews/Characters/OPFOR/USSR_Army/Character_USSR_Rifleman.edds"
-   m_sAffiliatedFaction "USSR"
-  }
-  SCR_PlayerArsenalLoadout "{5E1A3B1BC3C524A3}" {
-   m_sLoadoutName "Arsenal"
-   m_sLoadoutResource "{5346CF7E39A65A6B}Prefabs/Characters/Factions/OPFOR/USSR_Army/Character_USSR_Base.et"
-   m_sLoadoutImage "{6A8FF7A3F9007CD0}UI/Textures/EditorPreviews/Characters/OPFOR/USSR_Army/Character_USSR_Rifleman.edds"
-   m_sAffiliatedFaction "USSR"
+   m_bEnabled 1
   }
  }
 }
