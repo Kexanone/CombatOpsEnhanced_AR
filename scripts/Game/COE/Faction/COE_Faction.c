@@ -13,13 +13,14 @@ enum COE_EEntityLabel
 	LARGE_FLAT_SLOT,
 	MG_NEST,
 	BUNKER,
-	OCCUPIED_APC,
+	ARMED_VEHICLE,
 	MARKSMAN,
 	RIFLEMAN_MG,
 	RIFLEMAN_GL,
 	RIFLEMAN_AT,
 	RIFLEMAN,
-	TEAM,
+	PATROL_GROUP,
+	CHECKPOINT_GROUP
 }
 
 //------------------------------------------------------------------------------------------------
@@ -55,8 +56,8 @@ class COE_Faction : SCR_Faction
 	[Attribute(desc: "Prefabs for MG nests")]
 	protected ref array<ResourceName> m_aMGNestPrefabs;
 	
-	[Attribute(desc: "Prefabs for occupied APC")]
-	protected ref array<ResourceName> m_aOccupiedAPCPrefabs;
+	[Attribute(desc: "Prefabs for armed vehicles")]
+	protected ref array<ResourceName> m_aArmedVehiclePrefabs;
 	
 	[Attribute(desc: "Prefabs for marksman")]
 	protected ref array<ResourceName> m_aMarksmanPrefabs;
@@ -73,8 +74,11 @@ class COE_Faction : SCR_Faction
 	[Attribute(desc: "Prefabs for rifleman")]
 	protected ref array<ResourceName> m_aRiflemanPrefabs;
 	
-	[Attribute(desc: "Prefabs for team")]
-	protected ref array<ResourceName> m_aTeamPrefabs;
+	[Attribute(desc: "Prefabs for patrol groups")]
+	protected ref array<ResourceName> m_aPatrolGroupPrefabs;
+	
+	[Attribute(desc: "Prefabs for groups that occupy checkpoints")]
+	protected ref array<ResourceName> m_aCheckpointGroupPrefabs;
 		
 	protected IEntity m_pMainBase;
 	
@@ -116,8 +120,12 @@ class COE_Faction : SCR_Faction
 			case COE_EEntityLabel.MEDIUM_ROAD_SLOT: {return m_aMediumRoadSlotPrefabs;};
 			case COE_EEntityLabel.LARGE_ROAD_SLOT: {return m_aLargeRoadSlotPrefabs;};
 			case COE_EEntityLabel.LARGE_FLAT_SLOT: {return m_aLargeFlatSlotPrefabs;};
+			case COE_EEntityLabel.MG_NEST: {return m_aMGNestPrefabs;};
+			case COE_EEntityLabel.ARMED_VEHICLE: {return m_aArmedVehiclePrefabs;};
 			case COE_EEntityLabel.MARKSMAN: {return m_aMarksmanPrefabs;};
 			case COE_EEntityLabel.RIFLEMAN: {return m_aRiflemanPrefabs;};
+			case COE_EEntityLabel.PATROL_GROUP: {return m_aPatrolGroupPrefabs;};
+			case COE_EEntityLabel.CHECKPOINT_GROUP: {return m_aCheckpointGroupPrefabs;};
 		};
 		
 		return {};
