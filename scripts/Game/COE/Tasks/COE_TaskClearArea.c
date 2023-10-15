@@ -20,7 +20,7 @@ class COE_TaskClearAreaConfig : COE_TaskBaseConfig
 		for (int i = 0; i < count; i++)
 		{
 			COE_WorldTools.SampleTransformInArea(transform, area, {}, params);
-			IEntity btr = COE_GameTools.SpawnStructurePrefab("{C012BB3488BEA0C2}Prefabs/Vehicles/Wheeled/BTR70/BTR70.et", transform);
+			IEntity btr = COE_GameTools.SpawnStructurePrefab(m_EnemyFaction.GetRandomPrefabByLabel(COE_EEntityLabel.ARMED_VEHICLE), transform);
 			btr.GetPhysics().SetActive(ActiveState.ACTIVE);
 		}
 	}

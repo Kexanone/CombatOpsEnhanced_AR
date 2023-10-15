@@ -137,6 +137,7 @@ class COE_ObjectiveManager : GenericEntity
 		}	
 		else
 		{
+			m_aExfilConfig.Init();
 			m_aExfilConfig.Create();
 		};	
 		
