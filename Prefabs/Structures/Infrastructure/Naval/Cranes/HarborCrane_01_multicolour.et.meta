@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{31FE31E686346E2C}Prefabs/Structures/Infrastructure/Naval/Cranes/HarborCrane_01_multicolour.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}
