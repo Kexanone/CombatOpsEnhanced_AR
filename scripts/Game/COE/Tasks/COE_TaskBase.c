@@ -10,6 +10,7 @@ class COE_TaskBaseConfig : ScriptAndConfig
 	[Attribute(desc: "Name of the Scenario Workflow task prefab")]
 	protected ResourceName m_sSFTaskPrefabName;
 	
+	protected COE_Faction m_PlayerFaction;
 	protected COE_Faction m_EnemyFaction;
 	
 	//------------------------------------------------------------------------------------------------
@@ -25,6 +26,7 @@ class COE_TaskBaseConfig : ScriptAndConfig
 		if (!factionManager)
 			return;
 		
+		m_PlayerFaction = factionManager.GetPlayerFaction();
 		m_EnemyFaction = factionManager.GetEnemyFaction();
 	}
 	
@@ -52,14 +54,15 @@ class COE_TaskBaseConfig : ScriptAndConfig
 		
 		if (targetEntity && slot)
 		{
-			SCR_ScenarioFrameworkLayerBase slotSFComponent = SCR_ScenarioFrameworkLayerBase.Cast(slot.FindComponent(SCR_ScenarioFrameworkLayerBase));
-			slotSFComponent.SetEntity(targetEntity);
+			SCR_ScenarioFrameworkSlotBase slotSFComponent = SCR_ScenarioFrameworkSlotBase.Cast(slot.FindComponent(SCR_ScenarioFrameworkSlotBase));
+			slotSFComponent.COE_SetAsset(targetEntity);
 		};
 			
 		SCR_ScenarioFrameworkLayerBase layerSFComponent = SCR_ScenarioFrameworkLayerBase.Cast(layer.FindComponent(SCR_ScenarioFrameworkLayerBase));
 		if (!layerSFComponent)
 			return;
 		
+		layerSFComponent.COE_SetFactionKey(m_PlayerFaction.GetFactionKey());
 		layerSFComponent.Init();
 	}
 }

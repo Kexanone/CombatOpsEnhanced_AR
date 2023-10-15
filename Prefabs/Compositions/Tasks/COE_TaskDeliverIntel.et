@@ -17,6 +17,7 @@ GenericEntity : "{88821DCA414AF4C7}Prefabs/ScenarioFramework/Components/LayerTas
    ID "5E7D7A6657219D1C"
    components {
     SCR_ScenarioFrameworkSlotDelivery "{59F51EA7A10294D2}" {
+     m_sFactionKey ""
      m_iRandomPercent 100
      m_bShowDebugShapesDuringRuntime 0
      m_aPlugins {

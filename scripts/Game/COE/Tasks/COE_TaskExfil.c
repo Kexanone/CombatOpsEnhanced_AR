@@ -4,15 +4,7 @@ class COE_TaskExfilConfig : COE_TaskBaseConfig
 	//------------------------------------------------------------------------------------------------
 	override void Create(COE_Location location = null)
 	{
-		COE_FactionManager factionManager = COE_FactionManager.Cast(GetGame().GetFactionManager());
-		if (!factionManager)
-			return;
-		
-		COE_Faction faction = factionManager.GetPlayerFaction();
-		if (!faction)
-			return;
-		
-		IEntity base = faction.GetPlayerMainBase();
+		IEntity base = m_PlayerFaction.GetPlayerMainBase();
 		if (!base)
 			return;
 		

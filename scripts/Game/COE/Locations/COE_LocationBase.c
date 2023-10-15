@@ -136,7 +136,6 @@ class COE_Location : Managed
 	protected ref array<BaseCompartmentSlot> m_aTurretSeats = {};
 	
 	static const float ROAD_BLOCK_RADIUS_EXTENSION = 100;
-	static ref array<ResourceName> groupPrefabNames = {"{96BAB56E6558788E}Prefabs/Groups/OPFOR/Group_USSR_Team_AT.et", "{43C7A28EEB660FF8}Prefabs/Groups/OPFOR/Group_USSR_Team_GL.et", "{1C0502B5729E7231}Prefabs/Groups/OPFOR/Group_USSR_Team_Suppress.et"};
 	
 	//------------------------------------------------------------------------------------------------
 	void COE_Location(vector center, float radius)
@@ -256,7 +255,7 @@ class COE_Location : Managed
 				continue;
 			
 			AIWaypoint wp = COE_GameTools.SpawnWaypointPrefab("{B2F9598C9DEFE645}Prefabs/AI/Waypoints/COE_AIWaypoint_Defend_10m.et", roadblock.GetOrigin());
-			AIGroup group = COE_GameTools.SpawnGroupPrefab("{A2F75E45C66B1C0A}Prefabs/Groups/OPFOR/Group_USSR_MachineGunTeam.et", roadblock.GetOrigin());
+			AIGroup group = COE_GameTools.SpawnGroupPrefab(m_Faction.GetRandomPrefabByLabel(COE_EEntityLabel.CHECKPOINT_GROUP), roadblock.GetOrigin());
 			group.AddWaypoint(wp);
 		};
 	}
@@ -295,13 +294,15 @@ class COE_Location : Managed
 		params.MaxSlopeAngle = 90;
 		vector transform[4];
 		
-		foreach (ResourceName groupPrefabName : groupPrefabNames)
+		array<ResourceName> groupNames = m_Faction.GetPrefabsByLabel(COE_EEntityLabel.PATROL_GROUP);
+		SCR_ArrayHelperT<ResourceName>.Shuffle(groupNames);
+		
+		for (int i = 0; i < 3; i++)
 		{
 			COE_WorldTools.SampleTransformInArea(transform, sampleArea, {}, params);
-			AIGroup group = COE_GameTools.SpawnGroupPrefab(groupPrefabName, transform[3]);
+			AIGroup group = COE_GameTools.SpawnGroupPrefab(groupNames[i], transform[3]);
 			COE_AITasks.Patrol(group, m_vCenter, m_fRadius);
-		};
-
+		}
 	}
 	
 	//------------------------------------------------------------------------------------------------
