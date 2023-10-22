@@ -8,7 +8,6 @@ GenericEntity : "{88821DCA414AF4C7}Prefabs/ScenarioFramework/Components/LayerTas
    m_bPlaceMarkerOnSubjectSlot 1
    m_sTaskTitleUpdated "Deliver Intel"
    m_sTaskDescriptionUpdated "#AR-CombatScenario_Intel_Description_D"
-   m_iIntelMapMarkerUpdateDelay 2
   }
  }
  coords 99.566 1 152.77
