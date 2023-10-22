@@ -9,6 +9,9 @@ class COE_VehicleSpawnSlot : GenericEntity
 	[Attribute(desc: "Vehicle prefab to spawn on this slot")]
 	protected ResourceName m_sVehiclePrefabToSpawn;
 	
+	[Attribute(defvalue: "3", desc: "Respawn delay in seconds")]
+	protected float m_iRespawnDelay;
+	
 	Vehicle m_pVehicle = null;
 	protected IEntity m_pPreviewEntity;
 	bool m_bWasVehicleDeserted = false;
@@ -31,24 +34,41 @@ class COE_VehicleSpawnSlot : GenericEntity
 		spawnManager.AddSlot(this);
 	};
 	
-	void ScheduleRespawn()
+	protected array<CompartmentAccessComponent> GetCrew()
 	{
 		SCR_EditableVehicleComponent editableVehicle = SCR_EditableVehicleComponent.Cast(m_pVehicle.FindComponent(SCR_EditableVehicleComponent));
 		array<CompartmentAccessComponent> crewCompartmentAccess = new array<CompartmentAccessComponent>;
 		editableVehicle.GetCrew(crewCompartmentAccess, false);
+		return crewCompartmentAccess;
+	}
+	
+	void ScheduleRespawn()
+	{
+		SCR_EditableVehicleComponent editableVehicle = SCR_EditableVehicleComponent.Cast(m_pVehicle.FindComponent(SCR_EditableVehicleComponent));
+		array<CompartmentAccessComponent> crewCompartmentAccess = GetCrew();
 
 		foreach (CompartmentAccessComponent compartmentAccess: crewCompartmentAccess)
 		{
 			compartmentAccess.EjectOutOfVehicle();
 		};
 		
-		GetGame().GetCallqueue().CallLater(Respawn, 3000);	
+		GetGame().GetCallqueue().CallLater(Respawn, 1000*m_iRespawnDelay);	
 	}
 	
 	void Respawn()
 	{
 		if (m_pVehicle)
+		{
+			// Crew ejection can be severley delayed
+			// => If it is not completed, we reschedule the respawn, since otherwise players that are still in the vehicle get deleted too
+			if (!GetCrew().IsEmpty())
+			{
+				ScheduleRespawn();
+				return;
+			};
+			
 			SCR_EntityHelper.DeleteEntityAndChildren(m_pVehicle);
+		};
 		
 		EntitySpawnParams params = EntitySpawnParams();
 		params.TransformMode = ETransformMode.WORLD;
