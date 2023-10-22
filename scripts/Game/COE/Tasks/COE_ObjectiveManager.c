@@ -24,6 +24,7 @@ class COE_ObjectiveManager : GenericEntity
 	
 	private static COE_ObjectiveManager m_pInstance;
 	protected ref COE_Location m_pCurrentLocation;
+	protected ref array<ref COE_Location> m_pOldLocations = {};
 	protected int m_pObjectiveCounter = 0;
 	
 	static COE_ObjectiveManager GetInstance()
@@ -87,6 +88,14 @@ class COE_ObjectiveManager : GenericEntity
 	{
 		if (!Replication.IsServer())
 			return;
+		
+		// Clean-up previous location
+		if (m_pCurrentLocation)
+		{
+			m_pCurrentLocation.ScheduleCleanUp();
+			m_pOldLocations.Insert(m_pCurrentLocation);
+			m_pCurrentLocation = null;
+		};
 		
 		GetGame().GetCallqueue().CallLater(CreateNextObjective, m_fNextObjectiveTimeout * 1000);
 	}
