@@ -351,7 +351,7 @@ class COE_Location : Managed
 		for (int i = 0; i < m_MissionHeader.m_iCOE_NumberOfGroupsPerObjective; i++)
 		{
 			COE_WorldTools.SampleTransformInArea(transform, sampleArea, {}, params);
-			AIGroup group = COE_GameTools.SpawnGroupPrefab(groupNames[i], transform[3]);
+			AIGroup group = COE_GameTools.SpawnGroupPrefab(groupNames[i%groupNames.Count()], transform[3]);
 			COE_AITasks.Patrol(group, m_vCenter, m_fRadius);
 			MarkGroupForCleanUp(group);
 		}
