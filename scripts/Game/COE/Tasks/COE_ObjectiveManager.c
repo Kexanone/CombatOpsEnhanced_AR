@@ -56,15 +56,11 @@ class COE_ObjectiveManager : GenericEntity
 		Math.Randomize(-1);
 		SCR_ArrayHelperT<ref COE_TaskBaseConfig>.Shuffle(m_aTaskConfigs);
 		
-		/*
 		COE_MissionHeader header = COE_MissionHeader.Cast(GetGame().GetMissionHeader());
 		if (header)
 		{
-			PrintFormat("||GOG||%1||%2||", m_iNumberOfObjectives, header.m_iCOE_NumberOfObjectives);
 			m_iNumberOfObjectives = header.m_iCOE_NumberOfObjectives;
-			PrintFormat("||KEK||%1||%2||", m_iNumberOfObjectives, header.m_iCOE_NumberOfObjectives);
 		};
-		*/
 		
 		m_pInstance = this;
 	};
