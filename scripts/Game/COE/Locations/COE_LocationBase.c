@@ -130,6 +130,7 @@ class COE_Location : Managed
 	protected ref array<IEntity> m_aEntitiesMarkedForCleanUp = {};
 	protected ref array<AIGroup> m_aGroupsMarkedForCleanUp = {};
 	protected COE_Faction m_Faction;
+	ref COE_MissionHeader m_MissionHeader;
 	protected ref array<SCR_SiteSlotEntity> m_aFlatSlots = {};
 	protected ref array<SCR_SiteSlotEntity> m_aRoadSlots = {};
 	protected ref array<COE_AISlotConfig> m_aRiflemanSlots = {};
@@ -149,6 +150,11 @@ class COE_Location : Managed
 			return;
 		
 		m_Faction = factionManager.GetEnemyFaction();
+		
+		m_MissionHeader = COE_MissionHeader.Cast(GetGame().GetMissionHeader());
+		// Workaround for workbench, since mission header is not defined
+		if (!m_MissionHeader)
+			m_MissionHeader = SCR_ConfigHelperT<COE_MissionHeader>.GetConfigObject("{26CDF8012C795FAF}Missions/COE_Eden.conf");
 	}
 	
 	//------------------------------------------------------------------------------------------------
@@ -270,8 +276,8 @@ class COE_Location : Managed
 	protected void SpawnRoadBlocks()
 	{
 		Math.Randomize(-1);
-		int minCount = Math.Min(2, m_aRoadSlots.Count());
-		int maxCount = Math.Min(3, m_aRoadSlots.Count());
+		int minCount = Math.Min(m_MissionHeader.m_iCOE_MinNumberOfRoadblocks, m_aRoadSlots.Count());
+		int maxCount = Math.Min(m_MissionHeader.m_iCOE_MaxNumberOfRoadblocks, m_aRoadSlots.Count());
 		int count = Math.RandomIntInclusive(minCount, maxCount);
 		
 		COE_ArrayHelperT<SCR_SiteSlotEntity>.Shuffle(m_aRoadSlots);
@@ -342,13 +348,31 @@ class COE_Location : Managed
 		array<ResourceName> groupNames = m_Faction.GetPrefabsByLabel(COE_EEntityLabel.PATROL_GROUP);
 		SCR_ArrayHelperT<ResourceName>.Shuffle(groupNames);
 		
-		for (int i = 0; i < 3; i++)
+		for (int i = 0; i < m_MissionHeader.m_iCOE_NumberOfGroupsPerObjective; i++)
 		{
 			COE_WorldTools.SampleTransformInArea(transform, sampleArea, {}, params);
 			AIGroup group = COE_GameTools.SpawnGroupPrefab(groupNames[i], transform[3]);
 			COE_AITasks.Patrol(group, m_vCenter, m_fRadius);
 			MarkGroupForCleanUp(group);
 		}
+	}
+	
+	void SpawnAPCs()
+	{
+		COE_CircleArea sampleArea = COE_CircleArea(m_vCenter, m_fRadius);
+		COE_SamplePosParams params = COE_SamplePosParams();
+		params.EmptyRadius = 5;
+		vector transform[4];
+		
+		int count = Math.RandomIntInclusive(m_MissionHeader.m_iCOE_MinNumberOfAPCs, m_MissionHeader.m_iCOE_MaxNumberOfAPCs);
+		
+		for (int i = 0; i < count; i++)
+		{
+			COE_WorldTools.SampleTransformInArea(transform, sampleArea, {}, params);
+			IEntity btr = COE_GameTools.SpawnStructurePrefab(m_Faction.GetRandomPrefabByLabel(COE_EEntityLabel.ARMED_VEHICLE), transform);
+			btr.GetPhysics().SetActive(ActiveState.ACTIVE);
+			MarkEntityForCleanUp(btr);
+		};
 	}
 	
 	//------------------------------------------------------------------------------------------------
