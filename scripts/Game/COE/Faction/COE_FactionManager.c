@@ -20,7 +20,6 @@ class COE_FactionManager : SCR_FactionManager
 		
 		// Read mission header
 		COE_MissionHeader header = COE_MissionHeader.Cast(GetGame().GetMissionHeader());
-		PrintFormat("|||%1|||", header.m_aCOE_OpposingFactionsConfigs);
 		if (header && !header.m_aCOE_OpposingFactionsConfigs.IsEmpty())
 		{
 			m_aOpposingFactionsConfigs = header.m_aCOE_OpposingFactionsConfigs;
