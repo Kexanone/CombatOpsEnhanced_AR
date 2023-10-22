@@ -127,7 +127,8 @@ class COE_Location : Managed
 	protected float m_fRadius;
 	protected ResourceName m_sMainPrefabName;
 	protected ref array<IEntity> m_aStructures = {};
-	protected ref array<AIGroup> m_aGroups = {};
+	protected ref array<IEntity> m_aEntitiesMarkedForCleanUp = {};
+	protected ref array<AIGroup> m_aGroupsMarkedForCleanUp = {};
 	protected COE_Faction m_Faction;
 	protected ref array<SCR_SiteSlotEntity> m_aFlatSlots = {};
 	protected ref array<SCR_SiteSlotEntity> m_aRoadSlots = {};
@@ -199,9 +200,43 @@ class COE_Location : Managed
 	}
 	
 	//------------------------------------------------------------------------------------------------
-	array<AIGroup> GetGroups()
+	void MarkGroupForCleanUp(AIGroup group)
 	{
-		return m_aGroups;
+		m_aGroupsMarkedForCleanUp.Insert(group);
+	}
+	
+	//------------------------------------------------------------------------------------------------
+	void MarkEntityForCleanUp(IEntity entity)
+	{
+		m_aEntitiesMarkedForCleanUp.Insert(entity);
+	}
+	
+	//------------------------------------------------------------------------------------------------
+	void ScheduleCleanUp()
+	{
+		array<int> playerIds = {};
+		GetGame().GetPlayerManager().GetPlayers(playerIds);
+		
+		foreach (int playerId : playerIds)
+		{
+			IEntity player = GetGame().GetPlayerManager().GetPlayerControlledEntity(playerId);
+			if (!player)
+				continue;
+			
+			if (vector.DistanceXZ(m_vCenter, player.GetOrigin()) > 1000)
+				continue;
+			
+			// There are still players nearby => Delay clean-up
+			GetGame().GetCallqueue().CallLater(ScheduleCleanUp, 60000);
+			return;
+		};
+		
+		// All players have left => Start clean-up
+		foreach (IEntity entity : m_aEntitiesMarkedForCleanUp)
+			SCR_EntityHelper.DeleteEntityAndChildren(entity);
+		
+		foreach (AIGroup group : m_aGroupsMarkedForCleanUp)
+			SCR_EntityHelper.DeleteEntityAndChildren(group);
 	}
 	
 	//------------------------------------------------------------------------------------------------
@@ -225,7 +260,10 @@ class COE_Location : Managed
 		SCR_ArrayHelperT<COE_AISlotConfig>.Shuffle(configs);
 			
 		for (int i = 0; i < maxCount; i++)
-			configs[i].Spawn();	
+		{
+			IEntity unit = configs[i].Spawn();	
+			MarkEntityForCleanUp(unit);
+		};
 	}
 	
 	//------------------------------------------------------------------------------------------------
@@ -257,6 +295,7 @@ class COE_Location : Managed
 			AIWaypoint wp = COE_GameTools.SpawnWaypointPrefab("{B2F9598C9DEFE645}Prefabs/AI/Waypoints/COE_AIWaypoint_Defend_10m.et", roadblock.GetOrigin());
 			AIGroup group = COE_GameTools.SpawnGroupPrefab(m_Faction.GetRandomPrefabByLabel(COE_EEntityLabel.CHECKPOINT_GROUP), roadblock.GetOrigin());
 			group.AddWaypoint(wp);
+			MarkGroupForCleanUp(group);
 		};
 	}
 	
@@ -271,20 +310,26 @@ class COE_Location : Managed
 			GetGame().GetWorld().QueryEntitiesBySphere(m_vCenter, m_fRadius + ROAD_BLOCK_RADIUS_EXTENSION, QueryRoadSlotsCallback);
 		};
 		
+		// Spawn marksmen
 		if (!m_aMarksmanSlots.IsEmpty())
 		{
 			int maxCount = Math.RandomIntInclusive(2, Math.Min(3, m_aMarksmanSlots.Count()));
 			SCR_ArrayHelperT<COE_AISlotConfig>.Shuffle(m_aMarksmanSlots);
 			
 			for (int i = 0; i < maxCount; i++)
-				m_aMarksmanSlots[i].Spawn();			
+			{
+				IEntity unit = m_aMarksmanSlots[i].Spawn();
+				MarkEntityForCleanUp(unit);
+			};		
 		};
 		
+		// Spawn units at structures
 		if (!m_aStructures.IsEmpty())
 		{
 			SpawnAIAtStructures();
 		};
 		
+		// Spawn road blocks and add occupants to all turrets
 		SpawnRoadBlocks();
 		GetGame().GetWorld().QueryEntitiesBySphere(m_vCenter, m_fRadius + ROAD_BLOCK_RADIUS_EXTENSION, SpawnTurretOccupantsCallback);
 		
@@ -302,6 +347,7 @@ class COE_Location : Managed
 			COE_WorldTools.SampleTransformInArea(transform, sampleArea, {}, params);
 			AIGroup group = COE_GameTools.SpawnGroupPrefab(groupNames[i], transform[3]);
 			COE_AITasks.Patrol(group, m_vCenter, m_fRadius);
+			MarkGroupForCleanUp(group);
 		}
 	}
 	
@@ -407,7 +453,7 @@ class COE_Location : Managed
 		if (!compartmentManager)
 			return true;
 				
-		compartmentManager.SpawnDefaultOccupants({ECompartmentType.Turret});		
+		compartmentManager.SpawnDefaultOccupants({ECompartmentType.Turret});
 		return true;
 	}
 }
