@@ -12,9 +12,10 @@ class COE_VehicleSpawnSlot : GenericEntity
 	[Attribute(defvalue: "3", desc: "Respawn delay in seconds")]
 	protected float m_iRespawnDelay;
 	
-	Vehicle m_pVehicle = null;
+	protected Vehicle m_pVehicle = null;
 	protected IEntity m_pPreviewEntity;
 	bool m_bWasVehicleDeserted = false;
+	bool m_bIsRespawning = false;
 	
 	//------------------------------------------------------------------------------------------------
 	void COE_VehicleSpawnSlot(IEntitySource src, IEntity parent)
@@ -25,7 +26,7 @@ class COE_VehicleSpawnSlot : GenericEntity
 		Activate();
 		SetEventMask(EntityEvent.INIT);
 	};
-	
+		
 	//------------------------------------------------------------------------------------------------
 	override protected void EOnInit(IEntity owner)
 	{
@@ -33,6 +34,12 @@ class COE_VehicleSpawnSlot : GenericEntity
 		COE_VehicleSpawnManager spawnManager = COE_VehicleSpawnManager.GetInstance();
 		spawnManager.AddSlot(this);
 	};
+	
+	//------------------------------------------------------------------------------------------------
+	IEntity GetVehicle()
+	{
+		return m_pVehicle;
+	}
 	
 	protected array<CompartmentAccessComponent> GetCrew()
 	{
@@ -44,6 +51,16 @@ class COE_VehicleSpawnSlot : GenericEntity
 	
 	void ScheduleRespawn()
 	{
+		m_bIsRespawning = true;
+		EjectCrew();		
+		GetGame().GetCallqueue().CallLater(Respawn, 1000*m_iRespawnDelay);	
+	}
+	
+	protected void EjectCrew()
+	{
+		if (!m_pVehicle)
+			return;
+		
 		SCR_EditableVehicleComponent editableVehicle = SCR_EditableVehicleComponent.Cast(m_pVehicle.FindComponent(SCR_EditableVehicleComponent));
 		array<CompartmentAccessComponent> crewCompartmentAccess = GetCrew();
 
@@ -51,8 +68,6 @@ class COE_VehicleSpawnSlot : GenericEntity
 		{
 			compartmentAccess.EjectOutOfVehicle();
 		};
-		
-		GetGame().GetCallqueue().CallLater(Respawn, 1000*m_iRespawnDelay);	
 	}
 	
 	void Respawn()
@@ -75,6 +90,7 @@ class COE_VehicleSpawnSlot : GenericEntity
 		GetWorldTransform(params.Transform);
 		m_pVehicle = Vehicle.Cast(GetGame().SpawnEntityPrefab(Resource.Load(m_sVehiclePrefabToSpawn), null, params));
 		m_pVehicle.GetPhysics().SetActive(ActiveState.ACTIVE);
+		m_bIsRespawning = false;
 	};
 	
 	//------------------------------------------------------------------------------------------------

@@ -51,8 +51,19 @@ class COE_VehicleSpawnManager : GenericEntity
 		
 		foreach (COE_VehicleSpawnSlot slot : m_aManagedSlots)
 		{
+			// Skip, since asset is already about to be respawned
+			if (slot.m_bIsRespawning)
+				continue;
+			
+			// Respawn, since asset has been deleted
+			if (!slot.GetVehicle())
+			{
+				slot.ScheduleRespawn();
+				continue;
+			};
+			
 			bool isDeserted = true;
-			vector vehiclePos = slot.m_pVehicle.GetOrigin();
+			vector vehiclePos = slot.GetVehicle().GetOrigin();
 			
 			if (slot.GetIsVehicleAlive() && vehiclePos[1] > GetGame().GetWorld().GetOceanBaseHeight() - 1)
 			{
