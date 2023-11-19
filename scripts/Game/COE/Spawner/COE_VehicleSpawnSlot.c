@@ -31,6 +31,10 @@ class COE_VehicleSpawnSlot : GenericEntity
 	override protected void EOnInit(IEntity owner)
 	{
 		super.EOnInit(owner);
+		
+		if (!Replication.IsServer())
+			return;
+		
 		COE_VehicleSpawnManager spawnManager = COE_VehicleSpawnManager.GetInstance();
 		spawnManager.AddSlot(this);
 	};
