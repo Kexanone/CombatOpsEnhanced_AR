@@ -54,6 +54,7 @@ COE_GameMode : "{1B76F75A3175E85C}Prefabs/MP/Modes/Plain/GameMode_Plain.et" {
   }
   SCR_NotificationSenderComponent "{56FA84B04BE7D4C0}" {
    m_iKillFeedType FULL
+   m_iReceiveKillFeedType ALL
   }
   SCR_RespawnBriefingComponent "{5E6F1867E2884BB0}" {
    m_Info SCR_UIInfo "{5E6F1867E2884B89}" {
