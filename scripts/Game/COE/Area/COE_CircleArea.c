@@ -25,9 +25,13 @@ class COE_CircleArea : COE_AreaBase
 	
 	override void GetBoundBox(out vector min, out vector max)
 	{
+		vector world_mins, world_maxs;
+		GetGame().GetWorld().GetBoundBox(world_mins, world_maxs);
 		vector offset = {m_fRadius, 0, m_fRadius};
 		min = m_vCenter - offset;
+		min[1] = world_mins[1];
 		max = m_vCenter + offset;
+		max[1] = world_maxs[1];
 	}
 	
 	//------------------------------------------------------------------------------------------------
