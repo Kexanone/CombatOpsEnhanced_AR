@@ -39,7 +39,7 @@ class COE_GameMode : SCR_BaseGameMode
 	override protected void OnGameStart()
 	{
 		super.OnGameStart();
-		CreateMainBaseMarker();
+		//CreateMainBaseMarker();
 		
 		if (!Replication.IsServer())
 			return;
@@ -112,6 +112,7 @@ class COE_GameMode : SCR_BaseGameMode
 	}
 
 	//------------------------------------------------------------------------------------------------
+	/*
 	void CreateMainBaseMarker()
 	{
 		COE_FactionManager factionManager = COE_FactionManager.Cast(GetGame().GetFactionManager());
@@ -133,4 +134,5 @@ class COE_GameMode : SCR_BaseGameMode
 		markerManager.InsertLocalMarker(m_COE_mainBaseMarker);
 		m_COE_mainBaseMarker.SetMilitarySymbol(faction, EMilitarySymbolDimension.INSTALLATION, EMilitarySymbolIcon.RESPAWN);
 	}
+	*/
 }
