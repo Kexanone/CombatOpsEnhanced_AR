@@ -1,0 +1,10 @@
+COE_CustomLocationEntity {
+ ID "5F02D719729A0C96"
+ components {
+  COE_AISlotsComponent "{5F02D7196D784851}" {
+  }
+  COE_IntelSlotsComponent "{5F02D7196357AE16}" {
+  }
+ }
+ coords 2804.806 6.907 3026.688
+}
