@@ -46,8 +46,8 @@ class COE_WorldTools
 		
 		Math3D.MatrixIdentity4(transform);	
 		
-		vector pos;
-		int trialCounter = 0;
+		vector pos = area.SamplePointInArea();
+		int trialCounter = 1;
 		
 		while (!IsPositionAccepted(pos, excludedAreas, params) && (params.MaxNumTrials < 0 || params.MaxNumTrials > trialCounter))
 		{
