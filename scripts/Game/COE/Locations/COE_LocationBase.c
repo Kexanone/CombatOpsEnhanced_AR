@@ -342,6 +342,7 @@ class COE_Location : Managed
 		COE_CircleArea sampleArea = COE_CircleArea(m_vCenter, m_fRadius);
 		COE_SamplePosParams params = COE_SamplePosParams();
 		params.EmptyRadius = 0.5;
+		params.EmptyHeight = 30;
 		params.MaxSlopeAngle = 90;
 		vector transform[4];
 		
