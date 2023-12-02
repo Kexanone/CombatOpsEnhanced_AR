@@ -30,7 +30,7 @@ class COE_AITasks
 		{
 			vector pos = SCR_Math2D.GenerateRandomPointInRadius(0, radius, position);
 			pos[1] = SCR_TerrainHelper.GetTerrainY(pos);
-			if (vector.Distance(prevPos, pos) >= minDistance && !COE_Utils.SurfaceIsWater(pos) &&  SCR_WorldTools.TraceCylinder(pos))
+			if (vector.Distance(prevPos, pos) >= minDistance && !COE_Utils.SurfaceIsWater(pos) &&  SCR_WorldTools.TraceCylinder(pos, 0.5, 30))
 			{
 				AIWaypoint wp = COE_GameTools.SpawnWaypointPrefab("{22A875E30470BD4F}Prefabs/AI/Waypoints/AIWaypoint_Patrol.et", pos);
 				group.AddWaypoint(wp);
