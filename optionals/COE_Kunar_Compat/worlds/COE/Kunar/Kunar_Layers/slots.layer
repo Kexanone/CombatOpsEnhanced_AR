@@ -1,0 +1,647 @@
+$grp SCR_SiteSlotEntity : "{4B1C4BDDF6683101}PrefabsEditable/Slots/Flat/E_SlotFlatMedium.et" {
+ {
+  coords 2000.316 16.626 3595.865
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 0.093 0
+    angleX 1.503
+    angleZ -1.052
+   }
+  }
+ }
+ {
+  coords 2047.944 16.368 3572.893
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 -0.007 0
+    angleX 3.936
+    angleZ -0.385
+   }
+  }
+ }
+ {
+  coords 1473.866 24.512 3567.012
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 0.177 0
+    angleX 0.804
+    angleZ -0.821
+   }
+  }
+ }
+}
+$grp SCR_SiteSlotEntity : "{588A3DAF0296B0C1}PrefabsEditable/Slots/Flat/E_SlotFlatSmall.et" {
+ {
+  coords 2283.144 100.027 1524.552
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 0.537 0
+    angleX 12.127
+    angleZ 8.645
+   }
+  }
+ }
+ {
+  coords 2155.161 138.824 1486.562
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 -0.418 0
+    angleX -5.132
+    angleZ 10.443
+   }
+  }
+ }
+ {
+  coords 2268.916 147.157 1655.7
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 0.36 0
+    angleX 13.931
+    angleZ 6.135
+   }
+  }
+ }
+ {
+  coords 1136.195 229.309 884.286
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 0.48 0
+    angleX -5.653
+    angleZ 10.959
+   }
+  }
+ }
+ {
+  coords 1164.025 220.924 856.485
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 1.291 0
+    angleX -3.486
+    angleZ -0.088
+   }
+  }
+ }
+ {
+  coords 1186.107 217.516 900.825
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 0.55 0
+    angleX -4.495
+    angleZ 1.454
+   }
+  }
+ }
+ {
+  coords 2271.667 11.481 3316.931
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 -0.717 0
+    angleX -0.636
+    angleZ -0.41
+   }
+  }
+ }
+ {
+  coords 2996.225 353.271 969.687
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 0.668 0
+    angleX -17.799
+    angleZ -1.322
+   }
+  }
+ }
+ {
+  coords 2980.929 352.352 974.136
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 -0.057 0
+    angleX -19.086
+    angleZ -4.505
+   }
+  }
+ }
+ {
+  coords 250.85 162.804 2191.59
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 0.56 0
+    angleX 11.299
+    angleZ 16.665
+   }
+  }
+ }
+ {
+  coords 246.843 174.49 2122.998
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 0.448 0
+    angleX -19.997
+    angleZ -15.717
+   }
+  }
+ }
+ {
+  coords 1373.518 148.816 3017.423
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 0.396 0
+    angleX -16.509
+    angleZ -3.921
+   }
+  }
+ }
+ {
+  coords 3902.118 128.42 1675.957
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 -0.788 0
+    angleX -11.251
+    angleZ 9.002
+   }
+  }
+ }
+ {
+  coords 3982.501 143.715 1224.094
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 0.013 0
+    angleX 7.079
+    angleZ 12.583
+   }
+  }
+ }
+ {
+  coords 4001.105 134.794 1268.912
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 0.229 0
+    angleX -7.792
+    angleZ 8.816
+   }
+  }
+ }
+ {
+  coords 4008.511 139.055 1229.278
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 -0.067 0
+    angleX 3.133
+    angleZ 10.873
+   }
+  }
+ }
+ {
+  coords 4050.177 113.96 1784.146
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 -0.001 0
+    angleX -6.307
+    angleZ -14.061
+   }
+  }
+ }
+ {
+  coords 4043.434 108.072 1759.977
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 0.693 0
+    angleX 7.576
+    angleZ -20.354
+   }
+  }
+ }
+ {
+  coords 2878.738 24.315 2361.744
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 0.048 0
+    angleX -1.88
+    angleZ 1.073
+   }
+  }
+ }
+ {
+  coords 2892.697 20.046 2485.475
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 -0.148 0
+    angleX -3.014
+    angleZ -1.454
+   }
+  }
+ }
+ {
+  coords 2887.535 26.437 2320.045
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 -0.118 0
+    angleX -0.127
+    angleZ 4.114
+   }
+  }
+ }
+ {
+  coords 859.098 117.118 2536.021
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 -0.21 0
+    angleX 4.431
+    angleZ -11.474
+   }
+  }
+ }
+ {
+  coords 1325.509 33.555 3383
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 0.133 0
+    angleX -6.745
+    angleZ -3.228
+   }
+  }
+ }
+ {
+  coords 1416.952 26.625 3479.599
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 0.286 0
+    angleX -3.352
+    angleZ 2.113
+   }
+  }
+ }
+ {
+  coords 1353.65 25.699 3505.2
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 0.061 0
+    angleX 0.558
+    angleZ 0.403
+   }
+  }
+ }
+ {
+  coords 1361.762 39.032 3350.127
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 0.278 0
+    angleX -7.374
+    angleZ -6.162
+   }
+  }
+ }
+ {
+  coords 393.133 80.076 3567.289
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 0.006 0
+    angleX 13.806
+    angleZ 1.134
+   }
+  }
+ }
+ {
+  coords 3479.855 280.116 544.656
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 0.21 0
+    angleX -10.756
+    angleZ 1.209
+   }
+  }
+ }
+ {
+  coords 3463.87 281.496 533.583
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 0.131 0
+    angleX 5.103
+    angleZ 5.635
+   }
+  }
+ }
+ {
+  coords 3445.375 281.219 507.528
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 0.178 0
+    angleX 6.172
+    angleZ 6.002
+   }
+  }
+ }
+ {
+  coords 2350.277 162.654 1840.762
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 0.081 0
+    angleX -2.384
+    angleZ -4.038
+   }
+  }
+ }
+ {
+  coords 2357.333 166.496 1883.541
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 0.162 0
+    angleX 2.321
+    angleZ -1.545
+   }
+  }
+ }
+ {
+  coords 2087.847 23.062 3889.867
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 -0.015 0
+    angleX 0.119
+    angleZ 0.247
+   }
+  }
+ }
+ {
+  coords 1850.244 212.517 293.573
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 0.5 0
+    angleX -2.214
+    angleZ 9.266
+   }
+  }
+ }
+ {
+  coords 633.153 403.473 950.866
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 0.237 0
+    angleX 7.634
+    angleZ 16.697
+   }
+  }
+ }
+ {
+  coords 739.21 374.168 888.685
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 0.01 0
+    angleX -3.148
+    angleZ -5.959
+   }
+  }
+ }
+ {
+  coords 1166.684 81.525 3910.991
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 0.218 0
+    angleX -5.098
+    angleZ 6.093
+   }
+  }
+ }
+ {
+  coords 3333.378 325.608 1746.48
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 -0.198 0
+    angleX -9.083
+    angleZ 8.811
+   }
+  }
+ }
+ {
+  coords 3345.688 311.891 1816.815
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 -0.552 0
+    angleX -13.447
+    angleZ 1.187
+   }
+  }
+ }
+ {
+  coords 1696.051 228.71 2460.828
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 -0.215 0
+    angleX 14.812
+    angleZ 10.795
+   }
+  }
+ }
+ {
+  coords 1708.9 229.847 2484.277
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 0.583 0
+    angleX 15.411
+    angleZ 12.743
+   }
+  }
+ }
+ {
+  coords 1606.755 234.83 2481.15
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 -0.096 0
+    angleX 17.538
+    angleZ 1.628
+   }
+  }
+ }
+ {
+  coords 1470.729 38.207 3690.984
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 0.412 0
+    angleX -2.058
+    angleZ 4.127
+   }
+  }
+ }
+ {
+  coords 1458.113 39.375 3683.473
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 0.451 0
+    angleX -1.05
+    angleZ 8.315
+   }
+  }
+ }
+ {
+  coords 1584.301 27.748 3586.64
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 -0.306 0
+    angleX 1.165
+    angleZ 2.511
+   }
+  }
+ }
+ {
+  coords 426.644 356.351 298.813
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 0.012 0
+    angleX 8.185
+    angleZ 1.601
+   }
+  }
+ }
+ {
+  coords 374.807 365.295 341.413
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 -0.04 0
+    angleX 5.206
+    angleZ 2.06
+   }
+  }
+ }
+ {
+  coords 396.671 364.071 346.97
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 -0.031 0
+    angleX 4.357
+    angleZ 6.611
+   }
+  }
+ }
+ {
+  coords 379.439 361.001 308.27
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 -0.081 0
+    angleX 9.593
+    angleZ 2.175
+   }
+  }
+ }
+ {
+  coords 493.183 349.889 324.75
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 -0.018 0
+    angleX 2.213
+    angleZ 12.015
+   }
+  }
+ }
+ {
+  coords 2927.218 14.077 2692.24
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 0.046 0
+    angleX 4.585
+    angleZ 2.348
+   }
+  }
+ }
+}
+SCR_SiteSlotEntity : "{66265A506DF1FE2B}PrefabsEditable/Slots/Road/E_SlotRoadSmall.et" {
+ coords 2096.811 17.028 3495.94
+ angleY -95.612
+ {
+  StaticModelEntity {
+   ID "52E8C3643526D54D"
+   coords 0 -0.007 0
+   angleX 1.484
+   angleZ 0.322
+  }
+ }
+}
+$grp SCR_SiteSlotEntity : "{F4066B8425BEC47C}PrefabsEditable/Slots/Road/E_SlotRoadMedium.et" {
+ {
+  coords 2226.405 107.694 1382.582
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 -0.631 0
+    angleX 1.279
+    angleZ 1.491
+   }
+  }
+ }
+ {
+  coords 2313.248 14.092 3332.395
+  angleY 139.596
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 -0.011 0
+    angleX 0.599
+    angleZ 0.019
+   }
+  }
+ }
+ {
+  coords 2152.89 15.479 3429.663
+  angleY -173.226
+  {
+   StaticModelEntity {
+    ID "52E8C3643526D54D"
+    coords 0 0 0
+    angleX 1.42
+    angleZ 1.19
+   }
+  }
+ }
+}

@@ -1,0 +1,87 @@
+GenericEntity {
+ ID "5F0401C2E1EBC079"
+ components {
+  SCR_MapDescriptorComponent "{5F0401C2E1D54108}" {
+   MainType Fortress
+   Scale 1
+   Faction 1
+  }
+ }
+ coords 2675.562 8 3078.68
+ {
+  GenericEntity ArsenalBox : "{45C675ED3CFBBEC5}Prefabs/Props/Military/Compositions/US/ArsenalBox_US.et" {
+   ID "5F0401C2E1EBC187"
+   components {
+    SCR_FactionAffiliationComponent "{5A50E7655452A21D}" {
+     "faction affiliation" "RHS_US_USMC"
+    }
+    SCR_ResourceComponent "{5D7D07D2F7A252D2}" {
+     m_aContainers {
+      SCR_ResourceContainer "{5F0401C2E1D5411E}" {
+       m_eResourceRights SELF
+       m_eStorageType STORED
+       m_fResourceValueCurrent 30000
+       m_fResourceValueMax 30000
+      }
+     }
+    }
+   }
+   coords -32.279 0.103 -25.655
+   angleY 34.808
+  }
+  SCR_SpawnPoint SpawnPoint : "{69D81D4A5FB98F58}Prefabs/MP/Spawning/SpawnPoint_USMC_CP.et" {
+   ID "5F0401C2E1EBC185"
+   coords -35.519 0 -30.782
+   angleY 34.808
+  }
+  $grp COE_VehicleSpawnSlot : "{737F3D65682DD64F}Prefabs/Spawner/COE_VehicleSpawnSlot.et" {
+   {
+    ID "5F0401C2E1EA5E4C"
+    coords 10.433 0.2 -62.258
+    angleY 33
+    m_sVehiclePrefabToSpawn "{9B1BF9644E0378D6}Prefabs/Vehicles/Wheeled/M998/M998_covered_long.et"
+   }
+   {
+    ID "5F0401C2E1EA5E4F"
+    coords 0.02 0 1.575
+    angleY -57
+    m_sVehiclePrefabToSpawn "{70BAEEFC2D3FEE64}Prefabs/Vehicles/Helicopters/UH1H/UH1H.et"
+   }
+   {
+    ID "5F0401C2E1EA89CA"
+    coords -0.287 0.2 -55.296
+    angleY 33
+    m_sVehiclePrefabToSpawn "{9B1BF9644E0378D6}Prefabs/Vehicles/Wheeled/M998/M998_covered_long.et"
+   }
+   {
+    ID "5F0401C2E1EA89CB"
+    coords 15.68 0.2 -65.665
+    angleY 33
+    m_sVehiclePrefabToSpawn "{9B1BF9644E0378D6}Prefabs/Vehicles/Wheeled/M998/M998_covered_long.et"
+   }
+   {
+    ID "5F0401C2E1EAF915"
+    coords 5.164 0.2 -58.836
+    angleY 33
+    m_sVehiclePrefabToSpawn "{9B1BF9644E0378D6}Prefabs/Vehicles/Wheeled/M998/M998_covered_long.et"
+   }
+   {
+    ID "5F0401C2E1EB9AC0"
+    coords 8.86 0 15.18
+    angleY -57
+    m_sVehiclePrefabToSpawn "{70BAEEFC2D3FEE64}Prefabs/Vehicles/Helicopters/UH1H/UH1H.et"
+   }
+   {
+    ID "5F0401C2E1EB9AC7"
+    coords -8.63 0 -11.75
+    angleY -57
+    m_sVehiclePrefabToSpawn "{70BAEEFC2D3FEE64}Prefabs/Vehicles/Helicopters/UH1H/UH1H.et"
+   }
+  }
+  GenericEntity : "{B5FDCA49E8753CDF}Prefabs/Structures/Decal/HeliPad_military.et" {
+   ID "5F0401C2E1D54101"
+   coords 0.208 0 1.485
+   angleY -57
+  }
+ }
+}

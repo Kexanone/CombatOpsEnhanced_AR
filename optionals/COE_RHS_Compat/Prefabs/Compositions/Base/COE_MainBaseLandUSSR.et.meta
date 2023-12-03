@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{AA187F3D6F4C39E8}Prefabs/Compositions/Base/COE_MainBaseLandUSSR.et"
+ Configurations {
+  EntityTemplateResourceClass PC {
+  }
+  EntityTemplateResourceClass XBOX_ONE : PC {
+  }
+  EntityTemplateResourceClass XBOX_SERIES : PC {
+  }
+  EntityTemplateResourceClass PS4 : PC {
+  }
+  EntityTemplateResourceClass HEADLESS : PC {
+  }
+ }
+}

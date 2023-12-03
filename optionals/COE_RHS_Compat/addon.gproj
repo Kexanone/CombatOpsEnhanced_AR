@@ -1,0 +1,20 @@
+GameProject {
+ ID "COE_RHS_Compat"
+ GUID "5EE2F844D4CCCAD6"
+ TITLE "COE - RHS Compat"
+ Dependencies {
+  "58D0FB3206B6F859" "5E6EFC469852BFC2" "595F2BF2F44836FB"
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+ }
+}

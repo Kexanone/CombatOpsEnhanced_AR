@@ -1,0 +1,753 @@
+COE_PolygonAreaPicker AirfieldBorder {
+ coords 2686.173 8 3073.35
+ m_cDebugShapeColor 1 0 0 0
+ m_vP1 -42.395 81.738 197.683
+ m_vP2 -274.45 76.65 261.715
+ m_vP3 -401.469 82.394 17.91
+ m_vP4 -15.464 96.993 -388.269
+ m_vP5 248.902 47.257 -44.523
+}
+GenericEntity COE_MainBase_FobMichigan {
+ coords 2675.562 8 3078.68
+}
+$grp COE_CustomLocationEntity : "{C487613DC869C65F}Prefabs/Location/COE_CustomLocation.et" {
+ IronTower {
+  components {
+   COE_AISlotsComponent "{5F02D7196D784851}" {
+    m_aAISlotConfigs {
+     COE_AISlotConfig "{5F0331AF395BE537}" {
+      m_vPosition -6.779 13.903 -0.669
+      m_vLookPosition -7.141 13.903 -3.268
+      m_iStanceChange STANCECHANGE_TOCROUCH
+      m_iEntityLabel HVT
+      m_bOccupyWhenNotMain 0
+     }
+     COE_AISlotConfig "{5F0331AF70927378}" {
+      m_vPosition -2.166 0 3.135
+      m_vLookPosition 5.287 0 3.386
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331AF70E9457A}" {
+      m_vPosition 5.602 0 -0.945
+      m_vLookPosition 7.131 0 3.234
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331AF7141D575}" {
+      m_vPosition -8.143 -0.201 -1.007
+      m_vLookPosition -4.52 -0.201 -1.159
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331AF71F79DF9}" {
+      m_vPosition -7.467 3.29 -0.443
+      m_vLookPosition -9.718 3.29 -1.374
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331AF7F442B55}" {
+      m_vPosition -5.706 6.576 -2.141
+      m_vLookPosition -9.36 6.576 -2.474
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331AF7F8DD2B1}" {
+      m_vPosition -5.642 10.336 -1.402
+      m_vLookPosition -9.743 10.336 -0.909
+      m_iEntityLabel RIFLEMAN
+     }
+    }
+   }
+   COE_IntelSlotsComponent "{5F02D7196357AE16}" {
+    m_aIntelSlotConfigs {
+     COE_IntelSlotConfig "{5F0331AF09D617FD}" {
+      m_vPosition -7.907 7.537 0.766
+      m_vAngles 11 0 0
+     }
+    }
+   }
+  }
+  coords 340.599 234.638 2808.546
+ }
+ HummerTower {
+  components {
+   COE_AISlotsComponent "{5F02D7196D784851}" {
+    m_aAISlotConfigs {
+     COE_AISlotConfig "{5F0331AF395BE537}" {
+      m_vPosition -9.507 13.903 0.086
+      m_vLookPosition -8.527 13.903 -2.475
+      m_iStanceChange STANCECHANGE_TOCROUCH
+      m_iEntityLabel HVT
+      m_bOccupyWhenNotMain 0
+     }
+     COE_AISlotConfig "{5F0331AF70927378}" {
+      m_vPosition -4.138 0 4.158
+      m_vLookPosition 5.287 0 3.386
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331AF70E9457A}" {
+      m_vPosition 0.744 0 -4.317
+      m_vLookPosition 4.569 0 2.952
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331AF7141D575}" {
+      m_vPosition -8.143 -0.201 -1.007
+      m_vLookPosition -4.52 -0.201 -1.159
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331AF71F79DF9}" {
+      m_vPosition -7.467 3.29 -0.443
+      m_vLookPosition -9.718 3.29 -1.374
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331AF7F442B55}" {
+      m_vPosition -7.3 6.576 -1.649
+      m_vLookPosition -9.36 6.576 -2.474
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331AF7F8DD2B1}" {
+      m_vPosition -8.224 10.336 -0.591
+      m_vLookPosition -10.495 10.336 -0.867
+      m_iEntityLabel RIFLEMAN
+     }
+    }
+   }
+   COE_IntelSlotsComponent "{5F02D7196357AE16}" {
+    m_aIntelSlotConfigs {
+     COE_IntelSlotConfig "{5F0331AF09D617FD}" {
+      m_vPosition -8.705 7.547 0.76
+      m_vAngles 22 0 0
+     }
+    }
+   }
+  }
+  coords 4020.816 110.536 1782.125
+ }
+ ColdTower {
+  components {
+   COE_AISlotsComponent "{5F02D7196D784851}" {
+    m_aAISlotConfigs {
+     COE_AISlotConfig "{5F0331AF395BE537}" {
+      m_vPosition -9.806 13.903 -3.057
+      m_vLookPosition -10.742 13.903 -4.016
+      m_iStanceChange STANCECHANGE_TOCROUCH
+      m_iEntityLabel HVT
+      m_bOccupyWhenNotMain 0
+     }
+     COE_AISlotConfig "{5F0331AF70927378}" {
+      m_vPosition -6.036 0 1.712
+      m_vLookPosition 3.102 0 1.32
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331AF70E9457A}" {
+      m_vPosition -2.872 0 -6.003
+      m_vLookPosition 3.74 0 1.606
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331AF7141D575}" {
+      m_vPosition -11.265 -0.201 -2.749
+      m_vLookPosition -7.546 -0.201 -2.651
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331AF71F79DF9}" {
+      m_vPosition -8.664 3.29 -2.589
+      m_vLookPosition -11.242 3.29 -2.393
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331AF7F442B55}" {
+      m_vPosition -10.078 6.576 -2.08
+      m_vLookPosition -12.367 6.576 -1.785
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331AF7F8DD2B1}" {
+      m_vPosition -9.02 10.336 -3.674
+      m_vLookPosition -11.628 10.336 -3.609
+      m_iEntityLabel RIFLEMAN
+     }
+    }
+   }
+   COE_IntelSlotsComponent "{5F02D7196357AE16}" {
+    m_aIntelSlotConfigs {
+     COE_IntelSlotConfig "{5F0331AF09D617FD}" {
+      m_vPosition -10.1 7.543 -0.86
+      m_vAngles 22 0 0
+     }
+    }
+   }
+  }
+  coords 128.73 593.077 1033.675
+  angleY 132.755
+ }
+ OP_Kandaru {
+  components {
+   COE_AISlotsComponent "{5F02D7196D784851}" {
+    m_aAISlotConfigs {
+     COE_AISlotConfig "{5F0331A921AEB266}" {
+      m_vPosition -20.94 0 -20.947
+      m_vLookPosition -15.329 0 -14
+      m_iEntityLabel HVT
+      m_bOccupyWhenNotMain 0
+     }
+     COE_AISlotConfig "{5F0331A92E10D10D}" {
+      m_vPosition 9.596 0.433 5.128
+      m_vLookPosition 10.058 0.433 3.961
+      m_iEntityLabel HVT
+     }
+     COE_AISlotConfig "{5F0331A92E796390}" {
+      m_vPosition -12.165 0 13.386
+      m_vLookPosition -6.259 0 13.064
+      m_iEntityLabel HVT
+      m_bOccupyWhenNotMain 0
+     }
+     COE_AISlotConfig "{5F0331A961F6C793}" {
+      m_vPosition -6.176 2.704 -38.474
+      m_vLookPosition -5.645 2.704 -42.627
+      m_iStanceChange STANCECHANGE_TOERECTED
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331A96E35FB36}" {
+      m_vPosition 11.021 0.332 -25.895
+      m_vLookPosition 2.518 0.332 -32.169
+      m_iStanceChange STANCECHANGE_TOERECTED
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331A96E75F837}" {
+      m_vPosition 10.062 3.337 5.046
+      m_vLookPosition 15.036 3.337 5.894
+      m_iStanceChange STANCECHANGE_TOERECTED
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331A96EBFB4C0}" {
+      m_vPosition 5.303 0 10.009
+      m_vLookPosition 3.946 0 1.745
+      m_iStanceChange STANCECHANGE_TOCROUCH
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331A96EC7390E}" {
+      m_vPosition -7.971 0 -13.336
+      m_vLookPosition -5.179 0 -5.46
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331A96F1E27FB}" {
+      m_vPosition -14.497 6.013 11.66
+      m_vLookPosition -29.015 6.013 2.283
+      m_iStanceChange STANCECHANGE_TOERECTED
+      m_iEntityLabel RIFLEMAN
+     }
+    }
+   }
+   COE_IntelSlotsComponent "{5F02D7196357AE16}" {
+    m_aIntelSlotConfigs {
+     COE_IntelSlotConfig "{5F0331A9C2B45779}" {
+      m_vPosition -13.019 1.164 -22.402
+      m_vAngles 11 0 0
+     }
+     COE_IntelSlotConfig "{5F0331A9C2FDFC60}" {
+      m_vPosition -19.78 1.26 -19.563
+     }
+     COE_IntelSlotConfig "{5F0331A9C30058F5}" {
+      m_vPosition -3.937 1.168 14.303
+      m_vAngles 130 0 0
+     }
+    }
+   }
+  }
+  coords 1459.073 104.322 3112.315
+ }
+ OP_Eagle {
+  components {
+   COE_AISlotsComponent "{5F02D7196D784851}" {
+    m_aAISlotConfigs {
+     COE_AISlotConfig "{5F0331B748719BA5}" {
+      m_vPosition -16.652 0.755 11.712
+      m_vLookPosition -13.824 0.755 13.985
+      m_iEntityLabel HVT
+      m_bOccupyWhenNotMain 0
+     }
+     COE_AISlotConfig "{5F0331B748D9E416}" {
+      m_vPosition -12.023 4.594 -3.802
+      m_vLookPosition -9.008 4.594 -0.908
+      m_iEntityLabel HVT
+      m_bOccupyWhenNotMain 0
+     }
+     COE_AISlotConfig "{5F0331B74910F26F}" {
+      m_vPosition -16.389 3.782 12.674
+      m_vLookPosition -22.097 3.782 10.119
+      m_iStanceChange STANCECHANGE_TOERECTED
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331A8FE5EF180}" {
+      m_vPosition -9.483 3.224 14.998
+      m_vLookPosition -1.511 3.224 19.916
+      m_iStanceChange STANCECHANGE_TOERECTED
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331A8FEBFEE1E}" {
+      m_vPosition -3.177 0 9.51
+      m_vLookPosition 1.54 0 14.544
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331A8FF1CEC25}" {
+      m_vPosition 1.011 0 -4.841
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331A8FF5073FE}" {
+      m_vPosition -10.412 1.056 -5.243
+      m_vLookPosition -11.515 1.056 -0.908
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331A8FF8EEDB6}" {
+      m_vPosition -12.337 0 8.645
+      m_vLookPosition -4.865 0 5.194
+      m_iEntityLabel RIFLEMAN
+     }
+    }
+   }
+   COE_IntelSlotsComponent "{5F02D7196357AE16}" {
+    m_aIntelSlotConfigs {
+     COE_IntelSlotConfig "{5F0331B754FF1009}" {
+      m_vPosition 2.148 1.024 -1.798
+      m_vAngles 1 0 0
+     }
+     COE_IntelSlotConfig "{5F0331B755051C61}" {
+      m_vPosition -17.153 1.5 14.266
+      m_vAngles 11 0 0
+     }
+     COE_IntelSlotConfig "{5F0331B75546C988}" {
+      m_vPosition -12.145 1.853 -2.857
+      m_vAngles -90 0 0
+     }
+    }
+   }
+  }
+  coords 3678.74 212.725 3175.857
+ }
+ OP_Dallas {
+  components {
+   COE_AISlotsComponent "{5F02D7196D784851}" {
+    m_aAISlotConfigs {
+     COE_AISlotConfig "{5F0331B60F6C0772}" {
+      m_vPosition -2.262 0.34 -0.672
+      m_vLookPosition -0.026 0.34 -4.293
+      m_iEntityLabel HVT
+      m_bOccupyWhenNotMain 0
+     }
+     COE_AISlotConfig "{5F0331B65A2072BC}" {
+      m_vPosition -13.681 2.09 -2.934
+      m_vLookPosition -17.78 2.09 -3.039
+      m_iStanceChange STANCECHANGE_TOERECTED
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331B65A60CAA7}" {
+      m_vPosition -6.663 0.496 2.621
+      m_vLookPosition -6.891 0.496 7.862
+      m_iStanceChange STANCECHANGE_TOERECTED
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331B65AA87447}" {
+      m_vPosition 20.279 -5.134 3.898
+      m_vLookPosition 29.565 -5.134 22.706
+      m_iStanceChange STANCECHANGE_TOERECTED
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331B65AFC3B79}" {
+      m_vPosition 10.641 -4.196 12.358
+      m_vLookPosition 15.082 -4.196 21.245
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331B65B155C8B}" {
+      m_vPosition 15.479 0 -4.928
+      m_vLookPosition 19.617 0 1.188
+      m_iStanceChange STANCECHANGE_TOERECTED
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331B65B4A307C}" {
+      m_vPosition -4.462 1.301 -6.045
+      m_vLookPosition -3.302 1.301 -1.494
+      m_iEntityLabel RIFLEMAN
+     }
+    }
+   }
+   COE_IntelSlotsComponent "{5F02D7196357AE16}" {
+    m_aIntelSlotConfigs {
+     COE_IntelSlotConfig "{5F0331B60BA31B5A}" {
+      m_vPosition -3.244 1.037 0.165
+     }
+    }
+   }
+  }
+  coords 1764.599 210.642 814.081
+  {
+   GenericEntity : "{F39A28AB89986935}Prefabs/Structures/Misc/Table.et" {
+    coords -3.331 0.19 0.057
+    angleY 84.907
+   }
+  }
+ }
+ FOB_Thunderbolt {
+  components {
+   COE_AISlotsComponent "{5F02D7196D784851}" {
+    m_aAISlotConfigs {
+     COE_AISlotConfig "{5F0331BE73D9B680}" {
+      m_vPosition 5.543 0 30.387
+      m_vLookPosition 8.53 0 26.537
+      m_iEntityLabel HVT
+      m_bOccupyWhenNotMain 0
+     }
+     COE_AISlotConfig "{5F0331BE7004B652}" {
+      m_vPosition -0.574 0 25.727
+      m_vLookPosition 5.507 0 20.58
+      m_iEntityLabel HVT
+      m_bOccupyWhenNotMain 0
+     }
+     COE_AISlotConfig "{5F0331B4D3E1ABD3}" {
+      m_vPosition -22.824 2.015 16.069
+      m_vLookPosition 0 2.015 0
+      m_iEntityLabel HVT
+      m_bOccupyWhenNotMain 0
+     }
+     COE_AISlotConfig "{5F0331B4D0558D0A}" {
+      m_vPosition -8.815 0.817 -31.964
+      m_vLookPosition -12.521 0.817 -23.364
+      m_iEntityLabel HVT
+      m_bOccupyWhenNotMain 0
+     }
+     COE_AISlotConfig "{5F0331B4367E24A4}" {
+      m_vPosition 11.398 2.414 32.55
+      m_vLookPosition 7.066 2.414 36.725
+      m_iStanceChange STANCECHANGE_TOERECTED
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331B436ADE5A0}" {
+      m_vPosition -7.634 3.662 29.183
+      m_vLookPosition -10.378 3.662 33.149
+      m_iStanceChange STANCECHANGE_TOERECTED
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331B436EB431D}" {
+      m_vPosition -19.838 4.754 20.394
+      m_vLookPosition -27.641 4.754 29.777
+      m_iStanceChange STANCECHANGE_TOERECTED
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331B4372A5194}" {
+      m_vPosition -28.926 4.344 14.212
+      m_vLookPosition -35.578 4.344 25.39
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331B43766779A}" {
+      m_vPosition -40.387 2.831 9.113
+      m_vLookPosition -42.627 2.831 13.407
+      m_iStanceChange STANCECHANGE_TOERECTED
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331B437ACC7A5}" {
+      m_vPosition -48.65 1.586 -6.877
+      m_vLookPosition -54.694 1.586 -5.772
+      m_iStanceChange STANCECHANGE_TOERECTED
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331B5040F61A9}" {
+      m_vPosition -41.817 2.618 -35.297
+      m_vLookPosition -49.294 2.618 -37.592
+      m_iStanceChange STANCECHANGE_TOERECTED
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331B52741E00B}" {
+      m_vPosition 27.006 2.034 15.725
+      m_vLookPosition 33.462 2.034 15.602
+      m_iStanceChange STANCECHANGE_TOERECTED
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331B56142FDAE}" {
+      m_vPosition 2.97 0 16.301
+      m_vLookPosition 7.22 0 11.904
+      m_iEntityLabel RIFLEMAN
+     }
+    }
+   }
+   COE_IntelSlotsComponent "{5F02D7196357AE16}" {
+    m_aIntelSlotConfigs {
+     COE_IntelSlotConfig "{5F0331BE2D69BC51}" {
+      m_vPosition 0.996 1.127 25.122
+      m_vAngles 99 0 0
+     }
+     COE_IntelSlotConfig "{5F0331BE2B15507D}" {
+      m_vPosition 6.657 1.17 29.679
+      m_vAngles 133 0 0
+     }
+     COE_IntelSlotConfig "{5F0331B376D6DB33}" {
+      m_vPosition -9.34 1.797 -30.771
+     }
+     COE_IntelSlotConfig "{5F0331B37E9AA740}" {
+      m_vPosition -1.708 1.625 -25.066
+      m_vAngles -10 0 0
+     }
+    }
+   }
+  }
+  coords 509.681 45.035 3240.256
+ }
+ OP_Hawk {
+  components {
+   COE_AISlotsComponent "{5F02D7196D784851}" {
+    m_aAISlotConfigs {
+     COE_AISlotConfig "{5F02D716BC306A62}" {
+      m_vPosition -9.639 0 25.41
+      m_vLookPosition -13.23 0 19.695
+      m_iEntityLabel HVT
+      m_bOccupyWhenNotMain 0
+     }
+     COE_AISlotConfig "{5F02D716FBD3E218}" {
+      m_vPosition -9.09 0 22.434
+      m_vLookPosition -12.019 0 22.12
+      m_iEntityLabel HVT
+      m_bOccupyWhenNotMain 0
+     }
+     COE_AISlotConfig "{5F02D7179AAF8413}" {
+      m_vPosition 12.33 -0.838 -0.643
+      m_vLookPosition 15.255 0 -14.623
+      m_iEntityLabel HVT
+      m_bOccupyWhenNotMain 0
+     }
+     COE_AISlotConfig "{5F02D71620CD0A6A}" {
+      m_vPosition 7.57 1.54 -19.608
+      m_vLookPosition 2.117 0 -23.869
+      m_iStanceChange STANCECHANGE_TOERECTED
+      m_iEntityLabel RIFLEMAN
+      m_bOccupyWhenNotMain 0
+     }
+     COE_AISlotConfig "{5F02D7166E795011}" {
+      m_vPosition 26.51 4.163 -26.352
+      m_vLookPosition 29.042 0 -34.268
+      m_iStanceChange STANCECHANGE_TOERECTED
+      m_iEntityLabel RIFLEMAN
+      m_bOccupyWhenNotMain 0
+     }
+     COE_AISlotConfig "{5F02D717C361034E}" {
+      m_vPosition 12.115 -0.784 -7.255
+      m_vLookPosition 14.122 0 -12.596
+      m_iEntityLabel RIFLEMAN
+      m_bOccupyWhenNotMain 0
+     }
+     COE_AISlotConfig "{5F02D717F4B0B1C8}" {
+      m_iEntityLabel RIFLEMAN
+      m_bOccupyWhenNotMain 0
+     }
+     COE_AISlotConfig "{5F02D71719F517A1}" {
+      m_vPosition -17.742 0 21.917
+      m_vLookPosition -11.193 0 17.57
+      m_iEntityLabel RIFLEMAN
+      m_bOccupyWhenNotMain 0
+     }
+     COE_AISlotConfig "{5F02D7173881117E}" {
+      m_vPosition -10.643 0 16.25
+      m_vLookPosition -9.824 0 10.538
+      m_iEntityLabel RIFLEMAN
+      m_bOccupyWhenNotMain 0
+     }
+     COE_AISlotConfig "{5F02D717550A6CB7}" {
+      m_vPosition -8.766 1.729 5.24
+      m_iStanceChange STANCECHANGE_TOERECTED
+      m_iEntityLabel RIFLEMAN
+      m_bOccupyWhenNotMain 0
+     }
+    }
+   }
+   COE_IntelSlotsComponent "{5F02D7196357AE16}" {
+    m_aIntelSlotConfigs {
+     COE_IntelSlotConfig "{5F02D71778CA8A74}" {
+      m_vPosition 11.81 0.01 -1.901
+      m_vAngles 180 0 0
+     }
+    }
+   }
+  }
+  coords 958.269 192.694 2845.823
+ }
+ OP_Restrepo {
+  components {
+   COE_AISlotsComponent "{5F02D7196D784851}" {
+    m_aAISlotConfigs {
+     COE_AISlotConfig "{5F0331AC00AE0A24}" {
+      m_vPosition -3.831 -0.755 -11.636
+      m_vLookPosition -0.46 -0.755 -13.012
+      m_iEntityLabel HVT
+      m_bOccupyWhenNotMain 0
+     }
+     COE_AISlotConfig "{5F0331AC0118D371}" {
+      m_vPosition -1.02 -0.755 -17.148
+      m_vLookPosition 0.125 -0.755 -12.86
+      m_iEntityLabel HVT
+      m_bOccupyWhenNotMain 0
+     }
+     COE_AISlotConfig "{5F0331AC015E185C}" {
+      m_vPosition -7.975 1.269 12.229
+      m_vLookPosition -15.925 1.269 17.937
+      m_iStanceChange STANCECHANGE_TOERECTED
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331AC32D17E78}" {
+      m_vPosition -2.943 0 -0.482
+      m_vLookPosition -11.901 0 1.782
+      m_iStanceChange STANCECHANGE_TOERECTED
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331AC32E21F6C}" {
+      m_vPosition 1.641 1.724 17.412
+      m_vLookPosition 0 1.724 0
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331AC3303849C}" {
+      m_vPosition 6.922 -0.629 -16.501
+      m_vLookPosition 0 -0.629 0
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331AC335F5E0B}" {
+      m_vPosition -14.555 -1.673 -13.857
+      m_vLookPosition -31.243 -1.673 -1.876
+      m_iStanceChange STANCECHANGE_TOERECTED
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331AC33BDBDC6}" {
+      m_vPosition 11.411 3.182 8.281
+      m_vLookPosition 14.457 3.182 11.657
+      m_iStanceChange STANCECHANGE_TOCROUCH
+      m_iEntityLabel RIFLEMAN
+     }
+    }
+   }
+   COE_IntelSlotsComponent "{5F02D7196357AE16}" {
+    m_aIntelSlotConfigs {
+     COE_IntelSlotConfig "{5F0331ACEF31CD39}" {
+      m_vPosition -1.972 0.11 -11.527
+      m_vAngles 44 0 0
+     }
+    }
+   }
+  }
+  coords 1909.186 205.549 1342.305
+ }
+ OP_Phoneix {
+  components {
+   COE_AISlotsComponent "{5F02D7196D784851}" {
+    m_aAISlotConfigs {
+     COE_AISlotConfig "{5F0331AB992B8772}" {
+      m_vPosition -5.942 0 -6.943
+      m_vLookPosition -8.86 0 -1.008
+      m_iEntityLabel HVT
+      m_bOccupyWhenNotMain 0
+     }
+     COE_AISlotConfig "{5F0331AB99CF51E7}" {
+      m_vPosition 0.59 0 4.211
+      m_vLookPosition 0.525 0 -8.446
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331ABF9FBC48C}" {
+      m_vPosition 10.782 -2.55 4.949
+      m_vLookPosition 6.29 -2.55 11.646
+      m_iStanceChange STANCECHANGE_TOERECTED
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331AB06040CB6}" {
+      m_vPosition 3.891 1.304 -13.599
+      m_vLookPosition 8.575 1.304 -17.743
+      m_iStanceChange STANCECHANGE_TOERECTED
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331AB06587B2B}" {
+      m_vPosition 0.934 15.897 -75.366
+      m_vLookPosition 2.999 15.897 -88.115
+      m_iStanceChange STANCECHANGE_TOERECTED
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331AB0663390D}" {
+      m_vPosition 2.707 0.3 -45.356
+      m_vLookPosition 9.792 0.3 -43.906
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331ABA62702ED}" {
+      m_vPosition -2.511 -0.333 8.76
+      m_vLookPosition -4.962 -0.333 14.192
+      m_iStanceChange STANCECHANGE_TOERECTED
+      m_iEntityLabel RIFLEMAN
+     }
+    }
+   }
+   COE_IntelSlotsComponent "{5F02D7196357AE16}" {
+    m_aIntelSlotConfigs {
+     COE_IntelSlotConfig "{5F0331AA79947DE6}" {
+      m_vPosition -6.191 1.295 -9.466
+      m_vAngles 11 0 0
+     }
+    }
+   }
+  }
+  coords 1034.862 302.47 1879.271
+ }
+ OP_Vegas {
+  components {
+   COE_AISlotsComponent "{5F02D7196D784851}" {
+    m_aAISlotConfigs {
+     COE_AISlotConfig "{5F0331AEAD4A2577}" {
+      m_vPosition 12.625 -1.454 -1.06
+      m_vLookPosition 8.393 -1.454 -6.373
+      m_iEntityLabel HVT
+      m_bOccupyWhenNotMain 0
+     }
+     COE_AISlotConfig "{5F0331AEC61461B2}" {
+      m_vPosition -5.174 -0.411 1.454
+      m_vLookPosition 0 -0.411 0
+      m_iEntityLabel HVT
+      m_bOccupyWhenNotMain 0
+     }
+     COE_AISlotConfig "{5F0331AEE6349EAB}" {
+      m_vPosition 12.324 1.281 -13.192
+      m_vLookPosition 17.742 1.281 -25.401
+      m_iStanceChange STANCECHANGE_TOERECTED
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331AEE67C4511}" {
+      m_vPosition 24.709 4.488 -12.106
+      m_vLookPosition 31.463 4.488 -15.979
+      m_iStanceChange STANCECHANGE_TOERECTED
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331AEE6868565}" {
+      m_vPosition -1.167 -2.739 -16.638
+      m_vLookPosition -6.199 -2.739 -27.051
+      m_iStanceChange STANCECHANGE_TOERECTED
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331AEE6A09C7E}" {
+      m_vPosition 6.447 -1.093 11.428
+      m_vLookPosition 36.123 -1.093 14.693
+      m_iStanceChange STANCECHANGE_TOERECTED
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331AEE6F83FDB}" {
+      m_vPosition 2.504 0 4.454
+      m_iEntityLabel RIFLEMAN
+     }
+     COE_AISlotConfig "{5F0331AEE72BE7C4}" {
+      m_vPosition 4.134 -2.952 -19.952
+      m_vLookPosition 8.852 -2.952 -6.947
+      m_iStanceChange STANCECHANGE_TOCROUCH
+      m_iEntityLabel RIFLEMAN
+     }
+    }
+   }
+   COE_IntelSlotsComponent "{5F02D7196357AE16}" {
+    m_aIntelSlotConfigs {
+     COE_IntelSlotConfig "{5F0331AD60EA5735}" {
+      m_vPosition 10.556 -0.667 -2.253
+      m_vAngles 1 0 0
+     }
+    }
+   }
+  }
+  coords 2713.781 103.595 1970.5
+  {
+   StaticModelEntity : "{E0846CD0C6454040}PrefabsEditable/Auto/MP/Campaign/E_RequestTable_US.et" {
+    coords 10.436 -1.577 -2.133
+    angleY -65.852
+   }
+  }
+ }
+}

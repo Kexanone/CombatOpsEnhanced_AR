@@ -1,0 +1,20 @@
+SCR_DestructibleBuildingEntity : "{6C4619ACF65218ED}Prefabs/Structures/Bulding/House_K_1_EP1.et" {
+ ID "5CB519DB83627E1E"
+ components {
+  COE_AISlotsComponent "{5F0331B9B3E1D424}" {
+   m_aAISlotConfigs {
+    COE_AISlotConfig "{5F0331B9BA1153E3}" {
+     m_vPosition -3.651 6.718 -2.017
+     m_vLookPosition -6.988 6.718 -3.775
+     m_iEntityLabel MARKSMAN
+    }
+    COE_AISlotConfig "{5F0331B9BA65EC3B}" {
+     m_vPosition -4.785 3.677 0.658
+     m_vLookPosition -8.737 3.677 0.221
+     m_iStanceChange STANCECHANGE_TOERECTED
+     m_iEntityLabel MARKSMAN
+    }
+   }
+  }
+ }
+}
