@@ -1,5 +1,5 @@
 MetaFileClass {
- Name "{DE06FBCB3D1D9E6E}gfx/preview.edds"
+ Name "{C9D485F6F055C410}UI/Textures/MissionLoadingScreens/COE_Arland_Preview.edds"
  Configurations {
   PNGResourceClass PC : "{DC555BD399D92412}Configs/System/ResourceTypes/PC/TextureUnspecified.conf" {
   }
