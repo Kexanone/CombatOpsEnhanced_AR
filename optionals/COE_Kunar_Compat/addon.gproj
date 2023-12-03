@@ -1,0 +1,22 @@
+GameProject {
+ ID "COE_Kunar_Compat"
+ GUID "5F02B470F89A09D5"
+ TITLE "COE - Kunar Compat"
+ Dependencies {
+  "5C9691EA7FD7A79F" "5E6EFC469852BFC2" "58D0FB3206B6F859"
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+  GameProjectConfig Xbox {
+  }
+ }
+}

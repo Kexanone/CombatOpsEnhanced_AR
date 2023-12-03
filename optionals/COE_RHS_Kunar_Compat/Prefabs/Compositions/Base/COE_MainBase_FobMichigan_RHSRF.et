@@ -1,0 +1,75 @@
+GenericEntity {
+ ID "5F0401C2F672A9B2"
+ components {
+  SCR_MapDescriptorComponent "{5F0401C2F67235CE}" {
+   MainType Fortress
+   Scale 1
+  }
+ }
+ coords 2675.562 8 3078.68
+ {
+  SCR_SpawnPoint SpawnPoint : "{50DAB3E40E882705}Prefabs/MP/Spawning/SpawnPoint_MSV_CP.et" {
+   ID "5F0401C2F672A9B0"
+   coords -35.519 0 -30.782
+   angleY 34.808
+  }
+  $grp COE_VehicleSpawnSlot : "{737F3D65682DD64F}Prefabs/Spawner/COE_VehicleSpawnSlot.et" {
+   {
+    ID "5F0401C2F67235B7"
+    coords -0.287 0.2 -55.296
+    angleY 33
+    m_sVehiclePrefabToSpawn "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et"
+   }
+   {
+    ID "5F0401C2F672A81D"
+    coords 10.433 0.2 -62.258
+    angleY 33
+    m_sVehiclePrefabToSpawn "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et"
+   }
+   {
+    ID "5F0401C2F672A81E"
+    coords 15.68 0.2 -65.665
+    angleY 33
+    m_sVehiclePrefabToSpawn "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et"
+   }
+   {
+    ID "5F0401C2F672A81F"
+    coords 5.164 0.2 -58.836
+    angleY 33
+    m_sVehiclePrefabToSpawn "{259EE7B78C51B624}Prefabs/Vehicles/Wheeled/UAZ469/UAZ469.et"
+   }
+   {
+    ID "5F0401C2F672A9B1"
+    coords -9.348 0 -11.284
+    angleY -57
+    m_sVehiclePrefabToSpawn "{5BF04078A1EC66D8}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MTT-A_Black_no_pylons.et"
+   }
+   {
+    ID "5F0401C2F672A9BE"
+    coords 8.142 0 15.646
+    angleY -57
+    m_sVehiclePrefabToSpawn "{5BF04078A1EC66D8}Prefabs/Vehicles/Helicopters/Mi8MT/Mi8MTT-A_Black_no_pylons.et"
+   }
+  }
+  GenericEntity ArsenalBox : "{AD59EDEAA26CE792}Prefabs/Props/Military/Compositions/USSR/ArsenalBox_USSR.et" {
+   ID "5F0401C2F67235B0"
+   components {
+    SCR_FactionAffiliationComponent "{5A50E7655452A21D}" {
+     "faction affiliation" "RHS_RF_MSV"
+    }
+    SCR_ResourceComponent "{5D7D07D2F7A252D2}" {
+     m_aContainers {
+      SCR_ResourceContainer "{5F0401C2F67235DF}" {
+       m_eResourceRights SELF
+       m_eStorageType STORED
+       m_fResourceValueCurrent 30000
+       m_fResourceValueMax 30000
+      }
+     }
+    }
+   }
+   coords -32.279 0.103 -25.655
+   angleY 34.808
+  }
+ }
+}

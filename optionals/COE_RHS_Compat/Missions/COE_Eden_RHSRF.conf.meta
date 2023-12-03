@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{FE1D4E7C5EA2DF7C}Missions/COE_Eden_RHSAF.conf"
+ Configurations {
+  CONFResourceClass PC {
+  }
+  CONFResourceClass XBOX_ONE : PC {
+  }
+  CONFResourceClass XBOX_SERIES : PC {
+  }
+  CONFResourceClass PS4 : PC {
+  }
+  CONFResourceClass HEADLESS : PC {
+  }
+ }
+}

@@ -1,0 +1,31 @@
+SCR_LoadoutManager : "{AA4E7419A1FF65B0}Prefabs/MP/Managers/Loadouts/LoadoutManager_Base.et" {
+ ID "56B2B47708C4F23A"
+ m_aPlayerLoadouts {
+  SCR_FactionPlayerLoadout "{5AEC9DF92837B715}" {
+   m_sLoadoutResource "{7F333C03AF1F712B}Prefabs/Characters/Factions/BLUFOR/RHS_US_USMC/Character_US_USMC_Rifleman.et"
+   m_sLoadoutImage ""
+   m_sAffiliatedFaction "RHS_US_USMC"
+  }
+  SCR_FactionPlayerLoadout "{5E9E75A0D62400EA}" {
+   m_sAffiliatedFaction "RHS_US_USMC"
+  }
+  SCR_PlayerArsenalLoadout "{5B0298F01E3A1A0D}" {
+   m_sLoadoutResource "{D774AFD56F8E7B1F}Prefabs/Characters/Factions/BLUFOR/RHS_US_USMC/Character_US_USMC_Base.et"
+   m_sLoadoutImage ""
+   m_sAffiliatedFaction "RHS_US_USMC"
+  }
+  SCR_FactionPlayerLoadout "{5E1A3B1BC24D1796}" {
+   m_sLoadoutResource "{3B167AFE3D75631C}Prefabs/Characters/Factions/OPFOR/RHS_RF_MSV/EMR/Character_RF_MSV_EMR_Rifleman.et"
+   m_sLoadoutImage ""
+   m_sAffiliatedFaction "RHS_RF_MSV"
+  }
+  SCR_FactionPlayerLoadout "{5E9E75A0C92F4D63}" {
+   m_sAffiliatedFaction "RHS_RF_MSV"
+  }
+  SCR_PlayerArsenalLoadout "{5E1A3B1BC3C524A3}" {
+   m_sLoadoutResource "{0C64FB5BB7FD0DC9}Prefabs/Characters/Factions/OPFOR/RHS_RF_MSV/EMR/Character_RF_MSV_EMR_Base.et"
+   m_sLoadoutImage ""
+   m_sAffiliatedFaction "RHS_RF_MSV"
+  }
+ }
+}

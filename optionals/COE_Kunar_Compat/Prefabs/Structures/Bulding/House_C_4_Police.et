@@ -1,0 +1,91 @@
+SCR_DestructibleBuildingEntity : "{6C4619ACF65218ED}Prefabs/Structures/Bulding/House_K_1_EP1.et" {
+ ID "5CB519DB83627E1E"
+ components {
+  COE_AISlotsComponent "{5F032C7B736C0478}" {
+   m_aAISlotConfigs {
+    COE_AISlotConfig "{5F032C7AFF471D71}" {
+     m_vPosition -4.209 3.677 -4.518
+     m_vLookPosition -5.024 3.677 -6.447
+     m_iStanceChange STANCECHANGE_TOERECTED
+     m_iEntityLabel MARKSMAN
+    }
+    COE_AISlotConfig "{5F032C7AFFFCC000}" {
+     m_vPosition 7.238 6.851 -6.288
+     m_vLookPosition 8.556 6.851 -9.932
+     m_iStanceChange STANCECHANGE_TOCROUCH
+     m_iEntityLabel MARKSMAN
+    }
+    COE_AISlotConfig "{5F032C7AFC5B653E}" {
+     m_vPosition 6.845 6.851 2.347
+     m_vLookPosition 10.27 6.851 6.645
+     m_iStanceChange STANCECHANGE_TOCROUCH
+     m_iEntityLabel MARKSMAN
+    }
+    COE_AISlotConfig "{5F0331B89909F2E2}" {
+     m_vPosition 3.061 3.677 -5.662
+     m_vLookPosition 3.969 3.677 0.097
+     m_iEntityLabel HVT
+     m_bOccupyWhenNotMain 0
+    }
+    COE_AISlotConfig "{5F0331B8997B114A}" {
+     m_vPosition -0.73 3.677 -1.765
+     m_vLookPosition 2.074 3.677 -0.002
+     m_iEntityLabel HVT
+     m_bOccupyWhenNotMain 0
+    }
+    COE_AISlotConfig "{5F0331B8B8C9A05D}" {
+     m_vPosition 3.741 3.677 0.102
+     m_vLookPosition 3.18 3.677 3.116
+     m_iEntityLabel RIFLEMAN
+     m_bOccupyWhenNotMain 0
+    }
+    COE_AISlotConfig "{5F0331B8B9004A5F}" {
+     m_vPosition 6.808 3.677 -4.492
+     m_vLookPosition 5.288 3.677 0.614
+     m_iEntityLabel RIFLEMAN
+     m_bOccupyWhenNotMain 0
+    }
+    COE_AISlotConfig "{5F0331B8B9404925}" {
+     m_vPosition -1.107 3.677 -6.039
+     m_vLookPosition 2.517 3.677 -0.059
+     m_iEntityLabel RIFLEMAN
+     m_bOccupyWhenNotMain 0
+    }
+    COE_AISlotConfig "{5F0331B8B9852BDA}" {
+     m_vPosition 6.516 0.598 2.223
+     m_vLookPosition 5.093 0.598 -1.976
+     m_bOccupyWhenNotMain 0
+    }
+    COE_AISlotConfig "{5F0331B8B9F43C5A}" {
+     m_vPosition 2.248 0.598 1.508
+     m_vLookPosition 0.96 0.598 -3.043
+     m_iEntityLabel RIFLEMAN
+     m_bOccupyWhenNotMain 0
+    }
+    COE_AISlotConfig "{5F0331B8C6594865}" {
+     m_vPosition 5.72 0.598 -3.769
+     m_vLookPosition 6.067 0.598 -6.44
+     m_iEntityLabel RIFLEMAN
+     m_bOccupyWhenNotMain 0
+    }
+   }
+  }
+  COE_IntelSlotsComponent "{5F032C7B7E939B7A}" {
+   m_bShowDebugEntityPreviewInWorkbench 1
+   m_aIntelSlotConfigs {
+    COE_IntelSlotConfig "{5F032C7B7D797BAC}" {
+     m_vPosition 2.169 4.595 1.126
+     m_vAngles 20 0 0
+    }
+    COE_IntelSlotConfig "{5F032C7B7A031787}" {
+     m_vPosition 1.349 4.656 -4.121
+     m_vAngles 283 0 0
+    }
+    COE_IntelSlotConfig "{5F032C7B7B269214}" {
+     m_vPosition 4.997 4.656 -4.07
+     m_vAngles 277 0 0
+    }
+   }
+  }
+ }
+}

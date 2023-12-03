@@ -1,0 +1,70 @@
+SCR_DestructibleBuildingEntity : "{6C4619ACF65218ED}Prefabs/Structures/Bulding/House_K_1_EP1.et" {
+ ID "5CB519DB83627E1E"
+ components {
+  COE_AISlotsComponent "{5F02D7357455A548}" {
+   m_aAISlotConfigs {
+    COE_AISlotConfig "{5F02D73571616EB2}" {
+     m_vPosition 3.006 3.25 -5.863
+     m_vLookPosition 2.87 3.25 -7.353
+     m_iStanceChange STANCECHANGE_TOERECTED
+     m_iEntityLabel MARKSMAN
+    }
+    COE_AISlotConfig "{5F02D732AFA463A5}" {
+     m_vPosition 5.194 3.25 -4.209
+     m_vLookPosition 9.086 3.25 -4.337
+     m_iStanceChange STANCECHANGE_TOERECTED
+     m_iEntityLabel MARKSMAN
+    }
+    COE_AISlotConfig "{5F02D732CB468269}" {
+     m_vPosition -4.028 3.25 1.645
+     m_vLookPosition -1.934 3.25 -0.039
+     m_iEntityLabel HVT
+     m_bOccupyWhenNotMain 0
+    }
+    COE_AISlotConfig "{5F02D732EF5BE1CB}" {
+     m_vPosition -3.347 3.25 -1.361
+     m_vLookPosition -1.562 3.25 -0.101
+     m_iEntityLabel HVT
+     m_bOccupyWhenNotMain 0
+    }
+    COE_AISlotConfig "{5F032C7B9CBCC4CD}" {
+     m_vPosition -0.863 3.25 2.342
+     m_vLookPosition 1.241 3.25 2.236
+     m_iEntityLabel RIFLEMAN
+    }
+    COE_AISlotConfig "{5F032C7B9CE54539}" {
+     m_vPosition -0.444 3.25 -2.361
+     m_vLookPosition -0.171 3.25 0.416
+     m_iEntityLabel RIFLEMAN
+     m_bOccupyWhenNotMain 0
+    }
+    COE_AISlotConfig "{5F032C7B9D54D894}" {
+     m_vPosition 4.604 3.25 1.103
+     m_vLookPosition 1.988 3.25 2.029
+     m_iEntityLabel RIFLEMAN
+     m_bOccupyWhenNotMain 0
+    }
+    COE_AISlotConfig "{5F032C7B9D81085D}" {
+     m_vPosition -0.147 0.182 0.994
+     m_vLookPosition -0.174 0.182 -1.585
+     m_iEntityLabel RIFLEMAN
+     m_bOccupyWhenNotMain 0
+    }
+    COE_AISlotConfig "{5F032C7BD42F442E}" {
+     m_vPosition 3.706 0.182 -0.001
+     m_vLookPosition 5.305 0.182 -2.83
+     m_iEntityLabel RIFLEMAN
+     m_bOccupyWhenNotMain 0
+    }
+   }
+  }
+  COE_IntelSlotsComponent "{5F02D73504DD1FDD}" {
+   m_aIntelSlotConfigs {
+    COE_IntelSlotConfig "{5F02D73503125A65}" {
+     m_vPosition -3.241 3.981 -2.438
+     m_vAngles 125 0 0
+    }
+   }
+  }
+ }
+}

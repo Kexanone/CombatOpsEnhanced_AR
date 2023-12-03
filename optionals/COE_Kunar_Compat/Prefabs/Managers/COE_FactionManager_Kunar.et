@@ -1,0 +1,15 @@
+COE_FactionManager : "{F9A08100A9E20FB5}Prefabs/Managers/COE_FactionManager.et" {
+ ID "56B2B4776E6E4499"
+ Factions {
+  COE_Faction "{56DEAC40D2DBC8B1}" {
+   m_aPlayerMainBasePrefabs {
+    "{1A138FB7781AF633}Prefabs/Compositions/Base/COE_MainBase_FobMichigan_US.et"
+   }
+  }
+  COE_Faction "{56DEAC40D3C2E623}" {
+   m_aPlayerMainBasePrefabs {
+    "{5070BC2262B686C0}Prefabs/Compositions/Base/COE_MainBase_FobMichigan_USSR.et"
+   }
+  }
+ }
+}
