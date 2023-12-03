@@ -4,29 +4,21 @@
 [![Issues](https://img.shields.io/github/issues-raw/Kexanone/CombatOpsEnhanced_AR.svg?label=Issues&style=flat-square)](https://github.com/Kexanone/CombatOpsEnhanced_AR/issues)
 [![License](https://img.shields.io/badge/License-APL-orange.svg?style=flat-square)](https://github.com/Kexanone/CombatOpsEnhanced_AR/blob/experimental/LICENSE.md)
 
-**This game mode is work in progress and only works with the experimental version of Arma Reforger!**
-
-Coop gameplay with dynamic objectives for up to 8 players in Arma Reforger.
-This game mode is a reimplementation of the vanilla Combat Ops scenario with the aim to ease the setup and moddability.
-Your task is to complete three consecutive objectives and then RTB
+Co-operative gameplay for up to 8 players with dynamic objectives. Insert with helicopters, complete three consecutive objectives and RTB.
 
 ## Features
 
-- Randomly switches between US and USSR as player faction.
-- Players can insert with helicopters.
 - Randomly generated AOs with one of the following tasks:
   - Clear area
   - Destroy installation
   - Kill HVT
   - Deliver intel
 
-## References
+## Workshop Link
 
-### Workshop Link
+https://reforger.armaplatform.com/workshop/5E6EFC469852BFC2-CombatOpsEnhanced/scenarios
 
-_TBD_
-
-### Mods JSON
+## Mods JSON
 
 ```json
 "mods": [
@@ -37,15 +29,21 @@ _TBD_
 ]
 ```
 
-### Scenario IDs
+## Scenario IDs
 
-- Combat Ops Enhanced - Everon: `"{26CDF8012C795FAF}Missions/COE_Eden.conf"`
+- Combat Ops Enhanced - Everon (US): `"{16DB1B0CB0A48138}Missions/COE_Eden_US.conf"`
+- Combat Ops Enhanced - Everon (USSR): `"{56BF35CC5E6AEE2F}Missions/COE_Eden_USSR.conf"`
 
-### Mission Header
+## Mission Header
 
 - _TBD_
 
-### Creating Custom Scenarios
+## Compatibility Addons
+- RHS: [COE - RHS Compat](https://reforger.armaplatform.com/workshop/5EE2F844D4CCCAD6-COE-RHSCompat)
+- Kunar Province: [COE - Kunar Compat](https://reforger.armaplatform.com/workshop/5F02B470F89A09D5-COE-KunarCompat)
+- RHS and Kunar Province: [COE - RHS Kunar Compat](https://reforger.armaplatform.com/workshop/5F06E0F5A528C8C9-COE-RHSKunarCompat)
+
+## Creating Custom Scenarios
 
 _Documentation pending_
 
