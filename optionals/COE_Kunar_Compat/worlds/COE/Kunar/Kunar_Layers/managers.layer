@@ -80,6 +80,12 @@ COE_ObjectiveManager ObjectiveManager : "{973B5090288C8ADC}Prefabs/Managers/COE_
     "AirfieldBorder"
    }
   }
+  COE_AreaLocationConfig "{5E7C1ABC4E15FEA7}" {
+   m_bEnabled 0
+  }
+  COE_AreaLocationConfig "{5E7C1ABE1F9F05D6}" {
+   m_bEnabled 0
+  }
   COE_NamedLocationConfig "{5E7D7A70CD6A5F2A}" {
    m_bWeight 30
    m_fMaxDistanceMainBase 4000
