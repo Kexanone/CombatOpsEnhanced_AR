@@ -684,15 +684,16 @@ $grp COE_CustomLocationEntity : "{C487613DC869C65F}Prefabs/Location/COE_CustomLo
  OP_Vegas {
   components {
    COE_AISlotsComponent "{5F02D7196D784851}" {
+    m_bShowDebugEntityPreviewInWorkbench 1
     m_aAISlotConfigs {
      COE_AISlotConfig "{5F0331AEAD4A2577}" {
-      m_vPosition 12.625 -1.454 -1.06
+      m_vPosition 12.61 -1.07 -1.06
       m_vLookPosition 8.393 -1.454 -6.373
       m_iEntityLabel HVT
       m_bOccupyWhenNotMain 0
      }
      COE_AISlotConfig "{5F0331AEC61461B2}" {
-      m_vPosition -5.174 -0.411 1.454
+      m_vPosition -5.174 -0.21 1.454
       m_vLookPosition 0 -0.411 0
       m_iEntityLabel HVT
       m_bOccupyWhenNotMain 0
