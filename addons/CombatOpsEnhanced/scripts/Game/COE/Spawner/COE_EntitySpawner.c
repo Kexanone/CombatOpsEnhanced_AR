@@ -2,6 +2,9 @@
 [BaseContainerProps()]
 class COE_EntitySpawner_PrefabParams : Managed
 {
+	[Attribute(desc: "The name that should be set for the spawned entity")]
+	string m_sName;
+	
 	[Attribute(desc: "Resource name of the prefab")]
 	ResourceName m_sPrefabName;
 	

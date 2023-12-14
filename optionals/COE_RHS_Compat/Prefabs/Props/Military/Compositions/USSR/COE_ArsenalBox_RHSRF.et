@@ -1,0 +1,8 @@
+GenericEntity : "{1EE03FF59E89C75F}Prefabs/Props/Military/Compositions/USSR/COE_ArsenalBox_USSR.et" {
+ ID "56F2C6D6F7C6DAFA"
+ components {
+  SCR_FactionAffiliationComponent "{5A50E7655452A21D}" {
+   "faction affiliation" "RHS_RF_MSV"
+  }
+ }
+}

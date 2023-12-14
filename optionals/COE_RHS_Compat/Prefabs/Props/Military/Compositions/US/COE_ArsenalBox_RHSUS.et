@@ -1,0 +1,8 @@
+GenericEntity : "{2304C0551A8A1D65}Prefabs/Props/Military/Compositions/US/COE_ArsenalBox_US.et" {
+ ID "56F2C6D6F7C6DAFA"
+ components {
+  SCR_FactionAffiliationComponent "{5A50E7655452A21D}" {
+   "faction affiliation" "RHS_US_USMC"
+  }
+ }
+}

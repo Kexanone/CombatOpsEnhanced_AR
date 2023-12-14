@@ -5,6 +5,18 @@ COE_FactionManager : "{4A188E44289B9A50}Prefabs/MP/Managers/Factions/FactionMana
    m_aPlayerMainBasePrefabs {
     "{AA187F3D6F4C39E8}Prefabs/Compositions/Base/COE_MainBaseLandUSSR.et"
    }
+   m_aPlayerSpawnPrefabs {
+    "{50DAB3E40E882705}Prefabs/MP/Spawning/SpawnPoint_MSV_CP.et"
+   }
+   m_aArsenalBoxPrefabs {
+    "{3C6C1AE09E301B79}Prefabs/Props/Military/Compositions/USSR/COE_ArsenalBox_RHSRF.et"
+   }
+   m_aSmallVehicleRequestBoardPrefabs {
+    "{674B8266FCB76DFD}Prefabs/Props/Military/Compositions/USSR/COE_VehicleService_RHSRF_Small.et"
+   }
+   m_aHelicopterRequestBoardPrefabs {
+    "{3A9C615A0A5BB721}Prefabs/Props/Military/Compositions/USSR/COE_VehicleService_RHSRF_Large.et"
+   }
    m_aInstallationToDestroyPrefabs {
     "{DC7B76A39454380A}Prefabs/Compositions/Installation/USSR/COE_RPL5_Radar.et" "{CC15340158615106}Prefabs/Compositions/Installation/USSR/COE_R404_Antenna.et" "{5A5D82E72D1AD220}Prefabs/Compositions/Installation/USSR/COE_Ural4320_Command.et"
    }
@@ -60,6 +72,18 @@ COE_FactionManager : "{4A188E44289B9A50}Prefabs/MP/Managers/Factions/FactionMana
   COE_Faction "{5CC8DE37E1FF0F7A}" {
    m_aPlayerMainBasePrefabs {
     "{C863167AA262B49D}Prefabs/Compositions/Base/COE_MainBaseLandUS.et"
+   }
+   m_aPlayerSpawnPrefabs {
+    "{69D81D4A5FB98F58}Prefabs/MP/Spawning/SpawnPoint_USMC_CP.et"
+   }
+   m_aArsenalBoxPrefabs {
+    "{2463642BAAB1482B}Prefabs/Props/Military/Compositions/US/COE_ArsenalBox_RHSUS.et"
+   }
+   m_aSmallVehicleRequestBoardPrefabs {
+    "{69BD65FFCC33D8FA}Prefabs/Props/Military/Compositions/US/COE_VehicleService_RHSUS_Small.et"
+   }
+   m_aHelicopterRequestBoardPrefabs {
+    "{346A86C33ADF0226}Prefabs/Props/Military/Compositions/US/COE_VehicleService_RHSUS_Large.et"
    }
    m_aInstallationToDestroyPrefabs {
     "{DC7B76A39454380A}Prefabs/Compositions/Installation/USSR/COE_RPL5_Radar.et" "{CC15340158615106}Prefabs/Compositions/Installation/USSR/COE_R404_Antenna.et" "{A643E3CEBDAF05BB}Prefabs/Compositions/Installation/US/COE_M923A1_Command.et"

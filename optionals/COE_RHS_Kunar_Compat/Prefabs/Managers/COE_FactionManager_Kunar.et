@@ -3,12 +3,12 @@ COE_FactionManager : "{F9A08100A9E20FB5}Prefabs/Managers/COE_FactionManager.et" 
  Factions {
   COE_Faction "{5978B9CE6585BBE8}" {
    m_aPlayerMainBasePrefabs {
-    "{285EA6110A0EFD11}Prefabs/Compositions/Base/COE_MainBase_FobMichigan_RHSRF.et"
+    "{508DD30BE11E25C2}Prefabs/Compositions/Base/COE_MainBase_FobMichigan.et"
    }
   }
   COE_Faction "{5CC8DE37E1FF0F7A}" {
    m_aPlayerMainBasePrefabs {
-    "{9C15A7E9268FF857}Prefabs/Compositions/Base/COE_MainBase_FobMichigan_RHSUS.et"
+    "{508DD30BE11E25C2}Prefabs/Compositions/Base/COE_MainBase_FobMichigan.et"
    }
   }
  }

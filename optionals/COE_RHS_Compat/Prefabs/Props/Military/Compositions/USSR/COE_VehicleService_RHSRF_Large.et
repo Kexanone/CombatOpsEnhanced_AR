@@ -1,0 +1,8 @@
+GenericEntity : "{7179752A32DF8B16}Prefabs/Props/Military/Compositions/USSR/COE_VehicleService_USSR_Large.et" {
+ ID "F0DBA538AC2A0552"
+ components {
+  SCR_FactionAffiliationComponent "{5D22B92ED0ABBFD4}" {
+   "faction affiliation" "RHS_RF_MSV"
+  }
+ }
+}
