@@ -1,0 +1,24 @@
+GenericEntity : "{79604FB6CD0DD617}Prefabs/Props/Military/Compositions/US/VehicleService_US_Small.et" {
+ ID "F0DBA538AC2A0552"
+ components {
+  SCR_CatalogEntitySpawnerComponent "{5D22B968F23A847A}" {
+   m_fMaxSlotDistance 30
+   m_aIgnoredLabels {
+    21
+   }
+  }
+  SCR_ResourceComponent "{5D7CC617B33EF1CF}" {
+   m_aContainers {
+    SCR_ResourceContainer "{5F12F1EFCA5DBADB}" {
+     m_eResourceRights SELF
+     m_eStorageType STORED
+     m_fResourceValueCurrent 300000
+     m_fResourceValueMax 30000
+     m_bEnableResourceGain 1
+     m_fResourceGain 3000
+     m_fResourceGainTickrate 1
+    }
+   }
+  }
+ }
+}

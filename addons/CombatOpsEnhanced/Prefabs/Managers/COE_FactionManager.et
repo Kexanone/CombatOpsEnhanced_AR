@@ -6,6 +6,21 @@ COE_FactionManager : "{4A188E44289B9A50}Prefabs/MP/Managers/Factions/FactionMana
    m_aPlayerMainBasePrefabs {
     "{C863167AA262B49D}Prefabs/Compositions/Base/COE_MainBaseLandUS.et"
    }
+   m_aPlayerMainBaseCarrierPrefabs {
+    "{0F7E14BBC969DF41}Prefabs/Compositions/Base/COE_CarrierMainBase.et"
+   }
+   m_aPlayerSpawnPrefabs {
+    "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et"
+   }
+   m_aArsenalBoxPrefabs {
+    "{2304C0551A8A1D65}Prefabs/Props/Military/Compositions/US/COE_ArsenalBox_US.et"
+   }
+   m_aSmallVehicleRequestBoardPrefabs {
+    "{2462378BA6550F4A}Prefabs/Props/Military/Compositions/US/COE_VehicleService_US_Small.et"
+   }
+   m_aHelicopterRequestBoardPrefabs {
+    "{79B5D4B750B9D596}Prefabs/Props/Military/Compositions/US/COE_VehicleService_US_Large.et"
+   }
    m_aInstallationToDestroyPrefabs {
     "{DC7B76A39454380A}Prefabs/Compositions/Installation/USSR/COE_RPL5_Radar.et" "{CC15340158615106}Prefabs/Compositions/Installation/USSR/COE_R404_Antenna.et" "{A643E3CEBDAF05BB}Prefabs/Compositions/Installation/US/COE_M923A1_Command.et"
    }
@@ -58,6 +73,21 @@ COE_FactionManager : "{4A188E44289B9A50}Prefabs/MP/Managers/Factions/FactionMana
   COE_Faction "{56DEAC40D3C2E623}" {
    m_aPlayerMainBasePrefabs {
     "{AA187F3D6F4C39E8}Prefabs/Compositions/Base/COE_MainBaseLandUSSR.et"
+   }
+   m_aPlayerMainBaseCarrierPrefabs {
+    "{0F7E14BBC969DF41}Prefabs/Compositions/Base/COE_CarrierMainBase.et"
+   }
+   m_aPlayerSpawnPrefabs {
+    "{4FEA25583D0975F7}Prefabs/MP/Spawning/SpawnPoint_USSR.et"
+   }
+   m_aArsenalBoxPrefabs {
+    "{1EE03FF59E89C75F}Prefabs/Props/Military/Compositions/USSR/COE_ArsenalBox_USSR.et"
+   }
+   m_aSmallVehicleRequestBoardPrefabs {
+    "{2CAE9616C43351CA}Prefabs/Props/Military/Compositions/USSR/COE_VehicleService_USSR_Small.et"
+   }
+   m_aHelicopterRequestBoardPrefabs {
+    "{7179752A32DF8B16}Prefabs/Props/Military/Compositions/USSR/COE_VehicleService_USSR_Large.et"
    }
    m_aInstallationToDestroyPrefabs {
     "{DC7B76A39454380A}Prefabs/Compositions/Installation/USSR/COE_RPL5_Radar.et" "{CC15340158615106}Prefabs/Compositions/Installation/USSR/COE_R404_Antenna.et" "{5A5D82E72D1AD220}Prefabs/Compositions/Installation/USSR/COE_Ural4320_Command.et"

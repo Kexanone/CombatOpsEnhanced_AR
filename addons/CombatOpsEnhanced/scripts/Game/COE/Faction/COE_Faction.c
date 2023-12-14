@@ -1,6 +1,11 @@
 enum COE_EEntityLabel
 {
 	PLAYER_MAIN_BASE,
+	PLAYER_MAIN_BASE_CARRIER,
+	PLAYER_SPAWN,
+	ARSENAL_BOX,
+	SMALL_VEHICLE_REQUEST_BOARD,
+	HELICOPTER_REQUEST_BOARD,
 	INSTALLATION_TO_DESTROY,
 	SUPPLIES_TO_DESTROY,
 	HVT,
@@ -28,6 +33,21 @@ class COE_Faction : SCR_Faction
 {
 	[Attribute(desc: "Prefabs for player's main base")]
 	protected ref array<ResourceName> m_aPlayerMainBasePrefabs;
+	
+	[Attribute(desc: "Prefabs for player's main base carrier")]
+	protected ref array<ResourceName> m_aPlayerMainBaseCarrierPrefabs;
+	
+	[Attribute(desc: "Prefabs for player spawn")]
+	protected ref array<ResourceName> m_aPlayerSpawnPrefabs;
+	
+	[Attribute(desc: "Prefabs for arsenal box for players")]
+	protected ref array<ResourceName> m_aArsenalBoxPrefabs;
+	
+	[Attribute(desc: "Prefabs for requesting small vehicles")]
+	protected ref array<ResourceName> m_aSmallVehicleRequestBoardPrefabs;
+	
+	[Attribute(desc: "Prefabs for requesting helicopters vehicles")]
+	protected ref array<ResourceName> m_aHelicopterRequestBoardPrefabs;
 	
 	[Attribute(desc: "Prefabs for installations to be destroyed")]
 	protected ref array<ResourceName> m_aInstallationToDestroyPrefabs;
@@ -112,6 +132,11 @@ class COE_Faction : SCR_Faction
 		switch (label)
 		{
 			case COE_EEntityLabel.PLAYER_MAIN_BASE: {return m_aPlayerMainBasePrefabs;};
+			case COE_EEntityLabel.PLAYER_MAIN_BASE_CARRIER: {return m_aPlayerMainBaseCarrierPrefabs;};
+			case COE_EEntityLabel.PLAYER_SPAWN: {return m_aPlayerSpawnPrefabs;};
+			case COE_EEntityLabel.ARSENAL_BOX: {return m_aArsenalBoxPrefabs;};
+			case COE_EEntityLabel.SMALL_VEHICLE_REQUEST_BOARD: {return m_aSmallVehicleRequestBoardPrefabs;};
+			case COE_EEntityLabel.HELICOPTER_REQUEST_BOARD: {return m_aHelicopterRequestBoardPrefabs;};
 			case COE_EEntityLabel.INSTALLATION_TO_DESTROY: {return m_aInstallationToDestroyPrefabs;};
 			case COE_EEntityLabel.SUPPLIES_TO_DESTROY: {return m_aSuppliesToDestroyPrefabs;};
 			case COE_EEntityLabel.HVT: {return m_aHVTPrefabs;};

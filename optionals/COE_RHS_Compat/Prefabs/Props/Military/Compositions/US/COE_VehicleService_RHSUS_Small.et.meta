@@ -1,5 +1,5 @@
 MetaFileClass {
- Name "{C863167AA262B49D}Prefabs/Compositions/Base/COE_MainBaseLandUS.et""
+ Name "{69BD65FFCC33D8FA}Prefabs/Props/Military/Compositions/US/COE_VehicleService_RHSUS_Small.et"
  Configurations {
   EntityTemplateResourceClass PC {
   }

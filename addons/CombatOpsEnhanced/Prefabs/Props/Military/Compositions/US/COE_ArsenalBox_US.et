@@ -1,0 +1,18 @@
+GenericEntity : "{45C675ED3CFBBEC5}Prefabs/Props/Military/Compositions/US/ArsenalBox_US.et" {
+ ID "56F2C6D6F7C6DAFA"
+ components {
+  SCR_ResourceComponent "{5D7D07D2F7A252D2}" {
+   m_aContainers {
+    SCR_ResourceContainer "{5F12F1EF00D3E541}" {
+     m_eResourceRights SELF
+     m_eStorageType STORED
+     m_fResourceValueCurrent 30000
+     m_fResourceValueMax 3000
+     m_bEnableResourceGain 1
+     m_fResourceGain 300
+     m_fResourceGainTickrate 1
+    }
+   }
+  }
+ }
+}

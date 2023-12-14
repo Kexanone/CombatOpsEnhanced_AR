@@ -1,0 +1,8 @@
+GenericEntity : "{2462378BA6550F4A}Prefabs/Props/Military/Compositions/US/COE_VehicleService_US_Small.et" {
+ ID "F0DBA538AC2A0552"
+ components {
+  SCR_FactionAffiliationComponent "{5D22B92ED0ABBFD4}" {
+   "faction affiliation" "RHS_US_USMC"
+  }
+ }
+}

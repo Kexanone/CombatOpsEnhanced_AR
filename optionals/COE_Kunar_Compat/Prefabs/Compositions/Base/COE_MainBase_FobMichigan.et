@@ -1,0 +1,116 @@
+GenericEntity {
+ ID "5F13329346116C3B"
+ coords 2675.562 8 3078.68
+ {
+  $grp COE_LabelledEntitySlot {
+   {
+    ID "5F13329346116C39"
+    coords -32.327 0.091 -25.424
+    angleY -147
+    m_iEntityLabel ARSENAL_BOX
+   }
+   {
+    ID "5F1332934611AC74"
+    coords -35.775 0.124 -31.209
+    angleY 33
+    m_iEntityLabel PLAYER_SPAWN
+   }
+   {
+    ID "5F133293462E17E8"
+    coords -5.514 0.223 -56.999
+    angleY 33
+    m_iEntityLabel SMALL_VEHICLE_REQUEST_BOARD
+   }
+   {
+    ID "5F133293462E17F7"
+    coords -27.885 0.103 -23.236
+    angleY -57
+    m_iEntityLabel HELICOPTER_REQUEST_BOARD
+   }
+  }
+  $grp GenericEntity : "{3D9998855187A405}Prefabs/Systems/Compositions/EntitySpawnerSlot/EntitySpawnerSlot_Vehicle_Small.et" {
+   {
+    ID "5F133293462E767D"
+    coords 10.489 0.144 -62.131
+    angleY 33
+   }
+   {
+    ID "5F133293462E767E"
+    coords -0.175 0.144 -55.207
+    angleY 33
+   }
+   {
+    ID "5F133293462EADC4"
+    coords 15.926 0.144 -65.662
+    angleY 33
+   }
+   {
+    ID "5F133293462EDD8F"
+    coords 5.218 0.144 -58.709
+    angleY 33
+   }
+  }
+  $grp GenericEntity : "{47B7E8CA1935BB28}PrefabsEditable/SupportStationSystems/E_SupportStationSystem_Fuel.et" {
+   {
+    ID "5F1C48EEE3017E94"
+    coords 8.477 0.5 15.461
+   }
+   {
+    ID "5F1C48EEE5D98E7B"
+    coords -8.922 0.5 -11.592
+   }
+  }
+  $grp GenericEntity : "{604E7BB9A76B7ED9}Prefabs/Systems/Compositions/EntitySpawnerSlot/EntitySpawnerSlot_Vehicle_Large.et" {
+   {
+    ID "5F133293462E17E0"
+    coords -8.922 0.5 -11.592
+    angleY -57
+   }
+   {
+    ID "5F133293462E767F"
+    coords 8.477 0.5 15.461
+    angleY -57
+   }
+  }
+  $grp GenericEntity : "{64454FA087931713}PrefabsEditable/SupportStationSystems/E_SupportStationSystem_Repair.et" {
+   {
+    ID "5F1C48EEE01E45B1"
+    components {
+     SCR_ResourceComponent "{5DACF52CF6D4A1C9}" {
+      m_aContainers {
+       SCR_ResourceContainer "{5F1C48EE1F05E688}" {
+        m_eResourceRights SELF
+        m_eStorageType STORED
+        m_fResourceValueCurrent 30000
+        m_fResourceValueMax 3000
+        m_bEnableResourceGain 1
+        m_fResourceGain 300
+        m_fResourceGainTickrate 1
+       }
+      }
+     }
+    }
+    coords -8.922 0.5 -11.592
+   }
+   {
+    ID "5F1C48EEE0FD98A4"
+    components {
+     SCR_ResourceComponent "{5DACF52CF6D4A1C9}" {
+      m_aContainers {
+       SCR_ResourceContainer "{5F1C48EE20BC739F}" {
+        m_eResourceRights SELF
+        m_eStorageType STORED
+        m_fResourceValueCurrent 30000
+        m_fResourceValueMax 3000
+        m_bEnableResourceGain 1
+        m_fResourceGain 300
+        m_fResourceGainTickrate 1
+       }
+      }
+     }
+    }
+    coords 8.477 0.5 15.461
+   }
+  }
+ }
+}

@@ -1,5 +1,5 @@
 MetaFileClass {
- Name "{C863167AA262B49D}Prefabs/Compositions/Base/COE_MainBaseLandUS.et""
+ Name "{2304C0551A8A1D65}Prefabs/Props/Military/Compositions/US/COE_ArsenalBox_US.et"
  Configurations {
   EntityTemplateResourceClass PC {
   }
