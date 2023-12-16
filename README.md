@@ -38,10 +38,16 @@ https://reforger.armaplatform.com/workshop/5E6EFC469852BFC2-CombatOpsEnhanced/sc
 
 - _TBD_
 
+## Optional Addons
+
+- [HMAS Adelaide](https://reforger.armaplatform.com/workshop/5A78300A9F2D7A65-HMASAdelaide) (Used as main base on Everon when loaded)
+
 ## Compatibility Addons
+
 - RHS: [COE - RHS Compat](https://reforger.armaplatform.com/workshop/5EE2F844D4CCCAD6-COE-RHSCompat)
 - Kunar Province: [COE - Kunar Compat](https://reforger.armaplatform.com/workshop/5F02B470F89A09D5-COE-KunarCompat)
 - RHS and Kunar Province: [COE - RHS Kunar Compat](https://reforger.armaplatform.com/workshop/5F06E0F5A528C8C9-COE-RHSKunarCompat)
+- Taliban: [COE - Taliban Compat](https://reforger.armaplatform.com/workshop/5F1F6960A91B7E94-COE-TalibanCompat)
 
 ## Creating Custom Scenarios
 
