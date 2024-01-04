@@ -34,7 +34,7 @@ class COE_WorldTools
 		if (!COE_Utils.SurfaceIsFlat(pos, params.MaxSlopeAngle))
 			return false;
 		
-		return SCR_WorldTools.TraceCylinder(pos, params.EmptyRadius, params.EmptyHeight);
+		return IsPosEmpty(pos, params.EmptyRadius, params.EmptyHeight);
 	}
 	
 	//------------------------------------------------------------------------------------------------
@@ -49,12 +49,15 @@ class COE_WorldTools
 		vector pos = area.SamplePointInArea();
 		int trialCounter = 1;
 		
+		Print("|gog|COE_WorldTools.SampleTransformInArea|Start|");
+		PrintFormat("|%1|%2|", COE_CircleArea.Cast(area).GetCenter(), COE_CircleArea.Cast(area).GetRadius());
 		while (!IsPositionAccepted(pos, excludedAreas, params) && (params.MaxNumTrials < 0 || params.MaxNumTrials > trialCounter))
 		{
 			pos = area.SamplePointInArea();
 			pos[1] = GetGame().GetWorld().GetSurfaceY(pos[0], pos[2]);
 			trialCounter++;
 		};
+		Print("|gog|COE_WorldTools.SampleTransformInArea|End|");
 		
 		transform[3] = pos;
 		SCR_TerrainHelper.SnapAndOrientToTerrain(transform);
@@ -78,6 +81,7 @@ class COE_WorldTools
 		vector pos;
 		int trialCounter = 0;
 		
+		Print("|gog|COE_WorldTools.SampleTransformInWorld|Start|");
 		while (!IsPositionAccepted(pos, excludedAreas, params) && (params.MaxNumTrials < 0 || params.MaxNumTrials > trialCounter))
 		{
 			pos[0] = Math.RandomFloat(mins[0], maxs[0]);
@@ -85,6 +89,7 @@ class COE_WorldTools
 			pos[1] = GetGame().GetWorld().GetSurfaceY(pos[0], pos[2]);
 			trialCounter++;
 		}
+		Print("|gog|COE_WorldTools.SampleTransformInWorld|End|");
 		
 		transform[3] = pos;
 		SCR_TerrainHelper.SnapAndOrientToTerrain(transform);
@@ -175,5 +180,11 @@ class COE_WorldTools
 			m_aAllEntities.Insert(entity);
 		
 		return true;
+	}
+	
+	//------------------------------------------------------------------------------------------------
+	static bool IsPosEmpty(vector pos, float emptyRadius = 0.5, float emptyHeight = 2)
+	{
+		return SCR_WorldTools.TraceCylinder(pos + Vector(0, emptyHeight/2, 0), emptyRadius, emptyHeight);
 	}
 }

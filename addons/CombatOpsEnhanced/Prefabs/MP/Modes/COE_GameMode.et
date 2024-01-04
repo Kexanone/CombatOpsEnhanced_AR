@@ -18,7 +18,7 @@ COE_GameMode : "{1B76F75A3175E85C}Prefabs/MP/Modes/Plain/GameMode_Plain.et" {
    m_sHeaderTitle "#AR-CombatScenarioArland_Name"
    m_BaseLayout SCR_DebriefingScreenUnevenFourTiles "{5E6F1867E2884BBF}" {
     m_TopLeftTile SCR_DebriefingScreenBigImageContent "{5E6F1867E2884BBD}" {
-     m_sContentImage "{DE06FBCB3D1D9E6E}gfx/preview.edds"
+     m_sContentImage "{C9D485F6F055C410}UI/Textures/MissionLoadingScreens/COE_Arland_Preview.edds"
     }
     m_TopRightTile SCR_DebriefingScreenFinishedObjectivesContent "{5E6F1867E2884BBB}" {
      m_sTitleText "#AR-DebriefingScreen_Objectives"
@@ -134,7 +134,7 @@ COE_GameMode : "{1B76F75A3175E85C}Prefabs/MP/Modes/Plain/GameMode_Plain.et" {
      m_sTitleText "Introduction"
      m_aIntroduction {
       SCR_WelcomeScreenIntroduction "{5E6F1867E289B951}" {
-       m_sContentImage "{DE06FBCB3D1D9E6E}gfx/preview.edds"
+       m_sContentImage "{C9D485F6F055C410}UI/Textures/MissionLoadingScreens/COE_Arland_Preview.edds"
        m_sContentTitleText "#AR-Workshop_TabName_Briefing"
        m_sContentDescriptionText "#AR-CombatScenario_Briefing"
       }
@@ -145,10 +145,12 @@ COE_GameMode : "{1B76F75A3175E85C}Prefabs/MP/Modes/Plain/GameMode_Plain.et" {
   SerializerInventoryStorageManagerComponent "{5E6F1867E289B96E}" {
   }
  }
- PlayerControllerPrefab "{CD2B8EF361478648}Prefabs/Characters/Core/DefaultPlayerControllerMP_ScenarioFramework.et"
+ PlayerControllerPrefab "{21EAEB797197C0C3}Prefabs/Characters/Core/COE_PlayerController.et"
+ GarbageSystemConfig "{C443635EF40BDAF3}Configs/Core/CampaignGarbageSystem.conf"
  m_bAutoPlayerRespawn 0
  m_fAutoReloadTime 30
  m_aBaseLocationNames {
   "COE_MainBase_1"
  }
+ m_sCarrierToCheckPrefabName "{236F3EFB09667305}Prefabs/Structures/Military/Vessel/VesselHMAS_Adelaide_01/VessleHMAS_Adelaide_01.et"
 }

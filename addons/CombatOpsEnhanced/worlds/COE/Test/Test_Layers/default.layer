@@ -17,6 +17,53 @@ $grp COE_PolygonAreaPicker {
 GenericEntity COE_MainBase_1 {
  coords 118.192 1 151.103
 }
+GenericEntity : "{0EA8D3E27052750B}Prefabs/Props/Military/Compositions/USSR/VehicleService_USSR_Large.et" {
+ components {
+  SCR_CatalogEntitySpawnerComponent "{5D22B968F23A847A}" {
+   m_aIgnoredLabels {
+   }
+  }
+  SCR_ResourceComponent "{5D7CC617B33EF1CF}" {
+   m_aContainers {
+    SCR_ResourceContainer "{5F12A4F3BEC83F54}" {
+     m_eResourceRights SELF
+     m_eStorageType STORED
+     m_fResourceValueCurrent 2000000000
+     m_fResourceValueMax 2000000000
+    }
+   }
+  }
+ }
+ coords 88.992 1 245.669
+ angleY 103.141
+}
+$grp GenericEntity : "{3D9998855187A405}Prefabs/Systems/Compositions/EntitySpawnerSlot/EntitySpawnerSlot_Vehicle_Small.et" {
+ {
+  components {
+   Hierarchy "{5D647729E4CBA81C}" {
+    Enabled 1
+   }
+  }
+  coords 119.625 1 89.988
+  angleY 4.26
+ }
+ {
+  components {
+   Hierarchy "{5D647729E4CBA81C}" {
+    Enabled 1
+   }
+  }
+  coords 111.216 1 90.858
+  angleY 4.26
+ }
+}
+GenericEntity : "{604E7BB9A76B7ED9}Prefabs/Systems/Compositions/EntitySpawnerSlot/EntitySpawnerSlot_Vehicle_Large.et" {
+ components {
+  Hierarchy "{5E92E73DBAF90362}" {
+  }
+ }
+ coords 98.782 1 84.631
+}
 $grp GenericEntity : "{AC84AEB35260CEF8}Prefabs/Compositions/Slotted/SlotFlatSmall/MachineGunNest_S_US_01.et" {
  {
   coords 126.943 1 76.611
@@ -24,4 +71,38 @@ $grp GenericEntity : "{AC84AEB35260CEF8}Prefabs/Compositions/Slotted/SlotFlatSma
  {
   coords 102.124 1 142.75
  }
+}
+GenericEntity : "{B86F916928A1430F}PrefabsEditable/Auto/Props/Military/Compositions/USSR/E_VehicleService_USSR_Small.et" {
+ components {
+  SCR_ResourceComponent "{5D7CC617B33EF1CF}" {
+   m_aContainers {
+    SCR_ResourceContainer "{5F12A4F48D48F01A}" {
+     m_eResourceRights SELF
+     m_eStorageType STORED
+     m_fResourceValueCurrent 300000
+     m_fResourceValueMax 300000
+    }
+   }
+  }
+ }
+ coords 111.467 1 95.29
+}
+GenericEntity : "{D4573A9778DB3CB0}PrefabsEditable/Auto/Props/Military/Compositions/US/E_VehicleService_US_Small.et" {
+ components {
+  SCR_CatalogEntitySpawnerComponent "{5D22B968F23A847A}" {
+   m_aIgnoredLabels {
+   }
+  }
+  SCR_ResourceComponent "{5D7CC617B33EF1CF}" {
+   m_aContainers {
+    SCR_ResourceContainer "{5F12A4F7E1B3493B}" {
+     m_eResourceRights SELF
+     m_eStorageType STORED
+     m_fResourceValueCurrent 300000
+     m_fResourceValueMax 300000
+    }
+   }
+  }
+ }
+ coords 113.481 1 95.433
 }

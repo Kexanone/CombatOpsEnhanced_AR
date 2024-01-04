@@ -9,8 +9,10 @@ class COE_AreaBase : Managed
 	{
 		vector pos;
 		
+		Print("|gog|COE_AreaBase.IsPointInArea|Start|");
 		while(!pos || inner.IsPointInArea(pos))
 			pos = outer.SamplePointInArea();
+		Print("|gog|COE_AreaBase.IsPointInArea|End|");
 		
 		return pos;
 	}

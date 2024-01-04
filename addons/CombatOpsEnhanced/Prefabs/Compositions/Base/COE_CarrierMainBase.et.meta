@@ -1,5 +1,5 @@
 MetaFileClass {
- Name "{508DD30BE11E25C2}Prefabs/Compositions/Base/COE_MainBase_FobMichigan.et"
+ Name "{0F7E14BBC969DF41}Prefabs/Compositions/Base/COE_CarrierMainBase.et"
  Configurations {
   EntityTemplateResourceClass PC {
   }
@@ -10,8 +10,6 @@ MetaFileClass {
   EntityTemplateResourceClass PS4 : PC {
   }
   EntityTemplateResourceClass HEADLESS : PC {
-  }
-  EntityTemplateResourceClass Xbox : PC {
   }
  }
 }

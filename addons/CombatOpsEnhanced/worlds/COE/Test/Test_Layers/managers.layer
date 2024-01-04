@@ -47,6 +47,14 @@ COE_FactionManager FactionManager : "{F9A08100A9E20FB5}Prefabs/Managers/COE_Fact
    m_bIsPlayable 1
   }
  }
+ m_aOpposingFactionsConfigs {
+  COE_OpposingFactionsConfig "{5E9EC6AF8B3BF47F}" {
+   m_sPlayerFactionKey "USSR"
+   m_sEnemyFactionKey "US"
+  }
+  COE_OpposingFactionsConfig "{5E9CF2E19AEF9E0C}" {
+  }
+ }
 }
 COE_VehicleSpawnManager VehicleSpawnManager : "{03A3F74C83B9255B}Prefabs/Managers/COE_VehicleSpawnManager.et" {
  coords 91.746 1 141.073

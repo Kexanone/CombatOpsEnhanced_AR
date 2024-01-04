@@ -32,6 +32,26 @@ TagManager TagManager : "{2FA9E172CAB1857A}Prefabs/MP/Managers/TagManager.et" {
  coords 2744.816 10.968 3190.743
 }
 COE_GameMode GameMode : "{9EDD3A569D1FE096}Prefabs/MP/Modes/COE_GameMode.et" {
+ components {
+  SCR_DebriefingScreenComponent "{5E6F1867E2884BA2}" {
+   m_BaseLayout SCR_DebriefingScreenUnevenFourTiles "{5E6F1867E2884BBF}" {
+    m_TopLeftTile SCR_DebriefingScreenBigImageContent "{5E6F1867E2884BBD}" {
+     m_sContentImage "{09E85B2C4B050443}UI/Textures/MissionLoadingScreens/COE_Kunar_Preview.edds"
+    }
+   }
+  }
+  SCR_WelcomeScreenComponent "{5E6F1867E2884B90}" {
+   m_BaseLayout SCR_WelcomeScreenThreeHorizontalColumns "{5E6F1867E2884B91}" {
+    m_RightColumn SCR_WelcomeScreenIntroductionContent "{5E6F1867E289B95B}" {
+     m_aIntroduction {
+      SCR_WelcomeScreenIntroduction "{5E6F1867E289B951}" {
+       m_sContentImage "{09E85B2C4B050443}UI/Textures/MissionLoadingScreens/COE_Kunar_Preview.edds"
+      }
+     }
+    }
+   }
+  }
+ }
  coords 2744.816 10.968 3190.743
  m_aBaseLocationNames {
   "COE_MainBase_FobMichigan"
@@ -42,13 +62,21 @@ RadioManagerEntity RadioManager : "{B8E09FAB91C4ECCD}Prefabs/Radio/RadioManager.
 }
 COE_FactionManager FactionManager : "{EE237EF19EC14411}Prefabs/Managers/COE_FactionManager_Kunar.et" {
  coords 2744.816 10.968 3190.743
+ Factions {
+  COE_Faction "{56DEAC40D2DBC8B1}" {
+  }
+  COE_Faction "{56DEAC40D3C2E623}" {
+   m_aPlayerMainBasePrefabs {
+    ""
+   }
+  }
+  COE_Faction "{56DEAC40D132400B}" {
+  }
+ }
 }
 ScriptedChatEntity ChatEntity : "{F69BC912AC8236F9}Prefabs/MP/ScriptedChatEntity.et" {
  coords 2744.816 10.968 3190.743
  Flags 0
-}
-COE_VehicleSpawnManager VehicleSpawnManager : "{03A3F74C83B9255B}Prefabs/Managers/COE_VehicleSpawnManager.et" {
- coords 2744.816 10.968 3190.743
 }
 HitRegistrationManager HitRegManager : "{0EDA3D48791120DD}Prefabs/MP/HitRegManager.et" {
  coords 2744.816 10.968 3190.743
@@ -62,11 +90,9 @@ COE_ObjectiveManager ObjectiveManager : "{973B5090288C8ADC}Prefabs/Managers/COE_
   COE_FreeRoamingLocationConfig "{5E7B42E9CB2B02CF}" {
    m_bEnabled 0
    m_bWeight 80
-   m_fMaxDistanceMainBase 4000
   }
   COE_PrefabLocationConfig "{5E7B42D1349C35C1}" {
    m_bWeight 16
-   m_fMaxDistanceMainBase 4000
    m_aExcludedAreaPickerNames {
     "AirfieldBorder"
    }
@@ -75,7 +101,6 @@ COE_ObjectiveManager ObjectiveManager : "{973B5090288C8ADC}Prefabs/Managers/COE_
    }
   }
   COE_SlotLocationConfig "{5E7B42D0793541FB}" {
-   m_fMaxDistanceMainBase 4000
    m_aExcludedAreaPickerNames {
     "AirfieldBorder"
    }
@@ -88,7 +113,6 @@ COE_ObjectiveManager ObjectiveManager : "{973B5090288C8ADC}Prefabs/Managers/COE_
   }
   COE_NamedLocationConfig "{5E7D7A70CD6A5F2A}" {
    m_bWeight 30
-   m_fMaxDistanceMainBase 4000
    m_aSupportedTaskTypes {
     0
    }
@@ -99,7 +123,6 @@ COE_ObjectiveManager ObjectiveManager : "{973B5090288C8ADC}Prefabs/Managers/COE_
   COE_NamedLocationConfig "{5E8F1CE937D132EA}" {
    m_sComment "Areas with installations"
    m_bWeight 50
-   m_fMaxDistanceMainBase 4000
    m_aSupportedTaskTypes {
     1 2
    }
@@ -110,7 +133,6 @@ COE_ObjectiveManager ObjectiveManager : "{973B5090288C8ADC}Prefabs/Managers/COE_
   COE_NamedLocationConfig "{5E8F1CE955E96A2B}" {
    m_bEnabled 0
    m_bWeight 3
-   m_fMaxDistanceMainBase 4000
    m_aNamedLocations {
     "G_Harbour" "G_Harbour2" "G_Harbour3" "G_Harbour4" "G_Harbour5" "G_Harbour6"
    }
@@ -118,7 +140,6 @@ COE_ObjectiveManager ObjectiveManager : "{973B5090288C8ADC}Prefabs/Managers/COE_
   COE_NamedLocationConfig "{5E8F1CE953563688}" {
    m_bEnabled 0
    m_bWeight 3
-   m_fMaxDistanceMainBase 4000
    m_aNamedLocations {
     "G_Industrial" "G_Industrial3" "G_Sawmill" "G_Quarry" "G_Landfill"
    }
@@ -126,7 +147,6 @@ COE_ObjectiveManager ObjectiveManager : "{973B5090288C8ADC}Prefabs/Managers/COE_
   COE_CustomLocationConfig "{5F02D710B52A2CA6}" {
    m_sComment "FOBs and OPs"
    m_bWeight 11
-   m_fMaxDistanceMainBase 4000
    m_aSupportedTaskTypes {
     3 4
    }

@@ -31,7 +31,13 @@ class COE_Utils
 	//------------------------------------------------------------------------------------------------
 	static bool SurfaceIsWater(vector pos)
 	{
-		return GetGame().GetWorld().GetSurfaceY(pos[0], pos[2]) <= GetGame().GetWorld().GetOceanBaseHeight();
+		pos[1] = GetGame().GetWorld().GetSurfaceY(pos[0], pos[2]);
+		vector outWaterSurfacePoint;
+		EWaterSurfaceType outType;
+		vector transformWS[4];
+		vector obbExtents;
+		ChimeraWorldUtils.TryGetWaterSurface(GetGame().GetWorld(), pos, outWaterSurfacePoint, outType, transformWS, obbExtents);
+		return outType != EWaterSurfaceType.WST_NONE;
 	}
 	
 	//------------------------------------------------------------------------------------------------

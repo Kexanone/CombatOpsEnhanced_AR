@@ -13,6 +13,9 @@ class COE_ObjectiveManager : GenericEntity
 	[Attribute(defvalue: "500", desc: "Minimum distance between objectives in meter")]
 	protected float m_fMinDistanceObjectives;
 	
+	[Attribute(defvalue: "-1", desc: "Maximum distance to main base in meters. No limit if -1.")]
+	protected float m_fMaxDistanceMainBase;
+	
 	[Attribute(desc: "Configs for objective locations")]
 	ref array<ref COE_LocationBaseConfig> m_aLocationConfigs;
 	
@@ -167,5 +170,15 @@ class COE_ObjectiveManager : GenericEntity
 		Math.Randomize(-1);
 		locationConfigs.GetRandomValue(locationConfig);
 		return locationConfig;		
+	}
+	
+	float GetMaxDistanceToMainBase()
+	{
+		return m_fMaxDistanceMainBase;
+	}
+	
+	void SetMaxDistanceToMainBase(float distance)
+	{
+		m_fMaxDistanceMainBase = distance;
 	}
 }

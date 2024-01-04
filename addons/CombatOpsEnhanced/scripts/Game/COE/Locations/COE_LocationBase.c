@@ -12,9 +12,6 @@ class COE_LocationBaseConfig : ScriptAndConfig
 	[Attribute(defvalue: "1", desc: "The larger the weight, the more likely this config is selected")]
 	protected int m_bWeight;
 	
-	[Attribute(defvalue: "7000", desc: "Maximum distance to main base in meters")]
-	protected float m_fMaxDistanceMainBase;
-	
 	[Attribute(desc: "Names of area picker entities for excluded area")]
 	protected ref array<string> m_aExcludedAreaPickerNames;
 	protected ref array<ref COE_AreaBase> m_aExcludedAreas = {};
@@ -55,7 +52,15 @@ class COE_LocationBaseConfig : ScriptAndConfig
 		if (!mainBase)
 			return;
 		
-		m_pSampledArea = COE_CircleArea(mainBase.GetOrigin(), m_fMaxDistanceMainBase);
+		float maxDistanceToMainBase = COE_ObjectiveManager.GetInstance().GetMaxDistanceToMainBase();
+		if (maxDistanceToMainBase > 0)
+		{
+			m_pSampledArea = COE_CircleArea(mainBase.GetOrigin(), maxDistanceToMainBase);
+		}
+		else
+		{
+			m_pSampledArea = COE_WorldArea();
+		}
 		
 		// Get and store excluded areas
 		foreach (string pickerName : m_aExcludedAreaPickerNames)
@@ -154,7 +159,7 @@ class COE_Location : Managed
 		m_MissionHeader = COE_MissionHeader.Cast(GetGame().GetMissionHeader());
 		// Workaround for workbench, since mission header is not defined
 		if (!m_MissionHeader)
-			m_MissionHeader = SCR_ConfigHelperT<COE_MissionHeader>.GetConfigObject("{26CDF8012C795FAF}Missions/COE_Eden.conf");
+			m_MissionHeader = SCR_ConfigHelperT<COE_MissionHeader>.GetConfigObject("{56BF35CC5E6AEE2F}Missions/COE_Eden_USSR.conf");
 	}
 	
 	//------------------------------------------------------------------------------------------------
@@ -363,6 +368,7 @@ class COE_Location : Managed
 		COE_CircleArea sampleArea = COE_CircleArea(m_vCenter, m_fRadius);
 		COE_SamplePosParams params = COE_SamplePosParams();
 		params.EmptyRadius = 5;
+		params.EmptyHeight = 30;
 		vector transform[4];
 		
 		int count = Math.RandomIntInclusive(m_MissionHeader.m_iCOE_MinNumberOfAPCs, m_MissionHeader.m_iCOE_MaxNumberOfAPCs);
@@ -384,12 +390,9 @@ class COE_Location : Managed
 		
 		Math.Randomize(-1);
 		
-		while (true)
+		while (!m_aFlatSlots.IsEmpty())
 		{
-			if (m_aFlatSlots.IsEmpty())
-				return null;
-			
-			 SCR_SiteSlotEntity slot = SCR_SiteSlotEntity.Cast(m_aFlatSlots[Math.RandomInt(0, m_aFlatSlots.Count())]);
+			SCR_SiteSlotEntity slot = SCR_SiteSlotEntity.Cast(m_aFlatSlots[Math.RandomInt(0, m_aFlatSlots.Count())]);
 			
 			if (!slot.IsOccupied())
 				return slot;
