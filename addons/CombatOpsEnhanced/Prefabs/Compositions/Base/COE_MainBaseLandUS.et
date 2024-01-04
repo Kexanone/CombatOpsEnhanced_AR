@@ -426,6 +426,10 @@ GenericEntity : "{6E9190BC2713551D}Prefabs/Compositions/Slotted/BuildableComposi
     coords 9.7 0 31.3
     angleY 180
     {
+     GenericEntity : "{3282CF3ABA80168A}PrefabsEditable/SupportStationSystems/E_SupportStationSystem_Repair_Medium.et" {
+      ID "5F1C58C63C0F4A02"
+      coords 0 0 0
+     }
      GenericEntity : "{47B7E8CA1935BB28}PrefabsEditable/SupportStationSystems/E_SupportStationSystem_Fuel.et" {
       ID "5F1C36BBF3FDC790"
       coords 0 0 0
@@ -438,10 +442,6 @@ GenericEntity : "{6E9190BC2713551D}Prefabs/Compositions/Slotted/BuildableComposi
       }
       coords -0.39 0.85 1.516
      }
-     GenericEntity : "{64454FA087931713}PrefabsEditable/SupportStationSystems/E_SupportStationSystem_Repair.et" {
-      ID "5F1C36BB36790A93"
-      coords 0 0 0
-     }
     }
    }
    {
@@ -453,6 +453,10 @@ GenericEntity : "{6E9190BC2713551D}Prefabs/Compositions/Slotted/BuildableComposi
     coords -9.7 0 31.3
     angleY -180
     {
+     GenericEntity : "{3282CF3ABA80168A}PrefabsEditable/SupportStationSystems/E_SupportStationSystem_Repair_Medium.et" {
+      ID "5F1C58C64711B861"
+      coords 0 0 0
+     }
      GenericEntity : "{47B7E8CA1935BB28}PrefabsEditable/SupportStationSystems/E_SupportStationSystem_Fuel.et" {
       ID "5F1C36BB066269E5"
       coords 0 0 0
@@ -464,10 +468,6 @@ GenericEntity : "{6E9190BC2713551D}Prefabs/Compositions/Slotted/BuildableComposi
        }
       }
       coords -0.39 0.85 1.516
-     }
-     GenericEntity : "{64454FA087931713}PrefabsEditable/SupportStationSystems/E_SupportStationSystem_Repair.et" {
-      ID "5F1C36BB39C17C5C"
-      coords 0 0 0
      }
     }
    }

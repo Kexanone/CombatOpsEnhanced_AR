@@ -5,6 +5,9 @@ COE_FactionManager : "{4A188E44289B9A50}Prefabs/MP/Managers/Factions/FactionMana
    m_aPlayerMainBasePrefabs {
     "{AA187F3D6F4C39E8}Prefabs/Compositions/Base/COE_MainBaseLandUSSR.et"
    }
+   m_aPlayerMainBaseCarrierPrefabs {
+    "{0F7E14BBC969DF41}Prefabs/Compositions/Base/COE_CarrierMainBase.et"
+   }
    m_aPlayerSpawnPrefabs {
     "{50DAB3E40E882705}Prefabs/MP/Spawning/SpawnPoint_MSV_CP.et"
    }
@@ -72,6 +75,9 @@ COE_FactionManager : "{4A188E44289B9A50}Prefabs/MP/Managers/Factions/FactionMana
   COE_Faction "{5CC8DE37E1FF0F7A}" {
    m_aPlayerMainBasePrefabs {
     "{C863167AA262B49D}Prefabs/Compositions/Base/COE_MainBaseLandUS.et"
+   }
+   m_aPlayerMainBaseCarrierPrefabs {
+    "{0F7E14BBC969DF41}Prefabs/Compositions/Base/COE_CarrierMainBase.et"
    }
    m_aPlayerSpawnPrefabs {
     "{69D81D4A5FB98F58}Prefabs/MP/Spawning/SpawnPoint_USMC_CP.et"

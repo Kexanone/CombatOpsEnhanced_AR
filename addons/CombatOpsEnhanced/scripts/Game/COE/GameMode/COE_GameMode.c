@@ -9,16 +9,17 @@ class COE_GameMode : SCR_BaseGameMode
 	[Attribute(desc: "Names of GenericEntity for main base location", category: "Main Base")]
 	protected ref array<string> m_aBaseLocationNames;
 	
-	/*
-	[Attribute(desc: "Label of main base prefab", uiwidget: UIWidgets.ComboBox, enums: ParamEnumArray.FromEnum(COE_EEntityLabel))]
-	protected COE_EEntityLabel m_iMainBasePrefabLabel;
+	[Attribute(desc: "If this prefab name exists, a carrier will be used as main base", category: "Main Base Carrier")]
+	protected ResourceName m_sCarrierToCheckPrefabName;
 	
-	[Attribute(desc: "Inner border for main base positions", category: "Main Base")]
-	protected string m_sMainBaseInnerBorderName;
+	[Attribute(defvalue: "5000", desc: "Maximal objective distance from carrier", category: "Main Base Carrier")]
+	protected float m_fMaxObjectiveDistanceCarrier;
 	
-	[Attribute(desc: "Outer border for main base positions", category: "Main Base")]
-	protected string m_sMainBaseOuterBorderName;
-	*/
+	[Attribute(defvalue: "CarrierSpawnInnerBorder", desc: "Inner border for carrier positions", category: "Main Base Carrier")]
+	protected string m_sCarrierInnerBorderName;
+	
+	[Attribute(defvalue: "CarrierSpawnOuterBorder", desc: "Outer border for carrier positions", category: "Main Base Carrier")]
+	protected string m_sCarrierOuterBorderName;
 	
 	protected ref COE_MapMarkerBase m_COE_mainBaseMarker = new COE_MapMarkerBase();
 	
@@ -54,6 +55,12 @@ class COE_GameMode : SCR_BaseGameMode
 	//------------------------------------------------------------------------------------------------
 	void CreateMainBase()
 	{
+		if (Resource.Load(m_sCarrierToCheckPrefabName).IsValid() && GetGame().GetWorld().FindEntityByName(m_sCarrierInnerBorderName))
+		{
+			CreateMainBaseCarrier();
+			return;
+		};
+		
 		if (m_aBaseLocationNames.IsEmpty())
 		{
 			COE_Utils.PrintError(string.Format("No location for main base has been specified"), "COE_GameMode.CreateMainBase");
@@ -75,16 +82,19 @@ class COE_GameMode : SCR_BaseGameMode
 		faction.SetPlayerMainBase(base);
 		vector transform[4];
 		base.GetWorldTransform(transform);
-		COE_GameTools.SpawnStructurePrefab(faction.GetRandomPrefabByLabel(COE_EEntityLabel.PLAYER_MAIN_BASE), transform);
-		
-		/*
-		COE_PolygonAreaPicker innerBorderPicker = COE_PolygonAreaPicker.Cast(GetGame().GetWorld().FindEntityByName(m_sMainBaseInnerBorderName));
+		IEntity baseStructure = COE_GameTools.SpawnStructurePrefab(faction.GetRandomPrefabByLabel(COE_EEntityLabel.PLAYER_MAIN_BASE), transform);
+	}
+	
+	//------------------------------------------------------------------------------------------------
+	void CreateMainBaseCarrier()
+	{
+		COE_PolygonAreaPicker innerBorderPicker = COE_PolygonAreaPicker.Cast(GetGame().GetWorld().FindEntityByName(m_sCarrierInnerBorderName));
 		if (!innerBorderPicker)
 			return;
 		
 		COE_PolygonArea innerBorder = COE_PolygonArea.Cast(innerBorderPicker.GetArea());
 
-		COE_PolygonAreaPicker outerBorderPicker = COE_PolygonAreaPicker.Cast(GetGame().GetWorld().FindEntityByName(m_sMainBaseOuterBorderName));
+		COE_PolygonAreaPicker outerBorderPicker = COE_PolygonAreaPicker.Cast(GetGame().GetWorld().FindEntityByName(m_sCarrierOuterBorderName));
 		if (!outerBorderPicker)
 			return;
 		
@@ -98,7 +108,7 @@ class COE_GameMode : SCR_BaseGameMode
 		if (!faction)
 			return;
 		
-		Resource resource = Resource.Load(faction.GetRandomPrefabByLabel(m_iMainBasePrefabLabel));
+		Resource resource = Resource.Load(faction.GetRandomPrefabByLabel(COE_EEntityLabel.PLAYER_MAIN_BASE_CARRIER));
 		if (!resource)
 			return;
 		
@@ -108,7 +118,7 @@ class COE_GameMode : SCR_BaseGameMode
 		Math3D.AnglesToMatrix(Vector(Math.RandomFloat(0, 360), 0, 0), params.Transform);				
 		params.Transform[3] = COE_AreaBase.SamplePointInArea(outerBorder, innerBorder);
 		faction.SetPlayerMainBase(GetGame().SpawnEntityPrefab(resource, GetWorld(), params));
-		*/
+		COE_ObjectiveManager.GetInstance().SetMaxDistanceToMainBase(m_fMaxObjectiveDistanceCarrier);
 	}
 
 	//------------------------------------------------------------------------------------------------

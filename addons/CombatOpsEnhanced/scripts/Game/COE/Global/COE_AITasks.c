@@ -26,11 +26,13 @@ class COE_AITasks
 		array<AIWaypoint> wpList = {};
 		int i = 1;
 		
+		Print("|gog|COE_AITasks.Patrol|Start|");
+		PrintFormat("|%1|%2|", position, radius);
 		while (i <= count)
 		{
 			vector pos = SCR_Math2D.GenerateRandomPointInRadius(0, radius, position);
 			pos[1] = SCR_TerrainHelper.GetTerrainY(pos);
-			if (vector.Distance(prevPos, pos) >= minDistance && !COE_Utils.SurfaceIsWater(pos) &&  SCR_WorldTools.TraceCylinder(pos, 0.5, 30))
+			if (vector.Distance(prevPos, pos) >= minDistance && !COE_Utils.SurfaceIsWater(pos) &&  COE_WorldTools.IsPosEmpty(pos))
 			{
 				AIWaypoint wp = COE_GameTools.SpawnWaypointPrefab("{22A875E30470BD4F}Prefabs/AI/Waypoints/AIWaypoint_Patrol.et", pos);
 				group.AddWaypoint(wp);
@@ -39,6 +41,7 @@ class COE_AITasks
 				i++;
 			};
 		};
+		Print("|gog|COE_AITasks.Patrol|End|");
 		
 		AIWaypointCycle wpCycle = AIWaypointCycle.Cast(COE_GameTools.SpawnWaypointPrefab("{35BD6541CBB8AC08}Prefabs/AI/Waypoints/AIWaypoint_Cycle.et", prevPos));
 		wpCycle.SetWaypoints(wpList);

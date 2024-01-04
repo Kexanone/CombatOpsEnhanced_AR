@@ -22,11 +22,13 @@ modded class SCR_Math2D
 		if (!GetMinMaxPolygon(polygon, minX, maxX, minY, maxY))
 			return false;
 
+		Print("|gog|SCR_Math2D.GetRandomPointInPolygon|Start|");
 		GetRandomPointInRectangle(minX, maxX, minY, maxY, x, y);
 		while (!Math2D.IsPointInPolygon(polygon, x, y)) // ugh
 		{
 			GetRandomPointInRectangle(minX, maxX, minY, maxY, x, y);
 		}
+		Print("|gog|SCR_Math2D.GetRandomPointInPolygon|End|");
 
 		return true;
 	}

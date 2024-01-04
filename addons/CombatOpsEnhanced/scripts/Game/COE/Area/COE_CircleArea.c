@@ -40,6 +40,18 @@ class COE_CircleArea : COE_AreaBase
 		m_fRadius = radius;
 		m_fRadiusSq = Math.Pow(radius, 2);
 	}
+	
+	//------------------------------------------------------------------------------------------------
+	float GetRadius()
+	{
+		return m_fRadius;
+	}
+	
+	//------------------------------------------------------------------------------------------------
+	vector GetCenter()
+	{
+		return m_vCenter;
+	}
 }
 
 /*

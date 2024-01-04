@@ -7,11 +7,8 @@ class COE_NamedLocationConfig : COE_LocationBaseConfig
 	//------------------------------------------------------------------------------------------------
 	override bool PickPosition(out vector pos, out IEntity associatedStructure)
 	{
-		while (true)
+		while (!m_aNamedLocations.IsEmpty())
 		{
-			if (m_aNamedLocations.IsEmpty())
-				return false;
-		
 			string locationName = m_aNamedLocations[Math.RandomInt(0, m_aNamedLocations.Count())];
 			IEntity location = GetGame().GetWorld().FindEntityByName(locationName);		
 			pos = location.GetOrigin();

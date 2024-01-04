@@ -13,7 +13,7 @@ $grp COE_PolygonAreaPicker {
   m_vP9 208.182 0 -88.393
   m_vP10 229.187 0 357.918
  }
- MainBaseSpawnInnerBorder {
+ CarrierSpawnInnerBorder {
   coords 4838.219 0 12505.22
   m_cDebugShapeColor 1 0 0 1
   m_vP1 937.141 0 696.645
@@ -33,7 +33,7 @@ $grp COE_PolygonAreaPicker {
   m_vP15 3410.74 0 -2744.072
   m_vP16 1857.863 0 -1477.653
  }
- MainBaseSpawnOuterBorder {
+ CarrierSpawnOuterBorder {
   coords 4838.219 0 12505.22
   m_cDebugShapeColor 0 1 0 1
   m_vP1 1001.739 0 820.122
@@ -55,16 +55,6 @@ $grp COE_PolygonAreaPicker {
  }
 }
 GenericEntity COE_MainBase_1 {
- coords 3008.607 7.125 2075.41
-}
-COE_EntitySpawner CarrierSpawner : "{66C9366A037F7CB7}Prefabs/Spawner/COE_EntitySpawner.et" {
- coords 4838.219 0 12505.22
- Flags 1048579
- m_sInnerBorderName "CarrierSpawnInnerBorder"
- m_sOuterBorderName "CarrierSpawnOuterBorder"
- m_aPrefabParamsList {
-  COE_EntitySpawner_PrefabParams "{5E6F18678B7C00B1}" {
-   m_sPrefabName "{054F83ED85A4C8E4}Prefabs/Compositions/Base/COE_MainBaseCarrierUS.et"
-  }
- }
+ coords 3006.121 7.125 2060.74
+ angleY -16.062
 }

@@ -46,12 +46,9 @@ class COE_CustomLocationConfig : COE_LocationBaseConfig
 	{
 		if (m_aEntitiesToPick.IsEmpty())
 			return false;
-				
-		while (true)
-		{
-			if (m_aEntitiesToPick.IsEmpty())
-				return false;
 			
+		while (!m_aEntitiesToPick.IsEmpty())
+		{
 			associatedStructure = m_aEntitiesToPick[Math.RandomInt(0, m_aEntitiesToPick.Count())];
 			pos = associatedStructure.GetOrigin();
 			
