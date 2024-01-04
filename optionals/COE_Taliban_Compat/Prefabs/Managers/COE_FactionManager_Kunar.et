@@ -1,0 +1,60 @@
+COE_FactionManager : "{F9A08100A9E20FB5}Prefabs/Managers/COE_FactionManager.et" {
+ ID "56B2B4776E6E4499"
+ Factions {
+  COE_Faction "{56DEAC40D132400B}" {
+   m_aInstallationToDestroyPrefabs {
+    "{CC15340158615106}Prefabs/Compositions/Installation/USSR/COE_R404_Antenna.et" "{DC7B76A39454380A}Prefabs/Compositions/Installation/USSR/COE_RPL5_Radar.et"
+   }
+   m_aHVTPrefabs {
+    "{677B515F119222C2}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_SL.et"
+   }
+   m_aIntelPrefabs {
+    "{6D56FED1E55A8F84}Prefabs/Items/Misc/IntelligenceFolder_E_01/IntelligenceFolder_E_01.et"
+   }
+   m_aSmallRoadSlotPrefabs {
+    "{83A10E8547281E58}Prefabs/Compositions/Slotted/SlotRoadSmall/Barricade_S_USSR_01.et" "{9483333BFD9E2D0F}Prefabs/Compositions/Slotted/SlotRoadSmall/Checkpoint_S_USSR_01.et"
+   }
+   m_aMediumRoadSlotPrefabs {
+    "{27F6A0815E6FF6EF}Prefabs/Compositions/Slotted/SlotRoadMedium/Barricade_M_USSR_01.et" "{7C85836D444E3797}Prefabs/Compositions/Slotted/SlotRoadMedium/Checkpoint_M_USSR_01.et"
+   }
+   m_aLargeRoadSlotPrefabs {
+    "{2A27606856B8A914}Prefabs/Compositions/Slotted/SlotRoadLarge/Barricade_L_USSR_01.et" "{9F9924B626C5FA2C}Prefabs/Compositions/Slotted/SlotRoadLarge/Checkpoint_L_USSR_01.et"
+   }
+   m_aLargeFlatSlotPrefabs {
+    "{9C5CB7722205BA65}Prefabs/Compositions/Slotted/SlotFlatLarge/COE_LivingArea_L_USSR_01.et"
+   }
+   m_aArmedVehiclePrefabs {
+    "{8280753918FE527D}Prefabs/Vehicles/Toyotas/Combat/COE_Toyotaa_White_Gun.et"
+   }
+   m_aMarksmanPrefabs {
+    "{BF1E43FF39AA526B}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Scout.et"
+   }
+   m_aRiflemanMGPrefabs {
+    "{58E47E5A4D599432}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_MG.et"
+   }
+   m_aRiflemanGLPrefabs {
+    "{84B40583F4D1B7A3}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Rifleman.et"
+   }
+   m_aRiflemanATPrefabs {
+    "{D25BC9815A9F9E8D}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_AT.et"
+   }
+   m_aRiflemanPrefabs {
+    "{84B40583F4D1B7A3}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Rifleman.et"
+   }
+   m_aPatrolGroupPrefabs {
+    "{5BEA04939D148B1D}Prefabs/Groups/INDFOR/Group_FIA_FireTeam.et" "{2CC26054775FBA2C}Prefabs/Groups/INDFOR/Group_FIA_Team_AT.et"
+   }
+   m_aCheckpointGroupPrefabs {
+    "{22F33D3EC8F281AB}Prefabs/Groups/INDFOR/Group_FIA_MachineGunTeam.et"
+   }
+  }
+ }
+ m_aOpposingFactionsConfigs {
+  COE_OpposingFactionsConfig "{5E9EC6AF8B3BF47F}" {
+   m_sEnemyFactionKey "FIA"
+  }
+  COE_OpposingFactionsConfig "{5E9CF2E19AEF9E0C}" {
+   m_sEnemyFactionKey "FIA"
+  }
+ }
+}

@@ -1,0 +1,14 @@
+Turret : "{8BBB4EEDF8E30C32}Prefabs/Vehicles/Wheeled/M151A2/M151A2_gun_mount_M2HB.et" {
+ ID "6D6D283656DBA232"
+ components {
+  SCR_BaseCompartmentManagerComponent "{51ACFBB07A14CFA6}" {
+   CompartmentSlots {
+    TurretCompartmentSlot TurretCompartment {
+     m_DefaultOccupantData SCR_DefaultOccupantData "{59BA9CCCD3C443DE}" {
+      m_sDefaultOccupantPrefab "{84B40583F4D1B7A3}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Rifleman.et"
+     }
+    }
+   }
+  }
+ }
+}

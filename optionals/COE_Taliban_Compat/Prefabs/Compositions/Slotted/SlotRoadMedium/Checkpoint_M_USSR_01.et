@@ -1,0 +1,24 @@
+GenericEntity : "{6E9190BC2713551D}Prefabs/Compositions/Slotted/BuildableComposition_Base.et" {
+ ID "5282DCB5DFC8538F"
+ {
+  GenericEntity {
+   ID "5CC6B4BB106191D9"
+   {
+    Turret {
+     ID "5CC6B4BEF18D0296"
+     components {
+      SCR_BaseCompartmentManagerComponent "{51ACFBB07A14CFA6}" {
+       CompartmentSlots {
+        TurretCompartmentSlot TurretCompartment {
+         m_DefaultOccupantData SCR_DefaultOccupantData "{59BAA9F0962E63A3}" {
+          m_sDefaultOccupantPrefab "{84B40583F4D1B7A3}Prefabs/Characters/Factions/INDFOR/FIA/Character_FIA_Rifleman.et"
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

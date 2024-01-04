@@ -1,0 +1,22 @@
+GameProject {
+ ID "COE_Taliban_Compat"
+ GUID "5F1F6960A91B7E94"
+ TITLE "COE - Taliban Compat"
+ Dependencies {
+  "5EE162A9B07BAAA7" "5D931A33AEB81FA3" "5F02B470F89A09D5" "58D0FB3206B6F859"
+ }
+ Configurations {
+  GameProjectConfig PC {
+  }
+  GameProjectConfig XBOX_ONE {
+  }
+  GameProjectConfig XBOX_SERIES {
+  }
+  GameProjectConfig PS4 {
+  }
+  GameProjectConfig HEADLESS {
+  }
+  GameProjectConfig Xbox {
+  }
+ }
+}
