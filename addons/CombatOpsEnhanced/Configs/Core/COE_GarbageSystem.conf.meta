@@ -1,5 +1,5 @@
 MetaFileClass {
- Name "{C443635EF40BDAF3}Configs/Core/CampaignGarbageSystem.conf"
+ Name "{D85BB1C2EB0DB6B2}Configs/Core/COE_GarbageSystem.conf"
  Configurations {
   CONFResourceClass PC {
   }

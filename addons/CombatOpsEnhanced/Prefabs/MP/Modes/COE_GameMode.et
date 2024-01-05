@@ -146,7 +146,7 @@ COE_GameMode : "{1B76F75A3175E85C}Prefabs/MP/Modes/Plain/GameMode_Plain.et" {
   }
  }
  PlayerControllerPrefab "{21EAEB797197C0C3}Prefabs/Characters/Core/COE_PlayerController.et"
- GarbageSystemConfig "{C443635EF40BDAF3}Configs/Core/CampaignGarbageSystem.conf"
+ GarbageSystemConfig "{D85BB1C2EB0DB6B2}Configs/Core/COE_GarbageSystem.conf"
  m_bAutoPlayerRespawn 0
  m_fAutoReloadTime 30
  m_aBaseLocationNames {
