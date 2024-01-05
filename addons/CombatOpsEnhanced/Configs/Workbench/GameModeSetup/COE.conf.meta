@@ -1,0 +1,15 @@
+MetaFileClass {
+ Name "{DD9171D088A151E4}Configs/Workbench/GameModeSetup/GameMaster.conf"
+ Configurations {
+  CONFResourceClass PC {
+  }
+  CONFResourceClass XBOX_ONE : PC {
+  }
+  CONFResourceClass XBOX_SERIES : PC {
+  }
+  CONFResourceClass PS4 : PC {
+  }
+  CONFResourceClass HEADLESS : PC {
+  }
+ }
+}
