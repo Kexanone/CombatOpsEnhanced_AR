@@ -1,8 +1,277 @@
 GenericEntity : "{2304C0551A8A1D65}Prefabs/Props/Military/Compositions/US/COE_ArsenalBox_US.et" {
  ID "56F2C6D6F7C6DAFA"
  components {
+  SCR_ArsenalComponent "{56F2C6D1431AD9AF}" {
+   m_eArsenalSaveType NO_RESTRICTIONS
+  }
   SCR_FactionAffiliationComponent "{5A50E7655452A21D}" {
    "faction affiliation" "RHS_US_USMC"
+  }
+ }
+ {
+  GenericEntity {
+   ID "60655785D028147B"
+   components {
+    ClimbingDataComponent "{60655785D3344AB9}" {
+     CanClimbOver 0
+    }
+    MeshObject "{60655785D3344A38}" {
+     Object "{BCE236082832DE3A}Assets/Props/Military/AmmoBox/ArsenalBox_01/ArsenalBox_01_US_general.xob"
+     LODFactors {
+     }
+    }
+    RigidBody "{60655785D3344A55}" {
+     Mass 10
+     ModelGeometry 1
+     Static 1
+    }
+    SCR_ArsenalComponent "{60655785D3344A5B}" {
+     m_eSupportedArsenalItemTypes 524286
+     m_eSupportedArsenalItemModes 254
+     m_eEditableAttributeGroups 30
+     m_eArsenalSaveType NO_RESTRICTIONS
+    }
+    SCR_FactionAffiliationComponent "{60655785D3344A69}" {
+     "faction affiliation" "US"
+    }
+    SCR_ResupplySupportStationComponent "{60655785D3344BF0}" {
+     m_sOnUseSoundEffectFile "{7BACA57AF41F033D}Sounds/SupportStations/SupportStations_Character.acp"
+     m_sOnUseSoundEffectEventName "SOUND_RESUPPLY_AMMUNITION_SELF"
+     m_fRange -1
+    }
+    SCR_ServicePointComponent "{60655785D3344B07}" {
+     m_eType ARMORY
+     m_eBuildingLabel SERVICE_ARMORY
+     m_sDelegatePrefab "{13EB5465CA676A60}Prefabs/Systems/Services/ServicePointDelegate_Armory.et"
+    }
+    SCR_SlotCompositionComponent "{60655785D3344B01}" {
+     m_bOrientChildrenToTerrain 0
+    }
+    SCR_SoundDataComponent "{60655785D3344B33}" {
+     m_aAudioSourceConfiguration {
+      SCR_AudioSourceConfiguration "{60655785D3344B2C}" {
+       m_sSoundProject "{A73D28179B395F19}Sounds/Props/Military/AmmoBoxes/AmmoBox_Big_Wooden/Props_AmmoBox_Big_Wooden.acp"
+       m_sSoundEventName "SOUND_CONTAINER_OPEN"
+      }
+      SCR_AudioSourceConfiguration "{60655785D3344B35}" {
+       m_sSoundProject "{A73D28179B395F19}Sounds/Props/Military/AmmoBoxes/AmmoBox_Big_Wooden/Props_AmmoBox_Big_Wooden.acp"
+       m_sSoundEventName "SOUND_CONTAINER_CLOSE"
+      }
+     }
+    }
+    UniversalInventoryStorageComponent "{60655785D33448BE}" {
+     Attributes SCR_ItemAttributeCollection "{60655785D33448B1}" {
+      ItemDisplayName SCR_InventoryUIInfo "{60655785D334489D}" {
+       Name "#AR-Arsenal_Name"
+       Description "#AR-Arsenal_Description"
+       m_aItemHints {
+        SCR_SupplyAvailableItemHintUIInfo "{60655785D3344891}" {
+         Name "#AR-Item_SupplyConsumer_Hint1"
+         Icon "{8EB808BFA227C080}UI/Textures/Icons/InventoryHints/InventoryHint_SuppliesStored.edds"
+        }
+       }
+      }
+      ItemPhysAttributes ItemPhysicalAttributes "{60655785D33448A2}" {
+       Weight 5
+       DimensionScaler 0.9
+      }
+      CustomAttributes {
+       PreviewRenderAttributes "{60655785D33448B3}" {
+        CameraOrbitAngles 330 30 0
+        CameraDistanceToItem 2
+        CameraOffset 0 0 0
+       }
+      }
+      m_Size SLOT_2x2
+      m_SlotType SLOT_LOADOUT_STORAGE
+      m_bDraggable 0
+     }
+     Priority 1000
+    }
+    SCR_ArsenalInventoryStorageManagerComponent "{60655785D33448B9}" {
+    }
+    ActionsManagerComponent "{60655785D3344678}" {
+     Enabled 1
+     ActionContexts {
+      UserActionContext "{60655785D33448E4}" {
+       ContextName "default"
+       Position PointInfo "{60655785D33448E5}" {
+        Offset 0 0.464 0
+       }
+       Radius 1.5
+      }
+     }
+     additionalActions {
+      SCR_OpenStorageAction "{60655785D33448F8}" {
+       ParentContextList {
+        "default"
+       }
+       UIInfo UIInfo "{60655785D33448F9}" {
+        Name "#AR-Inventory_OpenArsenalStorage"
+       }
+      }
+      SCR_SaveArsenalLoadout "{60655785D3344811}" {
+       ParentContextList {
+        "default"
+       }
+       UIInfo UIInfo "{60655785D3344813}" {
+        Name "#AR-Loadout_Action_SaveLoadout"
+       }
+       Duration 1.5
+       "Sort Priority" 10
+      }
+      SCR_ResupplySelfSupportStationAction "{60655785D33449C5}" {
+       ParentContextList {
+        "default"
+       }
+       UIInfo UIInfo "{60655785D3344836}" {
+        Name "#AR-SupportStation_Resupply_HeldWeaponAmmo_ActionName"
+       }
+       Duration -1
+       PerformPerFrame 1
+       "Sort Priority" 12
+       m_ResupplyData SCR_ResupplyHeldWeaponSupportStationData "{60655785D3344839}" {
+        m_aMuzzleTypes {
+         0 1
+        }
+       }
+      }
+      SCR_ResupplySelfSupportStationAction "{60655785D3344933}" {
+       ParentContextList {
+        "default"
+       }
+       UIInfo UIInfo "{60655785D33449D7}" {
+        Name "#AR-SupportStation_Resupply_HeldWeaponGrenadeLauncher_ActionName"
+       }
+       Duration -1
+       PerformPerFrame 1
+       "Sort Priority" 13
+       m_ResupplyData SCR_ResupplyHeldWeaponSupportStationData "{60655785D33449D0}" {
+        m_aMuzzleTypes {
+         2
+        }
+       }
+      }
+      SCR_ResupplySelfSupportStationAction "{60655785D33446A7}" {
+       ParentContextList {
+        "default"
+       }
+       UIInfo UIInfo "{60655785D3344938}" {
+        Name "#AR-SupportStation_Resupply_Grenade_ActionName"
+       }
+       Duration -1
+       PerformPerFrame 1
+       "Sort Priority" 16
+       m_ResupplyData SCR_ResupplyCatalogItemSupportStationData "{60655785D3344941}" {
+        m_eResupplyType GRENADE
+       }
+      }
+      SCR_ResupplySelfSupportStationAction "{60655785D3344615}" {
+       ParentContextList {
+        "default"
+       }
+       UIInfo UIInfo "{60655785D33446B7}" {
+        Name "#AR-SupportStation_Resupply_Morphine_ActionName"
+       }
+       Duration -1
+       PerformPerFrame 1
+       "Sort Priority" 20
+       m_ResupplyData SCR_ResupplyCatalogItemSupportStationData "{60655785D33446B2}" {
+        m_eResupplyType MORPHINE
+       }
+      }
+      SCR_ResupplySelfSupportStationAction "{60655785D3344679}" {
+       ParentContextList {
+        "default"
+       }
+       UIInfo UIInfo "{60655785D3344619}" {
+        Name "#AR-SupportStation_Resupply_Bandage_ActionName"
+       }
+       Duration -1
+       PerformPerFrame 1
+       "Sort Priority" 19
+       m_ResupplyData SCR_ResupplyCatalogItemSupportStationData "{60655785D3344624}" {
+        m_eResupplyType BANDAGE
+       }
+      }
+     }
+    }
+    RplComponent "{60655785D334478F}" {
+     Enabled 1
+     "Rpl State Override" Runtime
+    }
+    SCR_ResourceComponent "{60655785D334475E}" {
+     m_aContainers {
+      SCR_ResourceContainer "{60655785D33447A3}" {
+       m_eResourceRights SELF
+       m_eStorageType STORED
+       m_fResourceValueCurrent 30000
+       m_fResourceValueMax 3000
+       m_bEnableResourceGain 1
+       m_fResourceGain 300
+       m_fResourceGainTickrate 1
+      }
+     }
+     m_aConsumers {
+      SCR_ResourceConsumer "{60655785D33447F5}" {
+       m_sDebugName "Arsenal - Consumer"
+       m_eResourceRights ALL
+       m_eGeneratorIdentifier DEFAULT
+       m_fResourceRange 135
+       m_ContainerQueue SCR_ResourceConsumerContainerQueue "{60655785D33447CE}" {
+        m_StoragePolicies {
+         SCR_ResourceConsumerStoragePolicy "{60655785D33447C0}" {
+          m_StorageQueue SCR_ResourceConsumerContainerStorageQueueExtended "{60655785D33447C1}" {
+          }
+          m_eStorageType STORED
+         }
+        }
+       }
+      }
+     }
+     m_aGenerators {
+      SCR_ResourceGenerator "{60655785D334474E}" {
+       m_sDebugName "Default - Generator"
+       m_eResourceRights ALL
+       m_fResourceMultiplier 0.333
+       m_fStorageRange 135
+       m_ContainerQueue SCR_ResourceGeneratorContainerQueue "{60655785D334471E}" {
+        m_StoragePolicies {
+         SCR_ResourceGeneratorStoragePolicy "{60655785D3344716}" {
+          m_StorageQueue SCR_ResourceGeneratorContainerStorageQueueExtended "{60655785D3344717}" {
+          }
+          m_eStorageType STORED
+         }
+         SCR_ResourceGeneratorStoragePolicy "{60655785D334471F}" {
+          m_StorageQueue SCR_ResourceGeneratorContainerStorageQueueExtended "{60655785D3344710}" {
+          }
+         }
+        }
+       }
+       m_aActions {
+        SCR_ResourceGeneratorActionStore "{60655785D3344718}" {
+        }
+        SCR_ResourceGeneratorActionDropContainers "{60655785D3344725}" {
+        }
+       }
+      }
+     }
+    }
+    Hierarchy "{60655785D3344767}" {
+     Enabled 1
+    }
+   }
+   coords -0.177 0 -0.656
+   angleY 180
+   Flags 1027
+  }
+  GenericEntity : "{A818BF34BFD8FCF2}Prefabs/Props/Decorations/Prop_RHSStatue_blue.et" {
+   ID "60655B2AA09075FF"
+   components {
+    Hierarchy "{5D4A8E6CFADC9212}" {
+    }
+   }
+   coords 0.339 0.769 0.055
   }
  }
 }

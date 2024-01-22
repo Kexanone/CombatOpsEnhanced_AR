@@ -1,14 +1,9 @@
-StaticModelEntity {
+GenericEntity {
  ID "5F142711E9DDB64E"
  components {
-  SCR_SlotCompositionComponent "{5E24A630ECD242A3}" {
-   m_bOrientChildrenToTerrain 0
-   m_bEditableChildren 0
-  }
-  Hierarchy "{5E24A630ECD242A4}" {
+  Hierarchy "{604962B07D75896B}" {
   }
  }
- coords 4814.299 28.566 11862.453
  {
   $grp COE_LabelledEntitySlot {
    {
@@ -30,78 +25,14 @@ StaticModelEntity {
     m_iEntityLabel PLAYER_SPAWN
    }
   }
-  GenericEntity : "{16A419830B778C3E}Prefabs/Structures/Military/Vessel/VesselHMAS_Adelaide_01/VessleHMAS_Adelaide_01_Doors.et" {
-   ID "5F142711E9DC9868"
-   coords 0 0 0
-  }
-  $grp GenericEntity : "{2FBD01028F1E8B16}Prefabs/Props/Furniture/FloodLight.et" {
-   {
-    ID "5F142711E9DC986B"
-    coords 8.531 21.284 -32.688
-   }
-   {
-    ID "5F142711E9DC986D"
-    coords 8.531 21.494 -18.236
-   }
-   {
-    ID "5F142711E9DC986E"
-    coords 8.531 21.757 0.123
-   }
-   {
-    ID "5F142711E9DCF8A4"
-    coords 10.553 23.414 27.315
-    angleY 51.433
-   }
-   {
-    ID "5F142711E9DCF8A5"
-    coords 14.325 23.428 27.319
-    angleY 89.973
-   }
-   {
-    ID "5F142711E9DCF8BA"
-    coords 8.926 27.931 23.535
-   }
-   {
-    ID "5F142711E9DF2E84"
-    coords 12.517 21.77 -54.925
-    angleY -92.502
-   }
-   {
-    ID "5F142711E9DF2E85"
-    coords 8.531 21.197 -38.422
-   }
-  }
-  $grp GenericEntity : "{47B7E8CA1935BB28}PrefabsEditable/SupportStationSystems/E_SupportStationSystem_Fuel.et" {
-   {
-    ID "5F1C420CC7846C19"
-    coords -61.741 91.782 97.384
-   }
-   {
-    ID "5F1C420CDB1B1CEA"
-    components {
-     SCR_FuelSupportStationComponent "{5E1CF311DF6C3CBE}" {
-      m_fRange 70
-     }
-    }
-    coords 0 17.012 0
-   }
-  }
-  SCR_DestructibleBuildingEntity : "{4D57ABE744816D32}Prefabs/Structures/Military/Vessel/VesselHMAS_Adelaide_01/VesselHMAS_Adelaide_01_base.et" {
-   ID "5F142711E9DF2E86"
+  GenericEntity : "{47B7E8CA1935BB28}PrefabsEditable/SupportStationSystems/E_SupportStationSystem_Fuel.et" {
+   ID "5F1C420CDB1B1CEA"
    components {
-    RplComponent "{50A4E7C9B5728062}" {
-     Streamable Disabled
+    SCR_FuelSupportStationComponent "{5E1CF311DF6C3CBE}" {
+     m_fRange 70
     }
    }
-   coords 0 0 0
-  }
-  GenericEntity : "{53A99461B277506E}Prefabs/Structures/Military/Vessel/VesselHMAS_Adelaide_01/VessleHMAS_Adelaide_01_Fittings_01.et" {
-   ID "5F142711E9DF2E80"
-   coords 0 0 0
-  }
-  GenericEntity : "{57BFA83364388FF9}Prefabs/Structures/Military/Vessel/VesselHMAS_Adelaide_01/VessleHMAS_Adelaide_01_Fence.et" {
-   ID "5F142711E9DF2E82"
-   coords 0 0 0
+   coords 0 17.012 0
   }
   $grp GenericEntity : "{604E7BB9A76B7ED9}Prefabs/Systems/Compositions/EntitySpawnerSlot/EntitySpawnerSlot_Vehicle_Large.et" {
    {
@@ -132,210 +63,30 @@ StaticModelEntity {
     coords -9.685 18.324 46.054
    }
   }
-  $grp GenericEntity : "{64454FA087931713}PrefabsEditable/SupportStationSystems/E_SupportStationSystem_Repair.et" {
-   {
-    ID "5F1C420CC5B77D52"
-    coords -75.727 88.001 97.896
-   }
-   {
-    ID "5F1C420CE61AD8BA"
-    components {
-     SCR_RepairSupportStationComponent "{5E1CF31185E317FE}" {
-      m_fRange 70
-     }
-     SCR_ResourceComponent "{5DACF52CF6D4A1C9}" {
-      m_aContainers {
-       SCR_ResourceContainer "{5F1C420C53A12798}" {
-        m_eResourceRights SELF
-        m_eStorageType STORED
-        m_fResourceValueCurrent 30000
-        m_fResourceValueMax 3000
-        m_bEnableResourceGain 1
-        m_fResourceGain 300
-        m_fResourceGainTickrate 1
-       }
+  GenericEntity : "{64454FA087931713}PrefabsEditable/SupportStationSystems/E_SupportStationSystem_Repair.et" {
+   ID "5F1C420CE61AD8BA"
+   components {
+    SCR_RepairSupportStationComponent "{5E1CF31185E317FE}" {
+     m_fRange 70
+    }
+    SCR_ResourceComponent "{5DACF52CF6D4A1C9}" {
+     m_aContainers {
+      SCR_ResourceContainer "{5F1C420C53A12798}" {
+       m_eResourceRights SELF
+       m_eStorageType STORED
+       m_fResourceValueCurrent 30000
+       m_fResourceValueMax 3000
+       m_bEnableResourceGain 1
+       m_fResourceGain 300
+       m_fResourceGainTickrate 1
       }
      }
     }
-    coords 0 17.012 0
    }
+   coords 0 17.012 0
   }
-  GenericEntity : "{696DB924A8AD1F9E}Prefabs/Structures/Military/Vessel/VesselHMAS_Adelaide_01/VessleHMAS_Adelaide_01_Fittings_02.et" {
-   ID "5F142711E9DF2E8E"
-   coords 0 0 0
-  }
-  GenericEntity : "{6C4554C1E1A3766F}Prefabs/Vehicles/Core/ForwardElevator.et" {
-   ID "5F142711E9DF2E8F"
-   components {
-    ActionsManagerComponent "{5A7C23C95F15F590}" {
-     Enabled 0
-    }
-    RplComponent "{63136787FD0BCE14}" {
-     Streamable Disabled
-    }
-   }
-   coords 0 0 0
-  }
-  $grp LightEntity : "{8CAD466D49510CDF}Prefabs/Structures/Infrastructure/Lamps/LampStreet_E_03/LightPrefabs/LampStreet_E_03_light.et" {
-   {
-    ID "5F142711E9DE12FE"
-    coords -0.866 5.696 7.195
-    angleX 0
-    Color 0.691 0.823 0.708 0
-    LV 6
-    Type Point
-    Radius 50
-    Dynamic 1
-    VolLightOffset -0.99
-    VolLightScale 0
-    LensFlareType Disabled
-   }
-   {
-    ID "5F142711E9DE12FF"
-    coords -0.866 6.043 36.105
-    angleX 0
-    Color 0.691 0.823 0.708 0
-    LV 6
-    Type Point
-    Radius 50
-    Dynamic 1
-    VolLightOffset -0.99
-    VolLightScale 0
-    LensFlareType Disabled
-   }
-   {
-    ID "5F142711E9DE3E7A"
-    coords -0.866 5.696 -18.851
-    angleX 0
-    Color 0.691 0.823 0.708 0
-    LV 6
-    Type Point
-    Radius 50
-    Dynamic 1
-    VolLightOffset -0.99
-    VolLightScale 0
-    LensFlareType Disabled
-   }
-   {
-    ID "5F142711E9DEA848"
-    coords -0.866 5.229 -48.935
-    angleX 0
-    Color 0.691 0.823 0.708 0
-    LV 6
-    Type Point
-    Radius 50
-    Dynamic 1
-    VolLightOffset -0.99
-    VolLightScale 0
-    LensFlareType Disabled
-   }
-   {
-    ID "5F142711E9DEA84B"
-    coords -0.866 4.809 -77.864
-    angleX 0
-    Color 0.691 0.823 0.708 0
-    LV 6
-    Type Point
-    Radius 50
-    Dynamic 1
-    VolLightOffset -0.99
-    VolLightScale 0
-    LensFlareType Disabled
-   }
-   {
-    ID "5F142711E9DF2E8A"
-    coords -0.866 13.981 -60.36
-    angleX 0
-    Color 0.691 0.823 0.708 0
-    LV 6
-    Type Point
-    Radius 50
-    Dynamic 1
-    VolLightOffset -0.99
-    VolLightScale 0
-    LensFlareType Disabled
-   }
-   {
-    ID "5F142711E9DF636A"
-    coords -0.866 13.727 -36.868
-    angleX 0
-    Color 0.691 0.823 0.708 0
-    LV 6
-    Type Point
-    Radius 50
-    Dynamic 1
-    VolLightOffset -0.99
-    VolLightScale 0
-    LensFlareType Disabled
-   }
-   {
-    ID "5F142711E9DF636B"
-    coords -0.866 14.404 -14.364
-    angleX 0
-    Color 0.691 0.823 0.708 0
-    LV 6
-    Type Point
-    Radius 50
-    Dynamic 1
-    VolLightOffset -0.99
-    VolLightScale 0
-    LensFlareType Disabled
-   }
-   {
-    ID "5F142711E9DFB0FC"
-    coords -0.866 14.404 10.222
-    angleX 0
-    Color 0.691 0.823 0.708 0
-    LV 6
-    Type Point
-    Radius 50
-    Dynamic 1
-    VolLightOffset -0.99
-    VolLightScale 0
-    LensFlareType Disabled
-   }
-   {
-    ID "5F142711E9DFE460"
-    coords -0.866 14.404 36.557
-    angleX 0
-    Color 0.691 0.823 0.708 0
-    LV 6
-    Type Point
-    Radius 50
-    Dynamic 1
-    VolLightOffset -0.99
-    VolLightScale 0
-    LensFlareType Disabled
-   }
-   {
-    ID "5F142711E9DFE49F"
-    coords -0.866 14.404 61.865
-    angleX 0
-    Color 0.691 0.823 0.708 0
-    LV 6
-    Type Point
-    Radius 50
-    Dynamic 1
-    VolLightOffset -0.99
-    VolLightScale 0
-    LensFlareType Disabled
-   }
-   {
-    ID "5F142711E9DFF558"
-    coords -0.866 6.699 62.963
-    angleX 0
-    Color 0.691 0.823 0.708 0
-    LV 6
-    Type Point
-    Radius 50
-    Dynamic 1
-    VolLightOffset -0.99
-    VolLightScale 0
-    LensFlareType Disabled
-   }
-  }
-  GenericEntity : "{BE670613AD1460B9}Prefabs/Vehicles/Core/RearElevator.et" {
-   ID "5F142711E9DEA84A"
+  StaticModelEntity : "{98FE7FDB84B147BD}PrefabsEditable/Auto/Structures/Military/Vessels/VessleHMAS_Adelaide_01/E_VessleHMAS_Adelaide_01.et" {
+   ID "604962B0FE851E69"
    coords 0 0 0
   }
  }
