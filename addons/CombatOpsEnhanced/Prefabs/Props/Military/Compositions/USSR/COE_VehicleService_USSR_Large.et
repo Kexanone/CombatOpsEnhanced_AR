@@ -3,6 +3,24 @@ GenericEntity : "{0EA8D3E27052750B}Prefabs/Props/Military/Compositions/USSR/Vehi
  components {
   SCR_CampaignBuildingProviderComponent "{5ED49CDEA85A0083}" {
    m_fBuildingRadius 75
+   m_aBudgetsToEvaluate {
+    SCR_CampaignBuildingCooldownWithRankBudgetToEvaluateData "{5EE71CAB5BFCF9A3}" {
+     m_aCustomCooldownData {
+      SCR_CooldownData "{5EEEF52515996867}" {
+       m_fDefaultTimeMultiplier 3
+      }
+      SCR_CooldownData "{5EEEF5250BF881BF}" {
+       m_fDefaultTimeMultiplier 3
+      }
+      SCR_CooldownData "{5EEEF5250BBA697C}" {
+       m_fDefaultTimeMultiplier 3
+      }
+      SCR_CooldownData "{5EEEF5250B54777E}" {
+       m_fDefaultTimeMultiplier 3
+      }
+     }
+    }
+   }
   }
   SCR_CatalogEntitySpawnerComponent "{5D22B968F23A847A}" {
    m_fMaxSlotDistance 60
