@@ -1,6 +1,9 @@
 GenericEntity : "{0EA8D3E27052750B}Prefabs/Props/Military/Compositions/USSR/VehicleService_USSR_Large.et" {
  ID "F0DBA538AC2A0552"
  components {
+  SCR_CampaignBuildingProviderComponent "{5ED49CDEA85A0083}" {
+   m_fBuildingRadius 75
+  }
   SCR_CatalogEntitySpawnerComponent "{5D22B968F23A847A}" {
    m_fMaxSlotDistance 60
    m_aIgnoredLabels {

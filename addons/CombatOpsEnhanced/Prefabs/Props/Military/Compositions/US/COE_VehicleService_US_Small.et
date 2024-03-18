@@ -1,6 +1,9 @@
 GenericEntity : "{79604FB6CD0DD617}Prefabs/Props/Military/Compositions/US/VehicleService_US_Small.et" {
  ID "F0DBA538AC2A0552"
  components {
+  SCR_CampaignBuildingProviderComponent "{5ED49CDEA85A0083}" {
+   m_fBuildingRadius 30
+  }
   SCR_CatalogEntitySpawnerComponent "{5D22B968F23A847A}" {
    m_fMaxSlotDistance 30
    m_aIgnoredLabels {

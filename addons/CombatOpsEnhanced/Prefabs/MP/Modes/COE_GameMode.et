@@ -10,6 +10,10 @@ COE_GameMode : "{1B76F75A3175E85C}Prefabs/MP/Modes/Plain/GameMode_Plain.et" {
   }
   SCR_ArsenalManagerComponent "{5E6F1867E2884BA8}" {
   }
+  SCR_CampaignBuildingManagerComponent "{60E5000D20BA6FA8}" {
+   m_sFreeRoamBuildingClientTrigger "{5E191CEAF4B95816}Prefabs/MP/FreeRoamBuildingClientTrigger.et"
+   m_BudgetType CAMPAIGN
+  }
   SCR_CommandingManagerComponent "{5E6F1867E2884BA4}" {
   }
   SCR_CompositionSlotManagerComponent "{5E8ED61996D6450A}" {
@@ -146,9 +150,11 @@ COE_GameMode : "{1B76F75A3175E85C}Prefabs/MP/Modes/Plain/GameMode_Plain.et" {
   }
  }
  PlayerControllerPrefab "{21EAEB797197C0C3}Prefabs/Characters/Core/COE_PlayerController.et"
- GarbageSystemConfig "{D85BB1C2EB0DB6B2}Configs/Core/COE_GarbageSystem.conf"
  m_bAutoPlayerRespawn 0
  m_fAutoReloadTime 30
+ m_aDisabledResourceTypes {
+  0
+ }
  m_aBaseLocationNames {
   "COE_MainBase_1"
  }
