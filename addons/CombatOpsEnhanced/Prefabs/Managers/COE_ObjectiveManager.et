@@ -69,6 +69,7 @@ COE_ObjectiveManager {
  }
  m_aTaskConfigs {
   COE_TaskClearAreaConfig "{5E83606A455304A0}" {
+   m_bEnabled 0
    m_iTaskType CLEAR_AREA
    m_sSFTaskPrefabName "{B3A0C171D2796529}Prefabs/Compositions/Tasks/COE_TaskClearArea.et"
   }
@@ -84,12 +85,12 @@ COE_ObjectiveManager {
    m_iTargetPrefabLabel SUPPLIES_TO_DESTROY
   }
   COE_TaskKillConfig "{5E83606A43AC974F}" {
+   m_bEnabled 0
    m_iTaskType KILL
    m_sSFTaskPrefabName "{E76E62C759F5E523}Prefabs/Compositions/Tasks/COE_TaskKill.et"
    m_iTargetPrefabLabel HVT
   }
   COE_TaskDeliverIntelConfig "{5E83606A41749631}" {
-   m_bEnabled 0
    m_iTaskType DELIVER_INTEL
    m_sSFTaskPrefabName "{B9057FFCAFCE30B7}Prefabs/Compositions/Tasks/COE_TaskDeliverIntel.et"
    m_iIntelPrefabLabel INTEL
