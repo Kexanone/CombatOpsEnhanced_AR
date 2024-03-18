@@ -87,6 +87,22 @@ GenericEntity : "{B86F916928A1430F}PrefabsEditable/Auto/Props/Military/Compositi
  }
  coords 111.467 1 95.29
 }
+GenericEntity TT1 : "{B9057FFCAFCE30B7}Prefabs/Compositions/Tasks/COE_TaskDeliverIntel.et" {
+ coords 114.743 1 58.622
+ {
+  GenericEntity GenericEntity2 {
+   ID "5E7D7A6657219D1C"
+  }
+  GenericEntity GenericEntity1 {
+   ID "5E7D7A6657219D19"
+   components {
+    SCR_ScenarioFrameworkSlotPick "{5A2283FD60F69A1A}" {
+     m_sObjectToSpawn "{6D56FED1E55A8F84}Prefabs/Items/Misc/IntelligenceFolder_E_01/IntelligenceFolder_E_01.et"
+    }
+   }
+  }
+ }
+}
 GenericEntity : "{D4573A9778DB3CB0}PrefabsEditable/Auto/Props/Military/Compositions/US/E_VehicleService_US_Small.et" {
  components {
   SCR_CatalogEntitySpawnerComponent "{5D22B968F23A847A}" {
@@ -105,4 +121,19 @@ GenericEntity : "{D4573A9778DB3CB0}PrefabsEditable/Auto/Props/Military/Compositi
   }
  }
  coords 113.481 1 95.433
+}
+SCR_ChimeraCharacter OO2 : "{DB108F0264C75F14}Prefabs/Characters/Factions/BLUFOR/US_Army/COE_Character_US_Officer.et" {
+ coords 109.527 1 56.295
+}
+GenericEntity TT2 : "{E76E62C759F5E523}Prefabs/Compositions/Tasks/COE_TaskKill.et" {
+ coords 109.303 1 58.353
+ {
+  GenericEntity SS2 {
+   ID "5E7D7A55AF193C78"
+  }
+ }
+}
+GenericEntity : "{EB66D4EF38CCA50A}Prefabs/Props/Military/Compositions/USSR/VehicleService_USSR_Medium.et" {
+ coords 107.262 1 95.136
+ angleY -7.442
 }

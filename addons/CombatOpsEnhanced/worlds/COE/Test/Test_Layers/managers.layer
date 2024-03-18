@@ -7,9 +7,6 @@ SCR_AIWorld AIWorld : "{01DC74137CFDDB6A}Prefabs/AI/SCR_AIWorld_Arland.et" {
 PerceptionManager PerceptionManager : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
  coords 98.458 1 145.191
 }
-TagManager TagManager : "{2FA9E172CAB1857A}Prefabs/MP/Managers/TagManager.et" {
- coords 93.496 1.214 146.931
-}
 COE_GameMode GameMode : "{9EDD3A569D1FE096}Prefabs/MP/Modes/COE_GameMode.et" {
  components {
   SCR_GameModeSFManager "{5E750EAAE1E3BF20}" {
@@ -29,6 +26,8 @@ COE_GameMode GameMode : "{9EDD3A569D1FE096}Prefabs/MP/Modes/COE_GameMode.et" {
   }
  }
  coords 92.656 1 140.371
+ m_aDisabledResourceTypes +{
+ }
 }
 RadioManagerEntity RadioManager : "{B8E09FAB91C4ECCD}Prefabs/Radio/RadioManager.et" {
  coords -860.907 -49.981 -310.18
@@ -49,8 +48,8 @@ COE_FactionManager FactionManager : "{F9A08100A9E20FB5}Prefabs/Managers/COE_Fact
  }
  m_aOpposingFactionsConfigs {
   COE_OpposingFactionsConfig "{5E9EC6AF8B3BF47F}" {
-   m_sPlayerFactionKey "USSR"
-   m_sEnemyFactionKey "US"
+   m_sPlayerFactionKey "RHS_RF_MSV"
+   m_sEnemyFactionKey "RHS_US_USMC"
   }
   COE_OpposingFactionsConfig "{5E9CF2E19AEF9E0C}" {
   }

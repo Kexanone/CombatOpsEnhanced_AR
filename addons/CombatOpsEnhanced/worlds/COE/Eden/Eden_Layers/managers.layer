@@ -19,9 +19,6 @@ SCR_AIWorld AIWorld : "{70CCCF16487C927F}Prefabs/AI/SCR_AIWorld_Eden.et" {
 PerceptionManager PerceptionManager : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
  coords 4778.674 27.103 11842.043
 }
-TagManager TagManager : "{2FA9E172CAB1857A}Prefabs/MP/Managers/TagManager.et" {
- coords 4773.712 27.317 11843.783
-}
 COE_GameMode GameMode : "{9EDD3A569D1FE096}Prefabs/MP/Modes/COE_GameMode.et" {
  coords 4772.873 27.103 11837.223
 }

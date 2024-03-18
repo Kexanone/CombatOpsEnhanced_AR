@@ -28,9 +28,6 @@ SCR_AIWorld AIWorld : "{70CCCF16487C927F}Prefabs/AI/SCR_AIWorld_Eden.et" {
 PerceptionManager PerceptionManager : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
  coords 2744.816 10.968 3190.743
 }
-TagManager TagManager : "{2FA9E172CAB1857A}Prefabs/MP/Managers/TagManager.et" {
- coords 2744.816 10.968 3190.743
-}
 COE_GameMode GameMode : "{9EDD3A569D1FE096}Prefabs/MP/Modes/COE_GameMode.et" {
  components {
   SCR_DebriefingScreenComponent "{5E6F1867E2884BA2}" {
@@ -66,9 +63,6 @@ COE_FactionManager FactionManager : "{EE237EF19EC14411}Prefabs/Managers/COE_Fact
   COE_Faction "{56DEAC40D2DBC8B1}" {
   }
   COE_Faction "{56DEAC40D3C2E623}" {
-   m_aPlayerMainBasePrefabs {
-    ""
-   }
   }
   COE_Faction "{56DEAC40D132400B}" {
   }
