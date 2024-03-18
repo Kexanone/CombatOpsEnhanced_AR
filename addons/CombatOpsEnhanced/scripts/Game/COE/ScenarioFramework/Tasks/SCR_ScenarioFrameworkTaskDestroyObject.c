@@ -8,13 +8,13 @@ modded class SCR_TaskDestroyObject : SCR_ScenarioFrameworkTask
 					
 		if (!m_Asset)
 			return;		
-		ScriptedDamageManagerComponent objectDmgManager = ScriptedDamageManagerComponent.Cast(m_Asset.FindComponent(ScriptedDamageManagerComponent));
+		SCR_DamageManagerComponent objectDmgManager = SCR_DamageManagerComponent.Cast(m_Asset.FindComponent(SCR_DamageManagerComponent));
 		
 		// Set subjet to child if parent is not destructible
 		if (!objectDmgManager)
 		{
 			m_Asset = m_Asset.GetChildren();
-			objectDmgManager = ScriptedDamageManagerComponent.Cast(m_Asset.FindComponent(ScriptedDamageManagerComponent));
+			objectDmgManager = SCR_DamageManagerComponent.Cast(m_Asset.FindComponent(SCR_DamageManagerComponent));
 		};
 		
 		if (objectDmgManager)
